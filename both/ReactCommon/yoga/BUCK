@@ -1,0 +1,12 @@
+diff --git a/E:/github/ms-react-native-forpatch/ReactCommon/yoga/BUCK b/E:/github/fb-react-native-forpatch/ReactCommon/yoga/BUCK
+index 4e97a4201..49ac7854a 100644
+--- a/E:/github/ms-react-native-forpatch/ReactCommon/yoga/BUCK
++++ b/E:/github/fb-react-native-forpatch/ReactCommon/yoga/BUCK
+@@ -12,7 +12,6 @@ cxx_library(
+         "-Werror",
+         "-std=c++1y",
+         "-O3",
+-		"-DANDROIDPLAT",
+     ],
+     force_static = True,
+     visibility = ["PUBLIC"],

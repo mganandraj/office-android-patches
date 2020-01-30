@@ -1,0 +1,15 @@
+diff --git a/E:/github/ms-react-native-forpatch/template/android/app/src/debug/AndroidManifest.xml b/E:/github/fb-react-native-forpatch/template/android/app/src/debug/AndroidManifest.xml
+index e68a6bea7..fa26aa56e 100644
+--- a/E:/github/ms-react-native-forpatch/template/android/app/src/debug/AndroidManifest.xml
++++ b/E:/github/fb-react-native-forpatch/template/android/app/src/debug/AndroidManifest.xml
+@@ -4,10 +4,5 @@
+ 
+     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+ 
+-<<<<<<< HEAD
+-    <application tools:targetApi="28" tools:ignore="GoogleAppIndexingWarning" android:networkSecurityConfig="@xml/react_native_config" />
+-</manifest>
+-=======
+     <application android:usesCleartextTraffic="true" tools:targetApi="28" tools:ignore="GoogleAppIndexingWarning" />
+ </manifest>
+->>>>>>> v0.60.0

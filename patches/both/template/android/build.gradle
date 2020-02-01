@@ -1,0 +1,16 @@
+diff --git "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\build.gradle" "b/E:\\github\\ms-react-native-forpatch\\template\\android\\build.gradle"
+index e7732fe..971f416 100644
+--- "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\build.gradle"
++++ "b/E:\\github\\ms-react-native-forpatch\\template\\android\\build.gradle"
+@@ -13,7 +13,11 @@ buildscript {
+         jcenter()
+     }
+     dependencies {
++<<<<<<< HEAD
++        classpath 'com.android.tools.build:gradle:3.3.1'
++=======
+         classpath("com.android.tools.build:gradle:3.4.1")
++>>>>>>> v0.60.0
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files

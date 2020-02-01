@@ -1,0 +1,36 @@
+diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\FlatList-test.js.snap" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\FlatList-test.js.snap"
+index 5b2c34d..a803418 100644
+--- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\FlatList-test.js.snap"
++++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\FlatList-test.js.snap"
+@@ -42,6 +42,7 @@ exports[`FlatList renders all the bells and whistles 1`] = `
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   refreshControl={
+     <RefreshControlMock
+       onRefresh={[MockFunction]}
+@@ -144,6 +145,7 @@ exports[`FlatList renders empty list 1`] = `
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   removeClippedSubviews={false}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+@@ -173,6 +175,7 @@ exports[`FlatList renders null list 1`] = `
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   removeClippedSubviews={false}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+@@ -215,6 +218,7 @@ exports[`FlatList renders simple list 1`] = `
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   removeClippedSubviews={false}
+   renderItem={[Function]}
+   scrollEventThrottle={50}

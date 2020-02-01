@@ -1,69 +1,27 @@
-const {
-  traverseDirectory,
-  writeFile,
-  getRelativePath,
-  lookUpRelativePath,
-  initDirectory,
-} = require('./fs_utils');
+const {diffReactNativeForks} = require('./diffReactNativeForks');
+const {patchReactNativeFork} = require('./patchReactNativeFork');
+const {resolvePath} = require('./fs_utils');
 
-const {createPatch} = require('./patch_utils');
+const log = require('simple-node-logger').createSimpleFileLogger(
+  'E:\\github\\office-android-patches\\patch-main.log',
+);
 
-const msPath = 'E:\\github\\ms-react-native-forpatch';
-const fbPath = 'E:\\github\\fb-react-native-forpatch';
+const basePath = 'E:\\github';
 
-const bothPath =
-  'E:\\github\\ms-react-native-forpatch\\office-android-patches\\both';
-const msOnlyPath =
-  'E:\\github\\ms-react-native-forpatch\\office-android-patches\\msOnly';
-const fbOnlyPath =
-  'E:\\github\\ms-react-native-forpatch\\office-android-patches\\fbOnly';
+// clean clone of MS fork
+const msForkBasePath = resolvePath(basePath, 'ms-react-native-forpatch');
 
-initDirectory(bothPath);
-initDirectory(msOnlyPath);
-initDirectory(fbOnlyPath);
+// clean clone of FB repo checked out at the right tag.
+const fbRepoBasePath = resolvePath(basePath, 'fb-react-native-forpatch-base');
+const fbRepoPatchedPath = resolvePath(
+  basePath,
+  'fb-react-native-forpatch-patched',
+);
 
-// const callbackOnPatch = (patch: string) => {
-//   // tslint:disable-next-line:no-console
-//   console.log('Patch:: ' + patch);
-// };
-// createPatch(
-//   'E:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle',
-//   'E:\\github\\fb-react-native-forpatch\\ReactAndroid\\build.gradle',
-//   callbackOnPatch,
-// );
-
-const callbackFile = (path: string) => {
-  // tslint:disable-next-line:no-console
-  // console.log('File: ' + path);
-
-  const first = path;
-  const firstRelativePath = getRelativePath(first, msPath);
-
-  const callbackOnHit = (second: string) => {
-    // tslint:disable-next-line:no-console
-    // console.log('File in both:: ' + first + '::' + second);
-    // writeFile(bothPath, firstRelativePath, 'data');
-
-    const callbackOnPatch = (patch: string) => {
-      // tslint:disable-next-line:no-console
-      // console.log('Patch:: ' + patch);
-      writeFile(bothPath, firstRelativePath, `${patch}`);
-    };
-    createPatch(first, second, callbackOnPatch);
-  };
-  const callbackOnMiss = (second: string) => {
-    // tslint:disable-next-line:no-console
-    console.log('Only in MS:: ' + first);
-    // writeFile(msOnlyPath, firstRelativePath, 'data');
-  };
-
-  lookUpRelativePath(fbPath, firstRelativePath, callbackOnHit, callbackOnMiss);
-};
-
-const callbackDirectory = (path: string) => {
-  // tslint:disable-next-line:no-console
-  // console.log('Directory: ' + path);
-};
+const patchesRootPath = resolvePath(
+  basePath,
+  'office-android-patches\\patches',
+);
 
 // Places we don't want to look for changes
 const topLevelBlackListDirs = [
@@ -85,13 +43,7 @@ const topLevelBlackListDirs = [
   '.prettierrc',
   'bots',
   'Brewfile',
-  //'build.gradle',
-  //'CHANGELOG.json',
-  //'CHANGELOG.md',
-  //'cli.js',
-  //'CODE_OF_CONDUCT.md',
-  //'ContainerShip',
-  //'CONTRIBUTING.md',
+  //'build.gradle', //'CHANGELOG.json', //'CHANGELOG.md', //'cli.js', //'CODE_OF_CONDUCT.md', //'ContainerShip', //'CONTRIBUTING.md',
   'danger',
   'double-conversion',
   //'ECOSYSTEM.md',
@@ -100,10 +52,7 @@ const topLevelBlackListDirs = [
   'Folly',
   'follybuild',
   'glog',
-  //'gradle',
-  //'gradlew',
-  //'gradlew.bat',
-  //'IntegrationTests',
+  //'gradle', //'gradlew', //'gradlew.bat', //'IntegrationTests',
   'jest',
   'jest-preset.js',
   'jest.config.js',
@@ -111,10 +60,7 @@ const topLevelBlackListDirs = [
   //'KeepingRecent.md',
   'keystores',
   'lib',
-  //'Libraries',
-  //'LICENSE',
-  //'LICENSE-docs',
-  //'local-cli',
+  //'Libraries', //'LICENSE', //'LICENSE-docs', //'local-cli',
   'metadata',
   //'metro.config.js',
   'office-android-patches',
@@ -122,22 +68,15 @@ const topLevelBlackListDirs = [
   'packages',
   //'processor',
   'React',
-  //'react-native.config.js',
-  //'react.gradle',
+  //'react-native.config.js', //'react.gradle',
   'React.podspec',
   //'ReactAndroid',
   'ReactApple',
-  //'ReactCommon',
-  //'README.md',
-  //'Releases.md',
-  //'rn-get-polyfills.js',
-  //'RNTester',
+  //'ReactCommon', //'README.md', //'Releases.md', //'rn-get-polyfills.js', //'RNTester',
   'runXcodeTests.sh',
-  //'scripts',
-  //'settings.gradle.kts',
+  //'scripts', //'settings.gradle.kts',
   'stubs',
-  //'template',
-  //'template.config.js',
+  //'template', //'template.config.js',
   'third-party-podspecs',
   //'tools',
   'v8-docker-build',
@@ -145,9 +84,11 @@ const topLevelBlackListDirs = [
   'yarn.lock',
 ];
 
-traverseDirectory(
-  msPath,
-  callbackFile,
-  callbackDirectory,
-  topLevelBlackListDirs,
-);
+// diffReactNativeForks(
+//   fbRepoBasePath,
+//   msForkBasePath,
+//   patchesRootPath,
+//   topLevelBlackListDirs,
+// );
+
+patchReactNativeFork(fbRepoPatchedPath, patchesRootPath);

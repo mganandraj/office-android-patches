@@ -1,0 +1,26 @@
+diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Vibration\\RCTVibration.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Vibration\\RCTVibration.xcodeproj\\project.pbxproj"
+index 4e00995..7a40cee 100644
+--- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Vibration\\RCTVibration.xcodeproj\\project.pbxproj"
++++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Vibration\\RCTVibration.xcodeproj\\project.pbxproj"
+@@ -210,6 +210,10 @@
+ 		832C81951AAF6DF0007FA2F7 /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
+ 				CLANG_STATIC_ANALYZER_MODE = deep;
+ 				OTHER_LDFLAGS = "-ObjC";
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+@@ -220,6 +224,10 @@
+ 		832C81961AAF6DF0007FA2F7 /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
+ 				CLANG_STATIC_ANALYZER_MODE = deep;
+ 				OTHER_LDFLAGS = "-ObjC";
+ 				PRODUCT_NAME = "$(TARGET_NAME)";

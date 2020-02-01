@@ -1,0 +1,935 @@
+unOnlyForDeploymentPostprocessing = 0;
+ 		};
+-		2DD3238C1DA2DD8A000FE1B8 /* Sources */ = {
+-			isa = PBXSourcesBuildPhase;
+-			buildActionMask = 2147483647;
+-			files = (
+-				2DD323DC1DA2DDBF000FE1B8 /* FlexibleSizeExampleView.m in Sources */,
+-				2DD323DD1DA2DDBF000FE1B8 /* UpdatePropertiesExampleView.m in Sources */,
+-				2DD323E01DA2DDBF000FE1B8 /* main.m in Sources */,
+-			);
+-			runOnlyForDeploymentPostprocessing = 0;
++		2DD3238C1DA2DD8A000FE1B8 /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++				2DD323DC1DA2DDBF000FE1B8 /* FlexibleSizeExampleView.m in Sources */,
++				2DD323DD1DA2DDBF000FE1B8 /* UpdatePropertiesExampleView.m in Sources */,
++				2DD323E01DA2DDBF000FE1B8 /* main.m in Sources */,
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++		2DD323A11DA2DD8B000FE1B8 /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++				2D4BD8DC1DA2E20D005AC8A8 /* RCTImageLoaderTests.m in Sources */,
++				2D4BD8D91DA2E20D005AC8A8 /* RCTEventDispatcherTests.m in Sources */,
++				2D4BD8D41DA2E20D005AC8A8 /* RCTAllocationTests.m in Sources */,
++				2D4BD8DA1DA2E20D005AC8A8 /* RCTGzipTests.m in Sources */,
++				2D4BD8DB1DA2E20D005AC8A8 /* RCTImageLoaderHelpers.m in Sources */,
++				2D4BD8D71DA2E20D005AC8A8 /* RCTConvert_NSURLTests.m in Sources */,
++				C60A228321C9726800B820FE /* RCTFormatErrorTests.m in Sources */,
++				2D4BD8E21DA2E20D005AC8A8 /* RCTModuleMethodTests.mm in Sources */,
++				2D4BD8DF1DA2E20D005AC8A8 /* RCTMethodArgumentTests.m in Sources */,
++				2D4BD8D31DA2E20D005AC8A8 /* RCTBundleURLProviderTests.m in Sources */,
++				2D4BD8D21DA2E20D005AC8A8 /* RCTURLUtilsTests.m in Sources */,
++				2D8C2E321DA40403000EE098 /* RCTMultipartStreamReaderTests.m in Sources */,
++				2D4BD8DE1DA2E20D005AC8A8 /* RCTJSONTests.m in Sources */,
++				2D4BD8E31DA2E20D005AC8A8 /* RCTShadowViewTests.m in Sources */,
++				2D4BD8D81DA2E20D005AC8A8 /* RCTFontTests.m in Sources */,
++				2D4BD8DD1DA2E20D005AC8A8 /* RCTImageUtilTests.m in Sources */,
++				2D4BD8E41DA2E20D005AC8A8 /* RCTUIManagerTests.m in Sources */,
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++		3D13F83A1D6F6AE000E69E0E /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++		9F616969225FB3F1008F89F1 /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++		9F61698F225FB40C008F89F1 /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++		9FBFA50F233C7E4C003D9A8D /* Sources */ = {
++			isa = PBXSourcesBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXSourcesBuildPhase section */
++
++/* Begin PBXTargetDependency section */
++		143BC59C1B21E3E100462512 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			target = 13B07F861A680F5B00A75B9A /* RNTester */;
++			targetProxy = 143BC59B1B21E3E100462512 /* PBXContainerItemProxy */;
++		};
++		18CD93F621498A8C009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = React;
++		};
++		18CD943921498A92009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTBlob;
++		};
++		18CD943B21498A98009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = ART;
++		};
++		18CD943D21498AA0009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTActionSheet;
++		};
++		18CD943F21498AA7009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTAnimation;
++		};
++		18CD944121498AAD009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTCameraRoll;
++		};
++		18CD944321498AB2009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTGeolocation;
++		};
++		18CD944521498AB8009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTNetwork;
++		};
++		18CD944721498ABE009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTImage;
++		};
++		18CD944921498AC5009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTLinking;
++		};
++		18CD944B21498ACA009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTPushNotification;
++		};
++		18CD944D21498AD0009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTSettings;
++		};
++		18CD944F21498AD5009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTText;
++		};
++		18CD945121498ADA009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTVibration;
++		};
++		18CD945321498ADF009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTWebSocket;
++		};
++		18CD94572149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTBlob-tvOS";
++		};
++		18CD94592149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "ART-tvOS";
++		};
++		18CD945B2149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "React-tvOS";
++		};
++		18CD945D2149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTAnimation-tvOS";
++		};
++		18CD945F2149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTImage-tvOS";
++		};
++		18CD94612149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTLinking-tvOS";
++		};
++		18CD94632149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTNetwork-tvOS";
++		};
++		18CD94652149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTPushNotification-tvOS";
++		};
++		18CD94672149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTSettings-tvOS";
++		};
++		18CD946B2149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTText-tvOS";
++		};
++		18CD946D2149B19D009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTWebSocket-tvOS";
++		};
++		18CD946F2149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTBlob-macOS";
++			targetProxy = 18CD946E2149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94712149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "ART-macOS";
++			targetProxy = 18CD94702149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94732149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "React-macOS";
++			targetProxy = 18CD94722149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94752149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTActionSheet-macOS";
++			targetProxy = 18CD94742149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94772149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTAnimation-macOS";
++			targetProxy = 18CD94762149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD947B2149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTImage-macOS";
++			targetProxy = 18CD947A2149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD947D2149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTLinking-macOS";
++			targetProxy = 18CD947C2149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD947F2149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTNetwork-macOS";
++			targetProxy = 18CD947E2149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94812149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTPushNotification-macOS";
++			targetProxy = 18CD94802149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94832149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTSettings-macOS";
++			targetProxy = 18CD94822149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CD94872149B235009E2179 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTWebSocket-macOS";
++			targetProxy = 18CD94862149B235009E2179 /* PBXContainerItemProxy */;
++		};
++		18CF93E9214723F400CDCB6F /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTText-macos";
++			targetProxy = 18CF93E8214723F400CDCB6F /* PBXContainerItemProxy */;
++		};
++		18FC77A81EF4770B002B3F17 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			target = 18FC77851EF4770B002B3F17 /* RNTester-macOS */;
++			targetProxy = 18FC77A71EF4770B002B3F17 /* PBXContainerItemProxy */;
++		};
++		2D4624C21DA2EA6900C74D09 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			target = 2DD3238F1DA2DD8A000FE1B8 /* RNTester-tvOS */;
++			targetProxy = 9FD21CD42242EE5B00E7F88E /* PBXContainerItemProxy */;
++		};
++		3D13F84C1D6F6B5F00E69E0E /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			target = 3D13F83D1D6F6AE000E69E0E /* RNTesterBundle */;
++			targetProxy = 3D13F84B1D6F6B5F00E69E0E /* PBXContainerItemProxy */;
++		};
++		9FBFA7AC233D53BA003D9A8D /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			target = 9FBFA512233C7E4C003D9A8D /* RNTesterBundle-macOS */;
++			targetProxy = 9FBFA7AB233D53BA003D9A8D /* PBXContainerItemProxy */;
++		};
++		9FF40704239F1AB4005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "React-macOS";
++			targetProxy = 9FF40703239F1AB4005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40706239F1ADA005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTText-macos";
++			targetProxy = 9FF40705239F1ADA005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40708239F1AE1005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTWebSocket-macOS";
++			targetProxy = 9FF40707239F1AE1005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4070A239F1AE8005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTSettings-macOS";
++			targetProxy = 9FF40709239F1AE8005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4070C239F1AEE005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTLinking-macOS";
++			targetProxy = 9FF4070B239F1AEE005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4070E239F1AF6005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTPushNotification-macOS";
++			targetProxy = 9FF4070D239F1AF6005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40710239F1AFC005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTImage-macOS";
++			targetProxy = 9FF4070F239F1AFC005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40712239F1B01005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTNetwork-macOS";
++			targetProxy = 9FF40711239F1B01005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40714239F1B09005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTAnimation-macOS";
++			targetProxy = 9FF40713239F1B09005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40716239F1B11005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTActionSheet-macOS";
++			targetProxy = 9FF40715239F1B11005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40718239F1B18005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "ART-macOS";
++			targetProxy = 9FF40717239F1B18005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4071A239F1B1D005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = "RCTBlob-macOS";
++			targetProxy = 9FF40719239F1B1D005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4071C239F1B6D005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTWebSocket;
++			targetProxy = 9FF4071B239F1B6D005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4071E239F1B72005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTVibration;
++			targetProxy = 9FF4071D239F1B72005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40720239F1B77005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTText;
++			targetProxy = 9FF4071F239F1B77005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40722239F1B7D005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTSettings;
++			targetProxy = 9FF40721239F1B7D005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40724239F1B83005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTPushNotification;
++			targetProxy = 9FF40723239F1B83005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40726239F1B88005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTLinking;
++			targetProxy = 9FF40725239F1B88005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40728239F1B8D005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTImage;
++			targetProxy = 9FF40727239F1B8D005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4072A239F1B92005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTNetwork;
++			targetProxy = 9FF40729239F1B92005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4072C239F1B98005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTCameraRoll;
++			targetProxy = 9FF4072B239F1B98005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4072E239F1B9E005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTAnimation;
++			targetProxy = 9FF4072D239F1B9E005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40730239F1BA4005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTActionSheet;
++			targetProxy = 9FF4072F239F1BA4005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40732239F1BAB005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = ART;
++			targetProxy = 9FF40731239F1BAB005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40734239F1BB1005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTBlob;
++			targetProxy = 9FF40733239F1BB1005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40736239F1BB7005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = React;
++			targetProxy = 9FF40735239F1BB7005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40738239F1BC9005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTWebSocket;
++			targetProxy = 9FF40737239F1BC9005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4073A239F1BCE005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTVibration;
++			targetProxy = 9FF40739239F1BCE005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4073C239F1BD4005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTText;
++			targetProxy = 9FF4073B239F1BD4005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4073E239F1BD9005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTSettings;
++			targetProxy = 9FF4073D239F1BD9005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40740239F1BE1005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTPushNotification;
++			targetProxy = 9FF4073F239F1BE1005F0C58 /* PBXContainerItemProxy */;
+ 		};
+-		2DD323A11DA2DD8B000FE1B8 /* Sources */ = {
+-			isa = PBXSourcesBuildPhase;
+-			buildActionMask = 2147483647;
+-			files = (
+-				2D4BD8DC1DA2E20D005AC8A8 /* RCTImageLoaderTests.m in Sources */,
+-				2D4BD8D91DA2E20D005AC8A8 /* RCTEventDispatcherTests.m in Sources */,
+-				2D4BD8D41DA2E20D005AC8A8 /* RCTAllocationTests.m in Sources */,
+-				2D4BD8DA1DA2E20D005AC8A8 /* RCTGzipTests.m in Sources */,
+-				2D4BD8DB1DA2E20D005AC8A8 /* RCTImageLoaderHelpers.m in Sources */,
+-				2D4BD8D71DA2E20D005AC8A8 /* RCTConvert_NSURLTests.m in Sources */,
+-				C60A228321C9726800B820FE /* RCTFormatErrorTests.m in Sources */,
+-				2D4BD8E21DA2E20D005AC8A8 /* RCTModuleMethodTests.mm in Sources */,
+-				2D4BD8DF1DA2E20D005AC8A8 /* RCTMethodArgumentTests.m in Sources */,
+-				2D4BD8D31DA2E20D005AC8A8 /* RCTBundleURLProviderTests.m in Sources */,
+-				2D4BD8D21DA2E20D005AC8A8 /* RCTURLUtilsTests.m in Sources */,
+-				2D8C2E321DA40403000EE098 /* RCTMultipartStreamReaderTests.m in Sources */,
+-				2D4BD8DE1DA2E20D005AC8A8 /* RCTJSONTests.m in Sources */,
+-				2D4BD8E31DA2E20D005AC8A8 /* RCTShadowViewTests.m in Sources */,
+-				2D4BD8D81DA2E20D005AC8A8 /* RCTFontTests.m in Sources */,
+-				2D4BD8DD1DA2E20D005AC8A8 /* RCTImageUtilTests.m in Sources */,
+-				2D4BD8E41DA2E20D005AC8A8 /* RCTUIManagerTests.m in Sources */,
+-			);
+-			runOnlyForDeploymentPostprocessing = 0;
++		9FF40742239F1BE5005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTLinking;
++			targetProxy = 9FF40741239F1BE5005F0C58 /* PBXContainerItemProxy */;
+ 		};
+-		3D13F83A1D6F6AE000E69E0E /* Sources */ = {
+-			isa = PBXSourcesBuildPhase;
+-			buildActionMask = 2147483647;
+-			files = (
+-			);
+-			runOnlyForDeploymentPostprocessing = 0;
++		9FF40744239F1BEB005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTImage;
++			targetProxy = 9FF40743239F1BEB005F0C58 /* PBXContainerItemProxy */;
+ 		};
+-/* End PBXSourcesBuildPhase section */
+-
+-/* Begin PBXTargetDependency section */
+-		143BC59C1B21E3E100462512 /* PBXTargetDependency */ = {
++		9FF40746239F1BF1005F0C58 /* PBXTargetDependency */ = {
+ 			isa = PBXTargetDependency;
+-			target = 13B07F861A680F5B00A75B9A /* RNTester */;
+-			targetProxy = 143BC59B1B21E3E100462512 /* PBXContainerItemProxy */;
++			name = RCTNetwork;
++			targetProxy = 9FF40745239F1BF1005F0C58 /* PBXContainerItemProxy */;
+ 		};
+-		2D4624C21DA2EA6900C74D09 /* PBXTargetDependency */ = {
++		9FF40748239F1BF6005F0C58 /* PBXTargetDependency */ = {
+ 			isa = PBXTargetDependency;
+-			target = 2DD3238F1DA2DD8A000FE1B8 /* RNTester-tvOS */;
+-			targetProxy = 2D4624C31DA2EA6900C74D09 /* PBXContainerItemProxy */;
++			name = RCTCameraRoll;
++			targetProxy = 9FF40747239F1BF6005F0C58 /* PBXContainerItemProxy */;
+ 		};
+-		3D13F84C1D6F6B5F00E69E0E /* PBXTargetDependency */ = {
++		9FF4074A239F1BFE005F0C58 /* PBXTargetDependency */ = {
+ 			isa = PBXTargetDependency;
+-			target = 3D13F83D1D6F6AE000E69E0E /* RNTesterBundle */;
+-			targetProxy = 3D13F84B1D6F6B5F00E69E0E /* PBXContainerItemProxy */;
++			name = RCTAnimation;
++			targetProxy = 9FF40749239F1BFE005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4074C239F1C04005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTActionSheet;
++			targetProxy = 9FF4074B239F1C04005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF4074E239F1C09005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = ART;
++			targetProxy = 9FF4074D239F1C09005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40750239F1C0E005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = RCTBlob;
++			targetProxy = 9FF4074F239F1C0E005F0C58 /* PBXContainerItemProxy */;
++		};
++		9FF40752239F1C15005F0C58 /* PBXTargetDependency */ = {
++			isa = PBXTargetDependency;
++			name = React;
++			targetProxy = 9FF40751239F1C15005F0C58 /* PBXContainerItemProxy */;
+ 		};
+ /* End PBXTargetDependency section */
+ 
+@@ -1869,12 +3654,24 @@
+ 			path = RNTester;
+ 			sourceTree = "<group>";
+ 		};
++		18FC77931EF4770B002B3F17 /* Main.storyboard */ = {
++			isa = PBXVariantGroup;
++			children = (
++				18FC77941EF4770B002B3F17 /* Base */,
++			);
++			name = Main.storyboard;
++			sourceTree = "<group>";
++		};
+ /* End PBXVariantGroup section */
+ 
+ /* Begin XCBuildConfiguration section */
+ 		004D28A61AAF61C70097A701 /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/RNTesterUnitTests",
++				);
+ 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+ 				HEADER_SEARCH_PATHS = (
+ 					"$(inherited)",
+@@ -1895,6 +3692,10 @@
+ 		004D28A71AAF61C70097A701 /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/RNTesterUnitTests",
++				);
+ 				HEADER_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"$(SRCROOT)/RNTesterUnitTests",
+@@ -1914,6 +3715,10 @@
+ 		13B07F941A680F5B00A75B9A /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
+ 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+ 				BUNDLE_CONFIG = "$(SRCROOT)/../metro.config.js";
+ 				DEVELOPMENT_TEAM = VYK7DLU38Z;
+@@ -1941,6 +3746,10 @@
+ 		13B07F951A680F5B00A75B9A /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
+ 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+ 				BUNDLE_CONFIG = "$(SRCROOT)/../metro.config.js";
+ 				DEVELOPMENT_TEAM = VYK7DLU38Z;
+@@ -1995,6 +3804,151 @@
+ 			};
+ 			name = Release;
+ 		};
++		18D8D9A521C06BCE00E0CCAC /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Debug;
++		};
++		18D8D9A621C06BCE00E0CCAC /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Release;
++		};
++		18FC77AD1EF4770B002B3F17 /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				DEBUG_INFORMATION_FORMAT = dwarf;
++				INFOPLIST_FILE = "RNTester-macOS/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOS";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++			};
++			name = Debug;
++		};
++		18FC77AE1EF4770B002B3F17 /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				COPY_PHASE_STRIP = NO;
++				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
++				INFOPLIST_FILE = "RNTester-macOS/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOS";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++			};
++			name = Release;
++		};
++		18FC77AF1EF4770B002B3F17 /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				DEBUG_INFORMATION_FORMAT = dwarf;
++				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/RNTesterUnitTests",
++				);
++				INFOPLIST_FILE = "RNTester-macOSUnitTests/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
++				MACOSX_DEPLOYMENT_TARGET = 10.10;
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOSUnitTests";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++			};
++			name = Debug;
++		};
++		18FC77B01EF4770B002B3F17 /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				COPY_PHASE_STRIP = NO;
++				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
++				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/RNTesterUnitTests",
++				);
++				INFOPLIST_FILE = "RNTester-macOSUnitTests/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
++				MACOSX_DEPLOYMENT_TARGET = 10.10;
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOSUnitTests";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++			};
++			name = Release;
++		};
++		18FC77B11EF4770B002B3F17 /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				DEBUG_INFORMATION_FORMAT = dwarf;
++				INFOPLIST_FILE = "RNTester-macOSIntegrationTests/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
++				MACOSX_DEPLOYMENT_TARGET = 10.11;
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOSIntegrationTests";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				PROVISIONING_PROFILE = "";
++				SDKROOT = macosx;
++				TEST_TARGET_NAME = "RNTester-macOS";
++			};
++			name = Debug;
++		};
++		18FC77B21EF4770B002B3F17 /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CODE_SIGN_IDENTITY = "-";
++				COMBINE_HIDPI_IMAGES = YES;
++				COPY_PHASE_STRIP = NO;
++				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
++				INFOPLIST_FILE = "RNTester-macOSIntegrationTests/Info.plist";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
++				MACOSX_DEPLOYMENT_TARGET = 10.11;
++				PRODUCT_BUNDLE_IDENTIFIER = "RCT.RNTester-macOSIntegrationTests";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				PROVISIONING_PROFILE = "";
++				SDKROOT = macosx;
++				TEST_TARGET_NAME = "RNTester-macOS";
++			};
++			name = Release;
++		};
+ 		2D4624DE1DA2EA6900C74D09 /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+@@ -2208,7 +4162,7 @@
+ 				GCC_OPTIMIZATION_LEVEL = 0;
+ 				GCC_PREPROCESSOR_DEFINITIONS = (
+ 					"DEBUG=1",
+-					"$(inherited)",
++					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)IntegrationTests/ReferenceImages\\\"\"",
+ 				);
+ 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+ 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+@@ -2227,6 +4181,7 @@
+ 				GCC_WARN_UNUSED_LABEL = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+ 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
++				MACOSX_DEPLOYMENT_TARGET = 10.10;
+ 				MTL_ENABLE_DEBUG_INFO = YES;
+ 				ONLY_ACTIVE_ARCH = YES;
+ 				OTHER_CPLUSPLUSFLAGS = (
+@@ -2300,6 +4255,7 @@
+ 				GCC_WARN_UNUSED_LABEL = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+ 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
++				MACOSX_DEPLOYMENT_TARGET = 10.10;
+ 				MTL_ENABLE_DEBUG_INFO = NO;
+ 				OTHER_CPLUSPLUSFLAGS = (
+ 					"$(OTHER_CFLAGS)",
+@@ -2321,6 +4277,114 @@
+ 			};
+ 			name = Release;
+ 		};
++		9F61697C225FB3F1008F89F1 /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Debug;
++		};
++		9F61697D225FB3F1008F89F1 /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Release;
++		};
++		9F6169A2225FB40C008F89F1 /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Debug;
++		};
++		9F6169A3225FB40C008F89F1 /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				ARCHS = (
++					"$(ARCHS_STANDARD)",
++					arm64e,
++				);
++				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SKIP_INSTALL = YES;
++				TARGETED_DEVICE_FAMILY = "1,2";
++			};
++			name = Release;
++		};
++		9FBFA517233C7E4C003D9A8D /* Debug */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CLANG_ENABLE_OBJC_WEAK = YES;
++				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
++				CODE_SIGN_STYLE = Automatic;
++				COMBINE_HIDPI_IMAGES = YES;
++				DEBUG_INFORMATION_FORMAT = dwarf;
++				DEVELOPMENT_TEAM = UBF8T346G9;
++				GCC_PREPROCESSOR_DEFINITIONS = (
++					"DEBUG=1",
++					"$(inherited)",
++				);
++				INFOPLIST_FILE = "RNTesterBundle-macOS/Info.plist";
++				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
++				MACOSX_DEPLOYMENT_TARGET = 10.14;
++				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
++				MTL_FAST_MATH = YES;
++				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.RNTesterBundle-macOS";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++				SKIP_INSTALL = YES;
++				WRAPPER_EXTENSION = bundle;
++			};
++			name = Debug;
++		};
++		9FBFA518233C7E4C003D9A8D /* Release */ = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
++				CLANG_ANALYZER_NONNULL = YES;
++				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
++				CLANG_ENABLE_OBJC_WEAK = YES;
++				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
++				CODE_SIGN_STYLE = Automatic;
++				COMBINE_HIDPI_IMAGES = YES;
++				COPY_PHASE_STRIP = NO;
++				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
++				DEVELOPMENT_TEAM = UBF8T346G9;
++				INFOPLIST_FILE = "RNTesterBundle-macOS/Info.plist";
++				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
++				MACOSX_DEPLOYMENT_TARGET = 10.14;
++				MTL_FAST_MATH = YES;
++				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.RNTesterBundle-macOS";
++				PRODUCT_NAME = "$(TARGET_NAME)";
++				SDKROOT = macosx;
++				SKIP_INSTALL = YES;
++				WRAPPER_EXTENSION = bundle;
++			};
++			name = Release;
++		};
+ /* End XCBuildConfiguration section */
+ 
+ /* Begin XCConfigurationList section */
+@@ -2351,6 +4415,42 @@
+ 			defaultConfigurationIsVisible = 0;
+ 			defaultConfigurationName = Release;
+ 		};
++		18D8D9C121C06BCE00E0CCAC /* Build configuration list for PBXNativeTarget "iosDeviceBuild" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				18D8D9A521C06BCE00E0CCAC /* Debug */,
++				18D8D9A621C06BCE00E0CCAC /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
++		18FC77F01EF4770B002B3F17 /* Build configuration list for PBXNativeTarget "RNTester-macOS" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				18FC77AD1EF4770B002B3F17 /* Debug */,
++				18FC77AE1EF4770B002B3F17 /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
++		18FC77F11EF4770B002B3F17 /* Build configuration list for PBXNativeTarget "RNTester-macOSUnitTests" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				18FC77AF1EF4770B002B3F17 /* Debug */,
++				18FC77B01EF4770B002B3F17 /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
++		18FC77F21EF4770B002B3F17 /* Build configuration list for PBXNativeTarget "RNTester-macOSIntegrationTests" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				18FC77B11EF4770B002B3F17 /* Debug */,
++				18FC77B21EF4770B002B3F17 /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
+ 		2D4624DD1DA2EA6900C74D09 /* Build configuration list for PBXNativeTarget "RNTester-tvOSIntegrationTests" */ = {
+ 			isa = XCConfigurationList;
+ 			buildConfigurations = (
+@@ -2396,6 +4496,33 @@
+ 			defaultConfigurationIsVisible = 0;
+ 			defaultConfigurationName = Release;
+ 		};
++		9F61697B225FB3F1008F89F1 /* Build configuration list for PBXNativeTarget "iosSimulatorBuild" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				9F61697C225FB3F1008F89F1 /* Debug */,
++				9F61697D225FB3F1008F89F1 /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
++		9F6169A1225FB40C008F89F1 /* Build configuration list for PBXNativeTarget "macOSBuild" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				9F6169A2225FB40C008F89F1 /* Debug */,
++				9F6169A3225FB40C008F89F1 /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
++		9FBFA516233C7E4C003D9A8D /* Build configuration list for PBXNativeTarget "RNTesterBundle-macOS" */ = {
++			isa = XCConfigurationList;
++			buildConfigurations = (
++				9FBFA517233C7E4C003D9A8D /* Debug */,
++				9FBFA518233C7E4C003D9A8D /* Release */,
++			);
++			defaultConfigurationIsVisible = 0;
++			defaultConfigurationName = Release;
++		};
+ /* End XCConfigurationList section */
+ 	};
+ 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;

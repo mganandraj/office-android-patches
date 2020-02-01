@@ -3,6 +3,14 @@ import fse from 'fs-extra';
 import fs_path from 'path';
 import {pathToFileURL} from 'url';
 
+const log = require('simple-node-logger').createSimpleFileLogger(
+  'E:\\github\\office-android-patches\\patch-fs.log',
+);
+
+export function resolvePath(base: string, relative: string): string {
+  return fs_path.resolve(base, relative);
+}
+
 export function isDirectory(path: string) {
   try {
     return fs.lstatSync(path).isDirectory();
@@ -54,13 +62,6 @@ export function writeFile(
     const absPath2 = fs_path.resolve(absPath1, name);
 
     fs.writeFileSync(absPath2, data);
-
-    //   fs.writeFile(absPath2, data, err => {
-    //     if (err)
-    //       throw new Error(
-    //         'File Writing Failed::' + basepath + '::' + relativefilepath,
-    //       );
-    //   });
   } catch (e) {
     throw new Error(
       'File Writing Failed::' + basepath + '::' + relativefilepath + '::' + e,
@@ -114,26 +115,10 @@ export function lookUpRelativePath(
   }
 }
 
-export function nukeDirectory(path: string) {
-  if (fs.existsSync(path)) {
-    fs.readdirSync(path).forEach(childFile => {
-      const childPath = fs_path.resolve(path, childFile);
-      if (fs.lstatSync(childPath).isDirectory()) {
-        // recurse
-        nukeDirectory(childPath);
-      } else {
-        // delete file
-        fs.unlinkSync(childPath);
-      }
-    });
-    fs.rmdirSync(path);
-  }
-}
-
 export function initDirectory(path: string) {
-  nukeDirectory(path);
-  if (fs.existsSync(path)) {
+  fse.removeSync(path);
+  if (fse.existsSync(path)) {
     throw new Error("Output directory can't be nuked !! (" + path + ')');
   }
-  fs.mkdirSync(path);
+  fse.ensureDirSync(path);
 }

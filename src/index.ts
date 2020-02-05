@@ -1,27 +1,11 @@
-const {diffReactNativeForks} = require('./diffReactNativeForks');
-const {patchReactNativeFork} = require('./patchReactNativeFork');
-const {resolvePath} = require('./fs_utils');
+import {diffReactNativeForks} from './diffReactNativeForks';
+import {patchReactNativeFork} from './patchReactNativeFork';
+import {resolvePath} from './fs_utils';
+import {InterfaceCLI, getArgs} from './cli';
+import {log} from './logger';
 
-const log = require('simple-node-logger').createSimpleFileLogger(
-  'E:\\github\\office-android-patches\\patch-main.log',
-);
-
-const basePath = 'E:\\github';
-
-// clean clone of MS fork
-const msForkBasePath = resolvePath(basePath, 'ms-react-native-forpatch');
-
-// clean clone of FB repo checked out at the right tag.
-const fbRepoBasePath = resolvePath(basePath, 'fb-react-native-forpatch-base');
-const fbRepoPatchedPath = resolvePath(
-  basePath,
-  'fb-react-native-forpatch-patched',
-);
-
-const patchesRootPath = resolvePath(
-  basePath,
-  'office-android-patches\\patches',
-);
+log.info('Main', 'Program starting.');
+const args = getArgs();
 
 // Places we don't want to look for changes
 const topLevelBlackListDirs = [
@@ -84,11 +68,13 @@ const topLevelBlackListDirs = [
   'yarn.lock',
 ];
 
-// diffReactNativeForks(
-//   fbRepoBasePath,
-//   msForkBasePath,
-//   patchesRootPath,
-//   topLevelBlackListDirs,
-// );
-
-patchReactNativeFork(fbRepoPatchedPath, patchesRootPath);
+if (args.createPatch) {
+  diffReactNativeForks(
+    args.baseFork,
+    args.dirtyFork,
+    args.patchFolder,
+    topLevelBlackListDirs,
+  );
+} else {
+  patchReactNativeFork(args.targetFork, args.patchFolder);
+}

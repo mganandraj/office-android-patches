@@ -1,17 +1,13 @@
-const {
+import {
   traverseDirectory,
   writeFile,
   getRelativePath,
   lookUpRelativePath,
   initDirectory,
   resolvePath,
-} = require('./fs_utils');
-
-const {createPatch} = require('./patch_utils');
-
-const log = require('simple-node-logger').createSimpleFileLogger(
-  'E:\\github\\office-android-patches\\patch-diff.log',
-);
+} from './fs_utils';
+import {createPatch} from './patch_utils';
+import {log} from './logger';
 
 export function diffReactNativeForks(
   fbRepoAbsPath: string,
@@ -45,8 +41,7 @@ export function diffReactNativeForks(
     };
 
     const callbackOnMiss = (second: string) => {
-      // tslint:disable-next-line:no-console
-      console.log('Only in MS:: ' + forkFileAbsPath);
+      log.info('diffRNFork', `Only in MS:: ${forkFileAbsPath}`);
       // writeFile(msOnlyPath, msForkFileRelativePath, 'data');
     };
 

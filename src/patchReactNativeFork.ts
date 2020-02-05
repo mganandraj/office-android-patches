@@ -1,19 +1,14 @@
-const {
+import {
   traverseDirectory,
   writeFile,
   getRelativePath,
   lookUpRelativePath,
   initDirectory,
   resolvePath,
-} = require('./fs_utils');
+} from './fs_utils';
+import {log} from './logger';
+import {applyPatch} from './patch_utils';
 
-const log = require('simple-node-logger').createSimpleFileLogger(
-  'E:\\github\\office-android-patches\\patch-apply.log',
-);
-
-log.set;
-
-const {applyPatch} = require('./patch_utils');
 export function patchReactNativeFork(
   targetRepoAbsPath: string,
   patchesRootAbsPath: string,
@@ -33,7 +28,7 @@ export function patchReactNativeFork(
       //   writeFile(bothPath, forkFileRelativePath, `${patch}`);
       // };
       applyPatch(hitPatchFileAbsPath, patchFileAbsPath, (result: string) => {
-        log.info(result);
+        log.info('PatchRNFork', result);
       });
     };
 

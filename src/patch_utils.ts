@@ -1,8 +1,6 @@
 const {spawn} = require('child_process');
 
-const log = require('simple-node-logger').createSimpleFileLogger(
-  'E:\\github\\office-android-patches\\patch-exec.log',
-);
+import {log} from './logger';
 
 // Returns patch between files as string
 // Return empty string when files are identical
@@ -23,7 +21,7 @@ export function createPatch(
   });
 
   patch.on('close', (code: any) => {
-    log.info(`git child process exited with code ${code}`);
+    log.info('Patch', `git child process exited with code ${code}`);
   });
 }
 
@@ -35,6 +33,7 @@ export function applyPatch(
   const patchArgs = ['-i', patchPath, targetPath, '-s'];
   const patch = spawn('C:\\Program Files\\Git\\usr\\bin\\patch.exe', patchArgs);
   log.info(
+    'Patch',
     'Calling C:\\Program Files\\Git\\usr\\bin\\patch.exe ' +
       patchArgs.toString(),
   );
@@ -53,6 +52,6 @@ export function applyPatch(
   });
 
   patch.on('close', (code: any) => {
-    log.info(`patch child process exited with code ${code}`);
+    log.info('Patch', `patch child process exited with code ${code}`);
   });
 }

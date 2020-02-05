@@ -2,10 +2,7 @@ import fs from 'fs';
 import fse from 'fs-extra';
 import fs_path from 'path';
 import {pathToFileURL} from 'url';
-
-const log = require('simple-node-logger').createSimpleFileLogger(
-  'E:\\github\\office-android-patches\\patch-fs.log',
-);
+import {log} from './logger';
 
 export function resolvePath(base: string, relative: string): string {
   return fs_path.resolve(base, relative);

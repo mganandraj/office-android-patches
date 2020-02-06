@@ -17,9 +17,8 @@ export function diffFiles(
   callback: (diff: string) => void,
   errorcallback: (error: string) => void,
 ) {
-  const diffArgs = path1IsNew
-    ? [path1, path2, '--unidirectional-new-file']
-    : [path1, path2];
+  const diffArgs = [path1, path2, '-u' /*-U 3*/];
+  if (path1IsNew) diffArgs.push('--unidirectional-new-file');
 
   const diff = spawn(diffExecutable, diffArgs);
 

@@ -5,7 +5,6 @@ import fse from 'fs-extra';
 program.version('0.0.1');
 
 export interface InterfaceCLI extends program.Command {
-  debug?: boolean;
   createPatch?: boolean;
   applyPatch?: boolean;
   dirtyFork?: string;
@@ -14,14 +13,75 @@ export interface InterfaceCLI extends program.Command {
   patchFolder?: string;
   patchExecutable?: string;
   diffExecutable?: string;
+  toplevelBlacklistDirs?: string[];
 }
 
+// Places we don't want to look for changes
+const defaultTopLevelBlackListDirs = [
+  '.ado',
+  '.appveyor',
+  '.circleci',
+  '.editorconfig',
+  '.eslintignore',
+  '.eslintrc',
+  '.flowconfig',
+  '.flowconfig.android',
+  '.flowconfig.macos',
+  '.git',
+  '.gitattributes',
+  '.github',
+  '.github.flowconfig.android',
+  '.gitignore',
+  '.nvmrc',
+  '.prettierrc',
+  'bots',
+  'Brewfile',
+  //'build.gradle', //'CHANGELOG.json', //'CHANGELOG.md', //'cli.js', //'CODE_OF_CONDUCT.md', //'ContainerShip', //'CONTRIBUTING.md',
+  'danger',
+  'double-conversion',
+  //'ECOSYSTEM.md',
+  'flow',
+  'flow-typed',
+  'Folly',
+  'follybuild',
+  'glog',
+  //'gradle', //'gradlew', //'gradlew.bat', //'IntegrationTests',
+  'jest',
+  'jest-preset.js',
+  'jest.config.js',
+  'jsc',
+  //'KeepingRecent.md',
+  'keystores',
+  'lib',
+  //'Libraries', //'LICENSE', //'LICENSE-docs', //'local-cli',
+  'metadata',
+  //'metro.config.js',
+  'office-android-patches',
+  //'package.json',
+  'packages',
+  //'processor',
+  'React',
+  //'react-native.config.js', //'react.gradle',
+  'React.podspec',
+  //'ReactAndroid',
+  'ReactApple',
+  //'ReactCommon', //'README.md', //'Releases.md', //'rn-get-polyfills.js', //'RNTester',
+  'runXcodeTests.sh',
+  //'scripts', //'settings.gradle.kts',
+  'stubs',
+  //'template', //'template.config.js',
+  'third-party-podspecs',
+  //'tools',
+  'v8-docker-build',
+  'website',
+  'yarn.lock',
+];
+
 const cli: InterfaceCLI = program
-  .option('-d, --debug', 'output extra debugging')
   .option(
-    '-p, --create-patch',
+    '-d, --create-patch',
     'Create patch files. Specify both dirty fork and base fork',
-    false,
+    true,
   )
   .option(
     '-df, --dirty-fork <path>',
@@ -34,14 +94,14 @@ const cli: InterfaceCLI = program
     'E:\\github\\fb-react-native-forpatch-base',
   )
   .option(
-    '-a, --apply-patch',
+    '-p, --apply-patch',
     'Apply patch files. Specify both the target fork to apply the patches and the path to path store',
     false,
   )
   .option(
     '-tf, --target-fork <path>',
     'Path to target fork where the patches will be applied',
-    'E:\\github\\fb-react-native-forpatch-patched',
+    'E:\\fb-react-native-forpatch-patched',
   )
   .option(
     '-pf, --patch-folder <path>',
@@ -58,9 +118,14 @@ const cli: InterfaceCLI = program
     'Full path of the diff utility to be used for diffing between files. What we expect is a *x diff utility or compatible one: http://man7.org/linux/man-pages/man1/diff.1.html',
     'C:\\Program Files\\Git\\usr\\bin\\diff.exe',
   )
+  .option(
+    '-bl, --toplevel-blacklist-dirs <name>',
+    'Top-level directory in fork to be excluded from the patch creation and application',
+    defaultTopLevelBlackListDirs,
+  )
   .on('--help', function() {
-    log.info('Main', '-p -df <dirty fork path> -bf <base fork path>');
-    log.info('Main', '-a -tf <target fork path> -pf <patch folder>');
+    log.info('Main', '-d -df <dirty fork path> -bf <base fork path>');
+    log.info('Main', '-p -pf <patch folder> -tf <target fork path>');
     log.info('Main', '-h --help');
   })
   .parse(process.argv);
@@ -138,6 +203,7 @@ log.info('Main', `cli.applyPatch: ${cli.applyPatch}`);
 log.info('Main', `cli.createPatch: ${cli.createPatch}`);
 log.info('Main', `cli.patchExecutable: ${cli.patchExecutable}`);
 log.info('Main', `cli.diffExecutable: ${cli.diffExecutable}`);
+log.info('Main', `cli.toplevelBlacklistDirs: ${cli.toplevelBlacklistDirs}`);
 
 export function getArgs(): InterfaceCLI {
   return cli;

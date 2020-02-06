@@ -5,9 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "build": "tsc",
-    "start": "node dist//index.js",
-    "test": "npm run lint && npm run build && npm start"
+    "start": "node_modules\\.bin\\ts-node src\\index.ts",
+    "test": "npm run lint && npm start"
   },
   "author": "",
   "license": "ISC",

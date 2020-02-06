@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LayoutEventsExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LayoutEventsExample.js"
-index 74a285e..6b63ba1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LayoutEventsExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LayoutEventsExample.js"
-@@ -14,6 +14,7 @@ const React = require('react');
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LayoutEventsExample.js"	2020-01-30 13:55:48.077612500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LayoutEventsExample.js"	2020-01-29 14:10:09.173886200 -0800
+@@ -14,6 +14,7 @@
  const {
    Image,
    LayoutAnimation,
@@ -10,7 +8,7 @@ index 74a285e..6b63ba1 100644
    StyleSheet,
    Text,
    View,
-@@ -42,10 +43,15 @@ class LayoutEventExample extends React.Component<Props, State> {
+@@ -42,10 +43,15 @@
    };
  
    animateViewLayout = () => {

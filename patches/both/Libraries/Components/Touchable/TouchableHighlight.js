@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableHighlight.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableHighlight.js"
-index b9e5529..c7dd414 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableHighlight.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableHighlight.js"
-@@ -405,9 +405,21 @@ const TouchableHighlight = ((createReactClass({
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableHighlight.js"	2020-01-30 13:55:47.882607500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableHighlight.js"	2020-01-29 14:10:08.873882700 -0800
+@@ -405,9 +405,21 @@
        <View
          accessible={this.props.accessible !== false}
          accessibilityLabel={this.props.accessibilityLabel}
@@ -25,7 +23,7 @@ index b9e5529..c7dd414 100644
          style={StyleSheet.compose(
            this.props.style,
            this.state.extraUnderlayStyle,
-@@ -434,6 +446,13 @@ const TouchableHighlight = ((createReactClass({
+@@ -434,6 +446,13 @@
          onResponderMove={this.touchableHandleResponderMove}
          onResponderRelease={this.touchableHandleResponderRelease}
          onResponderTerminate={this.touchableHandleResponderTerminate}

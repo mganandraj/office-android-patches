@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewAccessibility.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewAccessibility.js"
-index ab23281..f54ef11 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewAccessibility.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewAccessibility.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewAccessibility.js"	2020-01-30 13:55:47.886607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewAccessibility.js"	2020-01-29 14:10:08.878882100 -0800
 @@ -12,6 +12,11 @@
  
  import type {SyntheticEvent} from 'CoreEventTypes';

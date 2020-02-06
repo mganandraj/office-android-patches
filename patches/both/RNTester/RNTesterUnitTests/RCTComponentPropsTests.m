@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m"
-index 9b66322..8ad7b1a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m"	2020-01-30 13:55:48.060609000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTComponentPropsTests.m"	2020-01-29 14:10:09.106911500 -0800
 @@ -8,7 +8,11 @@
  
  #import <XCTest/XCTest.h>
@@ -32,7 +30,7 @@ index 9b66322..8ad7b1a 100644
  {
    RCTPropsTestView *view = [RCTPropsTestView new];
    view.integerProp = 57;
-@@ -111,7 +115,7 @@ RCT_CUSTOM_VIEW_PROPERTY(customProp, NSString, RCTPropsTestView)
+@@ -111,7 +115,7 @@
  
    dispatch_async(uiManager.methodQueue, ^{
      [uiManager createView:@2 viewName:@"RCTPropsTestView" rootTag:self->_rootViewReactTag props:props];
@@ -41,7 +39,7 @@ index 9b66322..8ad7b1a 100644
        view = (RCTPropsTestView *)viewRegistry[@2];
        XCTAssertEqual(view.integerProp, 58);
        XCTAssertEqualObjects(view.objectProp, @10);
-@@ -134,13 +138,13 @@ RCT_CUSTOM_VIEW_PROPERTY(customProp, NSString, RCTPropsTestView)
+@@ -134,13 +138,13 @@
    
    dispatch_async(uiManager.methodQueue, ^{
      [uiManager createView:@2 viewName:@"RCTPropsTestView" rootTag:self->_rootViewReactTag props:@{}];
@@ -57,7 +55,7 @@ index 9b66322..8ad7b1a 100644
        view = (RCTPropsTestView *)viewRegistry[@2];
        XCTAssertEqual(view.layer.allowsGroupOpacity, FALSE);
        [updateExpectation fulfill];
-@@ -168,7 +172,7 @@ RCT_CUSTOM_VIEW_PROPERTY(customProp, NSString, RCTPropsTestView)
+@@ -168,7 +172,7 @@
    dispatch_async(uiManager.methodQueue, ^{
      [uiManager createView:@2 viewName:@"RCTPropsTestView" rootTag:self->_rootViewReactTag props:props];
      [uiManager updateView:@2 viewName:@"RCTPropsTestView" props:resetProps];
@@ -66,7 +64,7 @@ index 9b66322..8ad7b1a 100644
        view = (RCTPropsTestView *)viewRegistry[@2];
        XCTAssertEqual(view.integerProp, 57);
        XCTAssertEqualObjects(view.objectProp, @9);
-@@ -190,12 +194,12 @@ RCT_CUSTOM_VIEW_PROPERTY(customProp, NSString, RCTPropsTestView)
+@@ -190,12 +194,12 @@
  
    dispatch_async(uiManager.methodQueue, ^{
      [uiManager createView:@2 viewName:@"RCTView" rootTag:self->_rootViewReactTag props:props];

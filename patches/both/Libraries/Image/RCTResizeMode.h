@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTResizeMode.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTResizeMode.h"
-index 9d49f2d..f175d95 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTResizeMode.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTResizeMode.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTResizeMode.h"	2020-01-30 13:55:47.910611200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTResizeMode.h"	2020-01-29 14:10:08.904882100 -0800
 @@ -8,10 +8,17 @@
  #import <React/RCTConvert.h>
  

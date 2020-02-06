@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedSectionList.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedSectionList.js"
-index ebd12df..d2e2653 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedSectionList.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedSectionList.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedSectionList.js"	2020-01-30 13:55:47.925608600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedSectionList.js"	2020-01-29 14:10:08.926884100 -0800
 @@ -12,11 +12,16 @@
  const React = require('react');
  const View = require('../Components/View/View');
@@ -20,7 +18,7 @@ index ebd12df..d2e2653 100644
  
  type Item = any;
  
-@@ -35,6 +40,7 @@ export type SectionBase<SectionItemT> = {
+@@ -35,6 +40,7 @@
    renderItem?: ?(info: {
      item: SectionItemT,
      index: number,
@@ -28,20 +26,20 @@ index ebd12df..d2e2653 100644
      section: SectionBase<SectionItemT>,
      separators: {
        highlight: () => void,
-@@ -51,6 +57,12 @@ type RequiredProps<SectionT: SectionBase<any>> = {
- };
+@@ -52,6 +58,12 @@
  
  type OptionalProps<SectionT: SectionBase<any>> = {
-+  /**
+   /**
 +   * Handles key down events and updates selection based on the key event
 +   *
 +   * @platform macos
 +   */
 +  enableSelectionOnKeyPress?: ?boolean, // TODO(macOS ISS#2323203)
-   /**
++  /**
     * Rendered after the last item in the last section.
     */
-@@ -65,6 +77,7 @@ type OptionalProps<SectionT: SectionBase<any>> = {
+   ListFooterComponent?: ?(React.ComponentType<any> | React.Element<any>),
+@@ -65,6 +77,7 @@
    renderItem?: (info: {
      item: Item,
      index: number,
@@ -49,11 +47,10 @@ index ebd12df..d2e2653 100644
      section: SectionT,
      separators: {
        highlight: () => void,
-@@ -102,6 +115,19 @@ type OptionalProps<SectionT: SectionBase<any>> = {
-    * sure to also set the `refreshing` prop correctly.
+@@ -103,6 +116,19 @@
     */
    onRefresh?: ?() => void,
-+  /**
+   /**
 +   * If provided, processes key press and mouse click events to update selection state
 +   * and invokes the provided function to notify of selection state changes.
 +   *
@@ -66,10 +63,11 @@ index ebd12df..d2e2653 100644
 +   * @platform macos
 +   */
 +  onSelectionEntered?: ?Function, // TODO(macOS ISS#2323203)
-   /**
++  /**
     * Called when the viewability of rows changes, as defined by the
     * `viewabilityConfig` prop.
-@@ -123,7 +149,10 @@ export type Props<SectionT> = RequiredProps<SectionT> &
+    */
+@@ -123,7 +149,10 @@
  type DefaultProps = typeof VirtualizedList.defaultProps & {
    data: $ReadOnlyArray<Item>,
  };
@@ -81,7 +79,7 @@ index ebd12df..d2e2653 100644
  
  /**
   * Right now this just flattens everything into one list and uses VirtualizedList under the
-@@ -203,12 +232,127 @@ class VirtualizedSectionList<
+@@ -203,12 +232,127 @@
            ? stickyHeaderIndices
            : undefined,
        },
@@ -210,7 +208,7 @@ index ebd12df..d2e2653 100644
      );
    }
  
-@@ -305,6 +449,24 @@ class VirtualizedSectionList<
+@@ -305,6 +449,24 @@
      }
    };
  
@@ -235,7 +233,7 @@ index ebd12df..d2e2653 100644
    _renderItem = ({item, index}: {item: Item, index: number}) => {
      const info = this._subExtractor(index);
      if (!info) {
-@@ -332,6 +494,7 @@ class VirtualizedSectionList<
+@@ -332,6 +494,7 @@
            }
            cellKey={info.key}
            index={infoIndex}
@@ -243,7 +241,7 @@ index ebd12df..d2e2653 100644
            item={item}
            leadingItem={info.leadingItem}
            leadingSection={info.leadingSection}
-@@ -402,6 +565,7 @@ type ItemWithSeparatorProps = $ReadOnly<{|
+@@ -402,6 +565,7 @@
    cellKey: string,
    index: number,
    item: Item,
@@ -251,7 +249,7 @@ index ebd12df..d2e2653 100644
    onUpdateSeparator: (cellKey: string, newProps: Object) => void,
    prevCellKey?: ?string,
    renderItem: Function,
-@@ -503,11 +667,13 @@ class ItemWithSeparator extends React.Component<
+@@ -503,11 +667,13 @@
        SeparatorComponent,
        item,
        index,

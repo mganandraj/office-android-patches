@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterBlock.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterBlock.js"
-index 6999668..de9eac5 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterBlock.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterBlock.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterBlock.js"	2020-01-30 13:55:48.083612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterBlock.js"	2020-01-29 14:10:09.179886200 -0800
 @@ -12,6 +12,7 @@
  
  const React = require('react');
@@ -10,7 +8,7 @@ index 6999668..de9eac5 100644
  
  type Props = $ReadOnly<{|
    children?: React.Node,
-@@ -47,8 +48,20 @@ const styles = StyleSheet.create({
+@@ -47,8 +48,20 @@
    container: {
      borderRadius: 3,
      borderWidth: 0.5,
@@ -33,7 +31,7 @@ index 6999668..de9eac5 100644
      margin: 10,
      marginVertical: 5,
      overflow: 'hidden',
-@@ -57,12 +70,33 @@ const styles = StyleSheet.create({
+@@ -57,12 +70,33 @@
      borderBottomWidth: 0.5,
      borderTopLeftRadius: 3,
      borderTopRightRadius: 2.5,

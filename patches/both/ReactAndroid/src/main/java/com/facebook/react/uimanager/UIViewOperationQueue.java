@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java"
-index cf66d2a..aae9388 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java"
-@@ -546,6 +546,36 @@ public class UIViewOperationQueue {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java"	2020-01-30 13:55:48.376580200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java"	2020-01-29 14:10:09.456887400 -0800
+@@ -546,6 +546,36 @@
      }
    }
  
@@ -39,7 +37,7 @@ index cf66d2a..aae9388 100644
    private final NativeViewHierarchyManager mNativeViewHierarchyManager;
    private final Object mDispatchRunnablesLock = new Object();
    private final Object mNonBatchedOperationsLock = new Object();
-@@ -774,6 +804,14 @@ public class UIViewOperationQueue {
+@@ -774,6 +804,14 @@
      mOperations.add(new SendAccessibilityEvent(tag, eventType));
    }
  

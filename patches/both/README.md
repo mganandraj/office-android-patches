@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\README.md" "b/E:\\github\\ms-react-native-forpatch\\README.md"
-index f2857cf..eb0dd2b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\README.md"
-+++ "b/E:\\github\\ms-react-native-forpatch\\README.md"
+--- "E:\\github\\fb-react-native-forpatch-base\\README.md"	2020-01-30 13:55:48.035612000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\README.md"	2020-01-29 14:10:09.043915100 -0800
 @@ -1,3 +1,16 @@
 +# Working fork for Microsoft internal usage
 +### **It is not our goal to have a long term fork of facebook/react-native/**
@@ -19,7 +17,7 @@ index f2857cf..eb0dd2b 100644
  <h1 align="center">
    <a href="https://facebook.github.io/react-native/">
      React Native
-@@ -73,6 +86,7 @@ React Native is developed and supported by many companies and individual core co
+@@ -73,6 +86,7 @@
  React Native apps may target iOS 9.0 and Android 4.1 (API 16) or newer. You may use Windows, macOS, or Linux as your development operating system, though building and running iOS apps is limited to macOS. Tools like [Expo](https://expo.io) can be used to work around this.
  
  ## 🎉 Building your first React Native app

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java"
-index 21f1efa..221b504 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java"
-@@ -33,4 +33,4 @@ public class JSCExecutorFactory implements JavaScriptExecutorFactory {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java"	2020-01-30 13:55:48.313611400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\jscexecutor\\JSCExecutorFactory.java"	2020-01-29 14:10:09.396921200 -0800
+@@ -33,4 +33,4 @@
    public String toString() {
      return "JSIExecutor+JSCRuntime";
    }

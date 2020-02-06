@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js"
-index d4df33a..29b7791 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js"
-@@ -167,7 +167,10 @@ function interpolate(
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js"	2020-01-30 13:55:47.836608200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Animated\\src\\nodes\\AnimatedInterpolation.js"	2020-01-29 14:10:08.813880100 -0800
+@@ -167,7 +167,10 @@
  
  function colorToRgba(input: string): string {
    let int32Color = normalizeColor(input);

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\YellowBox\\UI\\YellowBoxList.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\YellowBox\\UI\\YellowBoxList.js"
-index 2620c35..d5caa06 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\YellowBox\\UI\\YellowBoxList.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\YellowBox\\UI\\YellowBoxList.js"
-@@ -69,6 +69,7 @@ class YellowBoxList extends React.Component<Props, State> {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\YellowBox\\UI\\YellowBoxList.js"	2020-01-30 13:55:48.027608900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\YellowBox\\UI\\YellowBoxList.js"	2020-01-29 14:10:09.032884000 -0800
+@@ -69,6 +69,7 @@
      }
  
      const listStyle = {

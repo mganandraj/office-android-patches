@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java"
-index af8b0fb..9804620 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java"
-@@ -36,7 +36,7 @@ import static com.facebook.systrace.Systrace.TRACE_TAG_REACT_JAVA_BRIDGE;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java"	2020-01-30 13:55:48.265579000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java"	2020-01-29 14:10:09.356910500 -0800
+@@ -36,7 +36,7 @@
  @DoNotStrip
  public class JavaModuleWrapper {
    @DoNotStrip
@@ -11,7 +9,7 @@ index af8b0fb..9804620 100644
      @DoNotStrip
      Method method;
      @DoNotStrip
-@@ -46,8 +46,8 @@ public class JavaModuleWrapper {
+@@ -46,8 +46,8 @@
      @DoNotStrip
      String type;
    }

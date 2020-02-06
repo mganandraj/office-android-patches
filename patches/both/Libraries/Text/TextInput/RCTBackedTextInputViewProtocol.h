@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h"
-index f2fb4f3..83e0f63 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h"	2020-01-30 13:55:47.994608100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputViewProtocol.h"	2020-01-29 14:10:08.998884600 -0800
 @@ -5,24 +5,47 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -53,7 +51,7 @@ index f2fb4f3..83e0f63 100644
  @property (nonatomic, weak, nullable) id<RCTBackedTextInputDelegate> textInputDelegate;
  @property (nonatomic, readonly) CGSize contentSize;
  @property (nonatomic, strong, nullable) RCTTextAttributes *reactTextAttributes;
-@@ -32,8 +55,19 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -32,8 +55,19 @@
  // explicitly specify should `delegate` be notified about the change or not.
  // If the change was initiated programmatically, we must NOT notify the delegate.
  // If the change was a result of user actions (like typing or touches), we MUST notify the delegate.

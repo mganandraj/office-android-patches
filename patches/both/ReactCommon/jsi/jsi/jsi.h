@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.h"
-index 14334d2..b172b5b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.h"
-@@ -150,7 +150,7 @@ class Runtime {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.h"	2020-01-30 13:55:48.608616800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.h"	2020-01-29 14:10:09.829890800 -0800
+@@ -150,7 +150,7 @@
  
    /// Evaluates the given JavaScript \c buffer.  \c sourceURL is used
    /// to annotate the stack trace if there is an exception.  The
@@ -11,7 +9,7 @@ index 14334d2..b172b5b 100644
    /// whose format is specific to the implementation.  If the input
    /// format is unknown, or evaluation causes an error, a JSIException
    /// will be thrown.
-@@ -347,7 +347,7 @@ class PropNameID : public Pointer {
+@@ -347,7 +347,7 @@
    using Pointer::Pointer;
  
    PropNameID(Runtime& runtime, const PropNameID& other)
@@ -20,7 +18,7 @@ index 14334d2..b172b5b 100644
  
    PropNameID(PropNameID&& other) = default;
    PropNameID& operator=(PropNameID&& other) = default;
-@@ -745,7 +745,7 @@ class Array : public Object {
+@@ -745,7 +745,7 @@
    template <typename... Args>
    static Array createWithElements(Runtime&, Args&&... args);
  

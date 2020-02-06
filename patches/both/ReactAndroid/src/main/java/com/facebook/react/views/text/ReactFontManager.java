@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java"
-index 21d4c17..5bc87a3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java"
-@@ -14,6 +14,7 @@ import android.content.Context;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java"	2020-01-30 13:55:48.420628400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java"	2020-01-29 14:10:09.586891200 -0800
+@@ -14,6 +14,7 @@
  import android.content.res.AssetManager;
  import android.graphics.Typeface;
  import android.os.Build;
@@ -10,7 +8,7 @@ index 21d4c17..5bc87a3 100644
  import android.util.SparseArray;
  
  import androidx.annotation.NonNull;
-@@ -41,7 +42,7 @@ public class ReactFontManager {
+@@ -41,7 +42,7 @@
    private static ReactFontManager sReactFontManagerInstance;
  
    final private Map<String, FontFamily> mFontCache;
@@ -19,7 +17,7 @@ index 21d4c17..5bc87a3 100644
  
    private ReactFontManager() {
      mFontCache = new HashMap<>();
-@@ -67,12 +68,18 @@ public class ReactFontManager {
+@@ -67,12 +68,18 @@
        int style,
        int weight,
        AssetManager assetManager) {
@@ -43,7 +41,7 @@ index 21d4c17..5bc87a3 100644
      }
  
      FontFamily fontFamily = mFontCache.get(fontFamilyName);
-@@ -102,10 +109,34 @@ public class ReactFontManager {
+@@ -102,10 +109,34 @@
    public void addCustomFont(@NonNull Context context, @NonNull String fontFamily, int fontId) {
      Typeface font = ResourcesCompat.getFont(context, fontId);
      if (font != null) {

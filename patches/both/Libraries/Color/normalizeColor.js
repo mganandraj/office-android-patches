@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Color\\normalizeColor.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Color\\normalizeColor.js"
-index 811b553..c1c3a40 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Color\\normalizeColor.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Color\\normalizeColor.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Color\\normalizeColor.js"	2020-01-30 13:55:47.853609700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Color\\normalizeColor.js"	2020-01-29 14:10:08.827881400 -0800
 @@ -11,7 +11,15 @@
  /* eslint no-bitwise: 0 */
  'use strict';
@@ -19,7 +17,7 @@ index 811b553..c1c3a40 100644
    const matchers = getMatchers();
    let match;
  
-@@ -22,6 +30,21 @@ function normalizeColor(color: string | number): ?number {
+@@ -22,6 +30,21 @@
      return null;
    }
  

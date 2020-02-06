@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m"
-index 5a2af1c..f1a467e 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m"
-@@ -24,7 +24,7 @@ RCT_EXPORT_MODULE()
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m"	2020-01-30 13:55:48.000611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTSinglelineTextInputViewManager.m"	2020-01-29 14:10:09.003917100 -0800
+@@ -24,7 +24,7 @@
    return shadowView;
  }
  

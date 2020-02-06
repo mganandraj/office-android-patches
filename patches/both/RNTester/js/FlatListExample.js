@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\FlatListExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\FlatListExample.js"
-index f858704..ba97a89 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\FlatListExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\FlatListExample.js"
-@@ -130,6 +130,9 @@ class FlatListExample extends React.PureComponent<Props, State> {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\FlatListExample.js"	2020-01-30 13:55:48.076612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\FlatListExample.js"	2020-01-29 14:10:09.170894200 -0800
+@@ -130,6 +130,9 @@
              data={this.state.empty ? [] : filteredData}
              debug={this.state.debug}
              disableVirtualization={!this.state.virtualized}
@@ -12,7 +10,7 @@ index f858704..ba97a89 100644
              getItemLayout={
                this.state.fixedHeight ? this._getItemLayout : undefined
              }
-@@ -173,10 +176,11 @@ class FlatListExample extends React.PureComponent<Props, State> {
+@@ -173,10 +176,11 @@
      }));
    };
    _onRefresh = () => Alert.alert('onRefresh: nothing to refresh :P');
@@ -25,7 +23,7 @@ index f858704..ba97a89 100644
          horizontal={this.state.horizontal}
          fixedHeight={this.state.fixedHeight}
          onPress={this._pressItem}
-@@ -208,6 +212,11 @@ class FlatListExample extends React.PureComponent<Props, State> {
+@@ -208,6 +212,11 @@
      this._listRef.getNode().recordInteraction();
      pressItem(this, key);
    };

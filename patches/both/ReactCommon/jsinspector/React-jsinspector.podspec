@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsinspector\\React-jsinspector.podspec" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsinspector\\React-jsinspector.podspec"
-index 63db57a..8f7cebf 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsinspector\\React-jsinspector.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsinspector\\React-jsinspector.podspec"
-@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsinspector\\React-jsinspector.podspec"	2020-01-30 13:55:48.612617100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsinspector\\React-jsinspector.podspec"	2020-01-29 14:10:09.832892000 -0800
+@@ -24,7 +24,7 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

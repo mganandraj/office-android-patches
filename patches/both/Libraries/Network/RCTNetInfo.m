@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTNetInfo.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTNetInfo.m"
-index f9441f1..f295c57 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTNetInfo.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTNetInfo.m"
-@@ -148,7 +148,7 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTNetInfo.m"	2020-01-30 13:55:47.950609200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTNetInfo.m"	2020-01-29 14:10:08.945917300 -0800
+@@ -148,7 +148,7 @@
      status = RCTReachabilityStateNone;
    }
    

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga.podspec" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga.podspec"
-index fd17f01..01d86b2 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga.podspec"
-@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga.podspec"	2020-01-30 13:55:48.625582500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga.podspec"	2020-01-29 14:10:09.842926300 -0800
+@@ -39,7 +39,7 @@
    ]
  
    # Pinning to the same version as React.podspec.

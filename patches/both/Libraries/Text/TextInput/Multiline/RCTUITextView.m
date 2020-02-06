@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m"
-index 96e7867..f4933c7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m"	2020-01-30 13:55:47.993608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.m"	2020-01-29 14:10:08.997884100 -0800
 @@ -15,8 +15,10 @@
  
  @implementation RCTUITextView
@@ -13,7 +11,7 @@ index 96e7867..f4933c7 100644
    RCTBackedTextViewDelegateAdapter *_textInputDelegateAdapter;
  }
  
-@@ -27,10 +29,10 @@ static UIFont *defaultPlaceholderFont()
+@@ -27,10 +29,10 @@
    return [UIFont systemFontOfSize:17];
  }
  
@@ -26,7 +24,7 @@ index 96e7867..f4933c7 100644
  }
  
  - (instancetype)initWithFrame:(CGRect)frame
-@@ -40,12 +42,17 @@ static UIColor *defaultPlaceholderColor()
+@@ -40,12 +42,17 @@
                                               selector:@selector(textDidChange)
                                                   name:UITextViewTextDidChangeNotification
                                                 object:self];
@@ -45,7 +43,7 @@ index 96e7867..f4933c7 100644
  
      _textInputDelegateAdapter = [[RCTBackedTextViewDelegateAdapter alloc] initWithTextView:self];
    }
-@@ -91,14 +98,78 @@ static UIColor *defaultPlaceholderColor()
+@@ -91,15 +98,79 @@
  - (void)setPlaceholder:(NSString *)placeholder
  {
    _placeholder = placeholder;
@@ -91,8 +89,8 @@ index 96e7867..f4933c7 100644
 +- (NSTextAlignment)textAlignment
 +{
 +  return self.alignment;
-+}
-+
+ }
+ 
 +- (NSString*)text
 +{
 +  return self.string;
@@ -120,12 +118,13 @@ index 96e7867..f4933c7 100644
 +  }
 +
 +  return success;
- }
++}
 +#endif // ]TODO(macOS ISS#2323203)
- 
++
  - (void)setReactTextAttributes:(RCTTextAttributes *)reactTextAttributes
  {
-@@ -127,17 +198,27 @@ static UIColor *defaultPlaceholderColor()
+   if ([reactTextAttributes isEqual:_reactTextAttributes]) {
+@@ -127,17 +198,27 @@
  - (void)setFont:(UIFont *)font
  {
    [super setFont:font];
@@ -153,7 +152,7 @@ index 96e7867..f4933c7 100644
    // Using `setAttributedString:` while user is typing breaks some internal mechanics
    // when entering complex input languages such as Chinese, Korean or Japanese.
    // see: https://github.com/facebook/react-native/issues/19339
-@@ -154,11 +235,18 @@ static UIColor *defaultPlaceholderColor()
+@@ -154,11 +235,18 @@
    }
  
    [self textDidChange];
@@ -172,7 +171,7 @@ index 96e7867..f4933c7 100644
  {
    if (!notifyDelegate) {
      // We have to notify an adapter that following selection change was initiated programmatically,
-@@ -166,8 +254,19 @@ static UIColor *defaultPlaceholderColor()
+@@ -166,21 +254,88 @@
      [_textInputDelegateAdapter skipNextTextInputDidChangeSelectionEventWithTextRange:selectedTextRange];
    }
  
@@ -181,18 +180,18 @@ index 96e7867..f4933c7 100644
 +#else // [TODO(macOS ISS#2323203)
 +  [super setSelectedRange:selectedTextRange];
 +#endif // ]TODO(macOS ISS#2323203)
-+}
-+
+ }
+ 
 +#if TARGET_OS_OSX // [TODO(macOS ISS#2323203)
 +- (NSRange)selectedTextRange
 +{
 +  return [super selectedRange];
- }
++}
 +#endif // ]TODO(macOS ISS#2323203)
- 
++
  - (void)paste:(id)sender
  {
-@@ -175,12 +274,68 @@ static UIColor *defaultPlaceholderColor()
+   [super paste:sender];
    _textWasPasted = YES;
  }
  
@@ -261,7 +260,7 @@ index 96e7867..f4933c7 100644
  
  #pragma mark - Layout
  
-@@ -192,11 +347,22 @@ static UIColor *defaultPlaceholderColor()
+@@ -192,11 +347,22 @@
  
  - (CGSize)placeholderSize
  {
@@ -284,7 +283,7 @@ index 96e7867..f4933c7 100644
    placeholderSize.width += textContainerInset.left + textContainerInset.right;
    placeholderSize.height += textContainerInset.top + textContainerInset.bottom;
    // Returning size DOES contain `textContainerInset` (aka `padding`; as `sizeThatFits:` does).
-@@ -205,8 +371,13 @@ static UIColor *defaultPlaceholderColor()
+@@ -205,8 +371,13 @@
  
  - (CGSize)contentSize
  {
@@ -298,7 +297,7 @@ index 96e7867..f4933c7 100644
    // When a text input is empty, it actually displays a placehoder.
    // So, we have to consider `placeholderSize` as a minimum `contentSize`.
    // Returning size DOES contain `textContainerInset` (aka `padding`).
-@@ -215,6 +386,7 @@ static UIColor *defaultPlaceholderColor()
+@@ -215,6 +386,7 @@
      MAX(contentSize.height, placeholderSize.height));
  }
  
@@ -306,7 +305,7 @@ index 96e7867..f4933c7 100644
  - (void)layoutSubviews
  {
    [super layoutSubviews];
-@@ -224,6 +396,7 @@ static UIColor *defaultPlaceholderColor()
+@@ -224,6 +396,7 @@
    textFrame.size.height = MIN(placeholderHeight, textFrame.size.height);
    _placeholderView.frame = textFrame;
  }
@@ -314,7 +313,7 @@ index 96e7867..f4933c7 100644
  
  - (CGSize)intrinsicContentSize
  {
-@@ -234,7 +407,13 @@ static UIColor *defaultPlaceholderColor()
+@@ -234,7 +407,13 @@
  - (CGSize)sizeThatFits:(CGSize)size
  {
    // Returned fitting size depends on text size and placeholder size.
@@ -328,7 +327,7 @@ index 96e7867..f4933c7 100644
    CGSize placeholderSize = self.placeholderSize;
    // Returning size DOES contain `textContainerInset` (aka `padding`).
    return CGSizeMake(MAX(textSize.width, placeholderSize.width), MAX(textSize.height, placeholderSize.height));
-@@ -242,6 +421,7 @@ static UIColor *defaultPlaceholderColor()
+@@ -242,6 +421,7 @@
  
  #pragma mark - Context Menu
  
@@ -336,7 +335,7 @@ index 96e7867..f4933c7 100644
  - (BOOL)canPerformAction:(SEL)action withSender:(id)sender
  {
    if (_contextMenuHidden) {
-@@ -250,14 +430,28 @@ static UIColor *defaultPlaceholderColor()
+@@ -250,14 +430,28 @@
  
    return [super canPerformAction:action withSender:sender];
  }

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m"
-index dd6b489..de023f9 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m"	2020-01-30 13:55:47.992616800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputView.m"	2020-01-29 14:10:08.996882800 -0800
 @@ -13,6 +13,9 @@
  
  @implementation RCTMultilineTextInputView

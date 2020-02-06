@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m"
-index 54d6efd..c0df015 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m"	2020-01-30 13:55:48.066609200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTUIManagerTests.m"	2020-01-29 14:10:09.110882900 -0800
 @@ -21,7 +21,7 @@
          removeAtIndices:(NSArray *)removeAtIndices
                 registry:(NSDictionary<NSNumber *, id<RCTComponent>> *)registry;

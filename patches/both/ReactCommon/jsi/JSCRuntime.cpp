@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\JSCRuntime.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\JSCRuntime.cpp"
-index 2b5341c..c4f0dee 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\JSCRuntime.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\JSCRuntime.cpp"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\JSCRuntime.cpp"	2020-01-30 13:55:48.605620200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\JSCRuntime.cpp"	2020-01-29 14:10:09.824892300 -0800
 @@ -9,7 +9,7 @@
  #include <atomic>
  #include <condition_variable>
@@ -11,7 +9,7 @@ index 2b5341c..c4f0dee 100644
  #include <mutex>
  #include <queue>
  #include <sstream>
-@@ -789,7 +789,7 @@ jsi::Object JSCRuntime::createObject(std::shared_ptr<jsi::HostObject> ho) {
+@@ -789,7 +789,7 @@
  
  std::shared_ptr<jsi::HostObject> JSCRuntime::getHostObject(
      const jsi::Object& obj) {

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInputState.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInputState.js"
-index 5ce5595..61df6e0 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInputState.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInputState.js"
-@@ -36,8 +36,11 @@ function currentlyFocusedField(): ?number {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInputState.js"	2020-01-30 13:55:47.878607300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInputState.js"	2020-01-29 14:10:08.868885000 -0800
+@@ -36,8 +36,11 @@
   */
  function focusTextInput(textFieldID: ?number) {
    if (currentlyFocusedID !== textFieldID && textFieldID !== null) {
@@ -16,7 +14,7 @@ index 5ce5595..61df6e0 100644
        UIManager.focus(textFieldID);
      } else if (Platform.OS === 'android') {
        UIManager.dispatchViewManagerCommand(
-@@ -58,7 +61,10 @@ function focusTextInput(textFieldID: ?number) {
+@@ -58,7 +61,10 @@
  function blurTextInput(textFieldID: ?number) {
    if (currentlyFocusedID === textFieldID && textFieldID !== null) {
      currentlyFocusedID = null;
@@ -28,7 +26,7 @@ index 5ce5595..61df6e0 100644
        UIManager.blur(textFieldID);
      } else if (Platform.OS === 'android') {
        UIManager.dispatchViewManagerCommand(
-@@ -71,6 +77,28 @@ function blurTextInput(textFieldID: ?number) {
+@@ -71,6 +77,28 @@
    }
  }
  
@@ -57,7 +55,7 @@ index 5ce5595..61df6e0 100644
  function registerInput(textFieldID: number) {
    inputs.add(textFieldID);
  }
-@@ -85,6 +113,8 @@ function isTextInput(textFieldID: number) {
+@@ -85,6 +113,8 @@
  
  module.exports = {
    currentlyFocusedField,

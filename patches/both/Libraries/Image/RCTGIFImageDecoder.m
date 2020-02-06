@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTGIFImageDecoder.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTGIFImageDecoder.m"
-index a0afd43..e030338 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTGIFImageDecoder.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTGIFImageDecoder.m"
-@@ -62,7 +62,11 @@ RCT_EXPORT_MODULE()
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTGIFImageDecoder.m"	2020-01-30 13:55:47.904607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTGIFImageDecoder.m"	2020-01-29 14:10:08.897881900 -0800
+@@ -62,7 +62,11 @@
          continue;
        }
        if (!image) {
@@ -14,7 +12,7 @@ index a0afd43..e030338 100644
        }
  
        NSDictionary<NSString *, id> *frameProperties = (__bridge_transfer NSDictionary *)CGImageSourceCopyPropertiesAtIndex(imageSource, i, NULL);
-@@ -114,7 +118,11 @@ RCT_EXPORT_MODULE()
+@@ -114,7 +118,11 @@
      // Don't bother creating an animation
      CGImageRef imageRef = CGImageSourceCreateImageAtIndex(imageSource, 0, NULL);
      if (imageRef) {

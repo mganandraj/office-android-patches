@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec"
-index da20c0e..9935055 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec"
-@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec"	2020-01-30 13:55:47.960608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\React-RCTPushNotification.podspec"	2020-01-29 14:10:08.954883900 -0800
+@@ -25,7 +25,7 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/pushnotificationios"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.m"
-index e4c5c1a..f6b418f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.m"
-@@ -31,7 +31,7 @@ RCT_EXPORT_METHOD(verifySnapshot:(RCTResponseSenderBlock)callback)
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.m"	2020-01-30 13:55:48.041611400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.m"	2020-01-29 14:10:09.048883600 -0800
+@@ -31,7 +31,7 @@
  {
    RCTAssert(_controller != nil, @"No snapshot controller configured.");
  
@@ -11,7 +9,7 @@ index e4c5c1a..f6b418f 100644
      NSString *testName = NSStringFromSelector(self->_testSelector);
      if (!self->_snapshotCounter) {
        self->_snapshotCounter = [NSMutableDictionary new];
-@@ -81,7 +81,7 @@ RCT_EXPORT_METHOD(markTestCompleted)
+@@ -81,7 +81,7 @@
  
  RCT_EXPORT_METHOD(markTestPassed:(BOOL)success)
  {

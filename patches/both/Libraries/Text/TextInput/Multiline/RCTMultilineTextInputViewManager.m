@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m"
-index b086dfa..5e62e0c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m"	2020-01-30 13:55:47.992616800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTMultilineTextInputViewManager.m"	2020-01-29 14:10:08.996882800 -0800
 @@ -13,7 +13,7 @@
  
  RCT_EXPORT_MODULE()
@@ -11,7 +9,7 @@ index b086dfa..5e62e0c 100644
  {
    return [[RCTMultilineTextInputView alloc] initWithBridge:self.bridge];
  }
-@@ -21,7 +21,8 @@ RCT_EXPORT_MODULE()
+@@ -21,7 +21,8 @@
  #pragma mark - Multiline <TextInput> (aka TextView) specific properties
  
  #if !TARGET_OS_TV

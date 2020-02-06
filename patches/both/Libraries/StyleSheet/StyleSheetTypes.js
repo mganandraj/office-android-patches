@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\StyleSheetTypes.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\StyleSheetTypes.js"
-index f307de6..bec6a23 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\StyleSheetTypes.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\StyleSheetTypes.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\StyleSheetTypes.js"	2020-01-30 13:55:47.978611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\StyleSheetTypes.js"	2020-01-29 14:10:08.981883200 -0800
 @@ -11,8 +11,9 @@
  'use strict';
  

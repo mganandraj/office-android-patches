@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\build.gradle" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\build.gradle"
-index 0d6c9af..1821f2b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\build.gradle"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\build.gradle"
-@@ -68,7 +68,7 @@ project.ext.react = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\build.gradle"	2020-01-30 13:55:48.067619900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\build.gradle"	2020-01-29 14:10:09.122916600 -0800
+@@ -68,7 +68,7 @@
      bundleAssetName: "RNTesterApp.android.bundle",
      entryFile: file("../../js/RNTesterApp.android.js"),
      root: "$rootDir",
@@ -11,7 +9,7 @@ index 0d6c9af..1821f2b 100644
  ]
  
  apply from: "../../../react.gradle"
-@@ -131,20 +131,31 @@ android {
+@@ -131,20 +131,31 @@
      buildTypes {
          debug {
              signingConfig signingConfigs.release

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java"
-index b2325fd..0574e3f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java"
-@@ -107,7 +107,8 @@ public class CatalystInstanceImpl implements CatalystInstance {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java"	2020-01-30 13:55:48.254577800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java"	2020-01-29 14:10:09.350921400 -0800
+@@ -107,7 +107,8 @@
        final JavaScriptExecutor jsExecutor,
        final NativeModuleRegistry nativeModuleRegistry,
        final JSBundleLoader jsBundleLoader,
@@ -12,7 +10,7 @@ index b2325fd..0574e3f 100644
      Log.d(ReactConstants.TAG, "Initializing React Xplat Bridge.");
      Systrace.beginSection(TRACE_TAG_REACT_JAVA_BRIDGE, "createCatalystInstanceImpl");
  
-@@ -125,15 +126,23 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -125,15 +126,23 @@
      mTraceListener = new JSProfilerTraceListener(this);
      Systrace.endSection(TRACE_TAG_REACT_JAVA_BRIDGE);
  
@@ -40,7 +38,7 @@ index b2325fd..0574e3f 100644
      Log.d(ReactConstants.TAG, "Initializing React Xplat Bridge after initializeBridge");
      Systrace.endSection(TRACE_TAG_REACT_JAVA_BRIDGE);
  
-@@ -195,13 +204,15 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -195,13 +204,15 @@
      Collection<JavaModuleWrapper> javaModules,
      Collection<ModuleHolder> cxxModules);
  
@@ -62,7 +60,7 @@ index b2325fd..0574e3f 100644
  
    @Override
    public void setSourceURLs(String deviceURL, String remoteURL) {
-@@ -367,7 +378,6 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -367,7 +378,6 @@
                      mJavaScriptContextHolder.clear();
  
                      mHybridData.resetNative();
@@ -70,7 +68,7 @@ index b2325fd..0574e3f 100644
                      Log.d(ReactConstants.TAG, "CatalystInstanceImpl.destroy() end");
                      ReactMarker.logMarker(ReactMarkerConstants.DESTROY_CATALYST_INSTANCE_END);
                    }
-@@ -498,6 +508,9 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -498,6 +508,9 @@
  
    private native long getJavaScriptContext();
  
@@ -80,7 +78,7 @@ index b2325fd..0574e3f 100644
    private void incrementPendingJSCalls() {
      int oldPendingCalls = mPendingJSCalls.getAndIncrement();
      boolean wasIdle = oldPendingCalls == 0;
-@@ -595,6 +608,7 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -595,6 +608,7 @@
      private @Nullable NativeModuleRegistry mRegistry;
      private @Nullable JavaScriptExecutor mJSExecutor;
      private @Nullable NativeModuleCallExceptionHandler mNativeModuleCallExceptionHandler;
@@ -88,7 +86,7 @@ index b2325fd..0574e3f 100644
  
  
      public Builder setReactQueueConfigurationSpec(
-@@ -624,13 +638,20 @@ public class CatalystInstanceImpl implements CatalystInstance {
+@@ -624,13 +638,20 @@
        return this;
      }
  

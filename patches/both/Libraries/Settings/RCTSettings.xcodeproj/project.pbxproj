@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj"
-index 2366798..a6bdcec 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.975617000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettings.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.978883000 -0800
 @@ -9,6 +9,7 @@
  /* Begin PBXBuildFile section */
  		13DBA45E1AEE749000A17CF8 /* RCTSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DBA45D1AEE749000A17CF8 /* RCTSettingsManager.m */; };
@@ -135,10 +133,11 @@ index 2366798..a6bdcec 100644
  /* End XCBuildConfiguration section */
  
  /* Begin XCConfigurationList section */
-@@ -322,6 +379,15 @@
+@@ -321,6 +378,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		6448A5CA1F292E63006FF1F5 /* Build configuration list for PBXNativeTarget "RCTSettings-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -147,7 +146,6 @@ index 2366798..a6bdcec 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;

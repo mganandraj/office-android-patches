@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterPage.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterPage.js"
-index 6b1b0fe..e5f18e1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterPage.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterPage.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterPage.js"	2020-01-30 13:55:48.084616100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterPage.js"	2020-01-29 14:10:09.182888100 -0800
 @@ -11,6 +11,7 @@
  'use strict';
  
@@ -10,7 +8,7 @@ index 6b1b0fe..e5f18e1 100644
  const {ScrollView, StyleSheet, View} = require('react-native');
  
  const RNTesterTitle = require('./RNTesterTitle');
-@@ -52,7 +53,17 @@ class RNTesterPage extends React.Component<Props> {
+@@ -52,7 +53,17 @@
  
  const styles = StyleSheet.create({
    container: {

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m"
-index 6268097..52bbb86 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m"
-@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE()
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m"	2020-01-30 13:55:47.823578300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTNodeManager.m"	2020-01-29 14:10:08.799919000 -0800
+@@ -18,7 +18,7 @@
    return [ARTNode new];
  }
  

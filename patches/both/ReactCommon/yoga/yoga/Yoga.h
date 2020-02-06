@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.h"
-index a9dc01d..2ac5432 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.h"
-@@ -365,4 +365,9 @@ void YGTraversePreOrder(
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.h"	2020-01-30 13:55:48.632608500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.h"	2020-01-29 14:10:09.850895400 -0800
+@@ -365,4 +365,9 @@
  
  void YGNodeSetChildren(YGNodeRef owner, const std::vector<YGNodeRef>& children);
  

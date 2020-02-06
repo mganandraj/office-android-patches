@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageCache.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageCache.m"
-index a6546a7..9089054 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageCache.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageCache.m"
-@@ -38,6 +38,7 @@ static NSString *RCTCacheKeyForImage(NSString *imageTag, CGSize size, CGFloat sc
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageCache.m"	2020-01-30 13:55:47.905607700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageCache.m"	2020-01-29 14:10:08.898882100 -0800
+@@ -38,6 +38,7 @@
  {
    if (self = [super init]) {
      _decodedImageCache = [NSCache new];
@@ -10,7 +8,7 @@ index a6546a7..9089054 100644
      _decodedImageCache.totalCostLimit = 20 * 1024 * 1024; // 20 MB
      _cacheStaleTimes = [[NSMutableDictionary alloc] init];
  
-@@ -49,6 +50,7 @@ static NSString *RCTCacheKeyForImage(NSString *imageTag, CGSize size, CGFloat sc
+@@ -49,6 +50,7 @@
                                               selector:@selector(clearCache)
                                                   name:UIApplicationWillResignActiveNotification
                                                 object:nil];
@@ -18,7 +16,7 @@ index a6546a7..9089054 100644
    }
  
    return self;
-@@ -59,6 +61,7 @@ static NSString *RCTCacheKeyForImage(NSString *imageTag, CGSize size, CGFloat sc
+@@ -59,6 +61,7 @@
    [[NSNotificationCenter defaultCenter] removeObserver:self];
  }
  
@@ -26,7 +24,7 @@ index a6546a7..9089054 100644
  - (void)clearCache
  {
    [_decodedImageCache removeAllObjects];
-@@ -66,6 +69,7 @@ static NSString *RCTCacheKeyForImage(NSString *imageTag, CGSize size, CGFloat sc
+@@ -66,6 +69,7 @@
      [_cacheStaleTimes removeAllObjects];
    }
  }
@@ -34,7 +32,7 @@ index a6546a7..9089054 100644
  
  - (void)addImageToCache:(UIImage *)image
                   forKey:(NSString *)cacheKey
-@@ -73,7 +77,7 @@ static NSString *RCTCacheKeyForImage(NSString *imageTag, CGSize size, CGFloat sc
+@@ -73,7 +77,7 @@
    if (!image) {
      return;
    }

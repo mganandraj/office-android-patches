@@ -12,8 +12,7 @@ export function isDirectory(path: string) {
   try {
     return fs.lstatSync(path).isDirectory();
   } catch (e) {
-    // tslint:disable-next-line:no-console
-    console.log('throw::isDirectory::' + path + '::' + e);
+    log.error('FS:isDirectory', `${path}::${e}`);
   }
 }
 
@@ -21,8 +20,7 @@ export function isRegularFile(path: string) {
   try {
     return fs.lstatSync(path).isFile();
   } catch (e) {
-    // tslint:disable-next-line:no-console
-    console.log('throw::isRegularFile::' + path + '::' + e);
+    log.error('FS:isRegularFile', `${path}::${e}`);
   }
 }
 
@@ -30,8 +28,7 @@ export function isSymlink(path: string) {
   try {
     return fs.lstatSync(path).isSymbolicLink();
   } catch (e) {
-    // tslint:disable-next-line:no-console
-    console.log('throw::isSymlink::' + path + '::' + e);
+    log.error('FS:isSymlink', `${path}::${e}`);
   }
 }
 
@@ -44,6 +41,7 @@ export function writeFile(
   basepath: string,
   relativefilepath: string,
   data: string,
+  extension?: string /* Optional extension to be added to the relativefilepath */,
 ) {
   try {
     // const name2 = 'patch-' + name.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '-');
@@ -56,12 +54,16 @@ export function writeFile(
       fse.ensureDirSync(absPath1);
     }
 
-    const absPath2 = fs_path.resolve(absPath1, name);
+    const absPath2 = fs_path.resolve(
+      absPath1,
+      extension ? `${name}.${extension}` : name,
+    );
 
     fs.writeFileSync(absPath2, data);
   } catch (e) {
-    throw new Error(
-      'File Writing Failed::' + basepath + '::' + relativefilepath + '::' + e,
+    log.error(
+      'FS:writeFile',
+      `File Writing Failed::${basepath}::${relativefilepath}::${e}`,
     );
   }
 }
@@ -93,7 +95,10 @@ export function traverseDirectory(
         );
     });
   } else if (isSymlink(path)) {
-    throw new Error('We currently dont support symlinks: ' + path);
+    log.error(
+      'FS:traverseDirectory',
+      `We currently dont support symlinks: ${path}`,
+    );
   }
 }
 
@@ -115,7 +120,10 @@ export function lookUpRelativePath(
 export function initDirectory(path: string) {
   fse.removeSync(path);
   if (fse.existsSync(path)) {
-    throw new Error("Output directory can't be nuked !! (" + path + ')');
+    log.error(
+      'FS:initDirectory',
+      `Output directory can't be nuked !! (${path})`,
+    );
   }
   fse.ensureDirSync(path);
 }

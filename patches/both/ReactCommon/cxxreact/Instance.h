@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"
-index b129ee7..e1fc694 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"
-@@ -34,18 +34,38 @@ struct InstanceCallback {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.h"	2020-01-30 13:55:48.515581300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"	2020-01-29 14:10:09.748923000 -0800
+@@ -34,18 +34,38 @@
    virtual void decrementPendingJSCalls() {}
  };
  
@@ -45,7 +43,7 @@ index b129ee7..e1fc694 100644
    static bool isIndexedRAMBundle(const char *sourcePath);
    static bool isIndexedRAMBundle(std::unique_ptr<const JSBigString>* string);
    void loadRAMBundleFromString(std::unique_ptr<const JSBigString> script, const std::string& sourceURL);
-@@ -64,6 +84,7 @@ public:
+@@ -64,6 +84,7 @@
    void callJSFunction(std::string &&module, std::string &&method,
                        folly::dynamic &&params);
    void callJSCallback(uint64_t callbackId, folly::dynamic &&params);
@@ -53,7 +51,7 @@ index b129ee7..e1fc694 100644
  
    // This method is experimental, and may be modified or removed.
    void registerBundle(uint32_t bundleId, const std::string& bundlePath);
-@@ -73,20 +94,28 @@ public:
+@@ -73,20 +94,28 @@
  
    void handleMemoryPressure(int pressureLevel);
  

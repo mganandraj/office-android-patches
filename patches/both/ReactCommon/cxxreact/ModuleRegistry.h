@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\ModuleRegistry.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\ModuleRegistry.h"
-index 65d9531..b76d962 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\ModuleRegistry.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\ModuleRegistry.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\ModuleRegistry.h"	2020-01-30 13:55:48.520581000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\ModuleRegistry.h"	2020-01-29 14:10:09.751891600 -0800
 @@ -9,7 +9,7 @@
  #include <unordered_set>
  #include <vector>
@@ -11,7 +9,7 @@ index 65d9531..b76d962 100644
  #include <folly/Optional.h>
  #include <folly/dynamic.h>
  
-@@ -41,6 +41,12 @@ class RN_EXPORT ModuleRegistry {
+@@ -41,6 +41,12 @@
    ModuleRegistry(std::vector<std::unique_ptr<NativeModule>> modules, ModuleNotFoundCallback callback = nullptr);
    void registerModules(std::vector<std::unique_ptr<NativeModule>> modules);
  

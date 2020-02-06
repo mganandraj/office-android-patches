@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\React-jsi.podspec" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\React-jsi.podspec"
-index 180905c..f0733a8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\React-jsi.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\React-jsi.podspec"
-@@ -28,14 +28,20 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\React-jsi.podspec"	2020-01-30 13:55:48.606614400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\React-jsi.podspec"	2020-01-29 14:10:09.825892100 -0800
+@@ -28,14 +28,20 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

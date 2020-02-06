@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m"
-index 01f6c8a..4bdeb26 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m"
-@@ -126,7 +126,7 @@ typedef NS_OPTIONS(NSInteger, RCTTextSizeComparisonOptions) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m"	2020-01-30 13:55:47.989608600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\NSTextStorage+FontScaling.m"	2020-01-29 14:10:08.993882600 -0800
+@@ -126,7 +126,7 @@
        CGFloat fontSize = MAX(MIN(font.pointSize * ratio, maximumFontSize), minimumFontSize);
  
        [self addAttribute:NSFontAttributeName

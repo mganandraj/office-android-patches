@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m"
-index d226782..e9857a0 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m"	2020-01-30 13:55:47.996608200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputViewManager.m"	2020-01-29 14:10:08.999885400 -0800
 @@ -19,7 +19,9 @@
  
  #import "RCTBaseTextInputShadowView.h"
@@ -12,7 +10,7 @@ index d226782..e9857a0 100644
  
  @interface RCTBaseTextInputViewManager () <RCTUIManagerObserver>
  
-@@ -34,26 +36,29 @@ RCT_EXPORT_MODULE()
+@@ -34,26 +36,29 @@
  
  #pragma mark - Unified <TextInput> properties
  
@@ -55,7 +53,7 @@ index d226782..e9857a0 100644
  RCT_EXPORT_VIEW_PROPERTY(selection, RCTTextSelection)
  RCT_EXPORT_VIEW_PROPERTY(inputAccessoryViewID, NSString)
  RCT_EXPORT_VIEW_PROPERTY(textContentType, NSString)
-@@ -73,7 +78,9 @@ RCT_EXPORT_SHADOW_PROPERTY(onContentSizeChange, RCTBubblingEventBlock)
+@@ -73,7 +78,9 @@
  - (RCTShadowView *)shadowView
  {
    RCTBaseTextInputShadowView *shadowView = [[RCTBaseTextInputShadowView alloc] initWithBridge:self.bridge];
@@ -65,7 +63,7 @@ index d226782..e9857a0 100644
    [_shadowViews addObject:shadowView];
    return shadowView;
  }
-@@ -86,10 +93,12 @@ RCT_EXPORT_SHADOW_PROPERTY(onContentSizeChange, RCTBubblingEventBlock)
+@@ -86,10 +93,12 @@
  
    [bridge.uiManager.observerCoordinator addObserver:self];
  

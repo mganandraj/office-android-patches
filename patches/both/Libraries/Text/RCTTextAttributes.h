@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.h"
-index d48b10b..2c7d24f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.h"	2020-01-30 13:55:47.986615000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.h"	2020-01-29 14:10:08.990882500 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -11,7 +9,7 @@ index d48b10b..2c7d24f 100644
  
  #import <React/RCTTextDecorationLineType.h>
  
-@@ -24,8 +24,8 @@ extern NSString *const RCTTextAttributesTagAttributeName;
+@@ -24,8 +24,8 @@
  @interface RCTTextAttributes : NSObject <NSCopying>
  
  // Color
@@ -22,7 +20,7 @@ index d48b10b..2c7d24f 100644
  @property (nonatomic, assign) CGFloat opacity;
  // Font
  @property (nonatomic, copy, nullable) NSString *fontFamily;
-@@ -42,13 +42,13 @@ extern NSString *const RCTTextAttributesTagAttributeName;
+@@ -42,13 +42,13 @@
  @property (nonatomic, assign) NSTextAlignment alignment;
  @property (nonatomic, assign) NSWritingDirection baseWritingDirection;
  // Decoration
@@ -38,7 +36,7 @@ index d48b10b..2c7d24f 100644
  // Special
  @property (nonatomic, assign) BOOL isHighlighted;
  @property (nonatomic, strong, nullable) NSNumber *tag;
-@@ -84,8 +84,8 @@ extern NSString *const RCTTextAttributesTagAttributeName;
+@@ -84,8 +84,8 @@
  /**
   * Foreground and background colors with opacity and right defaults.
   */

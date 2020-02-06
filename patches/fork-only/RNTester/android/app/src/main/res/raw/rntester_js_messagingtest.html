@@ -1,0 +1,31 @@
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\res\\raw\\rntester_js_messagingtest.html"	1969-12-31 16:00:00.000000000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\res\\raw\\rntester_js_messagingtest.html"	2020-01-29 14:10:09.156884300 -0800
+@@ -0,0 +1,28 @@
++<!DOCTYPE html>
++<html>
++  <head>
++    <title>Messaging Test</title>
++    <meta http-equiv="content-type" content="text/html; charset=utf-8">
++    <meta name="viewport" content="width=320, user-scalable=no">
++  </head>
++  <body>
++    <p>Messages received from React Native: 0</p>
++    <p>(No messages)</p>
++    <button type="button">
++      Send message to React Native
++    </button>
++  </body>
++  <script>
++    var messagesReceivedFromReactNative = 0;
++    document.addEventListener('message', function(e) {
++      messagesReceivedFromReactNative += 1;
++      document.getElementsByTagName('p')[0].innerHTML =
++        'Messages received from React Native: ' + messagesReceivedFromReactNative;
++      document.getElementsByTagName('p')[1].innerHTML = e.data;
++    });
++
++    document.getElementsByTagName('button')[0].addEventListener('click', function() {
++      window.postMessage('"Hello" from the web view');
++    });
++  </script>
++</html>

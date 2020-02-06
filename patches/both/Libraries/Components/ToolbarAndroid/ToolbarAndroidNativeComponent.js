@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js"
-index e65b4ea..72ec072 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js"
-@@ -16,6 +16,7 @@ import type {SyntheticEvent} from '../../Types/CoreEventTypes';
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js"	2020-01-30 13:55:47.880618300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroidNativeComponent.js"	2020-01-29 14:10:08.872883500 -0800
+@@ -16,6 +16,7 @@
  import type {ImageSource} from '../../Image/ImageSource';
  import type {ViewProps} from '../View/ViewPropTypes';
  import type {NativeComponent} from '../../Renderer/shims/ReactNative';
@@ -10,7 +8,7 @@ index e65b4ea..72ec072 100644
  
  type Action = $ReadOnly<{|
    title: string,
-@@ -35,7 +36,7 @@ type NativeProps = $ReadOnly<{|
+@@ -35,7 +36,7 @@
    nativeActions?: Array<Action>,
  |}>;
  

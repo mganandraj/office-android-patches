@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js"
-index b9c157d..55a226d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js"
-@@ -31,7 +31,8 @@ let exported;
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js"	2020-01-30 13:55:47.870574800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js"	2020-01-29 14:10:08.857886000 -0800
+@@ -31,7 +31,8 @@
   * limitation of the screen, such as rounded corners or camera notches (aka
   * sensor housing area on iPhone X).
   */

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h"
-index 5318404..96028ee 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h"	2020-01-30 13:55:47.826578300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.h"	2020-01-29 14:10:08.802912100 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */

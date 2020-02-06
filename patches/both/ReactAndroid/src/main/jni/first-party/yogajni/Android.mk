@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk"
-index 7fa2b37..875efc0 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk"
-@@ -15,7 +15,7 @@ LOCAL_SRC_FILES := \
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk"	2020-01-30 13:55:48.474607200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk"	2020-01-29 14:10:09.673890900 -0800
+@@ -15,7 +15,7 @@
  
  LOCAL_C_INCLUDES := $(LOCAL_PATH)/jni
  

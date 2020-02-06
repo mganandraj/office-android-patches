@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\settings.gradle.kts" "b/E:\\github\\ms-react-native-forpatch\\settings.gradle.kts"
-index 0daab69..a82f439 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\settings.gradle.kts"
-+++ "b/E:\\github\\ms-react-native-forpatch\\settings.gradle.kts"
+--- "E:\\github\\fb-react-native-forpatch-base\\settings.gradle.kts"	2020-01-30 13:55:48.665582300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\settings.gradle.kts"	2020-01-29 14:10:10.024925200 -0800
 @@ -5,5 +5,6 @@
  
  include(

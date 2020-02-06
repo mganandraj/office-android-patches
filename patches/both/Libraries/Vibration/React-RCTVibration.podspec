@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Vibration\\React-RCTVibration.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Vibration\\React-RCTVibration.podspec"
-index e4df901..cc5e2f4 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Vibration\\React-RCTVibration.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Vibration\\React-RCTVibration.podspec"
-@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Vibration\\React-RCTVibration.podspec"	2020-01-30 13:55:48.015619800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Vibration\\React-RCTVibration.podspec"	2020-01-29 14:10:09.021883900 -0800
+@@ -25,7 +25,7 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/vibration"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\check_license.sh" "b/E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\check_license.sh"
-index cd2def2..5874a33 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\check_license.sh"
-+++ "b/E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\check_license.sh"
+--- "E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\check_license.sh"	2020-01-29 14:11:26.771530800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\check_license.sh"	2020-01-29 14:10:10.016924400 -0800
 @@ -7,7 +7,11 @@
  set -e
  

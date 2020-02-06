@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m"
-index 9eca118..e873f61 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m"	2020-01-30 13:55:47.826578300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\RCTActionSheetManager.m"	2020-01-29 14:10:08.802912100 -0800
 @@ -13,7 +13,12 @@
  #import <React/RCTUIManager.h>
  #import <React/RCTUtils.h>
@@ -29,7 +27,7 @@ index 9eca118..e873f61 100644
  }
  
  RCT_EXPORT_MODULE()
-@@ -32,6 +43,7 @@ RCT_EXPORT_MODULE()
+@@ -32,6 +43,7 @@
    return dispatch_get_main_queue();
  }
  
@@ -37,7 +35,7 @@ index 9eca118..e873f61 100644
  - (void)presentViewController:(UIViewController *)alertController
         onParentViewController:(UIViewController *)parentViewController
                  anchorViewTag:(NSNumber *)anchorViewTag
-@@ -48,45 +60,53 @@ RCT_EXPORT_MODULE()
+@@ -48,45 +60,53 @@
    alertController.popoverPresentationController.sourceRect = sourceView.bounds;
    [parentViewController presentViewController:alertController animated:YES completion:nil];
  }
@@ -94,7 +92,7 @@ index 9eca118..e873f61 100644
    UIAlertController *alertController =
    [UIAlertController alertControllerWithTitle:title
                                        message:message
-@@ -113,16 +133,52 @@ RCT_EXPORT_METHOD(showActionSheetWithOptions:(NSDictionary *)options
+@@ -113,16 +133,52 @@
  
    alertController.view.tintColor = [RCTConvert UIColor:options[@"tintColor"]];
    [self presentViewController:alertController onParentViewController:controller anchorViewTag:anchorViewTag];
@@ -147,7 +145,7 @@ index 9eca118..e873f61 100644
  
    NSMutableArray<id> *items = [NSMutableArray array];
    NSString *message = [RCTConvert NSString:options[@"message"]];
-@@ -150,6 +206,7 @@ RCT_EXPORT_METHOD(showShareActionSheetWithOptions:(NSDictionary *)options
+@@ -150,6 +206,7 @@
      return;
    }
  
@@ -155,7 +153,7 @@ index 9eca118..e873f61 100644
    UIActivityViewController *shareController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
  
    NSString *subject = [RCTConvert NSString:options[@"subject"]];
-@@ -173,8 +230,80 @@ RCT_EXPORT_METHOD(showShareActionSheetWithOptions:(NSDictionary *)options
+@@ -173,8 +230,80 @@
  
    NSNumber *anchorViewTag = [RCTConvert NSNumber:options[@"anchor"]];
    shareController.view.tintColor = [RCTConvert UIColor:options[@"tintColor"]];

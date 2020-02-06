@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h"
-index f711fe6..c27bb8e 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h"	2020-01-30 13:55:47.993608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegate.h"	2020-01-29 14:10:08.997884100 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -11,7 +9,7 @@ index f711fe6..c27bb8e 100644
  
  @protocol RCTBackedTextInputViewProtocol;
  
-@@ -27,9 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -27,9 +27,13 @@
  
  - (void)textInputDidChangeSelection;
  

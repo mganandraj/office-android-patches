@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\CxxNativeModule.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\CxxNativeModule.cpp"
-index 2b674c0..cb29e98 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\CxxNativeModule.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\CxxNativeModule.cpp"
-@@ -142,7 +142,7 @@ void CxxNativeModule::invoke(unsigned int reactMethodId, folly::dynamic&& params
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\CxxNativeModule.cpp"	2020-01-30 13:55:48.514580900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\CxxNativeModule.cpp"	2020-01-29 14:10:09.747921600 -0800
+@@ -142,7 +142,7 @@
      SystraceSection s(method.name.c_str());
      try {
        method.func(std::move(params), first, second);
@@ -11,7 +9,7 @@ index 2b674c0..cb29e98 100644
        throw;
      } catch (std::exception& e) {
        LOG(ERROR) << "std::exception. Method call " << method.name.c_str() << " failed: " << e.what();
-@@ -188,5 +188,18 @@ void CxxNativeModule::lazyInit() {
+@@ -188,5 +188,18 @@
    }
  }
  

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\build.gradle" "b/E:\\github\\ms-react-native-forpatch\\template\\android\\build.gradle"
-index e7732fe..971f416 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\build.gradle"
-+++ "b/E:\\github\\ms-react-native-forpatch\\template\\android\\build.gradle"
-@@ -13,7 +13,11 @@ buildscript {
+--- "E:\\github\\fb-react-native-forpatch-base\\template\\android\\build.gradle"	2020-01-30 13:55:48.667582000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\template\\android\\build.gradle"	2020-01-29 14:10:10.032894200 -0800
+@@ -13,7 +13,11 @@
          jcenter()
      }
      dependencies {

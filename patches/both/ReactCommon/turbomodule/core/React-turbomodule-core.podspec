@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec"
-index 7b93bc8..9384319 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec"
-@@ -28,11 +28,11 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec"	2020-01-30 13:55:48.614616700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\React-turbomodule-core.podspec"	2020-01-29 14:10:09.834890900 -0800
+@@ -28,11 +28,11 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m"
-index 641f4e7..03d08fe 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m"	2020-01-30 13:55:47.988608700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RawText\\RCTRawTextViewManager.m"	2020-01-29 14:10:08.992883100 -0800
 @@ -13,9 +13,9 @@
  
  RCT_EXPORT_MODULE(RCTRawText)

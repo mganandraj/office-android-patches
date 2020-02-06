@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\BUCK" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\BUCK"
-index 49ac785..4e97a42 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\BUCK"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\BUCK"
-@@ -12,6 +12,7 @@ cxx_library(
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\BUCK"	2020-01-30 13:55:48.624582400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\BUCK"	2020-01-29 14:10:09.842926300 -0800
+@@ -12,6 +12,7 @@
          "-Werror",
          "-std=c++1y",
          "-O3",

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\Picker.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\Picker.js"
-index 5353986..c314775 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\Picker.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\Picker.js"
-@@ -135,7 +135,10 @@ class Picker extends React.Component<PickerProps> {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\Picker.js"	2020-01-30 13:55:47.864606900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\Picker.js"	2020-01-29 14:10:08.844882700 -0800
+@@ -135,7 +135,10 @@
    };
  
    render() {

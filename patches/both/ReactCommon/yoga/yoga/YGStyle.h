@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGStyle.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGStyle.h"
-index 77c7e03..0634c0d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGStyle.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGStyle.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGStyle.h"	2020-01-30 13:55:48.630608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGStyle.h"	2020-01-29 14:10:09.847892700 -0800
 @@ -16,6 +16,13 @@
  #include "Yoga-internal.h"
  #include "Yoga.h"

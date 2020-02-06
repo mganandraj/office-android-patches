@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRClient.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRClient.js"
-index 0c192a7..050c509 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRClient.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRClient.js"
-@@ -25,6 +25,7 @@ const HMRClient = {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRClient.js"	2020-01-30 13:55:48.005612300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRClient.js"	2020-01-29 14:10:09.008883700 -0800
+@@ -25,6 +25,7 @@
      invariant(host, 'Missing required paramenter `host`');
  
      // Moving to top gives errors due to NativeModules not being initialized
@@ -10,7 +8,7 @@ index 0c192a7..050c509 100644
      const HMRLoadingView = require('./HMRLoadingView');
  
      /* $FlowFixMe(>=0.84.0 site=react_native_fb) This comment suppresses an
-@@ -48,7 +49,10 @@ const HMRClient = {
+@@ -48,7 +49,10 @@
  Try the following to fix the issue:
  - Ensure that the packager server is running and available on the same network`;
  

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Alert\\Alert.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Alert\\Alert.js"
-index 9d64acd..6d91d69 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Alert\\Alert.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Alert\\Alert.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Alert\\Alert.js"	2020-01-30 13:55:47.827578300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Alert\\Alert.js"	2020-01-29 14:10:08.803916400 -0800
 @@ -10,6 +10,7 @@
  
  'use strict';
@@ -10,7 +8,7 @@ index 9d64acd..6d91d69 100644
  const NativeModules = require('../BatchedBridge/NativeModules');
  const RCTAlertManager = NativeModules.AlertManager;
  const Platform = require('../Utilities/Platform');
-@@ -25,12 +26,12 @@ type Options = {
+@@ -25,12 +26,12 @@
    onDismiss?: ?Function,
  };
  
@@ -25,7 +23,7 @@ index 9d64acd..6d91d69 100644
  
  export type AlertButtonStyle = $Keys<{
    default: string,
-@@ -52,6 +53,8 @@ class Alert {
+@@ -52,6 +53,8 @@
    ): void {
      if (Platform.OS === 'ios') {
        Alert.prompt(title, message, buttons, 'default');

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj"
-index d74745f..0089b27 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.945616000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTAnimation.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.942882500 -0800
 @@ -17,6 +17,9 @@
  		13E501EE1D07A6C9005F35D8 /* RCTStyleAnimatedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E501E31D07A6C9005F35D8 /* RCTStyleAnimatedNode.m */; };
  		13E501EF1D07A6C9005F35D8 /* RCTTransformAnimatedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E501E51D07A6C9005F35D8 /* RCTTransformAnimatedNode.m */; };
@@ -290,10 +288,11 @@ index d74745f..0089b27 100644
  /* End XCBuildConfiguration section */
  
  /* Begin XCConfigurationList section */
-@@ -687,6 +878,15 @@
+@@ -686,6 +877,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		647647C21F0BC7F200C2D89B /* Build configuration list for PBXNativeTarget "RCTAnimation-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -302,7 +301,6 @@ index d74745f..0089b27 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;

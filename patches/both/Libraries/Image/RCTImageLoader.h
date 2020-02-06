@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.h"
-index 9e5ff9f..3b54dab 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.h"	2020-01-30 13:55:47.906607500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.h"	2020-01-29 14:10:08.899881900 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */

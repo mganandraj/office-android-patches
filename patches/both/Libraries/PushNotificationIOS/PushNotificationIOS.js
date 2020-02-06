@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js"
-index 5a8680e..bd3e39d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js"	2020-01-30 13:55:47.958612300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js"	2020-01-29 14:10:08.952887100 -0800
 @@ -11,6 +11,7 @@
  'use strict';
  
@@ -10,7 +8,7 @@ index 5a8680e..bd3e39d 100644
  const RCTPushNotificationManager = require('../BatchedBridge/NativeModules')
    .PushNotificationManager;
  const invariant = require('invariant');
-@@ -368,7 +369,8 @@ class PushNotificationIOS {
+@@ -368,7 +369,8 @@
      if (
        !this._isRemote ||
        !this._notificationId ||

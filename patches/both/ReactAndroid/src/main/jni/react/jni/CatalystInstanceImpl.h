@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"
-index 0ea967d..76d425b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"
-@@ -46,14 +46,18 @@ class CatalystInstanceImpl : public jni::HybridClass<CatalystInstanceImpl> {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-01-30 13:55:48.476581100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-01-29 14:10:09.676889700 -0800
+@@ -46,14 +46,18 @@
  
    CatalystInstanceImpl();
  
@@ -25,7 +23,7 @@ index 0ea967d..76d425b 100644
  
    void extendNativeModules(
      jni::alias_ref<jni::JCollection<JavaModuleWrapper::javaobject>::javaobject> javaModules,
-@@ -80,6 +84,7 @@ class CatalystInstanceImpl : public jni::HybridClass<CatalystInstanceImpl> {
+@@ -80,6 +84,7 @@
                           std::string&& jsonValue);
    jlong getJavaScriptContext();
    void handleMemoryPressure(int pressureLevel);

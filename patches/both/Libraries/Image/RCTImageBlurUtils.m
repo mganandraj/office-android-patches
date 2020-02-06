@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageBlurUtils.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageBlurUtils.m"
-index 8ee3282..6f3a5e6 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageBlurUtils.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageBlurUtils.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageBlurUtils.m"	2020-01-30 13:55:47.905607700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageBlurUtils.m"	2020-01-29 14:10:08.898882100 -0800
 @@ -7,11 +7,16 @@
  
  #import "RCTImageBlurUtils.h"
@@ -21,7 +19,7 @@ index 8ee3282..6f3a5e6 100644
  
    // Image must be nonzero size
    if (CGImageGetWidth(imageRef) * CGImageGetHeight(imageRef) == 0) {
-@@ -22,9 +27,14 @@ UIImage *RCTBlurredImageWithRadius(UIImage *inputImage, CGFloat radius)
+@@ -22,9 +27,14 @@
    if (CGImageGetBitsPerPixel(imageRef) != 32 ||
        CGImageGetBitsPerComponent(imageRef) != 8 ||
        !((CGImageGetBitmapInfo(imageRef) & kCGBitmapAlphaInfoMask))) {
@@ -38,7 +36,7 @@ index 8ee3282..6f3a5e6 100644
      UIGraphicsEndImageContext();
    }
  
-@@ -79,7 +89,11 @@ UIImage *RCTBlurredImageWithRadius(UIImage *inputImage, CGFloat radius)
+@@ -79,7 +89,11 @@
  
    //create image from context
    imageRef = CGBitmapContextCreateImage(ctx);

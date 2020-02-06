@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\RCTSRWebSocket.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\RCTSRWebSocket.m"
-index 6f1e5e8..cf38043 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\RCTSRWebSocket.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\RCTSRWebSocket.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\RCTSRWebSocket.m"	2020-01-30 13:55:48.016612300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\RCTSRWebSocket.m"	2020-01-29 14:10:09.022883900 -0800
 @@ -17,7 +17,9 @@
  #import "RCTSRWebSocket.h"
  

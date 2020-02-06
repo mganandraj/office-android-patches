@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewPropTypes.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewPropTypes.js"
-index 861f105..36df10f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewPropTypes.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewPropTypes.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\View\\ViewPropTypes.js"	2020-01-30 13:55:47.886607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\View\\ViewPropTypes.js"	2020-01-29 14:10:08.879882300 -0800
 @@ -10,7 +10,12 @@
  
  'use strict';
@@ -16,7 +14,7 @@ index 861f105..36df10f 100644
  import type {EdgeInsetsProp} from '../../StyleSheet/EdgeInsetsPropType';
  import type {Node} from 'react';
  import type {ViewStyleProp} from '../../StyleSheet/StyleSheet';
-@@ -20,8 +25,13 @@ import type {
+@@ -20,8 +25,13 @@
    AccessibilityStates,
    AccessibilityActionEvent,
    AccessibilityActionInfo,
@@ -30,11 +28,10 @@ index 861f105..36df10f 100644
  export type ViewLayout = Layout;
  export type ViewLayoutEvent = LayoutEvent;
  
-@@ -41,6 +51,20 @@ type DirectEventProps = $ReadOnly<{|
-    */
+@@ -42,6 +52,20 @@
    onAccessibilityTap?: ?() => void,
  
-+  /**
+   /**
 +   * When `accessible` is true, the system will try to invoke this function
 +   * when the user performs accessibility double click gesture.
 +   */
@@ -48,14 +45,14 @@ index 861f105..36df10f 100644
 +
 +  onMouseEnter?: (event: SyntheticEvent<{}>) => mixed, // [TODO(macOS ISS#2323203)
 +
-   /**
++  /**
     * Invoked on mount and layout changes with:
     *
-@@ -253,6 +277,23 @@ type AndroidViewProps = $ReadOnly<{|
-    */
+    * `{nativeEvent: { layout: {x, y, width, height}}}`
+@@ -254,6 +278,23 @@
    needsOffscreenAlphaCompositing?: ?boolean,
  
-+  /**
+   /**
 +   * When `true`, indicates that the view is clickable. By default,
 +   * all the touchable elements are clickable.
 +   *
@@ -72,24 +69,25 @@ index 861f105..36df10f 100644
 +
 +  onClick?: ?(event: PressEvent) => mixed, // TODO(android ISS)
 +
-   /**
++  /**
     * Indicates to accessibility services whether the user should be notified
     * when this view changes. Works for Android API >= 19 only.
-@@ -263,6 +304,13 @@ type AndroidViewProps = $ReadOnly<{|
-    */
+    *
+@@ -264,6 +305,13 @@
    accessibilityLiveRegion?: ?('none' | 'polite' | 'assertive'),
  
-+  /**
+   /**
 +   * fired when the view focus changes (gain->lose or lose->gain)
 +   *
 +   * @platform android
 +   */
 +  onFocusChange?: ?(event: SyntheticEvent<{}>) => mixed, // TODO(android ISS)
 +
-   /**
++  /**
     * Controls how view is important for accessibility which is if it
     * fires accessibility events and if it is reported to accessibility services
-@@ -274,6 +322,8 @@ type AndroidViewProps = $ReadOnly<{|
+    * that query the screen. Works for Android only.
+@@ -274,6 +322,8 @@
     */
    importantForAccessibility?: ?('auto' | 'yes' | 'no' | 'no-hide-descendants'),
  
@@ -98,7 +96,7 @@ index 861f105..36df10f 100644
    /**
     * TV next focus down (see documentation for the View component).
     *
-@@ -310,18 +360,12 @@ type AndroidViewProps = $ReadOnly<{|
+@@ -310,18 +360,12 @@
    nextFocusUp?: ?number,
  
    /**
@@ -120,7 +118,7 @@ index 861f105..36df10f 100644
  |}>;
  
  type IOSViewProps = $ReadOnly<{|
-@@ -353,10 +397,19 @@ type IOSViewProps = $ReadOnly<{|
+@@ -353,10 +397,19 @@
     */
    accessibilityElementsHidden?: ?boolean,
  
@@ -142,7 +140,7 @@ index 861f105..36df10f 100644
     *
     * See http://facebook.github.io/react-native/docs/view.html#shouldrasterizeios
     */
-@@ -438,6 +491,8 @@ export type ViewProps = $ReadOnly<{|
+@@ -438,6 +491,8 @@
     */
    nativeID?: ?string,
  
@@ -151,7 +149,7 @@ index 861f105..36df10f 100644
    /**
     * This defines how far a touch event can start away from the view.
     * Typical interface guidelines recommend touch targets that are at least
-@@ -469,4 +524,76 @@ export type ViewProps = $ReadOnly<{|
+@@ -469,4 +524,76 @@
     * See http://facebook.github.io/react-native/docs/view.html#removeclippedsubviews
     */
    removeClippedSubviews?: ?boolean,

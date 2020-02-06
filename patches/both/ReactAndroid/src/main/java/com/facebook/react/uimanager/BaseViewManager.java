@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java"
-index 0d63d86..30e90e9 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java"	2020-01-30 13:55:48.359581100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java"	2020-01-29 14:10:09.444887800 -0800
 @@ -6,22 +6,25 @@
  package com.facebook.react.uimanager;
  
@@ -31,7 +29,7 @@ index 0d63d86..30e90e9 100644
  import javax.annotation.Nullable;
  
  /**
-@@ -31,11 +34,13 @@ import javax.annotation.Nullable;
+@@ -31,11 +34,13 @@
  public abstract class BaseViewManager<T extends View, C extends LayoutShadowNode>
      extends ViewManager<T, C> {
  
@@ -45,7 +43,7 @@ index 0d63d86..30e90e9 100644
    private static final String PROP_ACCESSIBILITY_LABEL = "accessibilityLabel";
    private static final String PROP_ACCESSIBILITY_HINT = "accessibilityHint";
    private static final String PROP_ACCESSIBILITY_LIVE_REGION = "accessibilityLiveRegion";
-@@ -43,6 +48,7 @@ public abstract class BaseViewManager<T extends View, C extends LayoutShadowNode
+@@ -43,6 +48,7 @@
    private static final String PROP_ACCESSIBILITY_STATES = "accessibilityStates";
    private static final String PROP_ACCESSIBILITY_ACTIONS = "accessibilityActions";
    private static final String PROP_IMPORTANT_FOR_ACCESSIBILITY = "importantForAccessibility";
@@ -53,7 +51,7 @@ index 0d63d86..30e90e9 100644
  
    // DEPRECATED
    private static final String PROP_ROTATION = "rotation";
-@@ -124,6 +130,11 @@ public abstract class BaseViewManager<T extends View, C extends LayoutShadowNode
+@@ -124,6 +130,11 @@
      ReactFindViewUtil.notifyViewRendered(view);
    }
  
@@ -65,7 +63,7 @@ index 0d63d86..30e90e9 100644
    @ReactProp(name = PROP_ACCESSIBILITY_LABEL)
    public void setAccessibilityLabel(@Nonnull T view, String accessibilityLabel) {
      view.setTag(R.id.accessibility_label, accessibilityLabel);
-@@ -215,6 +226,24 @@ public abstract class BaseViewManager<T extends View, C extends LayoutShadowNode
+@@ -215,6 +226,24 @@
      }
    }
  

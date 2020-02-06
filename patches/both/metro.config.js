@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\metro.config.js" "b/E:\\github\\ms-react-native-forpatch\\metro.config.js"
-index 92b626c..4950b56 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\metro.config.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\metro.config.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\metro.config.js"	2020-01-30 13:55:48.643609800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\metro.config.js"	2020-01-29 14:10:09.997893000 -0800
 @@ -8,16 +8,58 @@
   * @format
   */

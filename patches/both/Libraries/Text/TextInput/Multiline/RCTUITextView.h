@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h"
-index 2c0bbb2..f76ac35 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h"	2020-01-30 13:55:47.993608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Multiline\\RCTUITextView.h"	2020-01-29 14:10:08.997884100 -0800
 @@ -5,7 +5,9 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -13,7 +11,7 @@ index 2c0bbb2..f76ac35 100644
  
  #import "RCTBackedTextInputViewProtocol.h"
  
-@@ -24,20 +26,36 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -24,20 +26,36 @@
  @property (nonatomic, weak) id<RCTBackedTextInputDelegate> textInputDelegate;
  
  @property (nonatomic, assign) BOOL contextMenuHidden;

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Button.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Button.js"
-index 5105ee1..3c4117c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Button.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Button.js"
-@@ -87,7 +87,10 @@ type ButtonProps = $ReadOnly<{|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Button.js"	2020-01-30 13:55:47.856607400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Button.js"	2020-01-29 14:10:08.832883100 -0800
+@@ -87,7 +87,10 @@
     * Text to display for blindness accessibility features
     */
    accessibilityLabel?: ?string,
@@ -14,7 +12,7 @@ index 5105ee1..3c4117c 100644
    /**
     * If true, disable all interactions for this component.
     */
-@@ -131,6 +134,7 @@ class Button extends React.Component<ButtonProps> {
+@@ -131,6 +134,7 @@
    render() {
      const {
        accessibilityLabel,
@@ -22,7 +20,7 @@ index 5105ee1..3c4117c 100644
        color,
        onPress,
        touchSoundDisabled,
-@@ -147,7 +151,10 @@ class Button extends React.Component<ButtonProps> {
+@@ -147,7 +151,10 @@
      const buttonStyles = [styles.button];
      const textStyles = [styles.text];
      if (color) {
@@ -34,7 +32,7 @@ index 5105ee1..3c4117c 100644
          textStyles.push({color: color});
        } else {
          buttonStyles.push({backgroundColor: color});
-@@ -170,6 +177,7 @@ class Button extends React.Component<ButtonProps> {
+@@ -170,6 +177,7 @@
      return (
        <Touchable
          accessibilityLabel={accessibilityLabel}
@@ -42,7 +40,7 @@ index 5105ee1..3c4117c 100644
          accessibilityRole="button"
          accessibilityStates={accessibilityStates}
          hasTVPreferredFocus={hasTVPreferredFocus}
-@@ -201,6 +209,7 @@ const styles = StyleSheet.create({
+@@ -201,6 +209,7 @@
        backgroundColor: '#2196F3',
        borderRadius: 2,
      },
@@ -50,7 +48,7 @@ index 5105ee1..3c4117c 100644
    }),
    text: {
      textAlign: 'center',
-@@ -215,6 +224,11 @@ const styles = StyleSheet.create({
+@@ -215,6 +224,11 @@
          color: 'white',
          fontWeight: '500',
        },
@@ -62,7 +60,7 @@ index 5105ee1..3c4117c 100644
      }),
    },
    buttonDisabled: Platform.select({
-@@ -223,11 +237,16 @@ const styles = StyleSheet.create({
+@@ -223,11 +237,16 @@
        elevation: 0,
        backgroundColor: '#dfdfdf',
      },

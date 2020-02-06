@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"
-index 2c3893e..c9cace9 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"
-@@ -38,7 +38,7 @@ public:
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"	2020-01-30 13:55:48.520581000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"	2020-01-29 14:10:09.752895100 -0800
+@@ -38,7 +38,7 @@
      return m_registry;
    }
    
@@ -11,7 +9,7 @@ index 2c3893e..c9cace9 100644
      return m_batchHadNativeModuleCalls;
    }
  
-@@ -58,7 +58,7 @@ public:
+@@ -58,7 +58,7 @@
      if (isEndOfBatch) {
        // onBatchComplete will be called on the native (module) queue, but
        // decrementPendingJSCalls will be called sync. Be aware that the bridge may still
@@ -20,7 +18,7 @@ index 2c3893e..c9cace9 100644
        if (m_batchHadNativeModuleCalls) {
          m_callback->onBatchComplete();
          m_batchHadNativeModuleCalls = false;
-@@ -85,12 +85,14 @@ private:
+@@ -85,12 +85,14 @@
  
  NativeToJsBridge::NativeToJsBridge(
      JSExecutorFactory *jsExecutorFactory,
@@ -38,7 +36,7 @@ index 2c3893e..c9cace9 100644
        m_executorMessageQueueThread(std::move(jsQueue)),
        m_inspectable(m_executor->isInspectable()) {}
  
-@@ -116,8 +118,8 @@ void NativeToJsBridge::loadApplication(
+@@ -116,8 +118,8 @@
        executor->setBundleRegistry(std::move(bundleRegistry));
      }
      try {
@@ -49,7 +47,7 @@ index 2c3893e..c9cace9 100644
      } catch (...) {
        m_applicationScriptHasFailure = true;
        throw;
-@@ -133,8 +135,8 @@ void NativeToJsBridge::loadApplicationSync(
+@@ -133,8 +135,8 @@
      m_executor->setBundleRegistry(std::move(bundleRegistry));
    }
    try {
@@ -60,7 +58,7 @@ index 2c3893e..c9cace9 100644
    } catch (...) {
      m_applicationScriptHasFailure = true;
      throw;
-@@ -239,6 +241,10 @@ void NativeToJsBridge::handleMemoryPressure(int pressureLevel) {
+@@ -239,6 +241,10 @@
    });
  }
  

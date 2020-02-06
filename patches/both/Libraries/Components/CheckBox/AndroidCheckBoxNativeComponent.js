@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js"
-index 097cba1..4c68a27 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js"
-@@ -14,6 +14,7 @@ const requireNativeComponent = require('../../ReactNative/requireNativeComponent
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js"	2020-01-30 13:55:47.857612500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\CheckBox\\AndroidCheckBoxNativeComponent.js"	2020-01-29 14:10:08.833882900 -0800
+@@ -14,6 +14,7 @@
  import type {ViewProps} from '../View/ViewPropTypes';
  import type {SyntheticEvent} from '../../Types/CoreEventTypes';
  import type {NativeComponent} from '../../Renderer/shims/ReactNative';
@@ -10,7 +8,7 @@ index 097cba1..4c68a27 100644
  
  type CheckBoxEvent = SyntheticEvent<
    $ReadOnly<{|
-@@ -42,7 +43,12 @@ type NativeProps = $ReadOnly<{|
+@@ -42,7 +43,12 @@
  
    on?: ?boolean,
    enabled?: boolean,

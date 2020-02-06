@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\StatusBar\\StatusBar.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\StatusBar\\StatusBar.js"
-index 7617f77..a9d1b52 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\StatusBar\\StatusBar.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\StatusBar\\StatusBar.js"
-@@ -18,6 +18,8 @@ const processColor = require('../../StyleSheet/processColor');
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\StatusBar\\StatusBar.js"	2020-01-30 13:55:47.875609600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\StatusBar\\StatusBar.js"	2020-01-29 14:10:08.864912200 -0800
+@@ -18,6 +18,8 @@
  const StatusBarManager = require('../../BatchedBridge/NativeModules')
    .StatusBarManager;
  
@@ -11,7 +9,7 @@ index 7617f77..a9d1b52 100644
  /**
   * Status bar style
   */
-@@ -29,11 +31,11 @@ export type StatusBarStyle = $Keys<{
+@@ -29,11 +31,11 @@
    /**
     * Dark background, white texts and icons
     */
@@ -25,7 +23,7 @@ index 7617f77..a9d1b52 100644
  }>;
  
  /**
-@@ -59,7 +61,7 @@ type AndroidProps = $ReadOnly<{|
+@@ -59,7 +61,7 @@
     * The background color of the status bar.
     * @platform android
     */

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.m"
-index ceefb2e..754b8a4 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.m"
-@@ -129,7 +129,7 @@ NSString *const RCTTextAttributesTagAttributeName = @"RCTTextAttributesTagAttrib
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTTextAttributes.m"	2020-01-30 13:55:47.987608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTTextAttributes.m"	2020-01-29 14:10:08.990882500 -0800
+@@ -129,7 +129,7 @@
    }
  
    // Colors
@@ -11,7 +9,7 @@ index ceefb2e..754b8a4 100644
  
    if (_foregroundColor || !isnan(_opacity)) {
      attributes[NSForegroundColorAttributeName] = effectiveForegroundColor;
-@@ -215,9 +215,9 @@ NSString *const RCTTextAttributesTagAttributeName = @"RCTTextAttributesTagAttrib
+@@ -215,9 +215,9 @@
    }
  }
  
@@ -23,7 +21,7 @@ index ceefb2e..754b8a4 100644
  
    if (!isnan(_opacity)) {
      effectiveForegroundColor = [effectiveForegroundColor colorWithAlphaComponent:CGColorGetAlpha(effectiveForegroundColor.CGColor) * _opacity];
-@@ -226,15 +226,15 @@ NSString *const RCTTextAttributesTagAttributeName = @"RCTTextAttributesTagAttrib
+@@ -226,15 +226,15 @@
    return effectiveForegroundColor;
  }
  

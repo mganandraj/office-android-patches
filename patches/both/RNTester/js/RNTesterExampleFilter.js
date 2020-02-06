@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleFilter.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleFilter.js"
-index ba6af79..b26a3e8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleFilter.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleFilter.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleFilter.js"	2020-01-30 13:55:48.083612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleFilter.js"	2020-01-29 14:10:09.180890800 -0800
 @@ -10,6 +10,7 @@
  
  'use strict';
@@ -10,7 +8,7 @@ index ba6af79..b26a3e8 100644
  const React = require('react');
  const {StyleSheet, TextInput, View} = require('react-native');
  
-@@ -72,6 +73,13 @@ class RNTesterExampleFilter extends React.Component<Props, State> {
+@@ -72,6 +73,13 @@
              this.setState(() => ({filter: text}));
            }}
            placeholder="Search..."
@@ -24,7 +22,7 @@ index ba6af79..b26a3e8 100644
            underlineColorAndroid="transparent"
            style={styles.searchTextInput}
            testID={this.props.testID}
-@@ -84,12 +92,40 @@ class RNTesterExampleFilter extends React.Component<Props, State> {
+@@ -84,12 +92,40 @@
  
  const styles = StyleSheet.create({
    searchRow: {

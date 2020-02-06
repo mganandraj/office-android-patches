@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h"
-index ec1e291..acadb9b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h"	2020-01-30 13:55:47.997608400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTInputAccessoryView.h"	2020-01-29 14:10:09.000883500 -0800
 @@ -5,12 +5,12 @@
   * LICENSE file in the root directory of this source tree.
   */

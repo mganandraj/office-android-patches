@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js"
-index 1bd0d27..45ad1e6 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js"
-@@ -24,6 +24,7 @@ const ensurePositiveDelayProps = require('./ensurePositiveDelayProps');
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js"	2020-01-30 13:55:47.882607500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.android.js"	2020-01-29 14:10:08.874883000 -0800
+@@ -24,6 +24,7 @@
  const processColor = require('../../StyleSheet/processColor');
  
  import type {PressEvent} from '../../Types/CoreEventTypes';
@@ -10,7 +8,7 @@ index 1bd0d27..45ad1e6 100644
  
  const rippleBackgroundPropType = PropTypes.shape({
    type: PropTypes.oneOf(['RippleAndroid']),
-@@ -170,7 +171,7 @@ const TouchableNativeFeedback = createReactClass({
+@@ -170,7 +171,7 @@
        borderless: boolean,
      ): {
        type: 'RippleAndroid',
@@ -19,7 +17,7 @@ index 1bd0d27..45ad1e6 100644
        borderless: boolean,
      } {
        return {
-@@ -312,8 +313,10 @@ const TouchableNativeFeedback = createReactClass({
+@@ -312,8 +313,10 @@
        [drawableProp]: this.props.background,
        accessible: this.props.accessible !== false,
        accessibilityLabel: this.props.accessibilityLabel,

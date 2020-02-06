@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TouchableExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TouchableExample.js"
-index 7e4e348..9158d6f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TouchableExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TouchableExample.js"
-@@ -391,6 +391,105 @@ class TouchableDisabled extends React.Component<{}> {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TouchableExample.js"	2020-01-30 13:55:48.095611800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TouchableExample.js"	2020-01-29 14:10:09.197887500 -0800
+@@ -391,6 +391,105 @@
    }
  }
  
@@ -108,7 +106,7 @@ index 7e4e348..9158d6f 100644
  const heartImage = {
    uri: 'https://pbs.twimg.com/media/BlXBfT3CQAA6cVZ.png:small',
  };
-@@ -567,4 +666,25 @@ exports.examples = [
+@@ -567,4 +666,25 @@
        return <TouchableDisabled />;
      },
    },

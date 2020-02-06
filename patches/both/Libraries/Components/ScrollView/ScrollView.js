@@ -1,12 +1,9 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ScrollView\\ScrollView.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ScrollView\\ScrollView.js"
-index 260bc0f..5180153 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ScrollView\\ScrollView.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ScrollView\\ScrollView.js"
-@@ -281,6 +281,20 @@ type IOSProps = $ReadOnly<{|
-     | 'never'
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ScrollView\\ScrollView.js"	2020-01-30 13:55:47.872608200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ScrollView\\ScrollView.js"	2020-01-29 14:10:08.859882100 -0800
+@@ -282,6 +282,20 @@
      | 'always'
    ),
-+  /**
+   /**
 +   * Experimental: specifies how much to adjust the content view by when using
 +   * the keyboard to scroll. This value adjusts the content's horizontal offset.
 +   *
@@ -20,10 +17,11 @@ index 260bc0f..5180153 100644
 +   * @platform macos
 +   */
 +  verticalLineScroll?: number, // TODO(macOS ISS#2323203)
-   /**
++  /**
     * When true, ScrollView will emit updateChildFrames data in scroll events,
     * otherwise will not compute or emit child frame data.  This only exists
-@@ -867,12 +881,89 @@ class ScrollView extends React.Component<Props, State> {
+    * to support legacy issues, `onLayout` should be used instead to retrieve
+@@ -867,12 +881,89 @@
      }
    }
  
@@ -114,7 +112,7 @@ index 260bc0f..5180153 100644
        ) {
          console.log(
            'You specified `onScroll` on a <ScrollView> but not ' +
-@@ -1046,6 +1137,7 @@ class ScrollView extends React.Component<Props, State> {
+@@ -1046,6 +1137,7 @@
        // Override the onContentSizeChange from props, since this event can
        // bubble up from TextInputs
        onContentSizeChange: null,
@@ -122,7 +120,7 @@ index 260bc0f..5180153 100644
        onLayout: this._handleLayout,
        onMomentumScrollBegin: this._scrollResponder
          .scrollResponderHandleMomentumScrollBegin,
-@@ -1096,6 +1188,11 @@ class ScrollView extends React.Component<Props, State> {
+@@ -1096,6 +1188,11 @@
            this.props.pagingEnabled === true &&
            this.props.snapToInterval == null &&
            this.props.snapToOffsets == null,

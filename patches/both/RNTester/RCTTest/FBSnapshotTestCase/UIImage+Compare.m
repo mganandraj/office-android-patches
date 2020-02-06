@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m"
-index 57b9f90..6500010 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m"	2020-01-30 13:55:48.039611800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\UIImage+Compare.m"	2020-01-29 14:10:09.046884600 -0800
 @@ -13,9 +13,11 @@
  {
    NSAssert(CGSizeEqualToSize(self.size, image.size), @"Images must be same size.");

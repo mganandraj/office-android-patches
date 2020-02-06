@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m"
-index fe5ee67..59a800b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m"	2020-01-30 13:55:47.994608100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.m"	2020-01-29 14:10:08.998884600 -0800
 @@ -6,18 +6,31 @@
   */
  
@@ -35,7 +33,7 @@ index fe5ee67..59a800b 100644
  }
  
  - (instancetype)initWithTextField:(UITextField<RCTBackedTextInputViewProtocol> *)backedTextInputView
-@@ -26,8 +39,10 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -26,8 +39,10 @@
      _backedTextInputView = backedTextInputView;
      backedTextInputView.delegate = self;
  
@@ -46,7 +44,7 @@ index fe5ee67..59a800b 100644
    }
  
    return self;
-@@ -35,8 +50,10 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -35,8 +50,10 @@
  
  - (void)dealloc
  {
@@ -57,7 +55,7 @@ index fe5ee67..59a800b 100644
  }
  
  #pragma mark - UITextFieldDelegate
-@@ -110,7 +127,11 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -110,7 +127,11 @@
  
  #pragma mark - Public Interface
  
@@ -69,7 +67,7 @@ index fe5ee67..59a800b 100644
  {
    _previousSelectedTextRange = textRange;
  }
-@@ -124,14 +145,74 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -124,14 +145,74 @@
  
  - (void)textFieldProbablyDidChangeSelection
  {
@@ -146,7 +144,7 @@ index fe5ee67..59a800b 100644
  @end
  
  #pragma mark - RCTBackedTextViewDelegateAdapter (for UITextView)
-@@ -140,9 +221,17 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -140,9 +221,17 @@
  @end
  
  @implementation RCTBackedTextViewDelegateAdapter {
@@ -164,7 +162,7 @@ index fe5ee67..59a800b 100644
  }
  
  - (instancetype)initWithTextView:(UITextView<RCTBackedTextInputViewProtocol> *)backedTextInputView
-@@ -190,7 +279,11 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -190,7 +279,11 @@
    if (!_backedTextInputView.textWasPasted && [text isEqualToString:@"\n"]) {
      if ([_backedTextInputView.textInputDelegate textInputShouldReturn]) {
        [_backedTextInputView.textInputDelegate textInputDidReturn];
@@ -176,7 +174,7 @@ index fe5ee67..59a800b 100644
        return NO;
      }
    }
-@@ -208,6 +301,8 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -208,6 +301,8 @@
    [_backedTextInputView.textInputDelegate textInputDidChange];
  }
  
@@ -185,7 +183,7 @@ index fe5ee67..59a800b 100644
  - (void)textViewDidChangeSelection:(__unused UITextView *)textView
  {
    [self textViewProbablyDidChangeSelection];
-@@ -222,9 +317,65 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -222,9 +317,65 @@
    }
  }
  
@@ -251,7 +249,7 @@ index fe5ee67..59a800b 100644
  {
    _previousSelectedTextRange = textRange;
  }
-@@ -233,11 +384,11 @@ static void *TextFieldSelectionObservingContext = &TextFieldSelectionObservingCo
+@@ -233,11 +384,11 @@
  
  - (void)textViewProbablyDidChangeSelection
  {

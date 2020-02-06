@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedList.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedList.js"
-index b896b3b..eb7b794 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedList.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedList.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\VirtualizedList.js"	2020-01-30 13:55:47.925608600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\VirtualizedList.js"	2020-01-29 14:10:08.925881600 -0800
 @@ -11,13 +11,13 @@
  
  const Batchinator = require('../Interaction/Batchinator');
@@ -17,7 +15,7 @@ index b896b3b..eb7b794 100644
  const View = require('../Components/View/View');
  const ViewabilityHelper = require('./ViewabilityHelper');
  
-@@ -34,6 +34,7 @@ import type {
+@@ -34,6 +34,7 @@
    ViewToken,
    ViewabilityConfigCallbackPair,
  } from './ViewabilityHelper';
@@ -25,7 +23,7 @@ index b896b3b..eb7b794 100644
  
  type Item = any;
  
-@@ -47,6 +48,12 @@ type ViewabilityHelperCallbackTuple = {
+@@ -47,6 +48,12 @@
    }) => void,
  };
  
@@ -38,24 +36,23 @@ index b896b3b..eb7b794 100644
  type RequiredProps = {
    // TODO: Conflicts with the optional `renderItem` in
    // `VirtualizedSectionList`'s props.
-@@ -77,6 +84,12 @@ type OptionalProps = {
-    * this for debugging purposes.
+@@ -78,6 +85,12 @@
     */
    disableVirtualization?: ?boolean,
-+  /**
+   /**
 +   * Handles key down events and updates selection based on the key event
 +   *
 +   * @platform macos
 +   */
 +  enableSelectionOnKeyPress?: ?boolean, // TODO(macOS ISS#2323203)
-   /**
++  /**
     * A marker property for telling the list to re-render (since it implements `PureComponent`). If
     * any of your `renderItem`, Header, Footer, etc. functions depend on anything outside of the
-@@ -164,6 +177,19 @@ type OptionalProps = {
-     highestMeasuredFrameIndex: number,
+    * `data` prop, stick it here and treat it immutably.
+@@ -165,6 +178,19 @@
      averageItemLength: number,
    }) => void,
-+  /**
+   /**
 +   * If provided, will be invoked whenever the selection on the list changes. Make sure to set
 +   * the property enableSelectionOnKeyPress to true to change selection via keyboard (macOS).
 +   *
@@ -68,10 +65,11 @@ index b896b3b..eb7b794 100644
 +   * @platform macos
 +   */
 +  onSelectionEntered?: ?Function, // TODO(macOS ISS#2323203)
-   /**
++  /**
     * Called when the viewability of rows changes, as defined by the
     * `viewabilityConfig` prop.
-@@ -238,7 +264,11 @@ type ChildListState = {
+    */
+@@ -238,7 +264,11 @@
    frames: {[key: number]: Frame},
  };
  
@@ -84,7 +82,7 @@ index b896b3b..eb7b794 100644
  
  /**
   * Base implementation for the more convenient [`<FlatList>`](/react-native/docs/flatlist.html)
-@@ -377,6 +407,25 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -377,6 +407,25 @@
      );
    }
  
@@ -110,7 +108,7 @@ index b896b3b..eb7b794 100644
    recordInteraction() {
      this._nestedChildLists.forEach(childList => {
        childList.ref && childList.ref.recordInteraction();
-@@ -598,6 +647,7 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -598,6 +647,7 @@
            this.props.getItemCount(this.props.data),
            (this.props.initialScrollIndex || 0) + this.props.initialNumToRender,
          ) - 1,
@@ -118,7 +116,7 @@ index b896b3b..eb7b794 100644
      };
  
      if (this._isNestedWithSameOrientation()) {
-@@ -694,6 +744,7 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -694,6 +744,7 @@
            index={ii}
            inversionStyle={inversionStyle}
            item={item}
@@ -126,7 +124,7 @@ index b896b3b..eb7b794 100644
            key={key}
            prevCellKey={prevCellKey}
            onUpdateSeparators={this._onUpdateSeparators}
-@@ -1048,6 +1099,12 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -1048,6 +1099,12 @@
    }
  
    _defaultRenderScrollComponent = props => {
@@ -139,7 +137,7 @@ index b896b3b..eb7b794 100644
      const onRefresh = props.onRefresh;
      if (this._isNestedWithSameOrientation()) {
        // $FlowFixMe - Typing ReactNativeComponent revealed errors
-@@ -1063,6 +1120,7 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -1063,6 +1120,7 @@
          // $FlowFixMe Invalid prop usage
          <ScrollView
            {...props}
@@ -147,7 +145,7 @@ index b896b3b..eb7b794 100644
            refreshControl={
              props.refreshControl == null ? (
                <RefreshControl
-@@ -1078,7 +1136,7 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -1078,7 +1136,7 @@
        );
      } else {
        // $FlowFixMe Invalid prop usage
@@ -156,7 +154,7 @@ index b896b3b..eb7b794 100644
      }
    };
  
-@@ -1200,6 +1258,80 @@ class VirtualizedList extends React.PureComponent<Props, State> {
+@@ -1200,6 +1258,80 @@
      this._headerLength = this._selectLength(e.nativeEvent.layout);
    };
  
@@ -237,7 +235,7 @@ index b896b3b..eb7b794 100644
    _renderDebugOverlay() {
      const normalize =
        this._scrollMetrics.visibleLength /
-@@ -1658,6 +1790,7 @@ class CellRenderer extends React.Component<
+@@ -1658,6 +1790,7 @@
      horizontal: ?boolean,
      index: number,
      inversionStyle: ViewStyleProp,
@@ -245,7 +243,7 @@ index b896b3b..eb7b794 100644
      item: Item,
      onLayout: (event: Object) => void, // This is extracted by ScrollViewStickyHeader
      onUnmount: (cellKey: string) => void,
-@@ -1734,6 +1867,7 @@ class CellRenderer extends React.Component<
+@@ -1734,6 +1867,7 @@
        item,
        index,
        inversionStyle,
@@ -253,7 +251,7 @@ index b896b3b..eb7b794 100644
        parentProps,
      } = this.props;
      const {renderItem, getItemLayout} = parentProps;
-@@ -1741,6 +1875,7 @@ class CellRenderer extends React.Component<
+@@ -1741,6 +1875,7 @@
      const element = renderItem({
        item,
        index,

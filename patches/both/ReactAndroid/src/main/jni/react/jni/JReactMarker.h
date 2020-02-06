@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h"
-index 6d12e50..916e0c3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h"	2020-01-30 13:55:48.479581200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h"	2020-01-29 14:10:09.679889700 -0800
 @@ -13,10 +13,14 @@
  namespace facebook {
  namespace react {

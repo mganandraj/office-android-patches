@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTSnapshotManager.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTSnapshotManager.m"
-index 4536bea..883b7e4 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTSnapshotManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTSnapshotManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTSnapshotManager.m"	2020-01-30 13:55:48.040611900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTSnapshotManager.m"	2020-01-29 14:10:09.047883700 -0800
 @@ -7,7 +7,7 @@
  
  #import "RCTSnapshotManager.h"

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m"
-index 3232ec4..f4c7dcf 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m"	2020-01-30 13:55:48.064609100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTModuleInitTests.m"	2020-01-29 14:10:09.109882700 -0800
 @@ -9,7 +9,11 @@
  #import <Foundation/Foundation.h>
  #import <XCTest/XCTest.h>

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\app\\src\\debug\\AndroidManifest.xml" "b/E:\\github\\ms-react-native-forpatch\\template\\android\\app\\src\\debug\\AndroidManifest.xml"
-index fa26aa5..e68a6be 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\template\\android\\app\\src\\debug\\AndroidManifest.xml"
-+++ "b/E:\\github\\ms-react-native-forpatch\\template\\android\\app\\src\\debug\\AndroidManifest.xml"
+--- "E:\\github\\fb-react-native-forpatch-base\\template\\android\\app\\src\\debug\\AndroidManifest.xml"	2020-01-29 14:11:26.780530700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\template\\android\\app\\src\\debug\\AndroidManifest.xml"	2020-01-29 14:10:10.027926900 -0800
 @@ -4,5 +4,10 @@
  
      <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>

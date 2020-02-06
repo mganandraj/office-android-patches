@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec"
-index 3832164..12876d8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec"
-@@ -28,12 +28,12 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec"	2020-01-30 13:55:48.604615800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jscallinvoker\\React-jscallinvoker.podspec"	2020-01-29 14:10:09.822923000 -0800
+@@ -28,12 +28,12 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

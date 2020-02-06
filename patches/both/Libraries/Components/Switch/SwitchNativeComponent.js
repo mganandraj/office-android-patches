@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Switch\\SwitchNativeComponent.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Switch\\SwitchNativeComponent.js"
-index b3be4df..20b2254 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Switch\\SwitchNativeComponent.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Switch\\SwitchNativeComponent.js"
-@@ -16,15 +16,17 @@ const ReactNative = require('../../Renderer/shims/ReactNative');
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Switch\\SwitchNativeComponent.js"	2020-01-30 13:55:47.876612200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Switch\\SwitchNativeComponent.js"	2020-01-29 14:10:08.865882000 -0800
+@@ -16,15 +16,17 @@
  const requireNativeComponent = require('../../ReactNative/requireNativeComponent');
  
  import type {SwitchChangeEvent} from '../../Types/CoreEventTypes';
@@ -23,7 +21,7 @@ index b3be4df..20b2254 100644
    value?: ?boolean,
  |}>;
  
-@@ -34,17 +36,17 @@ export type NativeAndroidProps = $ReadOnly<{|
+@@ -34,17 +36,17 @@
  
    enabled?: ?boolean,
    on?: ?boolean,

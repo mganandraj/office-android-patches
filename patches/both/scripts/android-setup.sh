@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\android-setup.sh" "b/E:\\github\\ms-react-native-forpatch\\scripts\\android-setup.sh"
-index c76f520..ee8ed15 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\android-setup.sh"
-+++ "b/E:\\github\\ms-react-native-forpatch\\scripts\\android-setup.sh"
-@@ -16,19 +16,23 @@ function getAndroidPackages {
+--- "E:\\github\\fb-react-native-forpatch-base\\scripts\\android-setup.sh"	2020-01-30 13:55:48.658610200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\scripts\\android-setup.sh"	2020-01-29 14:10:10.014924300 -0800
+@@ -16,19 +16,23 @@
  
    # Package names can be obtained using `sdkmanager --list`
    if [ ! -e "$DEPS" ] || [ ! "$CI" ]; then

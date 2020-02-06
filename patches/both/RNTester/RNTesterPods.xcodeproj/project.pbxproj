@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj"
-index 63e2447..1f3c3a8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj"	2020-01-30 13:55:48.057608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterPods.xcodeproj\\project.pbxproj"	2020-01-29 14:10:09.096884000 -0800
 @@ -16,9 +16,21 @@
  		3D13F84A1D6F6AFD00E69E0E /* OtherImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D13F8451D6F6AF200E69E0E /* OtherImages.xcassets */; };
  		3D2AFAF51D646CF80089D1A3 /* legacy_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AFAF41D646CF80089D1A3 /* legacy_image@2x.png */; };
@@ -748,10 +746,11 @@ index 63e2447..1f3c3a8 100644
  		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNTesterPods" */ = {
  			isa = XCConfigurationList;
  			buildConfigurations = (
-@@ -676,6 +1238,33 @@
+@@ -675,6 +1237,33 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		9F153485233AB2C7006DFE44 /* Build configuration list for PBXNativeTarget "RNTester-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -778,7 +777,6 @@ index 63e2447..1f3c3a8 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;

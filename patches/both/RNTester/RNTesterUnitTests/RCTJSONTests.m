@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m"
-index 3dcf15e..2ef8a8f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m"	2020-01-30 13:55:48.063609000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTJSONTests.m"	2020-01-29 14:10:09.108883400 -0800
 @@ -106,6 +106,7 @@
    XCTAssertEqualObjects(json, RCTJSONStringify(obj, NULL));
  }

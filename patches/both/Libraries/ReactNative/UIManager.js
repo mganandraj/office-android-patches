@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\UIManager.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\UIManager.js"
-index cf7f8ed..756fab3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\UIManager.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\UIManager.js"
-@@ -46,10 +46,8 @@ UIManager.getViewManagerConfig = function(viewManagerName: string) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\UIManager.js"	2020-01-30 13:55:47.961610500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\UIManager.js"	2020-01-29 14:10:08.960883000 -0800
+@@ -46,10 +46,8 @@
  
    // If we're in the Chrome Debugger, let's not even try calling the sync
    // method.
@@ -15,7 +13,7 @@ index cf7f8ed..756fab3 100644
    }
  
    if (UIManager.lazilyLoadView && !triedLoadingConfig.has(viewManagerName)) {
-@@ -105,7 +103,10 @@ function lazifyViewManagerConfig(viewName) {
+@@ -105,7 +103,10 @@
   * only needed for iOS, which puts the constants in the ViewManager
   * namespace instead of UIManager, unlike Android.
   */
@@ -27,7 +25,7 @@ index cf7f8ed..756fab3 100644
    Object.keys(UIManager).forEach(viewName => {
      lazifyViewManagerConfig(viewName);
    });
-@@ -139,7 +140,7 @@ if (Platform.OS === 'ios') {
+@@ -139,7 +140,7 @@
    }
  }
  

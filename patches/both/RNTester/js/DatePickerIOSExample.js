@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerIOSExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerIOSExample.js"
-index 6aef85f..582b030 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerIOSExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerIOSExample.js"
-@@ -32,7 +32,13 @@ class WithDatePickerData extends React.Component<Props, State> {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerIOSExample.js"	2020-01-30 13:55:48.075613000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerIOSExample.js"	2020-01-29 14:10:09.169892300 -0800
+@@ -32,7 +32,13 @@
  
    render() {
      return (

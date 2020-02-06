@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m"
-index 55998e0..41ca2d1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m"	2020-01-30 13:55:48.049613900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterIntegrationTests\\RNTesterSnapshotTests.m"	2020-01-29 14:10:09.069884700 -0800
 @@ -6,7 +6,7 @@
   *
   */
@@ -26,7 +24,7 @@ index 55998e0..41ca2d1 100644
    _runner.recordMode = NO;
  }
  
-@@ -39,8 +43,9 @@ RCT_TEST(ViewExample)
+@@ -39,8 +43,9 @@
  RCT_TEST(LayoutExample)
  RCT_TEST(ARTExample)
  RCT_TEST(ScrollViewExample)

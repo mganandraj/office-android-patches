@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.cpp"
-index 719dd93..aad96f1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.cpp"
-@@ -81,6 +81,10 @@ Instrumentation& Runtime::instrumentation() {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\jsi.cpp"	2020-01-30 13:55:48.608616800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\jsi.cpp"	2020-01-29 14:10:09.828890800 -0800
+@@ -81,6 +81,10 @@
        return false;
      }
  

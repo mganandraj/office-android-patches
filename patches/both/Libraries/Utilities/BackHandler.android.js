@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\BackHandler.android.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\BackHandler.android.js"
-index a7e2e29..be48d8b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\BackHandler.android.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\BackHandler.android.js"
-@@ -42,6 +42,8 @@ RCTDeviceEventEmitter.addListener(DEVICE_BACK_EVENT, function() {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\BackHandler.android.js"	2020-01-30 13:55:48.004610400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\BackHandler.android.js"	2020-01-29 14:10:09.006883800 -0800
+@@ -42,6 +42,8 @@
   *
   * iOS: Not applicable.
   *

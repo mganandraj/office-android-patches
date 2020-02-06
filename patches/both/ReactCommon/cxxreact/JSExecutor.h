@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\JSExecutor.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\JSExecutor.h"
-index bc2eb7d..2606948 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\JSExecutor.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\JSExecutor.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\JSExecutor.h"	2020-01-30 13:55:48.517581300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\JSExecutor.h"	2020-01-29 14:10:09.749922100 -0800
 @@ -7,7 +7,9 @@
  
  #include <memory>
@@ -12,7 +10,7 @@ index bc2eb7d..2606948 100644
  #include <cxxreact/NativeModule.h>
  #include <folly/dynamic.h>
  
-@@ -19,11 +21,21 @@ namespace facebook {
+@@ -19,11 +21,21 @@
  namespace react {
  
  class JSBigString;
@@ -35,7 +33,7 @@ index bc2eb7d..2606948 100644
  
  // This interface describes the delegate interface required by
  // Executor implementations to call from JS into native code.
-@@ -37,6 +49,8 @@ class ExecutorDelegate {
+@@ -37,6 +49,8 @@
      JSExecutor& executor, folly::dynamic&& calls, bool isEndOfBatch) = 0;
    virtual MethodCallResult callSerializableNativeHook(
      JSExecutor& executor, unsigned int moduleId, unsigned int methodId, folly::dynamic&& args) = 0;
@@ -44,7 +42,7 @@ index bc2eb7d..2606948 100644
  };
  
  using NativeExtensionsProvider = std::function<folly::dynamic(const std::string&)>;
-@@ -46,6 +60,14 @@ public:
+@@ -46,6 +60,14 @@
    virtual std::unique_ptr<JSExecutor> createJSExecutor(
      std::shared_ptr<ExecutorDelegate> delegate,
      std::shared_ptr<MessageQueueThread> jsQueue) = 0;
@@ -59,7 +57,7 @@ index bc2eb7d..2606948 100644
    virtual ~JSExecutorFactory() {}
  };
  
-@@ -105,6 +127,15 @@ public:
+@@ -105,6 +127,15 @@
  
    virtual void handleMemoryPressure(__unused int pressureLevel) {}
  

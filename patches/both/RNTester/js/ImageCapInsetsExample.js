@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageCapInsetsExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageCapInsetsExample.js"
-index ca95d45..f047672 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageCapInsetsExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageCapInsetsExample.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageCapInsetsExample.js"	2020-01-30 13:55:48.076612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageCapInsetsExample.js"	2020-01-29 14:10:09.171888600 -0800
 @@ -12,6 +12,7 @@
  
  const React = require('react');
@@ -10,7 +8,7 @@ index ca95d45..f047672 100644
  
  const nativeImageSource = require('../../Libraries/Image/nativeImageSource');
  const {Image, StyleSheet, Text, View} = ReactNative;
-@@ -19,16 +20,27 @@ const {Image, StyleSheet, Text, View} = ReactNative;
+@@ -19,16 +20,27 @@
  type Props = $ReadOnly<{||}>;
  class ImageCapInsetsExample extends React.Component<Props> {
    render() {
@@ -43,7 +41,7 @@ index ca95d45..f047672 100644
              style={styles.storyBackground}
              resizeMode="stretch"
              capInsets={{left: 0, right: 0, bottom: 0, top: 0}}
-@@ -37,11 +49,7 @@ class ImageCapInsetsExample extends React.Component<Props> {
+@@ -37,11 +49,7 @@
          <View style={[styles.background, {paddingTop: 10}]}>
            <Text>capInsets: 15</Text>
            <Image

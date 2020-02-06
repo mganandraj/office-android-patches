@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageExample.js"
-index 82cfc8b..772f6a1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageExample.js"
-@@ -469,7 +469,7 @@ exports.examples = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ImageExample.js"	2020-01-30 13:55:48.077612500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ImageExample.js"	2020-01-29 14:10:09.172888200 -0800
+@@ -469,7 +469,7 @@
          />
        );
      },
@@ -11,7 +9,7 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'Image Download Progress',
-@@ -482,7 +482,7 @@ exports.examples = [
+@@ -482,7 +482,7 @@
          />
        );
      },
@@ -20,7 +18,7 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'defaultSource',
-@@ -498,7 +498,7 @@ exports.examples = [
+@@ -498,7 +498,7 @@
          />
        );
      },
@@ -29,7 +27,7 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'Cache Policy',
-@@ -528,8 +528,9 @@ exports.examples = [
+@@ -528,8 +528,9 @@
          </View>
        );
      },
@@ -40,7 +38,7 @@ index 82cfc8b..772f6a1 100644
    {
      title: 'Border Color',
      render: function() {
-@@ -839,7 +840,7 @@ exports.examples = [
+@@ -839,7 +840,7 @@
          />
        );
      },
@@ -49,7 +47,7 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'Base64 image',
-@@ -848,7 +849,7 @@ exports.examples = [
+@@ -848,7 +849,7 @@
          <Image style={styles.base64} source={{uri: base64Icon, scale: 3}} />
        );
      },
@@ -58,7 +56,7 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'Cap Insets',
-@@ -860,7 +861,7 @@ exports.examples = [
+@@ -860,7 +861,7 @@
      render: function() {
        return <ImageCapInsetsExample />;
      },
@@ -67,11 +65,10 @@ index 82cfc8b..772f6a1 100644
    },
    {
      title: 'Image Size',
-@@ -915,6 +916,35 @@ exports.examples = [
-     },
+@@ -916,6 +917,35 @@
      platform: 'ios',
    },
-+  {
+   {
 +    title: 'Bundled images',
 +    description: 'Images shipped in a separate native bundle',
 +    render: function() {
@@ -100,6 +97,7 @@ index 82cfc8b..772f6a1 100644
 +    },
 +    platform: 'macos',
 +  },
-   {
++  {
      title: 'Blur Radius',
      render: function() {
+       return (

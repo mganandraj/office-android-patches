@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\package.json" "b/E:\\github\\ms-react-native-forpatch\\package.json"
-index 1bc2523..c3ce4c7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\package.json"
-+++ "b/E:\\github\\ms-react-native-forpatch\\package.json"
+--- "E:\\github\\fb-react-native-forpatch-base\\package.json"	2020-01-30 13:55:48.643609800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\package.json"	2020-01-29 14:10:09.997893000 -0800
 @@ -1,12 +1,11 @@
  {
    "name": "react-native",

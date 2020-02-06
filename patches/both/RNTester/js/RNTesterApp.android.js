@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.android.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.android.js"
-index d3b2915..f8258fa 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.android.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.android.js"
-@@ -124,6 +124,8 @@ class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.android.js"	2020-01-30 13:55:48.082577300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.android.js"	2020-01-29 14:10:09.179886200 -0800
+@@ -124,6 +124,8 @@
    _renderDrawerContent = () => {
      return (
        <View style={styles.drawerContentWrapper}>
@@ -11,7 +9,7 @@ index d3b2915..f8258fa 100644
          <RNTesterExampleList
            list={RNTesterList}
            displayTitleRow={true}
-@@ -188,6 +190,8 @@ class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
+@@ -188,6 +190,8 @@
            style={styles.toolbar}
            title="RNTester"
          />

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h"
-index ab05c5a..8649c12 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h"	2020-01-29 14:11:26.494528400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h"	2020-01-29 14:10:09.687889500 -0800
 @@ -179,4 +179,4 @@
  #undef HAVE_SYSCALL_H
  #undef HAVE_SYS_SYSCALL_H

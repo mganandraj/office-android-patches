@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m"
-index cdf4bfe..fb94400 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m"	2020-01-30 13:55:48.060609000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTConvert_NSURLTests.m"	2020-01-29 14:10:09.106911500 -0800
 @@ -30,7 +30,7 @@
  } \
  

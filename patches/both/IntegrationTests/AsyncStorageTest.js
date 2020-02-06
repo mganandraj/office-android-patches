@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\AsyncStorageTest.js" "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\AsyncStorageTest.js"
-index d22a611..e1a4de7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\AsyncStorageTest.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\AsyncStorageTest.js"
-@@ -137,18 +137,23 @@ function testRemoveItem() {
+--- "E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\AsyncStorageTest.js"	2020-01-30 13:55:47.807606500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\IntegrationTests\\AsyncStorageTest.js"	2020-01-29 14:10:08.788911300 -0800
+@@ -137,18 +137,23 @@
  }
  
  function testMerge() {

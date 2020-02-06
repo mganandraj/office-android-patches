@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Linking\\NativeLinking.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Linking\\NativeLinking.js"
-index 2fa0d78..8608a0a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Linking\\NativeLinking.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Linking\\NativeLinking.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Linking\\NativeLinking.js"	2020-01-30 13:55:47.921613500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Linking\\NativeLinking.js"	2020-01-29 14:10:08.920883300 -0800
 @@ -12,7 +12,7 @@
  
  import type {TurboModule} from 'RCTExport';
@@ -11,7 +9,7 @@ index 2fa0d78..8608a0a 100644
  
  export interface Spec extends TurboModule {
    // Common interface
-@@ -32,6 +32,6 @@ export interface Spec extends TurboModule {
+@@ -32,6 +32,6 @@
    +removeListeners: (count: number) => void;
  }
  

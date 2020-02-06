@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h"
-index 5b62f90..a728b7c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h"	2020-01-30 13:55:47.995610700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.h"	2020-01-29 14:10:08.999885400 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -11,7 +9,7 @@ index 5b62f90..a728b7c 100644
  
  #import <React/RCTView.h>
  
-@@ -27,8 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -27,8 +27,12 @@
  - (instancetype)initWithCoder:(NSCoder *)decoder NS_UNAVAILABLE;
  - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
  
@@ -25,7 +23,7 @@ index 5b62f90..a728b7c 100644
  @property (nonatomic, strong, nullable) RCTTextAttributes *textAttributes;
  @property (nonatomic, assign) UIEdgeInsets reactPaddingInsets;
  @property (nonatomic, assign) UIEdgeInsets reactBorderInsets;
-@@ -47,8 +51,11 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -47,8 +51,11 @@
  @property (nonatomic, copy) RCTTextSelection *selection;
  @property (nonatomic, strong, nullable) NSNumber *maxLength;
  @property (nonatomic, copy) NSAttributedString *attributedText;

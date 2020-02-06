@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java"
-index 2f7cfc4..7ffa23e 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java"
-@@ -13,7 +13,6 @@ import android.content.DialogInterface.OnClickListener;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java"	2020-01-30 13:55:48.329611400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java"	2020-01-29 14:10:09.414918100 -0800
+@@ -13,7 +13,6 @@
  import android.content.DialogInterface.OnDismissListener;
  import android.os.Bundle;
  import androidx.fragment.app.FragmentActivity;
@@ -10,7 +8,7 @@ index 2f7cfc4..7ffa23e 100644
  
  import com.facebook.common.logging.FLog;
  import com.facebook.react.bridge.Callback;
-@@ -68,13 +67,31 @@ public class DialogModule extends ReactContextBaseJavaModule implements Lifecycl
+@@ -68,13 +67,31 @@
      return NAME;
    }
  
@@ -44,7 +42,7 @@ index 2f7cfc4..7ffa23e 100644
      }
  
      public void showPendingAlert() {
-@@ -85,7 +102,11 @@ public class DialogModule extends ReactContextBaseJavaModule implements Lifecycl
+@@ -85,7 +102,11 @@
        }
  
        dismissExisting();
@@ -57,7 +55,7 @@ index 2f7cfc4..7ffa23e 100644
        mFragmentToShow = null;
      }
  
-@@ -93,10 +114,19 @@ public class DialogModule extends ReactContextBaseJavaModule implements Lifecycl
+@@ -93,10 +114,19 @@
        if (!mIsInForeground) {
          return;
        }
@@ -81,7 +79,7 @@ index 2f7cfc4..7ffa23e 100644
        }
      }
  
-@@ -108,14 +138,26 @@ public class DialogModule extends ReactContextBaseJavaModule implements Lifecycl
+@@ -108,14 +138,26 @@
        AlertFragmentListener actionListener =
            actionCallback != null ? new AlertFragmentListener(actionCallback) : null;
  
@@ -114,7 +112,7 @@ index 2f7cfc4..7ffa23e 100644
        }
      }
    }
-@@ -242,6 +284,13 @@ public class DialogModule extends ReactContextBaseJavaModule implements Lifecycl
+@@ -242,6 +284,13 @@
      if (activity == null) {
        return null;
      }

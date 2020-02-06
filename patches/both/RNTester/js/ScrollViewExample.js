@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ScrollViewExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ScrollViewExample.js"
-index c6c28af..507539b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ScrollViewExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ScrollViewExample.js"
-@@ -39,6 +39,7 @@ exports.examples = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ScrollViewExample.js"	2020-01-30 13:55:48.086613300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ScrollViewExample.js"	2020-01-29 14:10:09.184886700 -0800
+@@ -39,6 +39,7 @@
                // $FlowFixMe Invalid prop usage
                _scrollView = scrollView;
              }}

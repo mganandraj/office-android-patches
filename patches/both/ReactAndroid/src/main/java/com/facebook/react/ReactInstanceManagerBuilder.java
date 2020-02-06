@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java"
-index 47fc17b..4865ca7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java"
-@@ -15,11 +15,13 @@ import com.facebook.react.bridge.JSIModulePackage;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java"	2020-01-30 13:55:48.238578900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java"	2020-01-29 14:10:09.339920000 -0800
+@@ -15,11 +15,13 @@
  import com.facebook.react.bridge.JavaScriptExecutorFactory;
  import com.facebook.react.bridge.NativeModuleCallExceptionHandler;
  import com.facebook.react.bridge.NotThreadSafeBridgeIdleDebugListener;
@@ -16,7 +14,7 @@ index 47fc17b..4865ca7 100644
  import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
  import com.facebook.react.packagerconnection.RequestHandler;
  import com.facebook.react.uimanager.UIImplementationProvider;
-@@ -274,7 +276,7 @@ public class ReactInstanceManagerBuilder {
+@@ -274,7 +276,7 @@
          mCurrentActivity,
          mDefaultHardwareBackBtnHandler,
          mJavaScriptExecutorFactory == null

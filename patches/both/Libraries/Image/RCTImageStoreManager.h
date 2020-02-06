@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageStoreManager.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageStoreManager.h"
-index b196904..5d37eed 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageStoreManager.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageStoreManager.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageStoreManager.h"	2020-01-30 13:55:47.907607800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageStoreManager.h"	2020-01-29 14:10:08.901883400 -0800
 @@ -3,7 +3,7 @@
  // This source code is licensed under the MIT license found in the
  // LICENSE file in the root directory of this source tree.

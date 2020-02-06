@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.h"
-index d7fa119..cea585d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.h"
-@@ -20,10 +20,10 @@ public:
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.h"	2020-01-30 13:55:48.523580800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.h"	2020-01-29 14:10:09.754922800 -0800
+@@ -20,10 +20,10 @@
    std::string hello();
    double add(double a, double b);
    std::string concat(const std::string& a, const std::string& b);

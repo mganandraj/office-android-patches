@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h"
-index 5f5ea9c..8c3555b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h"	2020-01-30 13:55:47.994608100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBackedTextInputDelegateAdapter.h"	2020-01-29 14:10:08.997884100 -0800
 @@ -5,20 +5,24 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -31,7 +29,7 @@ index 5f5ea9c..8c3555b 100644
  - (void)selectedTextRangeWasSet;
  
  @end
-@@ -29,7 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -29,7 +33,11 @@
  
  - (instancetype)initWithTextView:(UITextView<RCTBackedTextInputViewProtocol> *)backedTextInputView;
  

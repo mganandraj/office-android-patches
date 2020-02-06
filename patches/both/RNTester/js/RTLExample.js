@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RTLExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RTLExample.js"
-index 38462ee..c8e2964 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RTLExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RTLExample.js"
-@@ -519,7 +519,9 @@ const BorderExample = withRTLState(({isRTL, setRTL}) => {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RTLExample.js"	2020-01-30 13:55:48.085620400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RTLExample.js"	2020-01-29 14:10:09.183885400 -0800
+@@ -519,7 +519,9 @@
  });
  
  const directionStyle = isRTL =>
@@ -13,7 +11,7 @@ index 38462ee..c8e2964 100644
  
  const styles = StyleSheet.create({
    container: {
-@@ -658,7 +660,7 @@ exports.examples = [
+@@ -658,7 +660,7 @@
    {
      title: 'Default Text Alignment',
      description:
@@ -22,7 +20,7 @@ index 38462ee..c8e2964 100644
        'In Android, it depends on the text content.',
      render: function(): React.Element<any> {
        return <TextAlignmentExample style={styles.fontSizeSmall} />;
-@@ -667,7 +669,7 @@ exports.examples = [
+@@ -667,7 +669,7 @@
    {
      title: "Using textAlign: 'left'",
      description:
@@ -31,7 +29,7 @@ index 38462ee..c8e2964 100644
        'languages or text content.',
      render: function(): React.Element<any> {
        return (
-@@ -680,7 +682,7 @@ exports.examples = [
+@@ -680,7 +682,7 @@
    {
      title: "Using textAlign: 'right'",
      description:

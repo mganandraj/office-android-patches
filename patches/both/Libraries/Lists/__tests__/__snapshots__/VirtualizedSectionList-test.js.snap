@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap"
-index 3d737ad..1741cb7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap"
-@@ -31,8 +31,11 @@ exports[`VirtualizedSectionList handles nested lists 1`] = `
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap"	2020-01-30 13:55:47.930608300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedSectionList-test.js.snap"	2020-01-29 14:10:08.930882900 -0800
+@@ -31,8 +31,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -14,7 +12,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -91,8 +94,11 @@ exports[`VirtualizedSectionList handles nested lists 1`] = `
+@@ -91,8 +94,11 @@
          onScroll={[Function]}
          onScrollBeginDrag={[Function]}
          onScrollEndDrag={[Function]}
@@ -26,7 +24,7 @@ index 3d737ad..1741cb7 100644
          sections={
            Array [
              Object {
-@@ -172,8 +178,11 @@ exports[`VirtualizedSectionList handles nested lists 1`] = `
+@@ -172,8 +178,11 @@
          onScroll={[Function]}
          onScrollBeginDrag={[Function]}
          onScrollEndDrag={[Function]}
@@ -38,7 +36,7 @@ index 3d737ad..1741cb7 100644
          sections={
            Array [
              Object {
-@@ -291,8 +300,11 @@ exports[`VirtualizedSectionList handles separators correctly 1`] = `
+@@ -291,8 +300,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -50,7 +48,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -448,8 +460,11 @@ exports[`VirtualizedSectionList handles separators correctly 2`] = `
+@@ -448,8 +460,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -62,7 +60,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -605,8 +620,11 @@ exports[`VirtualizedSectionList handles separators correctly 3`] = `
+@@ -605,8 +620,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -74,7 +72,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -776,6 +794,7 @@ exports[`VirtualizedSectionList renders all the bells and whistles 1`] = `
+@@ -776,6 +794,7 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -82,7 +80,7 @@ index 3d737ad..1741cb7 100644
    refreshControl={
      <RefreshControlMock
        onRefresh={[MockFunction]}
-@@ -784,7 +803,9 @@ exports[`VirtualizedSectionList renders all the bells and whistles 1`] = `
+@@ -784,7 +803,9 @@
    }
    refreshing={false}
    renderItem={[Function]}
@@ -92,7 +90,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -1020,8 +1041,11 @@ exports[`VirtualizedSectionList renders empty list 1`] = `
+@@ -1020,8 +1041,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -104,7 +102,7 @@ index 3d737ad..1741cb7 100644
    sections={Array []}
    stickyHeaderIndices={Array []}
    updateCellsBatchingPeriod={50}
-@@ -1051,8 +1075,11 @@ exports[`VirtualizedSectionList renders empty list with empty component 1`] = `
+@@ -1051,8 +1075,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -116,7 +114,7 @@ index 3d737ad..1741cb7 100644
    sections={Array []}
    stickyHeaderIndices={Array []}
    updateCellsBatchingPeriod={50}
-@@ -1103,8 +1130,11 @@ exports[`VirtualizedSectionList renders list with empty component 1`] = `
+@@ -1103,8 +1130,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -128,7 +126,7 @@ index 3d737ad..1741cb7 100644
    sections={
      Array [
        Object {
-@@ -1158,8 +1188,11 @@ exports[`VirtualizedSectionList renders null list 1`] = `
+@@ -1158,8 +1188,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -140,7 +138,7 @@ index 3d737ad..1741cb7 100644
    stickyHeaderIndices={Array []}
    updateCellsBatchingPeriod={50}
    windowSize={21}
-@@ -1202,8 +1235,11 @@ exports[`VirtualizedSectionList renders simple list 1`] = `
+@@ -1202,8 +1235,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}

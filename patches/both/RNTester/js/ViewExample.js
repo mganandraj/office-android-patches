@@ -1,12 +1,9 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ViewExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ViewExample.js"
-index 25dc264..91b8a64 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ViewExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ViewExample.js"
-@@ -402,6 +402,29 @@ exports.examples = [
-       return <ZIndexExample />;
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ViewExample.js"	2020-01-30 13:55:48.096609000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ViewExample.js"	2020-01-29 14:10:09.199887200 -0800
+@@ -403,6 +403,29 @@
      },
    },
-+  {
+   {
 +    // [TODO(macOS ISS#2323203)
 +    title: 'ToolTip',
 +    render() {
@@ -29,6 +26,7 @@ index 25dc264..91b8a64 100644
 +      );
 +    },
 +  }, // ]TODO(macOS ISS#2323203)
-   {
++  {
      title: 'BackfaceVisibility',
      render: function() {
+       return (

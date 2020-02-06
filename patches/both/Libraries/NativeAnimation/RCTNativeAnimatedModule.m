@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m"
-index 69bf078..08deab3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m"
-@@ -268,13 +268,13 @@ RCT_EXPORT_METHOD(removeAnimatedEventFromView:(nonnull NSNumber *)viewTag
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m"	2020-01-30 13:55:47.946611100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedModule.m"	2020-01-29 14:10:08.943882200 -0800
+@@ -268,13 +268,13 @@
    _preOperations = [NSMutableArray new];
    _operations = [NSMutableArray new];
  

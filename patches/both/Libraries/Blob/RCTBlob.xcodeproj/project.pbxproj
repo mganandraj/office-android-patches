@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj"
-index 0db6e1b..5857ccb 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.844574500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Blob\\RCTBlob.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.820881000 -0800
 @@ -16,6 +16,15 @@
  		19BA89001F84392F00741C5A /* RCTFileReaderModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = ADDFBA6A1F33455F0064C998 /* RCTFileReaderModule.h */; };
  		19BA89011F84393D00741C5A /* RCTFileReaderModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDFBA6B1F33455F0064C998 /* RCTFileReaderModule.m */; };
@@ -184,10 +182,11 @@ index 0db6e1b..5857ccb 100644
  		ADD01A6F1E09402E00F6D226 /* Debug */ = {
  			isa = XCBuildConfiguration;
  			buildSettings = {
-@@ -383,6 +475,15 @@
+@@ -382,6 +474,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		6484CE54201A74FA004275A4 /* Build configuration list for PBXNativeTarget "RCTBlob-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -196,7 +195,6 @@ index 0db6e1b..5857ccb 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  		ADD01A6E1E09402E00F6D226 /* Build configuration list for PBXNativeTarget "RCTBlob-tvOS" */ = {
  			isa = XCConfigurationList;
- 			buildConfigurations = (

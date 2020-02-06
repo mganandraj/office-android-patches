@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js"
-index 887a980..9378b37 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js"
-@@ -35,6 +35,11 @@ import type {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js"	2020-01-30 13:55:47.883607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js"	2020-01-29 14:10:08.874883000 -0800
+@@ -35,6 +35,11 @@
    AccessibilityStates,
  } from '../View/ViewAccessibility';
  
@@ -14,7 +12,7 @@ index 887a980..9378b37 100644
  type TargetEvent = SyntheticEvent<
    $ReadOnly<{|
      target: number,
-@@ -82,6 +87,16 @@ export type Props = $ReadOnly<{|
+@@ -82,6 +87,16 @@
    onPress?: ?(event: PressEvent) => mixed,
    onPressIn?: ?(event: PressEvent) => mixed,
    onPressOut?: ?(event: PressEvent) => mixed,
@@ -31,7 +29,7 @@ index 887a980..9378b37 100644
    pressRetentionOffset?: ?EdgeInsetsProp,
    rejectResponderTermination?: ?boolean,
    testID?: ?string,
-@@ -107,6 +122,8 @@ const TouchableWithoutFeedback = ((createReactClass({
+@@ -107,6 +122,8 @@
      accessibilityStates: PropTypes.arrayOf(
        PropTypes.oneOf(DeprecatedAccessibilityStates),
      ),
@@ -40,11 +38,10 @@ index 887a980..9378b37 100644
      /**
       * When `accessible` is true (which is the default) this may be called when
       * the OS-specific concept of "focus" occurs. Some platforms may not have
-@@ -123,6 +140,40 @@ const TouchableWithoutFeedback = ((createReactClass({
-      * If true, disable all interactions for this component.
+@@ -124,6 +141,40 @@
       */
      disabled: PropTypes.bool,
-+    /**
+     /**
 +     * Called when the mouse enters the touchable element
 +     */
 +    onMouseEnter: PropTypes.func, // TODO(macOS ISS#2323203)
@@ -78,10 +75,11 @@ index 887a980..9378b37 100644
 +      PropTypes.arrayOf(PropTypes.oneOf(DraggedTypes)),
 +    ]), // TODO(macOS ISS#2323203)
 +    tooltip: PropTypes.string, // TODO(macOS/win ISS#2323203)
-     /**
++    /**
       * Called when the touch is released, but not if cancelled (e.g. by a scroll
       * that steals the responder lock).
-@@ -261,9 +312,24 @@ const TouchableWithoutFeedback = ((createReactClass({
+      */
+@@ -261,9 +312,24 @@
      return (React: any).cloneElement(child, {
        ...overrides,
        accessible: this.props.accessible !== false,
@@ -107,7 +105,7 @@ index 887a980..9378b37 100644
        onStartShouldSetResponder: this.touchableHandleStartShouldSetResponder,
        onResponderTerminationRequest: this
          .touchableHandleResponderTerminationRequest,
-@@ -271,6 +337,14 @@ const TouchableWithoutFeedback = ((createReactClass({
+@@ -271,6 +337,14 @@
        onResponderMove: this.touchableHandleResponderMove,
        onResponderRelease: this.touchableHandleResponderRelease,
        onResponderTerminate: this.touchableHandleResponderTerminate,

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInput.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInput.js"
-index 4499922..09d52b8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInput.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInput.js"
-@@ -41,7 +41,10 @@ let RCTSinglelineTextInputView;
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\TextInput\\TextInput.js"	2020-01-30 13:55:47.877607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\TextInput\\TextInput.js"	2020-01-29 14:10:08.867882300 -0800
+@@ -41,7 +41,10 @@
  
  if (Platform.OS === 'android') {
    AndroidTextInput = requireNativeComponent('AndroidTextInput');
@@ -14,7 +12,7 @@ index 4499922..09d52b8 100644
    RCTMultilineTextInputView = requireNativeComponent(
      'RCTMultilineTextInputView',
    );
-@@ -124,12 +127,24 @@ export type EditingEvent = SyntheticEvent<
+@@ -124,12 +127,24 @@
  >;
  
  const DataDetectorTypes = [
@@ -39,7 +37,7 @@ index 4499922..09d52b8 100644
  ];
  
  type DataDetectorTypesType =
-@@ -798,6 +813,7 @@ const TextInput = createReactClass({
+@@ -798,6 +813,7 @@
       * multiline fields. Note that for multiline fields, setting `blurOnSubmit`
       * to `true` means that pressing return will blur the field and trigger the
       * `onSubmitEditing` event instead of inserting a newline into the field.
@@ -47,7 +45,7 @@ index 4499922..09d52b8 100644
       */
      blurOnSubmit: PropTypes.bool,
      /**
-@@ -861,14 +877,34 @@ const TextInput = createReactClass({
+@@ -861,14 +877,34 @@
       *
       * Possible values for `dataDetectorTypes` are:
       *
@@ -83,7 +81,7 @@ index 4499922..09d52b8 100644
       */
      dataDetectorTypes: PropTypes.oneOfType([
        PropTypes.oneOf(DataDetectorTypes),
-@@ -949,6 +985,14 @@ const TextInput = createReactClass({
+@@ -949,6 +985,14 @@
      );
    },
  
@@ -98,7 +96,7 @@ index 4499922..09d52b8 100644
    _inputRef: (undefined: any),
    _focusSubscription: (undefined: ?Function),
    _lastNativeText: (undefined: ?string),
-@@ -991,7 +1035,8 @@ const TextInput = createReactClass({
+@@ -991,7 +1035,8 @@
  
    render: function() {
      let textInput;
@@ -108,7 +106,7 @@ index 4499922..09d52b8 100644
        textInput = UIManager.getViewManagerConfig('RCTVirtualText')
          ? this._renderIOS()
          : this._renderIOSLegacy();
-@@ -1101,6 +1146,7 @@ const TextInput = createReactClass({
+@@ -1101,6 +1146,7 @@
          rejectResponderTermination={true}
          accessible={props.accessible}
          accessibilityLabel={props.accessibilityLabel}
@@ -116,7 +114,7 @@ index 4499922..09d52b8 100644
          accessibilityRole={props.accessibilityRole}
          accessibilityStates={props.accessibilityStates}
          nativeID={this.props.nativeID}
-@@ -1210,6 +1256,7 @@ const TextInput = createReactClass({
+@@ -1210,6 +1256,7 @@
          onPress={this._onPress}
          accessible={this.props.accessible}
          accessibilityLabel={this.props.accessibilityLabel}
@@ -124,7 +122,7 @@ index 4499922..09d52b8 100644
          accessibilityRole={this.props.accessibilityRole}
          accessibilityStates={this.props.accessibilityStates}
          nativeID={this.props.nativeID}
-@@ -1220,6 +1267,15 @@ const TextInput = createReactClass({
+@@ -1220,6 +1267,15 @@
    },
  
    _onFocus: function(event: FocusEvent) {
@@ -140,7 +138,7 @@ index 4499922..09d52b8 100644
      if (this.props.onFocus) {
        this.props.onFocus(event);
      }
-@@ -1315,7 +1371,17 @@ const TextInput = createReactClass({
+@@ -1315,7 +1371,17 @@
    _onBlur: function(event: BlurEvent) {
      // This is a hack to fix https://fburl.com/toehyir8
      // @todo(rsnara) Figure out why this is necessary.

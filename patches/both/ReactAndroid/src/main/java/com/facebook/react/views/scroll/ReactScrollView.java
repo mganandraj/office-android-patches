@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java"
-index e98c186..de0fc82 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java"
-@@ -205,6 +205,35 @@ public class ReactScrollView extends ScrollView implements ReactClippingViewGrou
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java"	2020-01-30 13:55:48.411612900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java"	2020-01-29 14:10:09.559919600 -0800
+@@ -205,6 +205,35 @@
      }
    }
  

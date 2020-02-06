@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js"
-index 74761df..fcfe473 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js"
-@@ -6752,6 +6752,7 @@ function startWorkOnPendingInteraction(root, expirationTime) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js"	2020-01-30 13:55:47.969608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-profiling.js"	2020-01-29 14:10:08.971883300 -0800
+@@ -6752,6 +6752,7 @@
        }
      }
    }

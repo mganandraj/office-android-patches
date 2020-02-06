@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java"
-index 0ac3046..7619d33 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java"	2020-01-30 13:55:48.325611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java"	2020-01-29 14:10:09.409919400 -0800
 @@ -7,7 +7,7 @@
  
  package com.facebook.react.modules.datepicker;
@@ -11,7 +9,7 @@ index 0ac3046..7619d33 100644
  import android.app.DatePickerDialog.OnDateSetListener;
  import android.content.DialogInterface;
  import android.content.DialogInterface.OnDismissListener;
-@@ -112,14 +112,16 @@ public class DatePickerDialogModule extends ReactContextBaseJavaModule {
+@@ -112,14 +112,16 @@
     */
    @ReactMethod
    public void open(@Nullable final ReadableMap options, Promise promise) {

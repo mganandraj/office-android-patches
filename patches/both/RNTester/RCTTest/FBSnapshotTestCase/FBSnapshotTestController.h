@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h"
-index 501d5b6..9c252b7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h"	2020-01-30 13:55:48.038612700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.h"	2020-01-29 14:10:09.045884000 -0800
 @@ -7,7 +7,7 @@
   */
  
@@ -11,7 +9,7 @@ index 501d5b6..9c252b7 100644
  
  typedef NS_ENUM(NSInteger, FBSnapshotTestControllerErrorCode) {
    FBSnapshotTestControllerErrorCodeUnknown,
-@@ -59,7 +59,7 @@ extern NSString *const FBReferenceImageFilePathKey;
+@@ -59,7 +59,7 @@
   @param errorPtr An error to log in an XCTAssert() macro if the method fails (missing reference image, images differ, etc).
   @returns YES if the comparison (or saving of the reference image) succeeded.
   */

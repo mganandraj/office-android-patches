@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTNode.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTNode.m"
-index ae1a152..be09b64 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTNode.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTNode.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTNode.m"	2020-01-30 13:55:47.815608900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTNode.m"	2020-01-29 14:10:08.794880100 -0800
 @@ -11,14 +11,14 @@
  
  @implementation ARTNode

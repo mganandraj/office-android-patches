@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h"
-index 5e3c5b3..5002841 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h"	2020-01-30 13:55:48.000611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\Singleline\\RCTUITextField.h"	2020-01-29 14:10:09.003917100 -0800
 @@ -5,7 +5,9 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -13,7 +11,7 @@ index 5e3c5b3..5002841 100644
  
  #import "RCTBackedTextInputViewProtocol.h"
  
-@@ -22,10 +24,27 @@ NS_ASSUME_NONNULL_BEGIN
+@@ -22,10 +24,27 @@
  
  @property (nonatomic, assign) BOOL caretHidden;
  @property (nonatomic, assign) BOOL contextMenuHidden;

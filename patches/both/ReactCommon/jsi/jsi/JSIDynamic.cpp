@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp"
-index f63254e..f275dfb 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp"
-@@ -18,36 +18,39 @@ namespace jsi {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp"	2020-01-30 13:55:48.606614400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\JSIDynamic.cpp"	2020-01-29 14:10:09.827891300 -0800
+@@ -18,36 +18,39 @@
  
  Value valueFromDynamic(Runtime& runtime, const folly::dynamic& dyn) {
    switch (dyn.type()) {
@@ -69,7 +67,7 @@ index f63254e..f275dfb 100644
    }
    CHECK(false);
  }
-@@ -67,7 +70,8 @@ folly::dynamic dynamicFromValue(Runtime& runtime, const Value& value) {
+@@ -67,7 +70,8 @@
        Array array = obj.getArray(runtime);
        folly::dynamic ret = folly::dynamic::array();
        for (size_t i = 0; i < array.size(runtime); ++i) {
@@ -79,7 +77,7 @@ index f63254e..f275dfb 100644
        }
        return ret;
      } else if (obj.isFunction(runtime)) {
-@@ -95,5 +99,5 @@ folly::dynamic dynamicFromValue(Runtime& runtime, const Value& value) {
+@@ -95,5 +99,5 @@
    }
  }
  

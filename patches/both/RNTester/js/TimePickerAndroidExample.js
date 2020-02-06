@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TimePickerAndroidExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TimePickerAndroidExample.js"
-index 28c2558..3e6cc29 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TimePickerAndroidExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TimePickerAndroidExample.js"
-@@ -44,8 +44,9 @@ class TimePickerAndroidExample extends React.Component {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\TimePickerAndroidExample.js"	2020-01-30 13:55:48.094612700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\TimePickerAndroidExample.js"	2020-01-29 14:10:09.196886800 -0800
+@@ -44,8 +44,9 @@
          newState[stateKey + 'Text'] = 'dismissed';
        }
        this.setState(newState);

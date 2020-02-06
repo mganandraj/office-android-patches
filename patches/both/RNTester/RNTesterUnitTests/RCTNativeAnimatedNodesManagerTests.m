@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m"
-index aa22449..629b196 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m"	2020-01-30 13:55:48.065609200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTNativeAnimatedNodesManagerTests.m"	2020-01-29 14:10:09.110882900 -0800
 @@ -13,10 +13,11 @@
  #import <RCTAnimation/RCTNativeAnimatedNodesManager.h>
  #import <RCTAnimation/RCTValueAnimatedNode.h>
@@ -15,7 +13,7 @@ index aa22449..629b196 100644
  
  @end
  
-@@ -121,6 +122,7 @@ static id RCTPropChecker(NSString *prop, NSNumber *value)
+@@ -121,6 +122,7 @@
    id _uiManager;
    RCTNativeAnimatedNodesManager *_nodesManager;
    RCTFakeDisplayLink *_displayLink;
@@ -23,7 +21,7 @@ index aa22449..629b196 100644
  }
  
  - (void)setUp
-@@ -168,6 +170,7 @@ static id RCTPropChecker(NSString *prop, NSNumber *value)
+@@ -168,6 +170,7 @@
      [[_uiManager expect] synchronouslyUpdateViewOnUIThread:@1001
                                                    viewName:@"UIView"
                                                       props:RCTPropChecker(@"opacity", frame)];

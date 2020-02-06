@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"
-index 64f7e67..64650ff 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"
-@@ -16,7 +16,7 @@ LOCAL_SRC_FILES := \
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"	2020-01-29 14:11:26.493527900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"	2020-01-29 14:10:09.686920900 -0800
+@@ -16,7 +16,7 @@
  
  LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
  

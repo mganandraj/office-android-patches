@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGNode.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGNode.h"
-index bbd1b70..5359c4a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGNode.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGNode.h"
-@@ -24,7 +24,7 @@ private:
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\YGNode.h"	2020-01-30 13:55:48.629618800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\YGNode.h"	2020-01-29 14:10:09.846923300 -0800
+@@ -24,7 +24,7 @@
    bool hasNewLayout_ : 1;
    bool isReferenceBaseline_ : 1;
    bool isDirty_ : 1;

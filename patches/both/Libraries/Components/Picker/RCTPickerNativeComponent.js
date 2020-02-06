@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js"
-index 6db9d49..85f161c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js"
-@@ -14,6 +14,7 @@ const requireNativeComponent = require('../../ReactNative/requireNativeComponent
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js"	2020-01-30 13:55:47.865606900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Picker\\RCTPickerNativeComponent.js"	2020-01-29 14:10:08.846883800 -0800
+@@ -14,6 +14,7 @@
  import type {SyntheticEvent} from '../../Types/CoreEventTypes';
  import type {TextStyleProp} from '../../StyleSheet/StyleSheet';
  import type {NativeComponent} from '../../Renderer/shims/ReactNative';
@@ -10,7 +8,7 @@ index 6db9d49..85f161c 100644
  
  type PickerIOSChangeEvent = SyntheticEvent<
    $ReadOnly<{|
-@@ -25,7 +26,7 @@ type PickerIOSChangeEvent = SyntheticEvent<
+@@ -25,7 +26,7 @@
  type RCTPickerIOSItemType = $ReadOnly<{|
    label: ?Label,
    value: ?(number | string),

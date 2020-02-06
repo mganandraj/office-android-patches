@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.m"
-index 13a485f..ab718b2 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageLoader.m"	2020-01-30 13:55:47.907607800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageLoader.m"	2020-01-29 14:10:08.900882000 -0800
 @@ -12,6 +12,7 @@
  
  #import <React/RCTConvert.h>
@@ -31,7 +29,7 @@ index 13a485f..ab718b2 100644
    }
  }
  
-@@ -736,14 +745,16 @@ static UIImage *RCTResizeImageIfNeeded(UIImage *image,
+@@ -736,14 +745,16 @@
            // Decompress the image data (this may be CPU and memory intensive)
            UIImage *image = RCTDecodeImageWithData(data, size, scale, resizeMode);
  
@@ -56,7 +54,7 @@ index 13a485f..ab718b2 100644
            }
  #endif
  
-@@ -826,9 +837,10 @@ static UIImage *RCTResizeImageIfNeeded(UIImage *image,
+@@ -826,9 +837,10 @@
        }
      } else {
        UIImage *image = imageOrData;
@@ -69,7 +67,7 @@ index 13a485f..ab718b2 100644
        };
      }
      callback(error, size);
-@@ -923,12 +935,12 @@ static UIImage *RCTResizeImageIfNeeded(UIImage *image,
+@@ -923,12 +935,12 @@
  
      NSString *mimeType = nil;
      NSData *imageData = nil;

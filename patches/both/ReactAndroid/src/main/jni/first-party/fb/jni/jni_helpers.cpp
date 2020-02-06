@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp"
-index 86dbbc5..318dcc5 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp"	2020-01-30 13:55:48.472582000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp"	2020-01-29 14:10:09.670923700 -0800
 @@ -9,6 +9,7 @@
  #include <stddef.h>
  #include <cstdio>
@@ -10,7 +8,7 @@ index 86dbbc5..318dcc5 100644
  #include <jni/jni_helpers.h>
  
  #define MSG_SIZE 1024
-@@ -25,8 +26,8 @@ namespace facebook {
+@@ -25,8 +26,8 @@
   * @return 0 on success; a negative value on failure
   */
  jint throwException(JNIEnv* pEnv, const char* szClassName, const char* szFmt, va_list va_args) {

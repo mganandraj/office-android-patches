@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettingsManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettingsManager.m"
-index ab8e14d..046ebed 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettingsManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettingsManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\RCTSettingsManager.m"	2020-01-30 13:55:47.975617000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\RCTSettingsManager.m"	2020-01-29 14:10:08.978883000 -0800
 @@ -16,6 +16,10 @@
  {
    BOOL _ignoringUpdates;
@@ -13,7 +11,7 @@ index ab8e14d..046ebed 100644
  }
  
  @synthesize bridge = _bridge;
-@@ -37,11 +41,12 @@ RCT_EXPORT_MODULE()
+@@ -37,11 +41,12 @@
    if ((self = [super init])) {
      _defaults = defaults;
  
@@ -27,7 +25,7 @@ index ab8e14d..046ebed 100644
    }
    return self;
  }
-@@ -109,4 +114,29 @@ RCT_EXPORT_METHOD(deleteValues:(NSArray<NSString *> *)keys)
+@@ -109,4 +114,29 @@
    _ignoringUpdates = NO;
  }
  

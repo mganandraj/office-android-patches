@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h"
-index dc16ab4..5af7626 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h"
-@@ -11,14 +11,23 @@ extern NSString *const RCTRemoteNotificationReceived;
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h"	2020-01-30 13:55:47.959607900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotificationManager.h"	2020-01-29 14:10:08.953883800 -0800
+@@ -11,14 +11,23 @@
  
  @interface RCTPushNotificationManager : RCTEventEmitter
  

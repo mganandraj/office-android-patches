@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js"
-index 5a356fc..6d94114 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js"
-@@ -6942,6 +6942,7 @@ function startWorkOnPendingInteraction(root, expirationTime) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js"	2020-01-30 13:55:47.971609300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-profiling.js"	2020-01-29 14:10:08.974884500 -0800
+@@ -6942,6 +6942,7 @@
        }
      }
    }

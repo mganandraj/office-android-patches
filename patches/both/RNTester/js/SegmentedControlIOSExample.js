@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SegmentedControlIOSExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SegmentedControlIOSExample.js"
-index 64a277d..d6e69fc 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SegmentedControlIOSExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SegmentedControlIOSExample.js"
-@@ -173,6 +173,7 @@ exports.examples = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SegmentedControlIOSExample.js"	2020-01-30 13:55:48.087609200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SegmentedControlIOSExample.js"	2020-01-29 14:10:09.185886400 -0800
+@@ -173,6 +173,7 @@
      render(): React.Element<any> {
        return <ColorSegmentedControlExample />;
      },

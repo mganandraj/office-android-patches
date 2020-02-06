@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\EventEmitter\\NativeEventEmitter.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\EventEmitter\\NativeEventEmitter.js"
-index 6b70ef0..8ab3497 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\EventEmitter\\NativeEventEmitter.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\EventEmitter\\NativeEventEmitter.js"
-@@ -32,7 +32,10 @@ class NativeEventEmitter extends EventEmitter {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\EventEmitter\\NativeEventEmitter.js"	2020-01-30 13:55:47.899606900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\EventEmitter\\NativeEventEmitter.js"	2020-01-29 14:10:08.890882000 -0800
+@@ -32,7 +32,10 @@
  
    constructor(nativeModule: ?NativeModule) {
      super(RCTDeviceEventEmitter.sharedSubscriber);

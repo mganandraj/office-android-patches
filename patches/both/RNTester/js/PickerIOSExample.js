@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\PickerIOSExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\PickerIOSExample.js"
-index e71e035..b15cdce 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\PickerIOSExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\PickerIOSExample.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\PickerIOSExample.js"	2020-01-30 13:55:48.080579000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\PickerIOSExample.js"	2020-01-29 14:10:09.177885400 -0800
 @@ -11,7 +11,7 @@
  'use strict';
  
@@ -11,7 +9,7 @@ index e71e035..b15cdce 100644
  
  const PickerItemIOS = PickerIOS.Item;
  
-@@ -152,7 +152,7 @@ class PickerStyleExample extends React.Component<{}, $FlowFixMeState> {
+@@ -152,7 +152,7 @@
      return (
        <PickerIOS
          itemStyle={{

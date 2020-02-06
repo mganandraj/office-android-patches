@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.m"
-index 7e03369..8fbbda8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.m"	2020-01-30 13:55:47.817607400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.m"	2020-01-29 14:10:08.795880600 -0800
 @@ -22,14 +22,14 @@
    return self;
  }

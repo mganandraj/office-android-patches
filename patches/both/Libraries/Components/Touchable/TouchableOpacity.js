@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableOpacity.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableOpacity.js"
-index 235d47f..31dcc6f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableOpacity.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableOpacity.js"
-@@ -308,9 +308,21 @@ const TouchableOpacity = ((createReactClass({
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\Touchable\\TouchableOpacity.js"	2020-01-30 13:55:47.882607500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\Touchable\\TouchableOpacity.js"	2020-01-29 14:10:08.874883000 -0800
+@@ -308,9 +308,21 @@
        <Animated.View
          accessible={this.props.accessible !== false}
          accessibilityLabel={this.props.accessibilityLabel}
@@ -25,7 +23,7 @@ index 235d47f..31dcc6f 100644
          style={[this.props.style, {opacity: this.state.anim}]}
          nativeID={this.props.nativeID}
          testID={this.props.testID}
-@@ -335,6 +347,16 @@ const TouchableOpacity = ((createReactClass({
+@@ -335,6 +347,16 @@
          onResponderGrant={this.touchableHandleResponderGrant}
          onResponderMove={this.touchableHandleResponderMove}
          onResponderRelease={this.touchableHandleResponderRelease}

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java"
-index a660111..1ce0ba9 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java"	2020-01-30 13:55:48.068609100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterApplication.java"	2020-01-29 14:10:09.140885000 -0800
 @@ -9,19 +9,48 @@
  package com.facebook.react.uiapp;
  

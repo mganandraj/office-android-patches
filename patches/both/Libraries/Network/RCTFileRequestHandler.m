@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTFileRequestHandler.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTFileRequestHandler.m"
-index 00041a7..77427cc 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTFileRequestHandler.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTFileRequestHandler.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\RCTFileRequestHandler.m"	2020-01-30 13:55:47.949608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\RCTFileRequestHandler.m"	2020-01-29 14:10:08.944884700 -0800
 @@ -7,7 +7,11 @@
  
  #import "RCTFileRequestHandler.h"

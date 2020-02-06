@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleContainer.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleContainer.js"
-index 9b66083..f2ffcb7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleContainer.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleContainer.js"
-@@ -20,11 +20,21 @@ class RNTesterExampleContainer extends React.Component {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleContainer.js"	2020-01-30 13:55:48.083612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleContainer.js"	2020-01-29 14:10:09.180890800 -0800
+@@ -20,11 +20,21 @@
      // Filter platform-specific examples
      const {description, platform} = example;
      let {title} = example;

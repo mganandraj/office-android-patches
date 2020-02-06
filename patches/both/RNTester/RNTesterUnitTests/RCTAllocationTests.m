@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m"
-index e088566..034cf78 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m"	2020-01-30 13:55:48.058609100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\RCTAllocationTests.m"	2020-01-29 14:10:09.105909500 -0800
 @@ -9,7 +9,11 @@
  #import <Foundation/Foundation.h>
  #import <XCTest/XCTest.h>
@@ -14,7 +12,7 @@ index e088566..034cf78 100644
  #import <React/RCTBridge+Private.h>
  #import <React/RCTBridge.h>
  #import <React/RCTModuleMethod.h>
-@@ -156,7 +160,7 @@ RCT_EXPORT_METHOD(test:(__unused NSString *)a
+@@ -156,7 +160,7 @@
    RCTBridge *bridge = [[RCTBridge alloc] initWithBundleURL:_bundleURL
                                              moduleProvider:nil
                                               launchOptions:nil];

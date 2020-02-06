@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m"
-index d9b0d73..7c087ab 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m"	2020-01-30 13:55:47.995610700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\TextInput\\RCTBaseTextInputView.m"	2020-01-29 14:10:08.999885400 -0800
 @@ -19,12 +19,13 @@
  #import "RCTInputAccessoryViewContent.h"
  #import "RCTTextAttributes.h"
@@ -17,7 +15,7 @@ index d9b0d73..7c087ab 100644
    NSInteger _nativeEventCount;
  }
  
-@@ -44,7 +45,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
+@@ -44,7 +45,7 @@
  RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)decoder)
  RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
  
@@ -26,7 +24,7 @@ index d9b0d73..7c087ab 100644
  {
    RCTAssert(NO, @"-[RCTBaseTextInputView backedTextInputView] must be implemented in subclass.");
    return nil;
-@@ -67,24 +68,34 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -67,24 +68,34 @@
  
  - (void)enforceTextAttributesIfNeeded
  {
@@ -63,7 +61,7 @@ index d9b0d73..7c087ab 100644
  }
  
  - (NSAttributedString *)attributedText
-@@ -110,10 +121,14 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -110,10 +121,14 @@
    }];
  
    BOOL shouldFallbackToBareTextComparison =
@@ -78,7 +76,7 @@ index d9b0d73..7c087ab 100644
  
    if (shouldFallbackToBareTextComparison) {
      return ([newText.string isEqualToString:oldText.string]);
-@@ -139,11 +154,16 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -139,11 +154,16 @@
    textNeedsUpdate = ([self textOf:attributedTextCopy equals:backedTextInputViewTextCopy] == NO);
  
    if (eventLag == 0 && textNeedsUpdate) {
@@ -95,7 +93,7 @@ index d9b0d73..7c087ab 100644
      if (selection.empty) {
        // Maintaining a cursor position relative to the end of the old text.
        NSInteger offsetStart =
-@@ -157,6 +177,16 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -157,6 +177,16 @@
        [self.backedTextInputView setSelectedTextRange:[self.backedTextInputView textRangeFromPosition:position toPosition:position]
                                        notifyDelegate:YES];
      }
@@ -112,7 +110,7 @@ index d9b0d73..7c087ab 100644
  
      [self updateLocalData];
    } else if (eventLag > RCTTextUpdateLagWarningThreshold) {
-@@ -167,9 +197,15 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -167,9 +197,15 @@
  - (RCTTextSelection *)selection
  {
    id<RCTBackedTextInputViewProtocol> backedTextInputView = self.backedTextInputView;
@@ -128,7 +126,7 @@ index d9b0d73..7c087ab 100644
  }
  
  - (void)setSelection:(RCTTextSelection *)selection
-@@ -180,13 +216,21 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -180,13 +216,21 @@
  
    id<RCTBackedTextInputViewProtocol> backedTextInputView = self.backedTextInputView;
  
@@ -152,7 +150,7 @@ index d9b0d73..7c087ab 100644
      [backedTextInputView setSelectedTextRange:selectedTextRange notifyDelegate:NO];
    } else if (eventLag > RCTTextUpdateLagWarningThreshold) {
      RCTLogWarn(@"Native TextInput(%@) is %lld events ahead of JS - try to make your JS faster.", backedTextInputView.attributedText.string, (long long)eventLag);
-@@ -260,6 +304,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -260,6 +304,7 @@
    #endif
  }
  
@@ -160,7 +158,7 @@ index d9b0d73..7c087ab 100644
  - (UIKeyboardType)keyboardType
  {
    return self.backedTextInputView.keyboardType;
-@@ -276,23 +321,29 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -276,23 +321,29 @@
      }
    }
  }
@@ -193,7 +191,7 @@ index d9b0d73..7c087ab 100644
  }
  
  #pragma mark - RCTBackedTextInputDelegate
-@@ -383,14 +434,19 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -383,14 +434,19 @@
          NSMutableAttributedString *newAttributedText = [backedTextInputView.attributedText mutableCopy];
          [newAttributedText replaceCharactersInRange:range withString:limitedString];
          backedTextInputView.attributedText = newAttributedText;
@@ -215,7 +213,7 @@ index d9b0d73..7c087ab 100644
          [self textInputDidChange];
        }
  
-@@ -433,11 +489,12 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -433,11 +489,12 @@
    // update the mismatched range.
    NSRange currentRange;
    NSRange predictionRange;
@@ -229,7 +227,7 @@ index d9b0d73..7c087ab 100644
    }
  
    _nativeEventCount++;
-@@ -467,6 +524,18 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -467,6 +524,18 @@
    });
  }
  
@@ -248,7 +246,7 @@ index d9b0d73..7c087ab 100644
  - (void)updateLocalData
  {
    [self enforceTextAttributesIfNeeded];
-@@ -507,7 +576,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -507,7 +576,7 @@
  
  #pragma mark - Accessibility
  
@@ -257,7 +255,7 @@ index d9b0d73..7c087ab 100644
  {
    return self.backedTextInputView;
  }
-@@ -542,7 +611,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -542,7 +611,7 @@
  
  - (void)setCustomInputAccessoryViewWithNativeID:(NSString *)nativeID
  {
@@ -266,7 +264,7 @@ index d9b0d73..7c087ab 100644
    __weak RCTBaseTextInputView *weakSelf = self;
    [_bridge.uiManager rootViewForReactTag:self.reactTag withCompletion:^(UIView *rootView) {
      RCTBaseTextInputView *strongSelf = weakSelf;
-@@ -555,12 +624,12 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -555,12 +624,12 @@
        }
      }
    }];
@@ -281,7 +279,7 @@ index d9b0d73..7c087ab 100644
    UIView<RCTBackedTextInputViewProtocol> *textInputView = self.backedTextInputView;
    UIKeyboardType keyboardType = textInputView.keyboardType;
  
-@@ -599,9 +668,10 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -599,9 +668,10 @@
      textInputView.inputAccessoryView = nil;
    }
    [self reloadInputViewsIfNecessary];
@@ -293,7 +291,7 @@ index d9b0d73..7c087ab 100644
  - (void)reloadInputViewsIfNecessary
  {
    // We have to call `reloadInputViews` for focused text inputs to update an accessory view.
-@@ -616,6 +686,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -616,6 +686,7 @@
      [self.backedTextInputView endEditing:YES];
    }
  }
@@ -301,7 +299,7 @@ index d9b0d73..7c087ab 100644
  
  #pragma mark - Helpers
  
-@@ -648,4 +719,15 @@ static BOOL findMismatch(NSString *first, NSString *second, NSRange *firstRange,
+@@ -648,4 +719,15 @@
    return YES;
  }
  

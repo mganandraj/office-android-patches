@@ -78,3 +78,5 @@ if (args.createPatch) {
 } else {
   patchReactNativeFork(args.targetFork, args.patchFolder);
 }
+
+log.info('Main', 'Program completed.');

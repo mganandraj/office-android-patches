@@ -2,26 +2,37 @@ const {spawn} = require('child_process');
 
 import {log} from './logger';
 
+import {InterfaceCLI, getArgs} from './cli';
+const patchExecutable = getArgs().patchExecutable;
+const diffExecutable = getArgs().diffExecutable;
+
 // Returns patch between files as string
+// For our use case, the first path is the FB/base repo and the second path is the dirtry fork.
+// For files which doesn't exist in the FB/base repo, the path1IsNew should be set so that we create path for 'new file'
 // Return empty string when files are identical
-export function createPatch(
+export function diffFiles(
   path1: string,
+  path1IsNew: boolean,
   path2: string,
   callback: (diff: string) => void,
+  errorcallback: (error: string) => void,
 ) {
-  const patch = spawn('git', ['diff', path1, path2]);
+  const diffArgs = path1IsNew
+    ? [path1, path2, '--unidirectional-new-file']
+    : [path1, path2];
 
-  patch.stdout.on('data', (data: string) => {
+  const diff = spawn(diffExecutable, diffArgs);
+
+  diff.stdout.on('data', (data: string) => {
     callback(data);
   });
 
-  patch.stderr.on('data', (data: any) => {
-    throw new Error('git diff failed between ' + path1 + ' and ' + path2);
-    callback('');
+  diff.stderr.on('data', (data: any) => {
+    errorcallback(`${diffExecutable} ${diffArgs} failed with message: ${data}`);
   });
 
-  patch.on('close', (code: any) => {
-    log.info('Patch', `git child process exited with code ${code}`);
+  diff.on('close', (code: any) => {
+    log.verbose('Patch', `git child process exited with code ${code}`);
   });
 }
 
@@ -29,9 +40,10 @@ export function applyPatch(
   targetPath: string,
   patchPath: string,
   callback: (result: string) => void,
+  errorcallback: (error: string) => void,
 ) {
   const patchArgs = ['-i', patchPath, targetPath, '-s'];
-  const patch = spawn('C:\\Program Files\\Git\\usr\\bin\\patch.exe', patchArgs);
+  const patch = spawn(patchExecutable, patchArgs);
   log.info(
     'Patch',
     'Calling C:\\Program Files\\Git\\usr\\bin\\patch.exe ' +
@@ -47,8 +59,9 @@ export function applyPatch(
   });
 
   patch.stderr.on('data', (data: any) => {
-    throw new Error('patch failed on ' + targetPath + ' with ' + patchPath);
-    callback('');
+    errorcallback(
+      `${patchExecutable} ${patchArgs} failed with message: ${data}`,
+    );
   });
 
   patch.on('close', (code: any) => {

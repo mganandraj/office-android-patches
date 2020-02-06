@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTConvert+Text.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTConvert+Text.h"
-index 0a33ab3..09c8b95 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTConvert+Text.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTConvert+Text.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\RCTConvert+Text.h"	2020-01-30 13:55:47.985611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\RCTConvert+Text.h"	2020-01-29 14:10:08.989883300 -0800
 @@ -11,6 +11,20 @@
  
  NS_ASSUME_NONNULL_BEGIN

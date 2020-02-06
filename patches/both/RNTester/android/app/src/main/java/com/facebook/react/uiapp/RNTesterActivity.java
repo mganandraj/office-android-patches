@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"
-index 8a90535..2c96cf0 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"	2020-01-30 13:55:48.068609100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"	2020-01-29 14:10:09.139887600 -0800
 @@ -9,14 +9,23 @@
  package com.facebook.react.uiapp;
  
@@ -26,7 +24,7 @@ index 8a90535..2c96cf0 100644
      private static final String PARAM_ROUTE = "route";
      private Bundle mInitialProps = null;
      private final @Nullable ReactActivity mActivity;
-@@ -38,12 +47,8 @@ public class RNTesterActivity extends ReactActivity {
+@@ -38,12 +47,8 @@
          mInitialProps = new Bundle();
          mInitialProps.putString("exampleFromAppetizeParams", routeUri);
        }
@@ -40,7 +38,7 @@ index 8a90535..2c96cf0 100644
      }
    }
  
-@@ -56,4 +61,4 @@ public class RNTesterActivity extends ReactActivity {
+@@ -56,4 +61,4 @@
    protected String getMainComponentName() {
      return "RNTesterApp";
    }

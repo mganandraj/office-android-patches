@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\react-native\\react-native-implementation.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\react-native\\react-native-implementation.js"
-index 8a4acfc..94188dc 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\react-native\\react-native-implementation.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\react-native\\react-native-implementation.js"
-@@ -181,6 +181,9 @@ module.exports = {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\react-native\\react-native-implementation.js"	2020-01-30 13:55:48.031612300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\react-native\\react-native-implementation.js"	2020-01-29 14:10:09.037882600 -0800
+@@ -181,6 +181,9 @@
    get Alert() {
      return require('Alert');
    },
@@ -12,7 +10,7 @@ index 8a4acfc..94188dc 100644
    get Animated() {
      return require('Animated');
    },
-@@ -217,6 +220,10 @@ module.exports = {
+@@ -217,6 +220,10 @@
    get DatePickerAndroid() {
      return require('DatePickerAndroid');
    },

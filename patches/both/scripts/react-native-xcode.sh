@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\react-native-xcode.sh" "b/E:\\github\\ms-react-native-forpatch\\scripts\\react-native-xcode.sh"
-index 34b8d5e..67f0c07 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\react-native-xcode.sh"
-+++ "b/E:\\github\\ms-react-native-forpatch\\scripts\\react-native-xcode.sh"
-@@ -13,7 +13,7 @@ set -x
+--- "E:\\github\\fb-react-native-forpatch-base\\scripts\\react-native-xcode.sh"	2020-01-30 13:55:48.661583200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\scripts\\react-native-xcode.sh"	2020-01-29 14:10:10.020926900 -0800
+@@ -13,7 +13,7 @@
  DEST=$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH
  
  # Enables iOS devices to get the IP address of the machine running Metro Bundler
@@ -11,7 +9,7 @@ index 34b8d5e..67f0c07 100644
    IP=$(ipconfig getifaddr en0)
    if [ -z "$IP" ]; then
      IP=$(ifconfig | grep 'inet ' | grep -v ' 127.' | cut -d\   -f2  | awk 'NR==1{print $1}')
-@@ -29,13 +29,11 @@ fi
+@@ -29,13 +29,11 @@
  
  case "$CONFIGURATION" in
    *Debug*)
@@ -30,7 +28,7 @@ index 34b8d5e..67f0c07 100644
      else
        echo "Bundling for physical device. Use the SKIP_BUNDLING flag to change this behavior."
      fi
-@@ -111,10 +109,19 @@ fi
+@@ -111,10 +109,19 @@
  
  BUNDLE_FILE="$DEST/main.jsbundle"
  

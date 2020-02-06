@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.m"
-index 0d2e1df..8799a6f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.m"	2020-01-30 13:55:47.908608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.m"	2020-01-29 14:10:08.902882300 -0800
 @@ -10,7 +10,9 @@
  #import <tgmath.h>
  
@@ -12,7 +10,7 @@ index 0d2e1df..8799a6f 100644
  
  #import <React/RCTLog.h>
  #import <React/RCTUtils.h>
-@@ -33,6 +35,7 @@ static CGSize RCTCeilSize(CGSize size, CGFloat scale)
+@@ -33,6 +35,7 @@
    };
  }
  
@@ -20,7 +18,7 @@ index 0d2e1df..8799a6f 100644
  static CGImagePropertyOrientation CGImagePropertyOrientationFromUIImageOrientation(UIImageOrientation imageOrientation)
  {
    // see https://stackoverflow.com/a/6699649/496389
-@@ -48,6 +51,7 @@ static CGImagePropertyOrientation CGImagePropertyOrientationFromUIImageOrientati
+@@ -48,6 +51,7 @@
      default: return kCGImagePropertyOrientationUp;
    }
  }
@@ -28,7 +26,7 @@ index 0d2e1df..8799a6f 100644
  
  CGRect RCTTargetRect(CGSize sourceSize, CGSize destSize,
                       CGFloat destScale, RCTResizeMode resizeMode)
-@@ -280,7 +284,11 @@ UIImage *__nullable RCTDecodeImageWithData(NSData *data,
+@@ -280,7 +284,11 @@
        destScale = 1;
      }
    } else if (!destScale) {
@@ -40,7 +38,7 @@ index 0d2e1df..8799a6f 100644
    }
  
    if (resizeMode == UIViewContentModeScaleToFill) {
-@@ -310,9 +318,14 @@ UIImage *__nullable RCTDecodeImageWithData(NSData *data,
+@@ -310,9 +318,14 @@
    }
  
    // Return image
@@ -55,7 +53,7 @@ index 0d2e1df..8799a6f 100644
    CGImageRelease(imageRef);
    return image;
  }
-@@ -330,15 +343,22 @@ NSDictionary<NSString *, id> *__nullable RCTGetImageMetadata(NSData *data)
+@@ -330,15 +343,22 @@
  
  NSData *__nullable RCTGetImageData(UIImage *image, float quality)
  {
@@ -78,7 +76,7 @@ index 0d2e1df..8799a6f 100644
    if (RCTImageHasAlpha(cgImage)) {
      // get png data
      destination = CGImageDestinationCreateWithData(imageData, kUTTypePNG, 1, NULL);
-@@ -369,11 +389,15 @@ UIImage *__nullable RCTTransformImage(UIImage *image,
+@@ -369,11 +389,15 @@
      return nil;
    }
  
@@ -95,7 +93,7 @@ index 0d2e1df..8799a6f 100644
    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
    UIGraphicsEndImageContext();
    return result;
-@@ -390,3 +414,20 @@ BOOL RCTImageHasAlpha(CGImageRef image)
+@@ -390,3 +414,20 @@
        return YES;
    }
  }

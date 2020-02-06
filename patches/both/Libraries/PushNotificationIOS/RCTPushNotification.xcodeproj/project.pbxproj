@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj"
-index 7bca703..d029211 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.959607900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\PushNotificationIOS\\RCTPushNotification.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.953883800 -0800
 @@ -9,6 +9,7 @@
  /* Begin PBXBuildFile section */
  		148699CF1ABD045300480536 /* RCTPushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTPushNotificationManager.m */; };
@@ -172,10 +170,11 @@ index 7bca703..d029211 100644
  /* End XCBuildConfiguration section */
  
  /* Begin XCConfigurationList section */
-@@ -370,6 +449,15 @@
+@@ -369,6 +448,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		6424F7A91F669A3A0025D741 /* Build configuration list for PBXNativeTarget "RCTPushNotification-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -184,7 +183,6 @@ index 7bca703..d029211 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;

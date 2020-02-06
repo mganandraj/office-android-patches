@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\React-RCTSettings.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\React-RCTSettings.podspec"
-index 05463e4..6c147d5 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\React-RCTSettings.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\React-RCTSettings.podspec"
-@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Settings\\React-RCTSettings.podspec"	2020-01-30 13:55:47.976612700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Settings\\React-RCTSettings.podspec"	2020-01-29 14:10:08.978883000 -0800
+@@ -25,7 +25,7 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/settings"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

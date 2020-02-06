@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextShadowView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextShadowView.m"
-index a1243e3..6c793bc 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextShadowView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextShadowView.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextShadowView.m"	2020-01-30 13:55:47.990609500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextShadowView.m"	2020-01-29 14:10:08.994914500 -0800
 @@ -99,16 +99,16 @@
     }
    ];
@@ -93,7 +91,7 @@ index a1243e3..6c793bc 100644
        }};
        
        NSRange truncatedGlyphRange = [layoutManager truncatedGlyphRangeInLineFragmentForGlyphAtIndex:range.location];
-@@ -401,8 +408,13 @@ static YGSize RCTTextShadowViewMeasure(YGNodeRef node, float width, YGMeasureMod
+@@ -401,8 +408,13 @@
    }
  
    size = (CGSize){

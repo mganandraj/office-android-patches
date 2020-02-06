@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\processColor.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\processColor.js"
-index cfad167..c29c408 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\processColor.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\processColor.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\StyleSheet\\processColor.js"	2020-01-30 13:55:47.979577500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\StyleSheet\\processColor.js"	2020-01-29 14:10:08.983884700 -0800
 @@ -13,9 +13,12 @@
  const Platform = require('../Utilities/Platform');
  
@@ -16,7 +14,7 @@ index cfad167..c29c408 100644
    if (color === undefined || color === null) {
      return color;
    }
-@@ -25,6 +28,20 @@ function processColor(color?: ?(string | number)): ?number {
+@@ -25,6 +28,20 @@
      return undefined;
    }
  

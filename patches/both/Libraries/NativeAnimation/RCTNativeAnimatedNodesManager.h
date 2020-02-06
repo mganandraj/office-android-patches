@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h"
-index 79e954d..fa846f6 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h"	2020-01-30 13:55:47.947607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\RCTNativeAnimatedNodesManager.h"	2020-01-29 14:10:08.943882200 -0800
 @@ -8,6 +8,9 @@
  #import <Foundation/Foundation.h>
  #import <React/RCTBridgeModule.h>

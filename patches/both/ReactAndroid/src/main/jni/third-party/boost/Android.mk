@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk"
-index 089e7d8..a7822cd 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk"	2020-01-29 14:11:26.493527900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk"	2020-01-29 14:10:09.686920900 -0800
 @@ -1,8 +1,8 @@
  LOCAL_PATH:= $(call my-dir)
  include $(CLEAR_VARS)

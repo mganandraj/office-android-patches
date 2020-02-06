@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec"
-index ddab24f..67e0bc7 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec"
-@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec"	2020-01-30 13:55:47.947607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\React-RCTAnimation.podspec"	2020-01-29 14:10:08.944884700 -0800
+@@ -24,7 +24,7 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\launchWebSocketServer.command" "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\launchWebSocketServer.command"
-index 1ce2cf5..a7c7ef2 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\launchWebSocketServer.command"
-+++ "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\launchWebSocketServer.command"
-@@ -11,8 +11,12 @@ clear
+--- "E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\launchWebSocketServer.command"	2020-01-29 14:11:25.811520300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\IntegrationTests\\launchWebSocketServer.command"	2020-01-29 14:10:08.791913200 -0800
+@@ -11,8 +11,12 @@
  
  THIS_DIR=$(cd -P "$(dirname "$(readlink "${BASH_SOURCE[0]}" || echo "${BASH_SOURCE[0]}")")" && pwd)
  pushd "$THIS_DIR"

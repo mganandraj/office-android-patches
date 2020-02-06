@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m"
-index ac66a14..4b8ca21 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m"	2020-01-30 13:55:48.038612700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\FBSnapshotTestCase\\FBSnapshotTestController.m"	2020-01-29 14:10:09.045884000 -0800
 @@ -10,8 +10,6 @@
  
  #import <objc/runtime.h>
@@ -11,7 +9,7 @@ index ac66a14..4b8ca21 100644
  #import "UIImage+Compare.h"
  #import "UIImage+Diff.h"
  
-@@ -67,7 +65,7 @@ typedef struct RGBAPixel {
+@@ -67,7 +65,7 @@
                                   error:(NSError **)errorPtr
  {
    NSString *filePath = [self _referenceFilePathForSelector:selector identifier:identifier];
@@ -20,7 +18,7 @@ index ac66a14..4b8ca21 100644
    if (nil == image && NULL != errorPtr) {
      BOOL exists = [_fileManager fileExistsAtPath:filePath];
      if (!exists) {
-@@ -238,11 +236,19 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
+@@ -238,11 +236,19 @@
    if (0 < identifier.length) {
      fileName = [fileName stringByAppendingFormat:@"_%@", identifier];
    }
@@ -42,7 +40,7 @@ index ac66a14..4b8ca21 100644
  #endif
    fileName = [fileName stringByAppendingPathExtension:@"png"];
    return fileName;
-@@ -288,7 +294,7 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
+@@ -288,7 +294,7 @@
  
  #pragma mark - Private API
  
@@ -51,7 +49,7 @@ index ac66a14..4b8ca21 100644
                                 selector:(SEL)selector
                               identifier:(NSString *)identifier
                                    error:(NSError **)errorPtr
-@@ -309,7 +315,7 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
+@@ -309,7 +315,7 @@
    return NO;
  }
  
@@ -60,7 +58,7 @@ index ac66a14..4b8ca21 100644
                       selector:(SEL)selector
                     identifier:(NSString *)identifier
                          error:(NSError **)errorPtr
-@@ -318,15 +324,20 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
+@@ -318,15 +324,20 @@
    return [self saveReferenceImage:snapshot selector:selector identifier:identifier error:errorPtr];
  }
  
@@ -83,7 +81,7 @@ index ac66a14..4b8ca21 100644
    UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0);
    CGContextRef context = UIGraphicsGetCurrentContext();
    NSAssert1(context, @"Could not generate context for view %@", view);
-@@ -342,7 +353,15 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
+@@ -342,7 +353,15 @@
  
    UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
    UIGraphicsEndImageContext();

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.ios.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.ios.js"
-index e13178d..ddfa588 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.ios.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.ios.js"
-@@ -61,13 +61,21 @@ const Header = ({onBack, title}: {onBack?: () => mixed, title: string}) => (
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterApp.ios.js"	2020-01-30 13:55:48.082577300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterApp.ios.js"	2020-01-29 14:10:09.179886200 -0800
+@@ -61,13 +61,21 @@
  );
  
  class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
@@ -24,7 +22,7 @@ index e13178d..ddfa588 100644
          const exampleAction = URIActionMap(
            this.props.exampleFromAppetizeParams,
          );
-@@ -83,6 +91,12 @@ class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
+@@ -83,6 +91,12 @@
      });
    }
  
@@ -37,7 +35,7 @@ index e13178d..ddfa588 100644
    _handleBack = () => {
      this._handleAction(RNTesterActions.Back());
    };
-@@ -131,8 +145,8 @@ class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
+@@ -131,8 +145,8 @@
  const styles = StyleSheet.create({
    headerContainer: {
      borderBottomWidth: StyleSheet.hairlineWidth,
@@ -48,7 +46,7 @@ index e13178d..ddfa588 100644
    },
    header: {
      height: 40,
-@@ -151,6 +165,7 @@ const styles = StyleSheet.create({
+@@ -151,6 +165,7 @@
      fontSize: 19,
      fontWeight: '600',
      textAlign: 'center',
@@ -56,7 +54,7 @@ index e13178d..ddfa588 100644
    },
    exampleContainer: {
      flex: 1,
-@@ -174,7 +189,10 @@ RNTesterList.ComponentExamples.concat(RNTesterList.APIExamples).forEach(
+@@ -174,7 +189,10 @@
          render() {
            return (
              <SnapshotViewIOS>

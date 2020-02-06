@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js"
-index e69e91b..bfe4be6 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js"
-@@ -14,7 +14,10 @@ const Platform = require('../../Utilities/Platform');
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js"	2020-01-30 13:55:47.954608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\__tests__\\XMLHttpRequest-test.js"	2020-01-29 14:10:08.948916500 -0800
+@@ -14,7 +14,10 @@
  let requestId = 1;
  
  function setRequestId(id) {

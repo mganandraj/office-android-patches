@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\TurboModule.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\TurboModule.cpp"
-index 352bb7a..30bd033 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\TurboModule.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\TurboModule.cpp"
-@@ -29,7 +29,7 @@ jsi::Value TurboModule::get(jsi::Runtime& runtime, const jsi::PropNameID& propNa
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\turbomodule\\core\\TurboModule.cpp"	2020-01-30 13:55:48.615614300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\turbomodule\\core\\TurboModule.cpp"	2020-01-29 14:10:09.835893700 -0800
+@@ -29,7 +29,7 @@
    return jsi::Function::createFromHostFunction(
      runtime,
      propName,

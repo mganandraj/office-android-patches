@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec"
-index 9cc25ab..aff1f81 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec"
-@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec"	2020-01-30 13:55:47.826578300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ActionSheetIOS\\React-RCTActionSheet.podspec"	2020-01-29 14:10:08.802912100 -0800
+@@ -25,7 +25,7 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/actionsheetios"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

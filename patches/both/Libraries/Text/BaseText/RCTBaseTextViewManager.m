@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m"
-index 247c636..de1c65a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m"	2020-01-30 13:55:47.985611500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\BaseText\\RCTBaseTextViewManager.m"	2020-01-29 14:10:08.988882800 -0800
 @@ -11,7 +11,7 @@
  
  RCT_EXPORT_MODULE(RCTBaseText)

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\React-RCTText.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\React-RCTText.podspec"
-index 2307249..0c9db6f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\React-RCTText.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\React-RCTText.podspec"
-@@ -25,11 +25,13 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\React-RCTText.podspec"	2020-01-30 13:55:47.988608700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\React-RCTText.podspec"	2020-01-29 14:10:08.992883100 -0800
+@@ -25,11 +25,13 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/text"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m"
-index a6dfde5..1ca342a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m"	2020-01-30 13:55:47.935613900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTFrameAnimation.m"	2020-01-29 14:10:08.936883800 -0800
 @@ -7,7 +7,7 @@
  
  #import "RCTFrameAnimation.h"

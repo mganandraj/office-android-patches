@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\gradle_download_deps.sh" "b/E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\gradle_download_deps.sh"
-index dd3d781..e541863 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\gradle_download_deps.sh"
-+++ "b/E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\gradle_download_deps.sh"
+--- "E:\\github\\fb-react-native-forpatch-base\\scripts\\circleci\\gradle_download_deps.sh"	2020-01-29 14:11:26.771530800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\scripts\\circleci\\gradle_download_deps.sh"	2020-01-29 14:10:10.017894800 -0800
 @@ -6,4 +6,8 @@
  
  set -e

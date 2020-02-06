@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.h"
-index 34016b9..28d103d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ARTSurfaceView.h"	2020-01-30 13:55:47.817607400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ARTSurfaceView.h"	2020-01-29 14:10:08.795880600 -0800
 @@ -5,10 +5,10 @@
   * LICENSE file in the root directory of this source tree.
   */

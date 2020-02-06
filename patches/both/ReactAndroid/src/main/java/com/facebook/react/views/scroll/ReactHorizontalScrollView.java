@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java"
-index 1868722..1fed7a8 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java"
-@@ -18,6 +18,7 @@ import android.hardware.SensorManager;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java"	2020-01-30 13:55:48.410610500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java"	2020-01-29 14:10:09.558927800 -0800
+@@ -18,6 +18,7 @@
  import androidx.core.view.ViewCompat;
  import androidx.core.text.TextUtilsCompat;
  import android.util.Log;
@@ -10,7 +8,7 @@ index 1868722..1fed7a8 100644
  import android.view.MotionEvent;
  import android.view.View;
  import android.view.ViewConfiguration;
-@@ -37,6 +38,8 @@ import java.lang.reflect.Field;
+@@ -37,6 +38,8 @@
  import java.util.List;
  import java.util.Locale;
  import javax.annotation.Nullable;
@@ -19,7 +17,7 @@ index 1868722..1fed7a8 100644
  
  /**
   * Similar to {@link ReactScrollView} but only supports horizontal scrolling.
-@@ -72,6 +75,9 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
+@@ -72,6 +75,9 @@
    private boolean mSnapToStart = true;
    private boolean mSnapToEnd = true;
    private ReactViewBackgroundManager mReactBackgroundManager;
@@ -29,7 +27,7 @@ index 1868722..1fed7a8 100644
  
    public ReactHorizontalScrollView(Context context) {
      this(context, null);
-@@ -221,6 +227,82 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
+@@ -221,6 +227,82 @@
      scrollTo(getScrollX(), getScrollY());
    }
  
@@ -112,11 +110,10 @@ index 1868722..1fed7a8 100644
    @Override
    protected void onScrollChanged(int x, int y, int oldX, int oldY) {
      super.onScrollChanged(x, y, oldX, oldY);
-@@ -263,6 +345,48 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
-     return false;
+@@ -264,6 +346,48 @@
    }
  
-+  @Override
+   @Override
 +  public boolean pageScroll(int direction) {
 +    boolean handled = super.pageScroll(direction);
 +
@@ -158,10 +155,11 @@ index 1868722..1fed7a8 100644
 +    return handled;
 +  }
 +
-   @Override
++  @Override
    public boolean onTouchEvent(MotionEvent ev) {
      if (!mScrollEnabled) {
-@@ -661,7 +785,6 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
+       return false;
+@@ -661,7 +785,6 @@
      } else if (velocityX < 0) {
        // when snapping velocity can feel sluggish for slow swipes
        velocityX -= (int) ((targetOffset - smallerOffset) * 10.0);
@@ -169,7 +167,7 @@ index 1868722..1fed7a8 100644
        targetOffset = smallerOffset;
      } else {
        targetOffset = nearestOffset;
-@@ -706,6 +829,29 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
+@@ -706,6 +829,29 @@
      }
    }
  

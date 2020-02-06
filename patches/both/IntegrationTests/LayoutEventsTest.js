@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\LayoutEventsTest.js" "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\LayoutEventsTest.js"
-index 7be877f..81919b0 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\LayoutEventsTest.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\IntegrationTests\\LayoutEventsTest.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\IntegrationTests\\LayoutEventsTest.js"	2020-01-30 13:55:47.809606400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\IntegrationTests\\LayoutEventsTest.js"	2020-01-29 14:10:08.789911700 -0800
 @@ -10,6 +10,7 @@
  
  'use strict';
@@ -10,7 +8,7 @@ index 7be877f..81919b0 100644
  const React = require('react');
  const ReactNative = require('react-native');
  const {Image, LayoutAnimation, StyleSheet, Text, View} = ReactNative;
-@@ -51,10 +52,15 @@ class LayoutEventsTest extends React.Component<Props, State> {
+@@ -51,10 +52,15 @@
  
    animateViewLayout() {
      debug('animateViewLayout invoked');

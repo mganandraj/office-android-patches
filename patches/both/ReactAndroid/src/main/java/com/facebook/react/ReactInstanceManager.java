@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"
-index 022eb1c..9d53982 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"
-@@ -49,12 +49,14 @@ import com.facebook.infer.annotation.ThreadConfined;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-01-30 13:55:48.237579000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-01-29 14:10:09.339920000 -0800
+@@ -49,12 +49,14 @@
  import com.facebook.infer.annotation.ThreadSafe;
  import com.facebook.react.bridge.Arguments;
  import com.facebook.react.bridge.CatalystInstance;
@@ -17,7 +15,7 @@ index 022eb1c..9d53982 100644
  import com.facebook.react.bridge.NativeDeltaClient;
  import com.facebook.react.bridge.NativeModuleCallExceptionHandler;
  import com.facebook.react.bridge.NativeModuleRegistry;
-@@ -168,6 +170,18 @@ public class ReactInstanceManager {
+@@ -168,6 +170,18 @@
    private final @Nullable NativeModuleCallExceptionHandler mNativeModuleCallExceptionHandler;
    private final @Nullable JSIModulePackage mJSIModulePackage;
    private List<ViewManager> mViewManagers;
@@ -36,7 +34,7 @@ index 022eb1c..9d53982 100644
  
    private class ReactContextInitParams {
      private final JavaScriptExecutorFactory mJsExecutorFactory;
-@@ -246,6 +260,8 @@ public class ReactInstanceManager {
+@@ -246,6 +260,8 @@
      mLifecycleState = initialLifecycleState;
      mMemoryPressureRouter = new MemoryPressureRouter(applicationContext);
      mNativeModuleCallExceptionHandler = nativeModuleCallExceptionHandler;
@@ -45,7 +43,7 @@ index 022eb1c..9d53982 100644
      synchronized (mPackages) {
        PrinterHolder.getPrinter()
            .logMessage(ReactDebugOverlayTags.RN_CORE, "RNCore: Use Split Packages");
-@@ -340,6 +356,44 @@ public class ReactInstanceManager {
+@@ -340,6 +356,44 @@
      recreateReactContextInBackgroundInner();
    }
  
@@ -90,7 +88,7 @@ index 022eb1c..9d53982 100644
    /**
     * Recreate the react application and context. This should be called if configuration has changed
     * or the developer has requested the app to be reloaded. It should only be called after an
-@@ -922,6 +976,8 @@ public class ReactInstanceManager {
+@@ -922,6 +976,8 @@
        }
      }
  
@@ -99,7 +97,7 @@ index 022eb1c..9d53982 100644
      mCreateReactContextThread =
          new Thread(
              null,
-@@ -985,27 +1041,71 @@ public class ReactInstanceManager {
+@@ -985,27 +1041,71 @@
      mCreateReactContextThread.start();
    }
  
@@ -180,7 +178,7 @@ index 022eb1c..9d53982 100644
        }
        ReactMarker.logMarker(ATTACH_MEASURED_ROOT_VIEWS_END);
      }
-@@ -1127,7 +1227,8 @@ public class ReactInstanceManager {
+@@ -1127,7 +1227,8 @@
        .setJSExecutor(jsExecutor)
        .setRegistry(nativeModuleRegistry)
        .setJSBundleLoader(jsBundleLoader)

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\polyfills\\console.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\polyfills\\console.js"
-index e6f5378..a0ca852 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\polyfills\\console.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\polyfills\\console.js"
-@@ -560,7 +560,8 @@ if (global.nativeLoggingHook) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\polyfills\\console.js"	2020-01-30 13:55:48.030611900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\polyfills\\console.js"	2020-01-29 14:10:09.036884000 -0800
+@@ -560,7 +560,8 @@
            // TODO(T43930203): remove this special case once originalConsole.assert properly checks
            // the condition
            if (methodName === 'assert') {

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java"
-index 2927ab9..a6652ed 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java"
-@@ -71,6 +71,9 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java"	2020-01-30 13:55:48.435625800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java"	2020-01-29 14:10:09.637920700 -0800
+@@ -71,6 +71,9 @@
        Spacing.ALL, Spacing.LEFT, Spacing.RIGHT, Spacing.TOP, Spacing.BOTTOM,
    };
  
@@ -12,7 +10,7 @@ index 2927ab9..a6652ed 100644
    private static final int FOCUS_TEXT_INPUT = 1;
    private static final int BLUR_TEXT_INPUT = 2;
  
-@@ -715,6 +718,11 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
+@@ -715,6 +718,11 @@
      view.setBorderStyle(borderStyle);
    }
  

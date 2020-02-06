@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m"
-index 179a187..5f05e32 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m"	2020-01-30 13:55:47.935613900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\NativeAnimation\\Drivers\\RCTSpringAnimation.m"	2020-01-29 14:10:08.936883800 -0800
 @@ -7,7 +7,7 @@
  
  #import "RCTSpringAnimation.h"

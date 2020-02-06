@@ -6,7 +6,7 @@ import {
   initDirectory,
   resolvePath,
 } from './fs_utils';
-import {createPatch} from './patch_utils';
+import {diffFiles} from './patch_utils';
 import {log} from './logger';
 
 export function diffReactNativeForks(
@@ -17,13 +17,13 @@ export function diffReactNativeForks(
 ) {
   // Where we write the patches
   const bothPath = resolvePath(patchesRootAbsPath, 'both');
-  const msOnlyPath = resolvePath(patchesRootAbsPath, 'msOnly');
-  const fbOnlyPath = resolvePath(patchesRootAbsPath, 'fbOnly');
+  const forkOnlyPath = resolvePath(patchesRootAbsPath, 'fork-only');
+  const baseOnlyPath = resolvePath(patchesRootAbsPath, 'base-only');
 
   // Init output directory
   initDirectory(bothPath);
-  initDirectory(msOnlyPath);
-  initDirectory(fbOnlyPath);
+  initDirectory(forkOnlyPath);
+  initDirectory(baseOnlyPath);
 
   const callbackFile = (forkFileAbsPath: string) => {
     const forkFileRelativePath = getRelativePath(
@@ -32,17 +32,35 @@ export function diffReactNativeForks(
     );
 
     const callbackOnHit = (fbRepoFileAbsPath: string) => {
-      const callbackOnPatchCreated = (patch: string) => {
-        // tslint:disable-next-line:no-console
-        // console.log('Patch:: ' + patch);
-        writeFile(bothPath, forkFileRelativePath, `${patch}`);
+      const callbackOnDiffCreated = (patch: string) => {
+        writeFile(bothPath, forkFileRelativePath, `${patch}`, '');
       };
-      createPatch(fbRepoFileAbsPath, forkFileAbsPath, callbackOnPatchCreated);
+      const callbackOnError = (error: string) => {
+        log.error('diffRNFork', error);
+      };
+      diffFiles(
+        fbRepoFileAbsPath,
+        false,
+        forkFileAbsPath,
+        callbackOnDiffCreated,
+        callbackOnError,
+      );
     };
 
-    const callbackOnMiss = (second: string) => {
-      log.info('diffRNFork', `Only in MS:: ${forkFileAbsPath}`);
-      // writeFile(msOnlyPath, msForkFileRelativePath, 'data');
+    const callbackOnMiss = (fbRepoFileAbsPath: string) => {
+      const callbackOnDiffCreated = (patch: string) => {
+        writeFile(forkOnlyPath, forkFileRelativePath, `${patch}`, '');
+      };
+      const callbackOnError = (error: string) => {
+        log.error('diffRNFork', error);
+      };
+      diffFiles(
+        fbRepoFileAbsPath,
+        true,
+        forkFileAbsPath,
+        callbackOnDiffCreated,
+        callbackOnError,
+      );
     };
 
     lookUpRelativePath(
@@ -53,11 +71,17 @@ export function diffReactNativeForks(
     );
   };
 
-  const callbackDirectory = (path: string) => {
-    // tslint:disable-next-line:no-console
-    // console.log('Directory: ' + path);
-  };
+  const callbackDirectory = (path: string) => {};
 
+  /*
+  Pseudo-code
+  1. Traverse through the fork rep
+  2. For each file look for the same file in the base repo
+  3. If the file is found in the base repo, then create and write the patch file to 'both' directory in the patch directory, keeping the same directory hierarchy.
+  4. If the file is not found in the base repo, then create and write the patch file as a 'new file' to 'forkOnly' directory in the patch directory, keeping the same directory hierarchy.
+
+  Please note that we currently don't traverse the base reporitory, assuming that all the files in the base repository are present in the fork also. Essentially, we expect the patches to be only additions.
+  */
   traverseDirectory(
     forkRepoAbsPath,
     callbackFile,

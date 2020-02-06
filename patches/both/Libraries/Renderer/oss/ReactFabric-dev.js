@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-dev.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-dev.js"
-index 5ea69a2..4121598 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-dev.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-dev.js"
-@@ -16411,6 +16411,40 @@ function throwException(
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactFabric-dev.js"	2020-01-30 13:55:47.967612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactFabric-dev.js"	2020-01-29 14:10:08.967885800 -0800
+@@ -16411,6 +16411,40 @@
          _workInProgress.effectTag |= ShouldCapture;
          _workInProgress.expirationTime = renderExpirationTime;
          return;
@@ -43,7 +41,7 @@ index 5ea69a2..4121598 100644
        }
        // This boundary already captured during this render. Continue to the next
        // boundary.
-@@ -16933,6 +16967,10 @@ function resolveLocksOnRoot(root, expirationTime) {
+@@ -16933,6 +16967,10 @@
    } else {
      return false;
    }
@@ -54,7 +52,7 @@ index 5ea69a2..4121598 100644
  }
  
  function interactiveUpdates$1(fn, a, b, c) {
-@@ -18190,6 +18228,7 @@ function checkForNestedUpdates() {
+@@ -18190,6 +18228,7 @@
        );
      }
    }
@@ -62,7 +60,7 @@ index 5ea69a2..4121598 100644
  }
  
  function flushRenderPhaseStrictModeWarningsInDEV() {
-@@ -19085,6 +19124,17 @@ var NativeMethodsMixin = function(findNodeHandle, findHostInstance) {
+@@ -19085,6 +19124,17 @@
       * Manipulation](docs/direct-manipulation.html)).
       */
      setNativeProps: function(nativeProps) {
@@ -80,7 +78,7 @@ index 5ea69a2..4121598 100644
        // Class components don't have viewConfig -> validateAttributes.
        // Nor does it make sense to set native props on a non-native component.
        // Instead, find the nearest host component and set props on it.
-@@ -19464,6 +19514,18 @@ var ReactNativeComponent = function(findNodeHandle, findHostInstance) {
+@@ -19464,6 +19514,18 @@
      ReactNativeComponent.prototype.setNativeProps = function setNativeProps(
        nativeProps
      ) {
@@ -99,7 +97,7 @@ index 5ea69a2..4121598 100644
        // Class components don't have viewConfig -> validateAttributes.
        // Nor does it make sense to set native props on a non-native component.
        // Instead, find the nearest host component and set props on it.
-@@ -19645,6 +19707,36 @@ var getInspectorDataForViewTag = void 0;
+@@ -19645,6 +19707,36 @@
    };
  }
  
@@ -136,7 +134,7 @@ index 5ea69a2..4121598 100644
  var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
  
  function findNodeHandle(componentOrHandle) {
-@@ -19776,4 +19868,4 @@ var fabric = ReactFabric$3.default || ReactFabric$3;
+@@ -19776,4 +19868,4 @@
  module.exports = fabric;
  
    })();

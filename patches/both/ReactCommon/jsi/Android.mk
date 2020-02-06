@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\Android.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\Android.mk"
-index d6a547c..cb29389 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\Android.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\Android.mk"
-@@ -10,7 +10,6 @@ include $(CLEAR_VARS)
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\Android.mk"	2020-01-29 14:11:26.693530200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\Android.mk"	2020-01-29 14:10:09.823890600 -0800
+@@ -10,7 +10,6 @@
  LOCAL_MODULE := jsi
  
  LOCAL_SRC_FILES := $(wildcard $(LOCAL_PATH)/jsi/*.cpp)
@@ -10,7 +8,7 @@ index d6a547c..cb29389 100644
  LOCAL_C_INCLUDES := $(LOCAL_PATH)
  LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
  
-@@ -19,17 +18,24 @@ LOCAL_SHARED_LIBRARIES := libfolly_json glog
+@@ -19,17 +18,24 @@
  
  include $(BUILD_STATIC_LIBRARY)
  

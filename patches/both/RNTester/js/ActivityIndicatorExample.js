@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ActivityIndicatorExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ActivityIndicatorExample.js"
-index ca25a45..5341f4b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ActivityIndicatorExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ActivityIndicatorExample.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\ActivityIndicatorExample.js"	2020-01-30 13:55:48.070608900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\ActivityIndicatorExample.js"	2020-01-29 14:10:09.160885800 -0800
 @@ -12,6 +12,7 @@
  
  import React, {Component} from 'react';
@@ -10,7 +8,7 @@ index ca25a45..5341f4b 100644
  
  type State = {|animating: boolean|};
  type Props = $ReadOnly<{||}>;
-@@ -66,6 +67,14 @@ const styles = StyleSheet.create({
+@@ -66,6 +67,14 @@
      flexDirection: 'row',
      justifyContent: 'space-around',
      padding: 8,
@@ -25,7 +23,7 @@ index ca25a45..5341f4b 100644
    },
  });
  
-@@ -102,8 +111,18 @@ exports.examples = [
+@@ -102,8 +111,18 @@
      render() {
        return (
          <View style={styles.horizontal}>
@@ -46,7 +44,7 @@ index ca25a45..5341f4b 100644
            <ActivityIndicator color="#aa3300" />
            <ActivityIndicator color="#00aa00" />
          </View>
-@@ -142,6 +161,19 @@ exports.examples = [
+@@ -142,6 +161,19 @@
      },
    },
    {

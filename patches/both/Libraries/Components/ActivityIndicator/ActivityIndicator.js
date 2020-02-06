@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js"
-index 1c4a54c..5f67851 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js"
-@@ -19,6 +19,7 @@ const RCTActivityIndicatorViewNativeComponent = require('./RCTActivityIndicatorV
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js"	2020-01-30 13:55:47.854607500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js"	2020-01-29 14:10:08.830882900 -0800
+@@ -19,6 +19,7 @@
  
  import type {NativeComponent} from '../../Renderer/shims/ReactNative';
  import type {ViewProps} from '../View/ViewPropTypes';
@@ -10,7 +8,7 @@ index 1c4a54c..5f67851 100644
  
  const RCTActivityIndicator =
    Platform.OS === 'android'
-@@ -53,7 +54,7 @@ type Props = $ReadOnly<{|
+@@ -53,7 +54,7 @@
     *
     * See http://facebook.github.io/react-native/docs/activityindicator.html#color
     */

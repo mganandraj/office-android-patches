@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.h"
-index bf5746a..142e3cb 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.h"
-@@ -40,10 +40,12 @@ public:
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.h"	2020-01-30 13:55:48.520581000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.h"	2020-01-29 14:10:09.752895100 -0800
+@@ -40,10 +40,12 @@
     * This must be called on the main JS thread.
     */
    NativeToJsBridge(
@@ -19,7 +17,7 @@ index bf5746a..142e3cb 100644
    virtual ~NativeToJsBridge();
  
    /**
-@@ -64,12 +66,12 @@ public:
+@@ -64,12 +66,12 @@
     */
    void loadApplication(
      std::unique_ptr<RAMBundleRegistry> bundleRegistry,
@@ -36,21 +34,21 @@ index bf5746a..142e3cb 100644
  
    void registerBundle(uint32_t bundleId, const std::string& bundlePath);
    void setGlobalVariable(std::string propName, std::unique_ptr<const JSBigString> jsonValue);
-@@ -79,6 +81,13 @@ public:
- 
+@@ -80,6 +82,13 @@
    void handleMemoryPressure(int pressureLevel);
  
-+  /**
+   /**
 +   * Returns the current peak memory usage due to m_executor's JavaScript
 +   * execution environment in bytes. If m_executor does not track this
 +   * information, return -1.
 +   */
 +  int64_t getPeakJsMemoryUsage() const noexcept;
 +
-   /**
++  /**
     * Synchronously tears down the bridge and the main executor.
     */
-@@ -92,7 +101,7 @@ private:
+   void destroy();
+@@ -92,7 +101,7 @@
    // will try to run the task on m_callback which will have been destroyed
    // within ~NativeToJsBridge(), thus causing a SIGSEGV.
    std::shared_ptr<bool> m_destroyed;
@@ -59,7 +57,7 @@ index bf5746a..142e3cb 100644
    std::unique_ptr<JSExecutor> m_executor;
    std::shared_ptr<MessageQueueThread> m_executorMessageQueueThread;
  
-@@ -107,7 +116,7 @@ private:
+@@ -107,7 +116,7 @@
    bool m_applicationScriptHasFailure = false;
  
    #ifdef WITH_FBSYSTRACE

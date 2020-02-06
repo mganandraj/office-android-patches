@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\Application.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\Application.mk"
-index 017ddd7..5e5b929 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\Application.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\Application.mk"
-@@ -22,7 +22,7 @@ APP_MK_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\Application.mk"	2020-01-30 13:55:48.459617000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\Application.mk"	2020-01-29 14:10:09.653915000 -0800
+@@ -22,7 +22,7 @@
  # Where are APP_MK_DIR, THIRD_PARTY_NDK_DIR, etc. defined?
  #   The directories inside NDK_MODULE_PATH (ex: APP_MK_DIR, THIRD_PARTY_NDK_DIR,
  #   etc.) are defined inside build.gradle.
@@ -11,7 +9,7 @@ index 017ddd7..5e5b929 100644
  
  APP_STL := c++_shared
  
-@@ -32,3 +32,5 @@ APP_CPPFLAGS := -std=c++1y
+@@ -32,3 +32,5 @@
  APP_LDFLAGS := -Wl,--build-id
  
  NDK_TOOLCHAIN_VERSION := clang

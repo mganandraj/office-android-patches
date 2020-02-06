@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile.lock" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile.lock"
-index f9f5a2e..8e4ded1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile.lock"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile.lock"
-@@ -41,6 +41,9 @@ PODS:
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile.lock"	2020-01-30 13:55:48.037611600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile.lock"	2020-01-29 14:10:09.044885000 -0800
+@@ -41,6 +41,9 @@
      - React-Core (= 1000.0.0)
      - React-RCTWebSocket (= 1000.0.0)
    - React-fishhook (1000.0.0)
@@ -12,7 +10,7 @@ index f9f5a2e..8e4ded1 100644
    - React-jsi (1000.0.0):
      - boost-for-react-native (= 1.63.0)
      - DoubleConversion
-@@ -92,12 +95,14 @@ PODS:
+@@ -92,12 +95,14 @@
      - Folly (= 2018.10.22.00)
      - React-Core (= 1000.0.0)
      - React-cxxreact (= 1000.0.0)
@@ -27,7 +25,7 @@ index f9f5a2e..8e4ded1 100644
      - React-jsi (= 1000.0.0)
    - React-turbomodule-samples (1000.0.0):
      - Folly (= 2018.10.22.00)
-@@ -115,6 +120,7 @@ PODS:
+@@ -115,6 +120,7 @@
    - yoga (1000.0.0.React)
  
  DEPENDENCIES:
@@ -35,7 +33,7 @@ index f9f5a2e..8e4ded1 100644
    - DoubleConversion (from `../third-party-podspecs/DoubleConversion.podspec`)
    - Folly (from `../third-party-podspecs/Folly.podspec`)
    - glog (from `../third-party-podspecs/glog.podspec`)
-@@ -124,6 +130,7 @@ DEPENDENCIES:
+@@ -124,6 +130,7 @@
    - React-cxxreact (from `../ReactCommon/cxxreact`)
    - React-DevSupport (from `../React`)
    - React-fishhook (from `../Libraries/fishhook`)
@@ -43,7 +41,7 @@ index f9f5a2e..8e4ded1 100644
    - React-jsi (from `../ReactCommon/jsi`)
    - React-jsiexecutor (from `../ReactCommon/jsiexecutor`)
    - React-jsinspector (from `../ReactCommon/jsinspector`)
-@@ -143,11 +150,9 @@ DEPENDENCIES:
+@@ -143,11 +150,9 @@
    - React-turbomodule-samples (from `../ReactCommon/turbomodule/samples`)
    - yoga (from `../ReactCommon/yoga`)
  
@@ -57,7 +55,7 @@ index f9f5a2e..8e4ded1 100644
    DoubleConversion:
      :podspec: "../third-party-podspecs/DoubleConversion.podspec"
    Folly:
-@@ -166,6 +171,8 @@ EXTERNAL SOURCES:
+@@ -166,6 +171,8 @@
      :path: "../React"
    React-fishhook:
      :path: "../Libraries/fishhook"
@@ -66,7 +64,7 @@ index f9f5a2e..8e4ded1 100644
    React-jsi:
      :path: "../ReactCommon/jsi"
    React-jsiexecutor:
-@@ -204,35 +211,36 @@ EXTERNAL SOURCES:
+@@ -204,35 +211,36 @@
      :path: "../ReactCommon/yoga"
  
  SPEC CHECKSUMS:

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\React-RCTNetwork.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\React-RCTNetwork.podspec"
-index 1779798..b63a97f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\React-RCTNetwork.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\React-RCTNetwork.podspec"
-@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Network\\React-RCTNetwork.podspec"	2020-01-30 13:55:47.953607700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Network\\React-RCTNetwork.podspec"	2020-01-29 14:10:08.947913700 -0800
+@@ -24,7 +24,7 @@
    s.homepage               = "http://facebook.github.io/react-native/"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRLoadingView.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRLoadingView.js"
-index 13eaa4b..0fe67ae 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRLoadingView.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRLoadingView.js"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Utilities\\HMRLoadingView.js"	2020-01-30 13:55:48.006612500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Utilities\\HMRLoadingView.js"	2020-01-29 14:10:09.008883700 -0800
 @@ -8,15 +8,24 @@
   * @flow strict-local
   */

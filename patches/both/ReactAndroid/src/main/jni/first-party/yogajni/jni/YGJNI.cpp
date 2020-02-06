@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp"
-index 2801166..5448f61 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp"	2020-01-30 13:55:48.474607200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp"	2020-01-29 14:10:09.674889900 -0800
 @@ -4,6 +4,8 @@
   * This source code is licensed under the MIT license found in the LICENSE
   * file in the root directory of this source tree.
@@ -11,7 +9,7 @@ index 2801166..5448f61 100644
  #include <fb/fbjni.h>
  #include <yoga/YGNode.h>
  #include <yoga/Yoga.h>
-@@ -416,15 +418,15 @@ static int YGJNILogFunc(
+@@ -416,15 +418,15 @@
      const YGConfigRef config,
      const YGNodeRef node,
      YGLogLevel level,

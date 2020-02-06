@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextViewManager.m"
-index 9e0af36..0e4b3b9 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextViewManager.m"
-@@ -44,10 +44,12 @@ RCT_EXPORT_VIEW_PROPERTY(selectable, BOOL)
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextViewManager.m"	2020-01-30 13:55:47.991610000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextViewManager.m"	2020-01-29 14:10:08.995883600 -0800
+@@ -44,10 +44,12 @@
  
    [bridge.uiManager.observerCoordinator addObserver:self];
  
@@ -15,7 +13,7 @@ index 9e0af36..0e4b3b9 100644
  }
  
  - (void)dealloc
-@@ -55,7 +57,7 @@ RCT_EXPORT_VIEW_PROPERTY(selectable, BOOL)
+@@ -55,7 +57,7 @@
    [[NSNotificationCenter defaultCenter] removeObserver:self];
  }
  
@@ -24,7 +22,7 @@ index 9e0af36..0e4b3b9 100644
  {
    return [RCTTextView new];
  }
-@@ -63,7 +65,9 @@ RCT_EXPORT_VIEW_PROPERTY(selectable, BOOL)
+@@ -63,7 +65,9 @@
  - (RCTShadowView *)shadowView
  {
    RCTTextShadowView *shadowView = [[RCTTextShadowView alloc] initWithBridge:self.bridge];

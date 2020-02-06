@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Releases.md" "b/E:\\github\\ms-react-native-forpatch\\Releases.md"
-index f9bab35..ce5e162 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Releases.md"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Releases.md"
-@@ -6,21 +6,7 @@ This document serves as guide for release coordinators. You can find a list of r
+--- "E:\\github\\fb-react-native-forpatch-base\\Releases.md"	2020-01-29 14:11:26.718530200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Releases.md"	2020-01-29 14:10:09.851893600 -0800
+@@ -6,21 +6,7 @@
  
  React Native follows a monthly release train. Every month, a new branch created off master enters the Release Candidate phase, and the previous Release Candidate branch is released and considered stable.
  

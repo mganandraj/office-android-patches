@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java"
-index 7b34688..2f89b35 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java"	2020-01-30 13:55:48.345614000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java"	2020-01-29 14:10:09.432887900 -0800
 @@ -7,6 +7,7 @@
  
  package com.facebook.react.modules.timepicker;
@@ -10,7 +8,7 @@ index 7b34688..2f89b35 100644
  import android.app.TimePickerDialog.OnTimeSetListener;
  import android.content.DialogInterface;
  import android.content.DialogInterface.OnDismissListener;
-@@ -92,13 +93,16 @@ public class TimePickerDialogModule extends ReactContextBaseJavaModule {
+@@ -92,13 +93,16 @@
    @ReactMethod
    public void open(@Nullable final ReadableMap options, Promise promise) {
  

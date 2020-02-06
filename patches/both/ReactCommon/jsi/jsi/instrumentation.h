@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\instrumentation.h" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\instrumentation.h"
-index f10fb69..fb75456 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\instrumentation.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\instrumentation.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\jsi\\jsi\\instrumentation.h"	2020-01-30 13:55:48.607617600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\jsi\\jsi\\instrumentation.h"	2020-01-29 14:10:09.828890800 -0800
 @@ -6,6 +6,7 @@
   */
  #pragma once
@@ -10,7 +8,7 @@ index f10fb69..fb75456 100644
  #include <string>
  
  #include <jsi/jsi.h>
-@@ -55,6 +56,15 @@ class Instrumentation {
+@@ -55,6 +56,15 @@
    /// \return true iff the heap capture succeeded
    virtual bool createSnapshotToFile(const std::string& path, bool compact) = 0;
  

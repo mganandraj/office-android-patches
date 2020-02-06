@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextView.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextView.h"
-index a082013..7edc12f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextView.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextView.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\Text\\RCTTextView.h"	2020-01-30 13:55:47.990609500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\Text\\RCTTextView.h"	2020-01-29 14:10:08.994914500 -0800
 @@ -7,17 +7,17 @@
  
  #import <React/RCTComponent.h>

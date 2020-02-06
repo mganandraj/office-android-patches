@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleList.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleList.js"
-index 9082b7a..6421260 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleList.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleList.js"
-@@ -36,6 +36,7 @@ type Props = {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\RNTesterExampleList.js"	2020-01-30 13:55:48.083612100 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\RNTesterExampleList.js"	2020-01-29 14:10:09.181886200 -0800
+@@ -36,6 +36,7 @@
  
  class RowComponent extends React.PureComponent<{
    item: Object,
@@ -10,7 +8,7 @@ index 9082b7a..6421260 100644
    onNavigate: Function,
    onPress?: Function,
    onShowUnderlay?: Function,
-@@ -50,12 +51,15 @@ class RowComponent extends React.PureComponent<{
+@@ -50,12 +51,15 @@
    };
    render() {
      const {item} = this.props;
@@ -27,7 +25,7 @@ index 9082b7a..6421260 100644
            <Text style={styles.rowTitleText}>{item.module.title}</Text>
            <Text style={styles.rowDetailText}>{item.module.description}</Text>
          </View>
-@@ -104,9 +108,17 @@ class RNTesterExampleList extends React.Component<Props, $FlowFixMeState> {
+@@ -104,9 +108,17 @@
                enableEmptySections={true}
                itemShouldUpdate={this._itemShouldUpdate}
                keyboardShouldPersistTaps="handled"
@@ -45,7 +43,7 @@ index 9082b7a..6421260 100644
              />
            )}
          />
-@@ -114,13 +126,19 @@ class RNTesterExampleList extends React.Component<Props, $FlowFixMeState> {
+@@ -114,13 +126,19 @@
      );
    }
  
@@ -66,7 +64,7 @@ index 9082b7a..6421260 100644
        onNavigate={this.props.onNavigate}
        onShowUnderlay={separators.highlight}
        onHideUnderlay={separators.unhighlight}
-@@ -164,35 +182,111 @@ const styles = StyleSheet.create({
+@@ -164,35 +182,111 @@
      flex: 1,
    },
    list: {

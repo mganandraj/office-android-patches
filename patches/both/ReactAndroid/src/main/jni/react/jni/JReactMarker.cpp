@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp"
-index 4f45897..fd4d611 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp"
-@@ -53,6 +53,15 @@ void JReactMarker::logPerfMarker(const ReactMarker::ReactMarkerId markerId, cons
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp"	2020-01-30 13:55:48.479581200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp"	2020-01-29 14:10:09.678890000 -0800
+@@ -53,6 +53,15 @@
      case ReactMarker::NATIVE_MODULE_SETUP_STOP:
        JReactMarker::logMarker("NATIVE_MODULE_SETUP_END", tag);
        break;

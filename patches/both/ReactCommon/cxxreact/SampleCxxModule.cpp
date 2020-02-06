@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.cpp"
-index e1bfb04..9a5ec62 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.cpp"
-@@ -28,9 +28,9 @@ std::string Sample::concat(const std::string& a, const std::string& b) {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\SampleCxxModule.cpp"	2020-01-30 13:55:48.522580900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\SampleCxxModule.cpp"	2020-01-29 14:10:09.754922800 -0800
+@@ -28,9 +28,9 @@
    return a + b;
  }
  
@@ -14,7 +12,7 @@ index e1bfb04..9a5ec62 100644
      ret += str;
    }
  
-@@ -52,7 +52,7 @@ void Sample::except() {
+@@ -52,7 +52,7 @@
    // throw std::runtime_error("oops");
  }
  

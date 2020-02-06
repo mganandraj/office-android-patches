@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m"
-index 48eec5f..ec82788 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m"	2020-01-30 13:55:48.002612000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Text\\VirtualText\\RCTVirtualTextViewManager.m"	2020-01-29 14:10:09.005914400 -0800
 @@ -13,9 +13,9 @@
  
  RCT_EXPORT_MODULE(RCTVirtualText)

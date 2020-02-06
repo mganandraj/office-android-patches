@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\MethodCall.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\MethodCall.cpp"
-index 7141513..1e4a756 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\MethodCall.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\MethodCall.cpp"
-@@ -64,12 +64,12 @@ std::vector<MethodCall> parseMethodCalls(folly::dynamic&& jsonData) {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\MethodCall.cpp"	2020-01-30 13:55:48.519581000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\MethodCall.cpp"	2020-01-29 14:10:09.750922100 -0800
+@@ -64,12 +64,12 @@
      }
  
      methodCalls.emplace_back(

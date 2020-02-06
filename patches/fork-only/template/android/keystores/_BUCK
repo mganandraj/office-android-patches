@@ -1,0 +1,11 @@
+--- "E:\\github\\fb-react-native-forpatch-base\\template\\android\\keystores\\_BUCK"	1969-12-31 16:00:00.000000000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\template\\android\\keystores\\_BUCK"	2020-01-29 14:10:10.034893800 -0800
+@@ -0,0 +1,8 @@
++keystore(
++    name = "debug",
++    properties = "debug.keystore.properties",
++    store = "debug.keystore",
++    visibility = [
++        "PUBLIC",
++    ],
++)

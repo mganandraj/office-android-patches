@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj"
-index bbf4d71..fcdca4a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.904607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImage.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.897881900 -0800
 @@ -14,6 +14,31 @@
  		139A38841C4D587C00862840 /* RCTResizeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 139A38831C4D587C00862840 /* RCTResizeMode.m */; };
  		13EF7F7F1BC825B1003F47DD /* RCTLocalAssetImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EF7F7E1BC825B1003F47DD /* RCTLocalAssetImageLoader.m */; };
@@ -179,12 +177,10 @@ index bbf4d71..fcdca4a 100644
  				CLANG_STATIC_ANALYZER_MODE = deep;
  				LIBRARY_SEARCH_PATHS = "$(inherited)";
  				OTHER_LDFLAGS = "-ObjC";
-@@ -481,6 +581,35 @@
- 			name = Debug;
- 		};
+@@ -483,12 +583,42 @@
  		58B511731A9E6B3D00147676 /* Release */ = {
-+			isa = XCBuildConfiguration;
-+			buildSettings = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
 +				ARCHS = (
 +					"$(ARCHS_STANDARD)",
 +					arm64e,
@@ -212,10 +208,11 @@ index bbf4d71..fcdca4a 100644
 +			name = Debug;
 +		};
 +		6BDE7AEA1ECB9C4400CC951F /* Release */ = {
- 			isa = XCBuildConfiguration;
- 			buildSettings = {
++			isa = XCBuildConfiguration;
++			buildSettings = {
  				CLANG_STATIC_ANALYZER_MODE = deep;
-@@ -489,6 +618,7 @@
+ 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+ 				OTHER_LDFLAGS = "-ObjC";
  				PRODUCT_NAME = RCTImage;
  				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/RCTImage;
  				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -223,10 +220,11 @@ index bbf4d71..fcdca4a 100644
  			};
  			name = Release;
  		};
-@@ -522,6 +652,15 @@
+@@ -521,6 +651,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		6BDE7AE81ECB9C4400CC951F /* Build configuration list for PBXNativeTarget "RCTImage-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -235,7 +233,6 @@ index bbf4d71..fcdca4a 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 58B511551A9E6B3D00147676 /* Project object */;

@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.h" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.h"
-index 42b0036..4a3be1c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RCTTest\\RCTTestModule.h"	2020-01-30 13:55:48.041611400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RCTTest\\RCTTestModule.h"	2020-01-29 14:10:09.048883600 -0800
 @@ -5,7 +5,7 @@
   * LICENSE file in the root directory of this source tree.
   */
@@ -11,7 +9,7 @@ index 42b0036..4a3be1c 100644
  
  #import <React/RCTBridgeModule.h>
  #import <React/RCTDefines.h>
-@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, RCTTestStatus) {
+@@ -28,7 +28,7 @@
  /**
   * This is the view to be snapshotted.
   */

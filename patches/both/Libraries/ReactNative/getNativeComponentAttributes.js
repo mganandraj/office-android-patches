@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\getNativeComponentAttributes.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\getNativeComponentAttributes.js"
-index bf08c38..3be8755 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\getNativeComponentAttributes.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\getNativeComponentAttributes.js"
-@@ -21,6 +21,7 @@ const resolveAssetSource = require('../Image/resolveAssetSource');
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ReactNative\\getNativeComponentAttributes.js"	2020-01-30 13:55:47.962609000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ReactNative\\getNativeComponentAttributes.js"	2020-01-29 14:10:08.960883000 -0800
+@@ -21,6 +21,7 @@
  const sizesDiffer = require('../Utilities/differ/sizesDiffer');
  const invariant = require('invariant');
  const warning = require('fbjs/lib/warning');
@@ -10,7 +8,7 @@ index bf08c38..3be8755 100644
  
  function getNativeComponentAttributes(uiViewClassName: string) {
    const viewConfig = UIManager.getViewManagerConfig(uiViewClassName);
-@@ -181,7 +182,10 @@ function getProcessorForType(typeName: string): ?(nextProp: any) => any {
+@@ -181,7 +182,10 @@
    return null;
  }
  

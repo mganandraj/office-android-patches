@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java"
-index b657eb5..6fbb77c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java"	2020-01-30 13:55:48.379606700 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java"	2020-01-29 14:10:09.458921000 -0800
 @@ -8,9 +8,12 @@
  package com.facebook.react.uimanager;
  
@@ -15,7 +13,7 @@ index b657eb5..6fbb77c 100644
  
  /**
   * Class that stores the mapping between native view name used in JS and the corresponding instance
-@@ -20,6 +23,16 @@ public final class ViewManagerRegistry {
+@@ -20,6 +23,16 @@
  
    private final Map<String, ViewManager> mViewManagers;
    private final @Nullable UIManagerModule.ViewManagerResolver mViewManagerResolver;
@@ -32,7 +30,7 @@ index b657eb5..6fbb77c 100644
  
    public ViewManagerRegistry(UIManagerModule.ViewManagerResolver viewManagerResolver) {
      mViewManagers = MapBuilder.newHashMap();
-@@ -43,17 +56,25 @@ public final class ViewManagerRegistry {
+@@ -43,17 +56,25 @@
    }
  
    public ViewManager get(String className) {

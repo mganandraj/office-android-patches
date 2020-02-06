@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js"
-index 38166b6..1aa4316 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js"
-@@ -3827,6 +3827,19 @@ function warnForStyleProps(props, validAttributes) {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js"	2020-01-30 13:55:47.970607600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Renderer\\oss\\ReactNativeRenderer-dev.js"	2020-01-29 14:10:08.972883100 -0800
+@@ -3827,6 +3827,19 @@
    }
  }
  
@@ -22,7 +20,7 @@ index 38166b6..1aa4316 100644
  function _classCallCheck(instance, Constructor) {
    if (!(instance instanceof Constructor)) {
      throw new TypeError("Cannot call a class as a function");
-@@ -16739,6 +16752,40 @@ function throwException(
+@@ -16739,6 +16752,40 @@
          _workInProgress.effectTag |= ShouldCapture;
          _workInProgress.expirationTime = renderExpirationTime;
          return;
@@ -63,7 +61,7 @@ index 38166b6..1aa4316 100644
        }
        // This boundary already captured during this render. Continue to the next
        // boundary.
-@@ -17231,6 +17278,10 @@ function runRootCallback(root, callback, isSync) {
+@@ -17231,6 +17278,10 @@
        root.callbackExpirationTime = NoWork;
      }
    }
@@ -74,7 +72,7 @@ index 38166b6..1aa4316 100644
  }
  
  function flushInteractiveUpdates$1() {
-@@ -19413,6 +19464,17 @@ var NativeMethodsMixin = function(findNodeHandle, findHostInstance) {
+@@ -19413,6 +19464,17 @@
       * Manipulation](docs/direct-manipulation.html)).
       */
      setNativeProps: function(nativeProps) {
@@ -92,7 +90,7 @@ index 38166b6..1aa4316 100644
        // Class components don't have viewConfig -> validateAttributes.
        // Nor does it make sense to set native props on a non-native component.
        // Instead, find the nearest host component and set props on it.
-@@ -19792,6 +19854,18 @@ var ReactNativeComponent = function(findNodeHandle, findHostInstance) {
+@@ -19792,6 +19854,18 @@
      ReactNativeComponent.prototype.setNativeProps = function setNativeProps(
        nativeProps
      ) {

@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\nativeImageSource.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\nativeImageSource.js"
-index 374a857..14b46b6 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\nativeImageSource.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\nativeImageSource.js"
-@@ -23,6 +23,7 @@ export type NativeImageSource = {|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\nativeImageSource.js"	2020-01-30 13:55:47.912612600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\nativeImageSource.js"	2020-01-29 14:10:08.908884000 -0800
+@@ -23,6 +23,7 @@
  type NativeImageSourceSpec = {|
    +android?: string,
    +ios?: string,

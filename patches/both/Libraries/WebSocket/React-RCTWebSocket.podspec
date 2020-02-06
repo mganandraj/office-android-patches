@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\React-RCTWebSocket.podspec" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\React-RCTWebSocket.podspec"
-index a1abfd7..62525de 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\React-RCTWebSocket.podspec"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\React-RCTWebSocket.podspec"
-@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\WebSocket\\React-RCTWebSocket.podspec"	2020-01-30 13:55:48.018611600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\WebSocket\\React-RCTWebSocket.podspec"	2020-01-29 14:10:09.024884000 -0800
+@@ -25,7 +25,7 @@
    s.documentation_url      = "https://facebook.github.io/react-native/docs/network#websocket-support"
    s.license                = package["license"]
    s.author                 = "Facebook, Inc. and its affiliates"

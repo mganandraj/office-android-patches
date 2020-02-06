@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.h" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.h"
-index a4b8216..49091ac 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.h"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.h"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageUtils.h"	2020-01-30 13:55:47.908608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageUtils.h"	2020-01-29 14:10:08.901883400 -0800
 @@ -6,7 +6,7 @@
   *
   */
@@ -11,7 +9,7 @@ index a4b8216..49091ac 100644
  
  #import <React/RCTDefines.h>
  #import <React/RCTResizeMode.h>
-@@ -91,4 +91,9 @@ RCT_EXTERN UIImage *__nullable RCTTransformImage(UIImage *image,
+@@ -91,4 +91,9 @@
   */
  RCT_EXTERN BOOL RCTImageHasAlpha(CGImageRef image);
  

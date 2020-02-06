@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerAndroidExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerAndroidExample.js"
-index 23f16cb..1b4f56b 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerAndroidExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerAndroidExample.js"
-@@ -68,8 +68,9 @@ class DatePickerAndroidExample extends React.Component<Props, State> {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\DatePickerAndroidExample.js"	2020-01-30 13:55:48.075613000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\DatePickerAndroidExample.js"	2020-01-29 14:10:09.168887000 -0800
+@@ -68,8 +68,9 @@
          newState[stateKey + 'Date'] = date;
        }
        this.setState(newState);

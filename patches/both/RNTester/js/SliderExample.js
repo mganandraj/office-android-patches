@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SliderExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SliderExample.js"
-index 5ca17c2..1d5da71 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SliderExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SliderExample.js"
-@@ -130,21 +130,21 @@ exports.examples = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\SliderExample.js"	2020-01-30 13:55:48.088612500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\SliderExample.js"	2020-01-29 14:10:09.187887900 -0800
+@@ -130,21 +130,21 @@
    },
    {
      title: 'Custom thumb image',

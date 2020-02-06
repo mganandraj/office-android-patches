@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\BorderExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\BorderExample.js"
-index f43016e..193c667 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\BorderExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\BorderExample.js"
-@@ -216,7 +216,7 @@ exports.examples = [
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\BorderExample.js"	2020-01-30 13:55:48.074612200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\BorderExample.js"	2020-01-29 14:10:09.166884700 -0800
+@@ -216,7 +216,7 @@
    {
      title: 'Custom Borders',
      description: 'border*Width & border*Color',
@@ -11,7 +9,7 @@ index f43016e..193c667 100644
      render() {
        return <View style={[styles.box, styles.border5]} />;
      },
-@@ -224,7 +224,7 @@ exports.examples = [
+@@ -224,7 +224,7 @@
    {
      title: 'Custom Borders',
      description: 'border*Width & border*Color',
@@ -20,7 +18,7 @@ index f43016e..193c667 100644
      render() {
        return <View style={[styles.box, styles.border6]} />;
      },
-@@ -232,7 +232,7 @@ exports.examples = [
+@@ -232,7 +232,7 @@
    {
      title: 'Custom Borders',
      description: 'borderRadius & clipping',

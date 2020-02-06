@@ -1,0 +1,5 @@
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterUnitTests\\OCMock.framework\\OCMock"	1969-12-31 16:00:00.000000000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterUnitTests\\OCMock.framework\\OCMock"	2020-01-29 14:10:09.097883900 -0800
+@@ -0,0 +1 @@
++Versions/Current/OCMock
+\ No newline at end of file

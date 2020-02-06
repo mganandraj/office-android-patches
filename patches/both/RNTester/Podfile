@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile"
-index 6c403e4..a40fe31 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile"
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\Podfile"	2020-01-30 13:55:48.037611600 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\Podfile"	2020-01-29 14:10:09.044885000 -0800
 @@ -1,8 +1,50 @@
 -platform :ios, '9.0'
 +# [TODO(macOS GH#217)
@@ -54,10 +52,15 @@ index 6c403e4..a40fe31 100644
    # Uncomment for Swift
    # use_frameworks!
  
-@@ -22,3 +64,25 @@ target 'RNTester' do
-   # To use fabric: add `fabric_enabled` option to the use_react_native method above, like below
-   # use_react_native!(path: "..", turbo_modules_enabled: true, fabric_enabled: true)
- end
+@@ -17,6 +59,28 @@
+   pod 'React-ART', :path => '../Libraries/ART'
+   pod 'React-RCTPushNotification', :path => '../Libraries/PushNotificationIOS'
+ 
++  # Additional Pods which are classed as unstable
++  #
++  # To use fabric: add `fabric_enabled` option to the use_react_native method above, like below
++  # use_react_native!(path: "..", turbo_modules_enabled: true, fabric_enabled: true)
++end
 +
 +# TODO(macOS GH#214)
 +target 'RNTester-macOS' do
@@ -75,8 +78,6 @@ index 6c403e4..a40fe31 100644
 +  pod 'React-ART', :path => '../Libraries/ART'
 +  pod 'React-RCTPushNotification', :path => '../Libraries/PushNotificationIOS'
 +
-+  # Additional Pods which are classed as unstable
-+  #
-+  # To use fabric: add `fabric_enabled` option to the use_react_native method above, like below
-+  # use_react_native!(path: "..", turbo_modules_enabled: true, fabric_enabled: true)
-+end
+   # Additional Pods which are classed as unstable
+   #
+   # To use fabric: add `fabric_enabled` option to the use_react_native method above, like below

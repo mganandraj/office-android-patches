@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\build.gradle" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle"
-index 6267513..75f77a5 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\build.gradle"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle"
-@@ -22,10 +22,11 @@ def downloadsDir = customDownloadsDir ? new File(customDownloadsDir) : new File(
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\build.gradle"	2020-01-30 13:55:48.205611000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle"	2020-01-29 14:10:09.305886900 -0800
+@@ -22,10 +22,11 @@
  def thirdPartyNdkDir = new File("$buildDir/third-party-ndk")
  
  // You need to have following folders in this directory:
@@ -15,7 +13,7 @@ index 6267513..75f77a5 100644
  def dependenciesPath = System.getenv("REACT_NATIVE_DEPENDENCIES")
  
  // The Boost library is a very large download (>100MB).
-@@ -33,6 +34,8 @@ def dependenciesPath = System.getenv("REACT_NATIVE_DEPENDENCIES")
+@@ -33,6 +34,8 @@
  // and the build will use that.
  def boostPath = dependenciesPath ?: System.getenv("REACT_NATIVE_BOOST_PATH")
  
@@ -24,7 +22,7 @@ index 6267513..75f77a5 100644
  task createNativeDepsDirectories {
      downloadsDir.mkdirs()
      thirdPartyNdkDir.mkdirs()
-@@ -48,12 +51,14 @@ task downloadBoost(dependsOn: createNativeDepsDirectories, type: Download) {
+@@ -48,12 +51,14 @@
  task prepareBoost(dependsOn: boostPath ? [] : [downloadBoost], type: Copy) {
      from(boostPath ?: tarTree(resources.gzip(downloadBoost.dest)))
      from("src/main/jni/third-party/boost/Android.mk")
@@ -43,7 +41,7 @@ index 6267513..75f77a5 100644
  }
  
  task downloadDoubleConversion(dependsOn: createNativeDepsDirectories, type: Download) {
-@@ -66,8 +71,7 @@ task downloadDoubleConversion(dependsOn: createNativeDepsDirectories, type: Down
+@@ -66,8 +71,7 @@
  task prepareDoubleConversion(dependsOn: dependenciesPath ? [] : [downloadDoubleConversion], type: Copy) {
      from(dependenciesPath ?: tarTree(downloadDoubleConversion.dest))
      from("src/main/jni/third-party/double-conversion/Android.mk")
@@ -53,7 +51,7 @@ index 6267513..75f77a5 100644
      includeEmptyDirs = false
      into("$thirdPartyNdkDir/double-conversion")
  }
-@@ -82,8 +86,8 @@ task downloadFolly(dependsOn: createNativeDepsDirectories, type: Download) {
+@@ -82,8 +86,8 @@
  task prepareFolly(dependsOn: dependenciesPath ? [] : [downloadFolly], type: Copy) {
      from(dependenciesPath ?: tarTree(downloadFolly.dest))
      from("src/main/jni/third-party/folly/Android.mk")
@@ -64,7 +62,7 @@ index 6267513..75f77a5 100644
      includeEmptyDirs = false
      into("$thirdPartyNdkDir/folly")
  }
-@@ -100,7 +104,7 @@ task downloadGlog(dependsOn: createNativeDepsDirectories, type: Download) {
+@@ -100,7 +104,7 @@
  task prepareGlog(dependsOn: dependenciesPath ? [] : [downloadGlog], type: Copy) {
      from(dependenciesPath ?: tarTree(downloadGlog.dest))
      from("src/main/jni/third-party/glog/")
@@ -73,7 +71,7 @@ index 6267513..75f77a5 100644
      includeEmptyDirs = false
      filesMatching("**/*.h.in") {
          filter(ReplaceTokens, tokens: [
-@@ -239,6 +243,8 @@ task buildReactNdkLib(dependsOn: [prepareJSC, prepareBoost, prepareDoubleConvers
+@@ -239,6 +243,8 @@
              "NDK_OUT=" + temporaryDir,
              "NDK_LIBS_OUT=$buildDir/react-ndk/all",
              "THIRD_PARTY_NDK_DIR=$buildDir/third-party-ndk",
@@ -82,7 +80,7 @@ index 6267513..75f77a5 100644
              "REACT_COMMON_DIR=$projectDir/../ReactCommon",
              "REACT_SRC_DIR=$projectDir/src/main/java/com/facebook/react",
              "-C", file("src/main/jni/react/jni").absolutePath,
-@@ -252,7 +258,10 @@ task cleanReactNdkLib(type: Exec) {
+@@ -252,7 +258,10 @@
      commandLine(getNdkBuildFullPath(),
              "NDK_APPLICATION_MK=$projectDir/src/main/jni/Application.mk",
              "THIRD_PARTY_NDK_DIR=$buildDir/third-party-ndk",
@@ -93,7 +91,7 @@ index 6267513..75f77a5 100644
              "-C", file("src/main/jni/react/jni").absolutePath,
              "clean")
      doLast {
-@@ -261,10 +270,17 @@ task cleanReactNdkLib(type: Exec) {
+@@ -261,10 +270,17 @@
      }
  }
  
@@ -114,7 +112,7 @@ index 6267513..75f77a5 100644
  }
  
  task packageReactNdkLibsForBuck(dependsOn: packageReactNdkLibs, type: Copy) {
-@@ -329,6 +345,14 @@ android {
+@@ -329,6 +345,14 @@
  }
  
  dependencies {
@@ -129,7 +127,7 @@ index 6267513..75f77a5 100644
      api("com.facebook.infer.annotation:infer-annotation:0.11.2")
      api("javax.inject:javax.inject:1")
      api("androidx.appcompat:appcompat:1.0.2")
-@@ -355,4 +379,4 @@ dependencies {
+@@ -355,4 +379,4 @@
      androidTestImplementation("org.mockito:mockito-core:${MOCKITO_CORE_VERSION}")
  }
  

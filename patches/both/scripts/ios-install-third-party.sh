@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\ios-install-third-party.sh" "b/E:\\github\\ms-react-native-forpatch\\scripts\\ios-install-third-party.sh"
-index 6638acb..26b49e1 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\scripts\\ios-install-third-party.sh"
-+++ "b/E:\\github\\ms-react-native-forpatch\\scripts\\ios-install-third-party.sh"
-@@ -71,7 +71,19 @@ mkdir -p third-party
+--- "E:\\github\\fb-react-native-forpatch-base\\scripts\\ios-install-third-party.sh"	2020-01-30 13:55:48.659608800 -0800
++++ "E:\\github\\ms-react-native-forpatch\\scripts\\ios-install-third-party.sh"	2020-01-29 14:10:10.018892900 -0800
+@@ -71,7 +71,19 @@
  
  SCRIPTDIR=$(dirname "$0")
  

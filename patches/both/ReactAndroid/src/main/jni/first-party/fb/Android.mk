@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk"
-index 90f2565..ba27a66 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk"
-@@ -21,6 +21,7 @@ LOCAL_SRC_FILES:= \
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk"	2020-01-30 13:55:48.459617000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk"	2020-01-29 14:10:09.653915000 -0800
+@@ -21,6 +21,7 @@
         jni/ReadableByteChannel.cpp \
         jni/References.cpp \
         jni/WeakReference.cpp \
@@ -10,7 +8,7 @@ index 90f2565..ba27a66 100644
         log.cpp \
         lyra/lyra.cpp \
         onload.cpp \
-@@ -29,6 +30,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
+@@ -29,6 +30,7 @@
  LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/include
  
  LOCAL_CFLAGS := -DLOG_TAG=\"libfb\" -DDISABLE_CPUCAP -DDISABLE_XPLAT -fexceptions -frtti

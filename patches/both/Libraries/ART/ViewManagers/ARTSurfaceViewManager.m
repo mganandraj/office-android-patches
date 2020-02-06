@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m"
-index 1a03897..dd734a3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m"	2020-01-30 13:55:47.825576400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ViewManagers\\ARTSurfaceViewManager.m"	2020-01-29 14:10:08.800879600 -0800
 @@ -13,7 +13,7 @@
  
  RCT_EXPORT_MODULE()

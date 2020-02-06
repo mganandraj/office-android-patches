@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.cpp"
-index f732298..e13f66d 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.cpp"
-@@ -1608,6 +1608,14 @@ static void YGNodeWithMeasureFuncSetMeasuredDimensions(
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\yoga\\yoga\\Yoga.cpp"	2020-01-30 13:55:48.632608500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\yoga\\yoga\\Yoga.cpp"	2020-01-29 14:10:09.849895300 -0800
+@@ -1608,6 +1608,14 @@
        : YGFloatMax(
              0, availableHeight - marginAxisColumn - paddingAndBorderAxisColumn);
  
@@ -17,7 +15,7 @@ index f732298..e13f66d 100644
    if (widthMeasureMode == YGMeasureModeExactly &&
        heightMeasureMode == YGMeasureModeExactly) {
      // Don't bother sizing the text if both dimensions are already defined.
-@@ -1628,16 +1636,6 @@ static void YGNodeWithMeasureFuncSetMeasuredDimensions(
+@@ -1628,16 +1636,6 @@
              ownerWidth),
          YGDimensionHeight);
    } else {

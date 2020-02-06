@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\SectionList.js" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\SectionList.js"
-index 076fb0e..1840d92 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\SectionList.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\SectionList.js"
-@@ -46,6 +46,7 @@ type OptionalProps<SectionT: SectionBase<any>> = {
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\SectionList.js"	2020-01-30 13:55:47.923608000 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\SectionList.js"	2020-01-29 14:10:08.924884400 -0800
+@@ -46,6 +46,7 @@
    renderItem?: (info: {
      item: Item,
      index: number,

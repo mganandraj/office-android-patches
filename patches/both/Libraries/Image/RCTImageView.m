@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageView.m" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageView.m"
-index e2f221b..4d077e3 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageView.m"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageView.m"
-@@ -34,6 +34,54 @@ static BOOL RCTShouldReloadImageForSizeChange(CGSize currentSize, CGSize idealSi
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Image\\RCTImageView.m"	2020-01-30 13:55:47.909608300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Image\\RCTImageView.m"	2020-01-29 14:10:08.902882300 -0800
+@@ -34,6 +34,54 @@
      heightMultiplier > upscaleThreshold || heightMultiplier < downscaleThreshold;
  }
  
@@ -57,7 +55,7 @@ index e2f221b..4d077e3 100644
  /**
   * See RCTConvert (ImageSource). We want to send down the source as a similar
   * JSON parameter.
-@@ -78,15 +126,32 @@ static NSDictionary *onLoadParamsForSource(RCTImageSource *source)
+@@ -78,15 +126,32 @@
  
    // Whether the latest change of props requires the image to be reloaded
    BOOL _needsReload;
@@ -92,7 +90,7 @@ index e2f221b..4d077e3 100644
      NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
      [center addObserver:self
                 selector:@selector(clearImageIfDetached)
-@@ -99,6 +164,7 @@ static NSDictionary *onLoadParamsForSource(RCTImageSource *source)
+@@ -99,6 +164,7 @@
      _imageView = [[UIImageView alloc] init];
      _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
      [self addSubview:_imageView];
@@ -100,7 +98,7 @@ index e2f221b..4d077e3 100644
    }
    return self;
  }
-@@ -110,9 +176,13 @@ static NSDictionary *onLoadParamsForSource(RCTImageSource *source)
+@@ -110,9 +176,13 @@
  
  RCT_NOT_IMPLEMENTED(- (instancetype)init)
  
@@ -115,7 +113,7 @@ index e2f221b..4d077e3 100644
  
  - (void)updateWithImage:(UIImage *)image
  {
-@@ -122,15 +192,31 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -122,15 +192,31 @@
    }
  
    // Apply rendering mode
@@ -147,7 +145,7 @@ index e2f221b..4d077e3 100644
    }
  
    // Apply trilinear filtering to smooth out mis-sized images
-@@ -144,6 +230,11 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -144,6 +230,11 @@
  {
    image = image ?: _defaultImage;
    if (image != self.image) {
@@ -159,7 +157,7 @@ index e2f221b..4d077e3 100644
      [self updateWithImage:image];
    }
  }
-@@ -199,9 +290,21 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -199,9 +290,21 @@
      if (_resizeMode == RCTResizeModeRepeat) {
        // Repeat resize mode is handled by the UIImage. Use scale to fill
        // so the repeated image fills the UIImageView.
@@ -181,7 +179,7 @@ index e2f221b..4d077e3 100644
      }
  
      if ([self shouldReloadImageSourceAfterResize]) {
-@@ -229,12 +332,14 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -229,12 +332,14 @@
    _imageSource = nil;
  }
  
@@ -196,7 +194,7 @@ index e2f221b..4d077e3 100644
  
  - (BOOL)hasMultipleSources
  {
-@@ -252,7 +357,11 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -252,7 +357,11 @@
      return nil;
    }
  
@@ -208,7 +206,7 @@ index e2f221b..4d077e3 100644
    const CGFloat targetImagePixels = size.width * size.height * scale * scale;
  
    RCTImageSource *bestSource = nil;
-@@ -315,7 +424,11 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -315,7 +424,11 @@
      };
  
      CGSize imageSize = self.bounds.size;
@@ -220,7 +218,7 @@ index e2f221b..4d077e3 100644
      if (!UIEdgeInsetsEqualToEdgeInsets(_capInsets, UIEdgeInsetsZero)) {
        // Don't resize images that use capInsets
        imageSize = CGSizeZero;
-@@ -370,7 +483,12 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -370,7 +483,12 @@
          return;
        }
        // Apply renderingMode to animated image.
@@ -233,7 +231,7 @@ index e2f221b..4d077e3 100644
        [self->_imageView.layer addAnimation:image.reactKeyframeAnimation forKey:@"contents"];
      } else {
        self.image = image;
-@@ -421,13 +539,31 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -421,13 +539,31 @@
      [self reloadImage];
    } else if ([self shouldReloadImageSourceAfterResize]) {
      CGSize imageSize = self.image.size;
@@ -271,7 +269,7 @@ index e2f221b..4d077e3 100644
        return;
      }
  
-@@ -454,10 +590,35 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -454,10 +590,35 @@
    }
  }
  
@@ -307,7 +305,7 @@ index e2f221b..4d077e3 100644
    if (!self.window) {
      // Cancel loading the image if we've moved offscreen. In addition to helping
      // prioritise image requests that are actually on-screen, this removes
-@@ -469,4 +630,10 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+@@ -469,4 +630,10 @@
    }
  }
  

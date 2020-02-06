@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LinkingExample.js" "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LinkingExample.js"
-index 32ae2bc..2b571bf 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LinkingExample.js"
-+++ "b/E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LinkingExample.js"
-@@ -76,8 +76,20 @@ class IntentAndroidExample extends React.Component {
+--- "E:\\github\\fb-react-native-forpatch-base\\RNTester\\js\\LinkingExample.js"	2020-01-30 13:55:48.078610900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\RNTester\\js\\LinkingExample.js"	2020-01-29 14:10:09.174888900 -0800
+@@ -76,8 +76,20 @@
            <OpenURLButton url={'https://www.facebook.com'} />
            <OpenURLButton url={'http://www.facebook.com'} />
            <OpenURLButton url={'http://facebook.com'} />

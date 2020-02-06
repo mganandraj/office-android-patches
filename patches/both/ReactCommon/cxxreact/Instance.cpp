@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.cpp" "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.cpp"
-index 8199681..837df2a 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.cpp"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.cpp"
-@@ -36,16 +36,28 @@ Instance::~Instance() {
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.cpp"	2020-01-30 13:55:48.514580900 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.cpp"	2020-01-29 14:10:09.747921600 -0800
+@@ -36,16 +36,28 @@
    }
  }
  
@@ -33,7 +31,7 @@ index 8199681..837df2a 100644
  
      std::lock_guard<std::mutex> lock(m_syncMutex);
      m_syncReady = true;
-@@ -56,25 +68,23 @@ void Instance::initializeBridge(
+@@ -56,25 +68,23 @@
  }
  
  void Instance::loadApplication(std::unique_ptr<RAMBundleRegistry> bundleRegistry,
@@ -69,7 +67,7 @@ index 8199681..837df2a 100644
  }
  
  void Instance::setSourceURL(std::string sourceURL) {
-@@ -84,15 +94,14 @@ void Instance::setSourceURL(std::string sourceURL) {
+@@ -84,15 +94,14 @@
    nativeToJsBridge_->loadApplication(nullptr, nullptr, std::move(sourceURL));
  }
  
@@ -90,7 +88,7 @@ index 8199681..837df2a 100644
    }
  }
  
-@@ -184,6 +193,10 @@ void Instance::callJSCallback(uint64_t callbackId, folly::dynamic &&params) {
+@@ -184,6 +193,10 @@
    nativeToJsBridge_->invokeCallback((double)callbackId, std::move(params));
  }
  
@@ -101,7 +99,7 @@ index 8199681..837df2a 100644
  void Instance::registerBundle(uint32_t bundleId, const std::string& bundlePath) {
    nativeToJsBridge_->registerBundle(bundleId, bundlePath);
  }
-@@ -198,6 +211,10 @@ void Instance::handleMemoryPressure(int pressureLevel) {
+@@ -198,6 +211,10 @@
    nativeToJsBridge_->handleMemoryPressure(pressureLevel);
  }
  

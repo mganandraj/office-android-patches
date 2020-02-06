@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj"
-index 2aec17b..a78db70 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj"
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj"	2020-01-30 13:55:47.812606500 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\ART\\ART.xcodeproj\\project.pbxproj"	2020-01-29 14:10:08.793879900 -0800
 @@ -43,25 +43,91 @@
  		325CF7BC1E5F2ABA00AC9606 /* ARTSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF68AE61AF0549300FF9E5C /* ARTSurfaceView.m */; };
  		325CF7BD1E5F2ABA00AC9606 /* ARTText.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF68AE81AF0549300FF9E5C /* ARTText.m */; };
@@ -272,10 +270,11 @@ index 2aec17b..a78db70 100644
  /* End XCBuildConfiguration section */
  
  /* Begin XCConfigurationList section */
-@@ -508,6 +654,15 @@
+@@ -507,6 +653,15 @@
+ 			);
  			defaultConfigurationIsVisible = 0;
  			defaultConfigurationName = Release;
- 		};
++		};
 +		647647771F0BC33500C2D89B /* Build configuration list for PBXNativeTarget "ART-macOS" */ = {
 +			isa = XCConfigurationList;
 +			buildConfigurations = (
@@ -284,7 +283,6 @@ index 2aec17b..a78db70 100644
 +			);
 +			defaultConfigurationIsVisible = 0;
 +			defaultConfigurationName = Release;
-+		};
+ 		};
  /* End XCConfigurationList section */
  	};
- 	rootObject = 0CF68AB91AF0540F00FF9E5C /* Project object */;

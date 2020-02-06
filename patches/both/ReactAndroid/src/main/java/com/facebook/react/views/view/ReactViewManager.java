@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java"
-index 69dce01..ff450ee 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java"
-@@ -10,7 +10,9 @@ package com.facebook.react.views.view;
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java"	2020-01-30 13:55:48.443613200 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java"	2020-01-29 14:10:09.644920800 -0800
+@@ -10,7 +10,9 @@
  import android.annotation.TargetApi;
  import android.graphics.Rect;
  import android.os.Build;
@@ -12,7 +10,7 @@ index 69dce01..ff450ee 100644
  import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
  import com.facebook.react.bridge.ReactContext;
  import com.facebook.react.bridge.ReadableArray;
-@@ -32,6 +34,7 @@ import com.facebook.yoga.YogaConstants;
+@@ -32,6 +34,7 @@
  import java.util.Locale;
  import java.util.Map;
  import javax.annotation.Nullable;
@@ -20,7 +18,7 @@ index 69dce01..ff450ee 100644
  
  /**
   * View manager for AndroidViews (plain React Views).
-@@ -51,13 +54,14 @@ public class ReactViewManager extends ViewGroupManager<ReactViewGroup> {
+@@ -51,13 +54,14 @@
      Spacing.START,
      Spacing.END,
    };
@@ -41,7 +39,7 @@ index 69dce01..ff450ee 100644
  
    @ReactProp(name = "hasTVPreferredFocus")
    public void setTVPreferredFocus(ReactViewGroup view, boolean hasTVPreferredFocus) {
-@@ -122,6 +126,35 @@ public class ReactViewManager extends ViewGroupManager<ReactViewGroup> {
+@@ -122,6 +126,35 @@
      }
    }
  
@@ -77,7 +75,7 @@ index 69dce01..ff450ee 100644
    @ReactProp(name = "borderStyle")
    public void setBorderStyle(ReactViewGroup view, @Nullable String borderStyle) {
      view.setBorderStyle(borderStyle);
-@@ -281,7 +314,7 @@ public class ReactViewManager extends ViewGroupManager<ReactViewGroup> {
+@@ -281,7 +314,7 @@
  
    @Override
    public Map<String, Integer> getCommandsMap() {
@@ -86,7 +84,7 @@ index 69dce01..ff450ee 100644
    }
  
    @Override
-@@ -307,6 +340,14 @@ public class ReactViewManager extends ViewGroupManager<ReactViewGroup> {
+@@ -307,6 +340,14 @@
          root.setPressed(args.getBoolean(0));
          break;
        }
@@ -101,7 +99,7 @@ index 69dce01..ff450ee 100644
      }
    }
  
-@@ -350,10 +391,44 @@ public class ReactViewManager extends ViewGroupManager<ReactViewGroup> {
+@@ -350,10 +391,44 @@
        }
        parent.removeViewWithSubviewClippingEnabled(child);
      } else {

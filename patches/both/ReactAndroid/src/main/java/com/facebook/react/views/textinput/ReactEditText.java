@@ -1,7 +1,5 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java" "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java"
-index 1638d49..8f7402f 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java"
-+++ "b/E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java"
+--- "E:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java"	2020-01-30 13:55:48.432612400 -0800
++++ "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java"	2020-01-29 14:10:09.612921100 -0800
 @@ -8,6 +8,7 @@
  package com.facebook.react.views.textinput;
  
@@ -10,7 +8,7 @@ index 1638d49..8f7402f 100644
  import android.graphics.Rect;
  import android.graphics.Typeface;
  import android.graphics.drawable.Drawable;
-@@ -61,7 +62,6 @@ public class ReactEditText extends EditText {
+@@ -61,7 +62,6 @@
    private boolean mIsSettingTextFromJS;
    // This component is controlled, so we want it to get focused only when JS ask it to do so.
    // Whenever android requests focus (which it does for random reasons), it will be ignored.
@@ -18,7 +16,7 @@ index 1638d49..8f7402f 100644
    private int mDefaultGravityHorizontal;
    private int mDefaultGravityVertical;
    private int mNativeEventCount;
-@@ -98,7 +98,6 @@ public class ReactEditText extends EditText {
+@@ -98,7 +98,6 @@
      mNativeEventCount = 0;
      mMostRecentEventCount = 0;
      mIsSettingTextFromJS = false;
@@ -26,11 +24,10 @@ index 1638d49..8f7402f 100644
      mBlurOnSubmit = null;
      mDisableFullscreen = false;
      mListeners = null;
-@@ -194,29 +193,6 @@ public class ReactEditText extends EditText {
-     return inputConnection;
+@@ -195,29 +194,6 @@
    }
  
--  @Override
+   @Override
 -  public void clearFocus() {
 -    setFocusableInTouchMode(false);
 -    super.clearFocus();
@@ -53,10 +50,11 @@ index 1638d49..8f7402f 100644
 -    return focused;
 -  }
 -
-   @Override
+-  @Override
    public void addTextChangedListener(TextWatcher watcher) {
      if (mListeners == null) {
-@@ -272,6 +248,16 @@ public class ReactEditText extends EditText {
+       mListeners = new ArrayList<>();
+@@ -272,6 +248,16 @@
    @Override
    protected void onFocusChanged(
        boolean focused, int direction, Rect previouslyFocusedRect) {
@@ -73,7 +71,7 @@ index 1638d49..8f7402f 100644
      super.onFocusChanged(focused, direction, previouslyFocusedRect);
      if (focused && mSelectionWatcher != null) {
        mSelectionWatcher.onSelectionChanged(getSelectionStart(), getSelectionEnd());
-@@ -291,12 +277,9 @@ public class ReactEditText extends EditText {
+@@ -291,12 +277,9 @@
    }
  
    public boolean getBlurOnSubmit() {
@@ -89,7 +87,7 @@ index 1638d49..8f7402f 100644
    }
  
    public void setDisableFullscreenUI(boolean disableFullscreenUI) {
-@@ -359,9 +342,13 @@ public class ReactEditText extends EditText {
+@@ -359,9 +342,13 @@
  
    // VisibleForTesting from {@link TextInputEventsTestCase}.
    public void requestFocusFromJS() {
@@ -105,7 +103,7 @@ index 1638d49..8f7402f 100644
    }
  
    /* package */ void clearFocusFromJS() {
-@@ -460,11 +447,17 @@ public class ReactEditText extends EditText {
+@@ -460,11 +447,17 @@
      return true;
    }
  

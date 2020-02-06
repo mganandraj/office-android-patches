@@ -1,8 +1,6 @@
-diff --git "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap" "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap"
-index b15b3cb..4ec463c 100644
---- "a/E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap"
-+++ "b/E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap"
-@@ -31,9 +31,12 @@ exports[`SectionList rendering empty section headers is fine 1`] = `
+--- "E:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap"	2020-01-30 13:55:47.930608300 -0800
++++ "E:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\SectionList-test.js.snap"	2020-01-29 14:10:08.929884000 -0800
+@@ -31,9 +31,12 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -15,7 +13,7 @@ index b15b3cb..4ec463c 100644
    sections={
      Array [
        Object {
-@@ -111,10 +114,13 @@ exports[`SectionList renders a footer when there is no data 1`] = `
+@@ -111,10 +114,13 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -29,7 +27,7 @@ index b15b3cb..4ec463c 100644
    sections={
      Array [
        Object {
-@@ -177,9 +183,12 @@ exports[`SectionList renders a footer when there is no data and no header 1`] =
+@@ -177,9 +183,12 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -42,7 +40,7 @@ index b15b3cb..4ec463c 100644
    sections={
      Array [
        Object {
-@@ -275,6 +284,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -275,6 +284,7 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}
@@ -50,7 +48,7 @@ index b15b3cb..4ec463c 100644
    refreshControl={
      <RefreshControlMock
        onRefresh={[MockFunction]}
-@@ -285,7 +295,9 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -285,7 +295,9 @@
    renderItem={[Function]}
    renderSectionFooter={[Function]}
    renderSectionHeader={[Function]}
@@ -60,7 +58,7 @@ index b15b3cb..4ec463c 100644
    sections={
      Array [
        Object {
-@@ -363,7 +375,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -363,7 +375,7 @@
            v="highlighted:false,leadingItem:undefined,leadingSection:undefined,section:s1,trailingItem:i1s1,trailingSection:s2"
          />
          <itemForSection1
@@ -69,7 +67,7 @@ index b15b3cb..4ec463c 100644
          />
          <itemSeparatorForSection1
            v="highlighted:false,leadingItem:i1s1,leadingSection:undefined,section:s1,trailingItem:i2s1,trailingSection:s2"
-@@ -376,7 +388,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -376,7 +388,7 @@
      >
        <View>
          <itemForSection1
@@ -78,7 +76,7 @@ index b15b3cb..4ec463c 100644
          />
          <sectionSeparator
            v="highlighted:false,leadingItem:i2s1,leadingSection:undefined,section:s1,trailingItem:undefined,trailingSection:s2"
-@@ -408,7 +420,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -408,7 +420,7 @@
            v="highlighted:false,leadingItem:undefined,leadingSection:s1,section:s2,trailingItem:i1s2,trailingSection:s3"
          />
          <defaultItem
@@ -87,7 +85,7 @@ index b15b3cb..4ec463c 100644
          />
          <defaultItemSeparator
            v="highlighted:false,leadingItem:i1s2,leadingSection:s1,section:s2,trailingItem:i2s2,trailingSection:s3"
-@@ -421,7 +433,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -421,7 +433,7 @@
      >
        <View>
          <defaultItem
@@ -96,7 +94,7 @@ index b15b3cb..4ec463c 100644
          />
          <sectionSeparator
            v="highlighted:false,leadingItem:i2s2,leadingSection:s1,section:s2,trailingItem:undefined,trailingSection:s3"
-@@ -453,7 +465,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -453,7 +465,7 @@
            v="highlighted:false,leadingItem:undefined,leadingSection:s2,section:s3,trailingItem:i1s3,trailingSection:undefined"
          />
          <defaultItem
@@ -105,7 +103,7 @@ index b15b3cb..4ec463c 100644
          />
          <defaultItemSeparator
            v="highlighted:false,leadingItem:i1s3,leadingSection:s2,section:s3,trailingItem:i2s3,trailingSection:undefined"
-@@ -466,7 +478,7 @@ exports[`SectionList renders all the bells and whistles 1`] = `
+@@ -466,7 +478,7 @@
      >
        <View>
          <defaultItem
@@ -114,7 +112,7 @@ index b15b3cb..4ec463c 100644
          />
          <sectionSeparator
            v="highlighted:false,leadingItem:i2s3,leadingSection:s2,section:s3,trailingItem:undefined,trailingSection:undefined"
-@@ -509,8 +521,11 @@ exports[`SectionList renders empty list 1`] = `
+@@ -509,8 +521,11 @@
    onScroll={[Function]}
    onScrollBeginDrag={[Function]}
    onScrollEndDrag={[Function]}

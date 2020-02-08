@@ -127,3 +127,32 @@ export function initDirectory(path: string) {
   }
   fse.ensureDirSync(path);
 }
+
+export function copyFile(absSourecPath: string, absDestinationPath: string) {
+  fse.copyFileSync(absSourecPath, absDestinationPath);
+}
+
+export function copyFile2(
+  destBasepath: string,
+  destRelativefilepath: string,
+  sourcePath: string,
+) {
+  // Ensure the directory exists.
+  const destRelativeDir = fs_path.parse(destRelativefilepath).dir;
+
+  // Create directory if not exists.
+  const destAbsDir = fs_path.resolve(destBasepath, destRelativeDir);
+  if (!fs.existsSync(destAbsDir)) {
+    fse.ensureDirSync(destAbsDir);
+  }
+
+  const destAbsPath = fs_path.resolve(destBasepath, destRelativefilepath);
+  if (fs.existsSync(destAbsDir)) {
+    log.error(
+      'FS:copyFile2',
+      `Trying to copy binary file but it already exists (${sourcePath})!`,
+    );
+  }
+
+  fse.copyFileSync(sourcePath, destAbsPath);
+}

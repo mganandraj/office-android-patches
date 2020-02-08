@@ -5,9 +5,12 @@ import {
   lookUpRelativePath,
   initDirectory,
   resolvePath,
+  copyFile2,
 } from './fs_utils';
 import {diffFiles} from './patch_utils';
 import {log} from './logger';
+import {isFileText, isFileBinary} from './file_type_utils';
+import {compareFiles} from './file_compare';
 
 export function diffReactNativeForks(
   fbRepoAbsPath: string,
@@ -38,13 +41,40 @@ export function diffReactNativeForks(
       const callbackOnError = (error: string) => {
         log.error('diffRNFork', error);
       };
-      diffFiles(
-        fbRepoFileAbsPath,
-        false,
-        forkFileAbsPath,
-        callbackOnDiffCreated,
-        callbackOnError,
-      );
+      const callbackOnBinaryFilesCompare = (same: boolean) => {
+        if (!same) {
+          copyFile2(bothPath, forkFileRelativePath, forkFileAbsPath);
+        } else {
+          log.info(
+            'diffRNFork',
+            `Skip copying identical binary files: ${forkFileRelativePath}`,
+          );
+        }
+      };
+      const callbackOnBinaryFilesCompareError = (result: string) => {
+        log.error('diffRNFork', `callbackOnBinaryFilesCompareError: ${result}`);
+      };
+
+      const handleBinaryFileInFork = () => {
+        compareFiles(
+          fbRepoFileAbsPath,
+          forkFileAbsPath,
+          callbackOnBinaryFilesCompare,
+          callbackOnBinaryFilesCompareError,
+        );
+      };
+      // If it's a binary file we copy it as is to the patches folder.
+      if (isFileBinary(forkFileAbsPath)) {
+        handleBinaryFileInFork();
+      } else {
+        diffFiles(
+          fbRepoFileAbsPath,
+          false /* new file*/,
+          forkFileAbsPath,
+          callbackOnDiffCreated,
+          callbackOnError,
+        );
+      }
     };
 
     const callbackOnMiss = (fbRepoFileAbsPath: string) => {
@@ -54,13 +84,20 @@ export function diffReactNativeForks(
       const callbackOnError = (error: string) => {
         log.error('diffRNFork', error);
       };
-      diffFiles(
-        fbRepoFileAbsPath,
-        true,
-        forkFileAbsPath,
-        callbackOnDiffCreated,
-        callbackOnError,
-      );
+      const handleBinaryFileInFork = () => {
+        copyFile2(forkOnlyPath, forkFileRelativePath, forkFileAbsPath);
+      };
+      if (isFileBinary(forkFileAbsPath)) {
+        handleBinaryFileInFork();
+      } else {
+        diffFiles(
+          fbRepoFileAbsPath,
+          true /* new file*/,
+          forkFileAbsPath,
+          callbackOnDiffCreated,
+          callbackOnError,
+        );
+      }
     };
 
     lookUpRelativePath(

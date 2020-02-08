@@ -45,7 +45,9 @@ const defaultTopLevelBlackListDirs = [
   'Folly',
   'follybuild',
   'glog',
+  '.gradle',
   //'gradle', //'gradlew', //'gradlew.bat', //'IntegrationTests',
+  '.idea',
   'jest',
   'jest-preset.js',
   'jest.config.js',
@@ -101,7 +103,7 @@ const cli: InterfaceCLI = program
   .option(
     '-tf, --target-fork <path>',
     'Path to target fork where the patches will be applied',
-    'E:\\fb-react-native-forpatch-patched',
+    'E:\\github\\fb-react-native-forpatch-patched',
   )
   .option(
     '-pf, --patch-folder <path>',

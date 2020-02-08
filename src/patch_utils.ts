@@ -12,7 +12,7 @@ const diffExecutable = getArgs().diffExecutable;
 // Return empty string when files are identical
 export function diffFiles(
   path1: string,
-  path1IsNew: boolean,
+  path1IsNew: boolean /* TODO :: path2IsNew ? */,
   path2: string,
   callback: (diff: string) => void,
   errorcallback: (error: string) => void,

@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "build": "tsc",
     "start": "node_modules\\.bin\\ts-node src\\index.ts",
     "test": "npm run lint && npm start"
   },

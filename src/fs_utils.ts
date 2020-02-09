@@ -128,7 +128,27 @@ export function initDirectory(path: string) {
   fse.ensureDirSync(path);
 }
 
+function ensureDirOfPathExists(filePath: string) {
+  const dir = fs_path.parse(filePath).dir;
+  fse.ensureDirSync(dir);
+}
+
 export function copyFile(absSourecPath: string, absDestinationPath: string) {
+  ensureDirOfPathExists(absDestinationPath);
+  fse.copyFileSync(absSourecPath, absDestinationPath);
+}
+
+export function copyFileOverwrite(
+  absSourecPath: string,
+  absDestinationPath: string,
+) {
+  ensureDirOfPathExists(absDestinationPath);
+  if (!fs.existsSync(absDestinationPath)) {
+    log.error(
+      'FS:copyFileOverwrite',
+      `Trying to overwrite file but the target doesn't already exist (${absDestinationPath})!`,
+    );
+  }
   fse.copyFileSync(absSourecPath, absDestinationPath);
 }
 
@@ -147,10 +167,35 @@ export function copyFile2(
   }
 
   const destAbsPath = fs_path.resolve(destBasepath, destRelativefilepath);
-  if (fs.existsSync(destAbsDir)) {
+  if (fs.existsSync(destAbsPath)) {
     log.error(
       'FS:copyFile2',
       `Trying to copy binary file but it already exists (${sourcePath})!`,
+    );
+  }
+
+  fse.copyFileSync(sourcePath, destAbsPath);
+}
+
+export function copyFile2Overwrite(
+  destBasepath: string,
+  destRelativefilepath: string,
+  sourcePath: string,
+) {
+  // Ensure the directory exists.
+  const destRelativeDir = fs_path.parse(destRelativefilepath).dir;
+
+  // Create directory if not exists.
+  const destAbsDir = fs_path.resolve(destBasepath, destRelativeDir);
+  if (!fs.existsSync(destAbsDir)) {
+    fse.ensureDirSync(destAbsDir);
+  }
+
+  const destAbsPath = fs_path.resolve(destBasepath, destRelativefilepath);
+  if (!fs.existsSync(destAbsPath)) {
+    log.error(
+      'FS:copyFile2Overwrite',
+      `Trying to overwrite file but the target doesn't already exist (${destRelativefilepath})!`,
     );
   }
 

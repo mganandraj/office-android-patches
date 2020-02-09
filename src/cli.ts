@@ -13,6 +13,9 @@ export interface InterfaceCLI extends program.Command {
   patchFolder?: string;
   patchExecutable?: string;
   diffExecutable?: string;
+  gitExecutable?: string;
+  cleanupForks?: boolean;
+  cleanupExistingPatches?: boolean;
   toplevelBlacklistDirs?: string[];
 }
 
@@ -83,7 +86,7 @@ const cli: InterfaceCLI = program
   .option(
     '-d, --create-patch',
     'Create patch files. Specify both dirty fork and base fork',
-    true,
+    false,
   )
   .option(
     '-df, --dirty-fork <path>',
@@ -98,12 +101,12 @@ const cli: InterfaceCLI = program
   .option(
     '-p, --apply-patch',
     'Apply patch files. Specify both the target fork to apply the patches and the path to path store',
-    false,
+    true,
   )
   .option(
     '-tf, --target-fork <path>',
     'Path to target fork where the patches will be applied',
-    'E:\\github\\fb-react-native-forpatch-patched',
+    'E:\\github\\fb-rn-p',
   )
   .option(
     '-pf, --patch-folder <path>',
@@ -119,6 +122,21 @@ const cli: InterfaceCLI = program
     '-de, --diff-executable <path>',
     'Full path of the diff utility to be used for diffing between files. What we expect is a *x diff utility or compatible one: http://man7.org/linux/man-pages/man1/diff.1.html',
     'C:\\Program Files\\Git\\usr\\bin\\diff.exe',
+  )
+  .option(
+    '-ge, --git-executable <path>',
+    'Full path of the git executable',
+    'C:\\Program Files\\Git\\bin\\git.exe',
+  )
+  .option(
+    '-cc, --cleanup-forks',
+    "Whether to clean up both the dirty and base forks. It will cleanup all non-tracked files. Essentially we run 'git clean -fdx'",
+    true,
+  )
+  .option(
+    '-cp, --cleanup-existing-patches',
+    'Cleanup the existing patches folder before starting a new run',
+    true,
   )
   .option(
     '-bl, --toplevel-blacklist-dirs <name>',
@@ -205,6 +223,9 @@ log.info('Main', `cli.applyPatch: ${cli.applyPatch}`);
 log.info('Main', `cli.createPatch: ${cli.createPatch}`);
 log.info('Main', `cli.patchExecutable: ${cli.patchExecutable}`);
 log.info('Main', `cli.diffExecutable: ${cli.diffExecutable}`);
+log.info('Main', `cli.gitExecutable: ${cli.gitExecutable}`);
+log.info('Main', `cli.cleanupForks: ${cli.cleanupForks}`);
+log.info('Main', `cli.cleanupExistingPatches: ${cli.cleanupExistingPatches}`);
 log.info('Main', `cli.toplevelBlacklistDirs: ${cli.toplevelBlacklistDirs}`);
 
 export function getArgs(): InterfaceCLI {

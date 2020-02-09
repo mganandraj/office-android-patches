@@ -1,4 +1,4 @@
-import fse from 'fs-extra';
+import fse from 'fs';
 import crypto from 'crypto';
 
 import {log} from './logger';
@@ -10,36 +10,36 @@ export function compareFiles(
   callbackOnError: (result: string) => void,
 ) {
   try {
-    let hash = crypto.createHash('md5');
-    let stream1 = fse.createReadStream(path1);
+    const hash1 = crypto.createHash('md5');
+    const stream1 = fse.createReadStream(path1);
 
-    stream1.on('data', function(data) {
-      hash.update(data, 'utf8');
+    stream1.on('data', data => {
+      hash1.update(data);
     });
 
-    stream1.on('end', function() {
-      hash.digest('hex');
+    stream1.on('end', () => {
+      const hash1Digest = hash1.digest('base64');
 
-      let hash2 = crypto.createHash('md5');
-      let stream2 = fse.createReadStream(path2);
+      const hash2 = crypto.createHash('md5');
+      const stream2 = fse.createReadStream(path2);
 
-      stream2.on('data', function(data) {
-        hash2.update(data, 'utf8');
+      stream2.on('data', data => {
+        hash2.update(data);
       });
 
-      stream2.on('end', function() {
-        hash2.digest('hex');
+      stream2.on('end', () => {
+        const hash2Digest = hash2.digest('base64');
 
-        if (hash === hash2) {
+        if (hash1Digest === hash2Digest) {
           log.info(
             'compareFiles',
-            `${path1} AND ${path2} are identical.  hashes: ${hash} === ${hash2}`,
+            `${path1} AND ${path2} are identical.  hashes: ${hash1Digest} <==> ${hash2Digest}`,
           );
           callback(true);
         } else {
           log.info(
             'compareFiles',
-            `${path1} AND ${path2} are different. hashes: ${hash} === ${hash2}`,
+            `${path1} AND ${path2} are different. hashes: ${hash1Digest} <==> ${hash2Digest}`,
           );
           callback(false);
         }

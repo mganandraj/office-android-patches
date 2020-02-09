@@ -5,9 +5,13 @@ import {
   lookUpRelativePath,
   initDirectory,
   resolvePath,
+  copyFile,
+  copyFileOverwrite,
+  copyFile2Overwrite,
 } from './fs_utils';
 import {log} from './logger';
 import {applyPatch} from './patch_utils';
+import {isFileText, isFileBinary} from './file_type_utils';
 
 export function patchReactNativeFork(
   targetRepoAbsPath: string,
@@ -23,16 +27,21 @@ export function patchReactNativeFork(
     );
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
-      applyPatch(
-        hitPatchFileAbsPath,
-        patchFileAbsPath,
-        (result: string) => {
-          log.info('PatchRNFork', result);
-        },
-        (result: string) => {
-          log.error('PatchRNFork', result);
-        },
-      );
+      if (!isFileBinary(patchFileAbsPath)) {
+        applyPatch(
+          hitPatchFileAbsPath,
+          patchFileAbsPath,
+          (result: string) => {
+            log.info('PatchRNFork', result);
+          },
+          (result: string) => {
+            log.error('PatchRNFork', result);
+          },
+        );
+      } else {
+        // Overwrite the file.
+        copyFileOverwrite(patchFileAbsPath, hitPatchFileAbsPath);
+      }
     };
 
     const callbackOnMiss = (missedPatchFileAbsPath: string) => {
@@ -40,6 +49,11 @@ export function patchReactNativeFork(
         'PatchRNFork',
         `File path with patches (${missedPatchFileAbsPath}) not found in the target repository.`,
       );
+
+      if (isFileBinary(patchFileAbsPath)) {
+        // If patch file is binary, we copy anyways.
+        copyFile(patchFileAbsPath, missedPatchFileAbsPath);
+      }
     };
 
     lookUpRelativePath(
@@ -66,19 +80,26 @@ export function patchReactNativeFork(
         'PatchRNFork',
         `File path with patches (${hitPatchFileAbsPath}) as new file, already found in the target repository.`,
       );
+
+      // This case must be handles manually.
     };
 
     const callbackOnMiss = (missedPatchFileAbsPath: string) => {
-      applyPatch(
-        missedPatchFileAbsPath,
-        patchFileAbsPath,
-        (result: string) => {
-          log.info('PatchRNFork', result);
-        },
-        (result: string) => {
-          log.error('PatchRNFork', result);
-        },
-      );
+      if (!isFileBinary(patchFileAbsPath)) {
+        applyPatch(
+          missedPatchFileAbsPath,
+          patchFileAbsPath,
+          (result: string) => {
+            log.info('PatchRNFork', result);
+          },
+          (result: string) => {
+            log.error('PatchRNFork', result);
+          },
+        );
+      } else {
+        //
+        copyFile(patchFileAbsPath, missedPatchFileAbsPath);
+      }
     };
 
     lookUpRelativePath(

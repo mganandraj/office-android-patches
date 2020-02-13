@@ -1,0 +1,62 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\Libraries\\RCTTest\\RNTester-macOS\\Assets.xcassets\\AppIcon.appiconset\\Contents.json"	1969-12-31 16:00:00.000000000 -0800
++++ "e:\\github\\ms-react-native-forpatch\\Libraries\\RCTTest\\RNTester-macOS\\Assets.xcassets\\AppIcon.appiconset\\Contents.json"	2020-01-29 14:10:08.955882500 -0800
+@@ -0,0 +1,58 @@
++{
++  "images" : [
++    {
++      "idiom" : "mac",
++      "size" : "16x16",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "16x16",
++      "scale" : "2x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "32x32",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "32x32",
++      "scale" : "2x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "128x128",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "128x128",
++      "scale" : "2x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "256x256",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "256x256",
++      "scale" : "2x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "512x512",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "mac",
++      "size" : "512x512",
++      "scale" : "2x"
++    }
++  ],
++  "info" : {
++    "version" : 1,
++    "author" : "xcode"
++  }
++}
+\ No newline at end of file

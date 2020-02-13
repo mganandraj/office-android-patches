@@ -35,13 +35,10 @@ const patchReactNativeFork: PatchRepoFuncType = (
     `options.cleanupRepos: ${options.cleanupRepos}`,
   );
 
-  const patchesBothAbsPath = resolvePath(patchStoreAbsPath, 'both');
-  const patchesForkOnlyAbsPath = resolvePath(patchStoreAbsPath, 'fork-only');
-
   const callbackFile = (patchFileAbsPath: string) => {
     const patchFileRelativePath = getRelativePath(
       patchFileAbsPath,
-      patchesBothAbsPath,
+      patchStoreAbsPath,
     );
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
@@ -91,7 +88,7 @@ const patchReactNativeFork: PatchRepoFuncType = (
   const callbackNewFile = (patchFileAbsPath: string) => {
     const patchFileRelativePath = getRelativePath(
       patchFileAbsPath,
-      patchesForkOnlyAbsPath,
+      patchStoreAbsPath,
     );
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
@@ -136,17 +133,10 @@ const patchReactNativeFork: PatchRepoFuncType = (
   };
 
   traverseDirectory(
-    patchesBothAbsPath,
+    patchStoreAbsPath,
     '.',
     callbackFile,
     callbackDirectory,
-    [],
-  );
-  traverseDirectory(
-    patchesForkOnlyAbsPath,
-    '.',
-    callbackNewFile,
-    callbackNewDirectory,
     [],
   );
 };

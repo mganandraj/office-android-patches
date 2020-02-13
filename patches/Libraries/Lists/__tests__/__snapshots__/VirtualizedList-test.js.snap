@@ -1,0 +1,98 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedList-test.js.snap"	2020-01-30 13:55:47.930608300 -0800
++++ "e:\\github\\ms-react-native-forpatch\\Libraries\\Lists\\__tests__\\__snapshots__\\VirtualizedList-test.js.snap"	2020-01-29 14:10:08.930882900 -0800
+@@ -26,6 +26,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -115,6 +116,7 @@
+         onScroll={[Function]}
+         onScrollBeginDrag={[Function]}
+         onScrollEndDrag={[Function]}
++        onScrollKeyDown={null}
+         renderItem={[Function]}
+         scrollEventThrottle={50}
+         stickyHeaderIndices={Array []}
+@@ -189,6 +191,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -270,6 +273,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -351,6 +355,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -446,6 +451,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   refreshControl={
+     <RefreshControlMock
+       onRefresh={[MockFunction]}
+@@ -626,6 +632,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -656,6 +663,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -702,6 +710,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -737,6 +746,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -776,6 +786,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}
+@@ -834,6 +845,7 @@
+   onScroll={[Function]}
+   onScrollBeginDrag={[Function]}
+   onScrollEndDrag={[Function]}
++  onScrollKeyDown={null}
+   renderItem={[Function]}
+   scrollEventThrottle={50}
+   stickyHeaderIndices={Array []}

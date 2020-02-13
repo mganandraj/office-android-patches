@@ -1,0 +1,11 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\build.gradle"	2020-02-10 15:17:06.918188300 -0800
++++ "e:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\build.gradle"	2020-02-10 15:17:20.452780200 -0800
+@@ -131,7 +131,7 @@
+     buildTypes {
+         debug {
+             signingConfig signingConfigs.release
+-        }
++        } 
+         release {
+             minifyEnabled enableProguardInReleaseBuilds
+             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

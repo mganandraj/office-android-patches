@@ -1,0 +1,10 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\annotations\\BUCK"	2020-01-30 13:55:48.380605900 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\annotations\\BUCK"	2020-01-29 14:10:09.459919100 -0800
+@@ -3,7 +3,6 @@
+ rn_android_library(
+     name = "annotations",
+     srcs = glob(["*.java"]),
+-    required_for_source_only_abi = True,
+     visibility = [
+         "PUBLIC",
+     ],

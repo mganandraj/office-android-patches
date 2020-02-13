@@ -59,6 +59,13 @@ export function writeFile(
       extension ? `${name}.${extension}` : name,
     );
 
+    if (fs.existsSync(absPath2)) {
+      log.error(
+        'FS:writeFile',
+        `Trying to write to file which already exists: ${absPath2}`,
+      );
+    }
+
     fs.writeFileSync(absPath2, data);
   } catch (e) {
     log.error(

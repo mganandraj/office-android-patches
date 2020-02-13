@@ -1,0 +1,10 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\BUCK"	2020-01-29 14:11:26.479528000 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\BUCK"	2020-01-29 14:10:09.674889900 -0800
+@@ -12,6 +12,7 @@
+         "-Werror",
+         "-O3",
+         "-std=c++11",
++        '-DANDROIDPLAT',
+     ],
+     soname = "libyoga.$(ext)",
+     visibility = ["PUBLIC"],

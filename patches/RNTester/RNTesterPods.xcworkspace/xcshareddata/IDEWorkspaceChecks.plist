@@ -1,0 +1,11 @@
+--- "e:\\github\\fb-react-native-forpatch-base\\RNTester\\RNTesterPods.xcworkspace\\xcshareddata\\IDEWorkspaceChecks.plist"	1969-12-31 16:00:00.000000000 -0800
++++ "e:\\github\\ms-react-native-forpatch\\RNTester\\RNTesterPods.xcworkspace\\xcshareddata\\IDEWorkspaceChecks.plist"	2020-01-29 14:10:09.096884000 -0800
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
++<plist version="1.0">
++<dict>
++	<key>IDEDidComputeMac32BitWarning</key>
++	<true/>
++</dict>
++</plist>

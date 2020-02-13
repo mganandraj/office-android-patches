@@ -11,27 +11,64 @@ import {diffFiles} from './patch_utils';
 import {log} from './logger';
 import {isFileText, isFileBinary} from './file_type_utils';
 import {compareFiles} from './file_compare';
+import {cleanRepoSync} from './git_utils';
 
-export function diffReactNativeForks(
-  fbRepoAbsPath: string,
-  forkRepoAbsPath: string,
-  patchesRootAbsPath: string,
-  topLevelBlackListDirs: string[] = [],
-) {
-  // Where we write the patches
-  const bothPath = resolvePath(patchesRootAbsPath, 'both');
-  const forkOnlyPath = resolvePath(patchesRootAbsPath, 'fork-only');
-  const baseOnlyPath = resolvePath(patchesRootAbsPath, 'base-only');
+import {IDiffCommandOptions, DiffReposFuncType} from './types';
+
+const diffReactNativeForks: DiffReposFuncType = (
+  dirtyRepoAbsPath: string,
+  baseRepoAbsPath: string,
+  options: IDiffCommandOptions,
+) => {
+  log.info('diffReactNativeForks', `dirtyRepoAbsPath: ${dirtyRepoAbsPath}`);
+  log.info('diffReactNativeForks', `baseRepoAbsPath: ${baseRepoAbsPath}`);
+  log.info('diffReactNativeForks', `options.patchName: ${options.patchName}`);
+  log.info(
+    'diffReactNativeForks',
+    `options.whitelistDirs: ${options.whitelistDirs}`,
+  );
+  log.info(
+    'diffReactNativeForks',
+    `options.blacklistDirs: ${options.blacklistDirs}`,
+  );
+
+  log.info(
+    'diffReactNativeForks',
+    `options.gitExecutable: ${options.gitExecutable}`,
+  );
+  log.info(
+    'diffReactNativeForks',
+    `options.cleanupRepos: ${options.cleanupRepos}`,
+  );
+
+  log.info(
+    'diffReactNativeForks',
+    `options.diffExecutable: ${options.diffExecutable}`,
+  );
+  log.info(
+    'diffReactNativeForks',
+    `options.cleanupExistingPatches: ${options.cleanupExistingPatches}`,
+  );
+
+  const patchStorePath = resolvePath(dirtyRepoAbsPath, options.patchName);
+
+  // Where we write the patches ..
+  const bothPath = resolvePath(patchStorePath, 'both');
+  const forkOnlyPath = resolvePath(patchStorePath, 'fork-only');
 
   // Init output directory
   initDirectory(bothPath);
   initDirectory(forkOnlyPath);
-  initDirectory(baseOnlyPath);
 
-  const callbackFile = (forkFileAbsPath: string) => {
+  if (options.cleanupRepos) {
+    cleanRepoSync(options.baseFork, options.gitExecutable);
+    cleanRepoSync(options.dirtyFork, options.gitExecutable);
+  }
+
+  const callbackFile = (dirtyRepoFileAbsPath: string) => {
     const forkFileRelativePath = getRelativePath(
-      forkFileAbsPath,
-      forkRepoAbsPath,
+      dirtyRepoFileAbsPath,
+      dirtyRepoAbsPath,
     );
 
     const callbackOnHit = (fbRepoFileAbsPath: string) => {
@@ -43,7 +80,7 @@ export function diffReactNativeForks(
       };
       const callbackOnBinaryFilesCompare = (same: boolean) => {
         if (!same) {
-          copyFile2(bothPath, forkFileRelativePath, forkFileAbsPath);
+          copyFile2(bothPath, forkFileRelativePath, dirtyRepoFileAbsPath);
         } else {
           log.info(
             'diffRNFork',
@@ -58,21 +95,22 @@ export function diffReactNativeForks(
       const handleBinaryFileInFork = () => {
         compareFiles(
           fbRepoFileAbsPath,
-          forkFileAbsPath,
+          dirtyRepoFileAbsPath,
           callbackOnBinaryFilesCompare,
           callbackOnBinaryFilesCompareError,
         );
       };
       // If it's a binary file we copy it as is to the patches folder.
-      if (isFileBinary(forkFileAbsPath)) {
+      if (isFileBinary(dirtyRepoFileAbsPath)) {
         handleBinaryFileInFork();
       } else {
         diffFiles(
           fbRepoFileAbsPath,
           false /* new file*/,
-          forkFileAbsPath,
+          dirtyRepoFileAbsPath,
           callbackOnDiffCreated,
           callbackOnError,
+          options.diffExecutable,
         );
       }
     };
@@ -85,23 +123,24 @@ export function diffReactNativeForks(
         log.error('diffRNFork', error);
       };
       const handleBinaryFileInFork = () => {
-        copyFile2(forkOnlyPath, forkFileRelativePath, forkFileAbsPath);
+        copyFile2(forkOnlyPath, forkFileRelativePath, dirtyRepoFileAbsPath);
       };
-      if (isFileBinary(forkFileAbsPath)) {
+      if (isFileBinary(dirtyRepoFileAbsPath)) {
         handleBinaryFileInFork();
       } else {
         diffFiles(
           fbRepoFileAbsPath,
           true /* new file*/,
-          forkFileAbsPath,
+          dirtyRepoFileAbsPath,
           callbackOnDiffCreated,
           callbackOnError,
+          options.diffExecutable,
         );
       }
     };
 
     lookUpRelativePath(
-      fbRepoAbsPath,
+      baseRepoAbsPath,
       forkFileRelativePath,
       callbackOnHit,
       callbackOnMiss,
@@ -119,10 +158,26 @@ export function diffReactNativeForks(
 
   Please note that we currently don't traverse the base reporitory, assuming that all the files in the base repository are present in the fork also. Essentially, we expect the patches to be only additions.
   */
-  traverseDirectory(
-    forkRepoAbsPath,
-    callbackFile,
-    callbackDirectory,
-    topLevelBlackListDirs,
-  );
-}
+
+  if (options.whitelistDirs.length === 0) {
+    traverseDirectory(
+      dirtyRepoAbsPath,
+      '.',
+      callbackFile,
+      callbackDirectory,
+      options.blacklistDirs,
+    );
+  } else {
+    options.whitelistDirs.forEach(dir => {
+      traverseDirectory(
+        dirtyRepoAbsPath,
+        dir,
+        callbackFile,
+        callbackDirectory,
+        options.blacklistDirs,
+      );
+    });
+  }
+};
+
+export default diffReactNativeForks;

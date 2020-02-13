@@ -1,0 +1,34 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Diff",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "args": [
+        "diff",
+        "E:\\github\\ms-react-native-forpatch",
+        "E:\\github\\fb-react-native-forpatch-base"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Patch",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "args": [
+        "patch",
+        "E:\\github\\fb-rn-p",
+        "E:\\github\\ms-react-native-forpatch\\patches"
+      ]
+    }
+  ]
+}

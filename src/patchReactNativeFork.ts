@@ -12,13 +12,31 @@ import {
 import {log} from './logger';
 import {applyPatch} from './patch_utils';
 import {isFileText, isFileBinary} from './file_type_utils';
+import {IPatchCommandOptions, PatchRepoFuncType} from './types';
 
-export function patchReactNativeFork(
+const patchReactNativeFork: PatchRepoFuncType = (
   targetRepoAbsPath: string,
-  patchesRootAbsPath: string,
-) {
-  const patchesBothAbsPath = resolvePath(patchesRootAbsPath, 'both');
-  const patchesForkOnlyAbsPath = resolvePath(patchesRootAbsPath, 'fork-only');
+  patchStoreAbsPath: string,
+  options: IPatchCommandOptions,
+) => {
+  log.info('patchReactNativeFork', `targetRepoAbsPath: ${targetRepoAbsPath}`);
+  log.info('patchReactNativeFork', `patchStoreAbsPath: ${patchStoreAbsPath}`);
+  log.info(
+    'patchReactNativeFork',
+    `options.patchExecutable: ${options.patchExecutable}`,
+  );
+
+  log.info(
+    'patchReactNativeFork',
+    `options.gitExecutable: ${options.gitExecutable}`,
+  );
+  log.info(
+    'patchReactNativeFork',
+    `options.cleanupRepos: ${options.cleanupRepos}`,
+  );
+
+  const patchesBothAbsPath = resolvePath(patchStoreAbsPath, 'both');
+  const patchesForkOnlyAbsPath = resolvePath(patchStoreAbsPath, 'fork-only');
 
   const callbackFile = (patchFileAbsPath: string) => {
     const patchFileRelativePath = getRelativePath(
@@ -37,6 +55,7 @@ export function patchReactNativeFork(
           (result: string) => {
             log.error('PatchRNFork', result);
           },
+          options.patchExecutable,
         );
       } else {
         // Overwrite the file.
@@ -95,6 +114,7 @@ export function patchReactNativeFork(
           (result: string) => {
             log.error('PatchRNFork', result);
           },
+          options.patchExecutable,
         );
       } else {
         //
@@ -115,11 +135,20 @@ export function patchReactNativeFork(
     // console.log('Directory: ' + path);
   };
 
-  traverseDirectory(patchesBothAbsPath, callbackFile, callbackDirectory, []);
+  traverseDirectory(
+    patchesBothAbsPath,
+    '.',
+    callbackFile,
+    callbackDirectory,
+    [],
+  );
   traverseDirectory(
     patchesForkOnlyAbsPath,
+    '.',
     callbackNewFile,
     callbackNewDirectory,
     [],
   );
-}
+};
+
+export default patchReactNativeFork;

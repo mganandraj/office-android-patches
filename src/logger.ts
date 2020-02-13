@@ -1,7 +1,7 @@
 import winston from 'winston';
 
 const logger = winston.createLogger({
-  level: 'info',
+  level: 'verbose',
   defaultMeta: {service: 'user-service'},
   format: winston.format.combine(
     winston.format.timestamp(),

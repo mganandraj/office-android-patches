@@ -71,23 +71,43 @@ export function writeFile(
 // Note :: Assuming the input path is an absolute path.
 // And callback gets called with absolute path
 export function traverseDirectory(
-  path: string,
+  rootAbsPath: string,
+  relPath: string,
   callbackFile: (path: string) => void,
   callbackDirectory: (path: string) => void,
-  topLevelBlackListDirs: string[] = [],
+  blackListDirs: string[] = [],
   recursive: boolean = true,
 ) {
+  log.verbose('traverseDirectory', `Entering ${rootAbsPath}\\${relPath}`);
+  const path = resolvePath(rootAbsPath, relPath);
   if (isRegularFile(path)) {
     callbackFile(path);
   } else if (isDirectory(path)) {
     const children = fs.readdirSync(path);
     children.forEach((childpath: string) => {
-      if (topLevelBlackListDirs.includes(childpath)) return;
       const absChildPath = fs_path.resolve(path, childpath);
+      const relChildPath = relPath + '\\' + childpath;
+
+      // Ignore the '.\' prefix when doing black list comparison
+      if (
+        blackListDirs.includes(
+          relChildPath.startsWith('.\\')
+            ? relChildPath.substr(2)
+            : relChildPath,
+        )
+      ) {
+        log.verbose(
+          'traverseDirectory',
+          `Ignoring ${rootAbsPath}\\${relChildPath} as it's blacklisted.`,
+        );
+        return;
+      }
+
       callbackDirectory(absChildPath);
       if (recursive)
         traverseDirectory(
-          absChildPath,
+          rootAbsPath,
+          relChildPath,
           callbackFile,
           callbackDirectory,
           [],

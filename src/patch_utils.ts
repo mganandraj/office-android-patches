@@ -2,9 +2,9 @@ import {spawn} from 'child_process';
 
 import {log} from './logger';
 
-import {InterfaceCLI, getArgs} from './cli';
-const patchExecutable = getArgs().patchExecutable;
-const diffExecutable = getArgs().diffExecutable;
+// import {InterfaceCLI, getArgs} from './cli';
+// const patchExecutable = getArgs().patchExecutable;
+// const diffExecutable = getArgs().diffExecutable;
 
 // Returns patch between files as string
 // For our use case, the first path is the FB/base repo and the second path is the dirtry fork.
@@ -16,6 +16,7 @@ export function diffFiles(
   path2: string,
   callback: (diff: string) => void,
   errorcallback: (error: string) => void,
+  diffExecutable: string,
 ) {
   const diffArgs = [path1, path2, '-u' /*-U 3*/];
   if (path1IsNew) diffArgs.push('--unidirectional-new-file');
@@ -40,6 +41,7 @@ export function applyPatch(
   patchPath: string,
   callback: (result: string) => void,
   errorcallback: (error: string) => void,
+  patchExecutable: string,
 ) {
   const patchArgs = ['-i', patchPath, targetPath, '-s'];
   const patch = spawn(patchExecutable, patchArgs);

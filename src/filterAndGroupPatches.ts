@@ -35,14 +35,15 @@ if (fse.existsSync(filteredGroupedPatchStore)) {
 fse.ensureDirSync(filteredGroupedPatchStore);
 
 // Known groups
-const RNHostDir = 'RNHost';
+const OfficeRNHostDir = 'OfficeRNHost';
 const V8IntegrationDir = 'V8Integration';
 const EditTextFocusDir = 'EditTextFocus';
 const AccessibilityDir = 'Accessibility';
+const UIChangesDir = 'UI';
 const DialogModuleDir = 'DialogModule';
 const AnnotationProcessingDir = 'AnnotationProcessing';
 const BuildAndThirdPartyFixesDir = 'BuildAndThirdPartyFixes';
-const SecurifyFixesDir = 'SecurityFixes';
+const SecurityFixesDir = 'SecurityFixes';
 
 const processFile = (
   patchFileRelativePath: string,
@@ -68,7 +69,321 @@ const processFile = (
 
 // Annotation Processing
 processFile('settings.gradle.kts', AnnotationProcessingDir);
+processFile('processor\\build.gradle', AnnotationProcessingDir);
 processFile(
   'processor\\libs\\infer-annotations-1.5.jar',
   AnnotationProcessingDir,
+);
+processFile(
+  'processor\\src\\main\\resources\\META-INF\\services\\javax.annotation.processing.Processor',
+  AnnotationProcessingDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\processing\\ReactNativeModuleProcessor.java',
+  AnnotationProcessingDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\AcJavaModuleWrapper.java',
+  AnnotationProcessingDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\JavaModuleWrapper.java',
+  AnnotationProcessingDir,
+);
+
+//OfficeRNHost
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstance.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\DynamicFromObject.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\NativeModuleRegistry.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\ReactBridge.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\ReactMarkerConstants.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManagerBuilder.java',
+  OfficeRNHostDir,
+);
+processFile('ReactCommon\\cxxreact\\CxxNativeModule.cpp', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\CxxNativeModule.h', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\Instance.cpp', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\Instance.h', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\JSExecutor.h', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\NativeToJsBridge.cpp', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\NativeToJsBridge.h', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\PlatformBundleInfo.h', OfficeRNHostDir);
+processFile('ReactCommon\\cxxreact\\ReactMarker.h', OfficeRNHostDir);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\Android.mk',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.cpp',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\JMessageQueueThread.cpp',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.cpp',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\JReactMarker.h',
+  OfficeRNHostDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\JSLogging.h',
+  OfficeRNHostDir,
+);
+
+// DialogModule
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\datepicker\\DatePickerDialogModule.java',
+  DialogModuleDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\DialogModule.java',
+  DialogModuleDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\dialog\\PlatformAlertFragment.java',
+  DialogModuleDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\modules\\timepicker\\TimePickerDialogModule.java',
+  DialogModuleDir,
+);
+
+// UI
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\NativeViewHierarchyManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIImplementation.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIManagerModule.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollViewManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextShadowNode.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextView.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewFocusEvent.java',
+  UIChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java',
+  UIChangesDir,
+);
+processFile('Libraries\\Components\\TextInput\\TextInput.js', UIChangesDir);
+processFile(
+  'Libraries\\Components\\TextInput\\TextInputState.js',
+  UIChangesDir,
+);
+
+// V8Integration
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\Android.mk',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\BUCK',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\InstanceManager.cpp',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\InstanceManager.h',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\OnLoad.cpp',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\V8Executor.java',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\V8ExecutorFactory.cpp',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\V8ExecutorFactory.h',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\V8ExecutorFactory.java',
+  V8IntegrationDir,
+);
+processFile('ReactCommon\\jsi\\Android.mk', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\FileUtils.cpp', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\FileUtils.h', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Platform.cpp', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Platform.h', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime.h', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime_basic.cpp', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime_droid.cpp', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime_impl.h', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime_shared.cpp', V8IntegrationDir);
+processFile('ReactCommon\\jsi\\V8Runtime_win.cpp', V8IntegrationDir);
+
+// BuildAndThirdPartyFixes
+processFile(
+  'ReactAndroid\\src\\main\\jni\\Application.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\boost\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\glog\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\jsc\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\base.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8base\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8platform\\Android.mk',
+  BuildAndThirdPartyFixesDir,
+);
+processFile('ReactAndroid\\build.gradle', BuildAndThirdPartyFixesDir);
+processFile('ReactAndroid\\NuGet.Config', BuildAndThirdPartyFixesDir);
+processFile('ReactAndroid\\packages.config', BuildAndThirdPartyFixesDir);
+processFile('ReactAndroid\\ReactAndroid.nuspec', BuildAndThirdPartyFixesDir);
+
+// Security
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\Android.mk',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\assert.cpp',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\CRTSafeAPIs.cpp',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\log.cpp',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\include\\fb\\CRTSafeAPIs.h',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk',
+  SecurityFixesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp',
+  SecurityFixesDir,
 );

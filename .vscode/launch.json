@@ -29,6 +29,14 @@
         "E:\\github\\fb-rn-p",
         "E:\\github\\ms-react-native-forpatch\\patches"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "GroupFilter",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\filterAndGroupPatches.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
     }
   ]
 }

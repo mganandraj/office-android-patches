@@ -25,7 +25,7 @@ const logger = winston.createLogger({
 const rawPatchStore = 'E:\\github\\office-android-patches\\patches';
 
 const filteredGroupedPatchStore =
-  'E:\\github\\office-android-patches\\patches-droid-office';
+  'E:\\github\\office-android-patches\\patches-droid-office-grouped';
 
 if (fse.existsSync(filteredGroupedPatchStore)) {
   logger.error('Output directory exists !');
@@ -40,6 +40,9 @@ const V8IntegrationDir = 'V8Integration';
 const EditTextFocusDir = 'EditTextFocus';
 const AccessibilityDir = 'Accessibility';
 const UIChangesDir = 'UI';
+const UIScollChangesDir = 'UIScroll';
+const UITextFontChangesDir = 'UITextFont';
+const UIEditTextChangesDir = 'UIEditText';
 const DialogModuleDir = 'DialogModule';
 const AnnotationProcessingDir = 'AnnotationProcessing';
 const BuildAndThirdPartyFixesDir = 'BuildAndThirdPartyFixes';
@@ -100,14 +103,14 @@ processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstanceImpl.java',
   OfficeRNHostDir,
 );
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\DynamicFromObject.java',
-  OfficeRNHostDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\NativeModuleRegistry.java',
-  OfficeRNHostDir,
-);
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\DynamicFromObject.java',
+//   OfficeRNHostDir,
+// );
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\NativeModuleRegistry.java',
+//   OfficeRNHostDir,
+// );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\ReactBridge.java',
   OfficeRNHostDir,
@@ -180,6 +183,56 @@ processFile(
   DialogModuleDir,
 );
 
+// UIScroll
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java',
+  UIScollChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java',
+  UIScollChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollViewManager.java',
+  UIScollChangesDir,
+);
+
+// UITextFont
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java',
+  UITextFontChangesDir,
+);
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextShadowNode.java',
+//   UITextFontChangesDir,
+// );
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextView.java',
+//   UITextFontChangesDir,
+// );
+
+//UIEditTextChanges
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java',
+  UIEditTextChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java',
+  UIEditTextChangesDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java',
+  UIChangesDir,
+);
+processFile(
+  'Libraries\\Components\\TextInput\\TextInput.js',
+  UIEditTextChangesDir,
+);
+processFile(
+  'Libraries\\Components\\TextInput\\TextInputState.js',
+  UIEditTextChangesDir,
+);
+
 // UI
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java',
@@ -201,57 +254,16 @@ processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java',
   UIChangesDir,
 );
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManager.java',
-  UIChangesDir,
-);
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManager.java',
+//   UIChangesDir,
+// );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java',
   UIChangesDir,
 );
 processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactHorizontalScrollView.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollView.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\scroll\\ReactScrollViewManager.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactFontManager.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextShadowNode.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\text\\ReactTextView.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactTextInputManager.java',
-  UIChangesDir,
-);
-processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewFocusEvent.java',
-  UIChangesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java',
-  UIChangesDir,
-);
-processFile('Libraries\\Components\\TextInput\\TextInput.js', UIChangesDir);
-processFile(
-  'Libraries\\Components\\TextInput\\TextInputState.js',
   UIChangesDir,
 );
 
@@ -260,10 +272,10 @@ processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\Android.mk',
   V8IntegrationDir,
 );
-processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\BUCK',
-  V8IntegrationDir,
-);
+// processFile(
+//   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\BUCK',
+//   V8IntegrationDir,
+// );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\v8executor\\InstanceManager.cpp',
   V8IntegrationDir,
@@ -304,6 +316,23 @@ processFile('ReactCommon\\jsi\\V8Runtime_impl.h', V8IntegrationDir);
 processFile('ReactCommon\\jsi\\V8Runtime_shared.cpp', V8IntegrationDir);
 processFile('ReactCommon\\jsi\\V8Runtime_win.cpp', V8IntegrationDir);
 
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\Android.mk',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\base.mk',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8base\\Android.mk',
+  V8IntegrationDir,
+);
+processFile(
+  'ReactAndroid\\src\\main\\jni\\third-party\\v8platform\\Android.mk',
+  V8IntegrationDir,
+);
+
 // BuildAndThirdPartyFixes
 processFile(
   'ReactAndroid\\src\\main\\jni\\Application.mk',
@@ -329,26 +358,11 @@ processFile(
   'ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h',
   BuildAndThirdPartyFixesDir,
 );
-processFile(
-  'ReactAndroid\\src\\main\\jni\\third-party\\jsc\\Android.mk',
-  BuildAndThirdPartyFixesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\Android.mk',
-  BuildAndThirdPartyFixesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\jni\\third-party\\v8\\base.mk',
-  BuildAndThirdPartyFixesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\jni\\third-party\\v8base\\Android.mk',
-  BuildAndThirdPartyFixesDir,
-);
-processFile(
-  'ReactAndroid\\src\\main\\jni\\third-party\\v8platform\\Android.mk',
-  BuildAndThirdPartyFixesDir,
-);
+// processFile(
+//   'ReactAndroid\\src\\main\\jni\\third-party\\jsc\\Android.mk',
+//   BuildAndThirdPartyFixesDir,
+// );
+
 processFile('ReactAndroid\\build.gradle', BuildAndThirdPartyFixesDir);
 processFile('ReactAndroid\\NuGet.Config', BuildAndThirdPartyFixesDir);
 processFile('ReactAndroid\\packages.config', BuildAndThirdPartyFixesDir);
@@ -379,10 +393,10 @@ processFile(
   'ReactAndroid\\src\\main\\jni\\first-party\\fb\\jni\\jni_helpers.cpp',
   SecurityFixesDir,
 );
-processFile(
-  'ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk',
-  SecurityFixesDir,
-);
+// processFile(
+//   'ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\Android.mk',
+//   SecurityFixesDir,
+// );
 processFile(
   'ReactAndroid\\src\\main\\jni\\first-party\\yogajni\\jni\\YGJNI.cpp',
   SecurityFixesDir,

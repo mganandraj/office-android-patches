@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\scripts\\logging.sh"	1969-12-31 16:00:00.000000000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\scripts\\logging.sh"	2020-01-29 14:10:10.018892900 -0800
++++ "e:\\github\\ms-react-native-forpatch\\scripts\\logging.sh"	2020-02-13 14:18:01.603280700 -0800
 @@ -0,0 +1,30 @@
 +#!/bin/bash
 +

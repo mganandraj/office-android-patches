@@ -10,6 +10,7 @@ export interface IDiffCommandOptions extends ICommonOptions {
   diffExecutable: string;
   cleanupExistingPatches: boolean; // Revert all tracked and untracked changes from both repos.
   blacklistDirs: string[]; // These paths will be ignored while recursively traversing the dirty repo.
+  blacklistExts: string[];
   whitelistDirs: string[]; // If specified, recursively traversal will start at these directories.
 }
 

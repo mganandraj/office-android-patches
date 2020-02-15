@@ -12,6 +12,8 @@ export function initCli(
 ) {
   const defaultWhiteListDirs: string[] = [];
 
+  const defaultBlackListExts = ['.iml'];
+
   // Places we don't want to look for changes
   const defaultBlackListDirs = [
     '.ado',
@@ -73,6 +75,13 @@ export function initCli(
     'v8-docker-build',
     'website',
     'yarn.lock',
+    'android',
+    'node_modules',
+    'ReactAndroid\\build',
+    'ReactAndroid\\packages',
+    'RNTester\\android\\app\\build',
+    'processor\\build',
+    'local.properties',
   ];
 
   function commaSeparatedList(value: string, dummyPrevious: any) {
@@ -109,13 +118,19 @@ export function initCli(
     )
     .option(
       '-bl, --blacklist-dirs <paths>',
-      'Paths in fork to be excluded from the patch creation and application',
+      'Paths in dirty repo to be excluded from the patch creation and application',
       commaSeparatedList,
       defaultBlackListDirs,
     )
     .option(
+      '-be, --blacklist-exts <exts>',
+      'File name extensions in dirty repo to be excluded from the patch creation and application',
+      commaSeparatedList,
+      defaultBlackListExts,
+    )
+    .option(
       '-wl, --whitelist-dirs <paths>',
-      'Paths in fork to be included in the patch creation and application',
+      'Paths in dirty repo to be included in the patch creation and application',
       commaSeparatedList,
       defaultWhiteListDirs,
     )

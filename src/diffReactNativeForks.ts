@@ -6,6 +6,7 @@ import {
   initDirectory,
   resolvePath,
   copyFile2,
+  getFileNameExtension,
 } from './fs_utils';
 import {diffFiles} from './patch_utils';
 import {log} from './logger';
@@ -31,7 +32,10 @@ const diffReactNativeForks: DiffReposFuncType = (
     'diffReactNativeForks',
     `options.blacklistDirs: ${options.blacklistDirs}`,
   );
-
+  log.info(
+    'diffReactNativeForks',
+    `options.blacklistExts: ${options.blacklistExts}`,
+  );
   log.info(
     'diffReactNativeForks',
     `options.gitExecutable: ${options.gitExecutable}`,
@@ -72,6 +76,14 @@ const diffReactNativeForks: DiffReposFuncType = (
       dirtyRepoAbsPath,
     );
 
+    const fileNameExtension = getFileNameExtension(dirtyRepoFileAbsPath);
+    if (options.blacklistExts.includes(fileNameExtension)) {
+      log.info(
+        'diffRNFork',
+        `Ignoring {dirtyRepoFileAbsPath} based on file name extension.`,
+      );
+      return;
+    }
     const callbackOnHit = (fbRepoFileAbsPath: string) => {
       const callbackOnDiffCreated = (patch: string) => {
         writeFile(patchStorePath, forkFileRelativePath, `${patch}`, '');
@@ -171,13 +183,24 @@ const diffReactNativeForks: DiffReposFuncType = (
     );
   } else {
     options.whitelistDirs.forEach(dir => {
-      traverseDirectory(
-        dirtyRepoAbsPath,
-        dir,
-        callbackFile,
-        callbackDirectory,
-        options.blacklistDirs,
-      );
+      if (
+        options.blacklistDirs.includes(
+          dir.startsWith('.\\') ? dir.substr(2) : dir,
+        )
+      ) {
+        log.info(
+          'diffRNFork',
+          `${dir} is present in both whitelist as well as blacklist. Ignoring it.`,
+        );
+      } else {
+        traverseDirectory(
+          dirtyRepoAbsPath,
+          dir,
+          callbackFile,
+          callbackDirectory,
+          options.blacklistDirs,
+        );
+      }
     });
   }
 };

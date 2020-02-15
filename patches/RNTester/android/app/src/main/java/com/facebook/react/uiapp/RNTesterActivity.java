@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"	2020-01-30 13:55:48.068609100 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"	2020-02-10 17:50:12.434900500 -0800
++++ "e:\\github\\ms-react-native-forpatch\\RNTester\\android\\app\\src\\main\\java\\com\\facebook\\react\\uiapp\\RNTesterActivity.java"	2020-02-13 14:18:01.594276400 -0800
 @@ -17,6 +17,7 @@
  
  public class RNTesterActivity extends ReactActivity {

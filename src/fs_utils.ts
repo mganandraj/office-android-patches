@@ -4,6 +4,10 @@ import fs_path from 'path';
 import {pathToFileURL} from 'url';
 import {log} from './logger';
 
+export function getFileNameExtension(path: string): string {
+  return fs_path.extname(path);
+}
+
 export function resolvePath(base: string, relative: string): string {
   return fs_path.resolve(base, relative);
 }
@@ -117,7 +121,7 @@ export function traverseDirectory(
           relChildPath,
           callbackFile,
           callbackDirectory,
-          [],
+          blackListDirs,
           recursive,
         );
     });

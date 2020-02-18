@@ -14,31 +14,27 @@ import {applyPatch} from './patch_utils';
 import {isFileText, isFileBinary} from './file_type_utils';
 import {IPatchCommandOptions, PatchRepoFuncType} from './types';
 
-const patchReactNativeFork: PatchRepoFuncType = (
+const patchRepo: PatchRepoFuncType = (
   targetRepoAbsPath: string,
-  patchStoreAbsPath: string,
+  patchNames: string[],
   options: IPatchCommandOptions,
 ) => {
-  log.info('patchReactNativeFork', `targetRepoAbsPath: ${targetRepoAbsPath}`);
-  log.info('patchReactNativeFork', `patchStoreAbsPath: ${patchStoreAbsPath}`);
-  log.info(
-    'patchReactNativeFork',
-    `options.patchExecutable: ${options.patchExecutable}`,
-  );
+  log.info('patchRepo', `targetRepoAbsPath: ${targetRepoAbsPath}`);
+  log.info('patchRepo', `patchNames: ${patchNames}`);
+  log.info('patchRepo', `options.patchStore: ${options.patchStore}`);
+  log.info('patchRepo', `options.reverse: ${options.reverse}`);
+  log.info('patchRepo', `options.patchExecutable: ${options.patchExecutable}`);
 
-  log.info(
-    'patchReactNativeFork',
-    `options.gitExecutable: ${options.gitExecutable}`,
-  );
-  log.info(
-    'patchReactNativeFork',
-    `options.cleanupRepos: ${options.cleanupRepos}`,
-  );
+  log.info('patchRepo', `options.gitExecutable: ${options.gitExecutable}`);
+  log.info('patchRepo', `options.cleanupRepos: ${options.cleanupRepos}`);
 
-  const callbackFile = (patchFileAbsPath: string) => {
+  const callbackFile = (
+    patchFileAbsPath: string,
+    patchFileRootAbsPath: string,
+  ) => {
     const patchFileRelativePath = getRelativePath(
       patchFileAbsPath,
-      patchStoreAbsPath,
+      patchFileRootAbsPath,
     );
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
@@ -53,6 +49,7 @@ const patchReactNativeFork: PatchRepoFuncType = (
             log.error('PatchRNFork', result);
           },
           options.patchExecutable,
+          options.reverse,
         );
       } else {
         // Overwrite the file.
@@ -69,39 +66,7 @@ const patchReactNativeFork: PatchRepoFuncType = (
       if (isFileBinary(patchFileAbsPath)) {
         // If patch file is binary, we copy anyways.
         copyFile(patchFileAbsPath, missedPatchFileAbsPath);
-      }
-    };
-
-    lookUpRelativePath(
-      targetRepoAbsPath,
-      patchFileRelativePath,
-      callbackOnHit,
-      callbackOnMiss,
-    );
-  };
-
-  const callbackDirectory = (path: string) => {
-    // tslint:disable-next-line:no-console
-    // console.log('Directory: ' + path);
-  };
-
-  const callbackNewFile = (patchFileAbsPath: string) => {
-    const patchFileRelativePath = getRelativePath(
-      patchFileAbsPath,
-      patchStoreAbsPath,
-    );
-
-    const callbackOnHit = (hitPatchFileAbsPath: string) => {
-      log.error(
-        'PatchRNFork',
-        `File path with patches (${hitPatchFileAbsPath}) as new file, already found in the target repository.`,
-      );
-
-      // This case must be handles manually.
-    };
-
-    const callbackOnMiss = (missedPatchFileAbsPath: string) => {
-      if (!isFileBinary(patchFileAbsPath)) {
+      } else {
         applyPatch(
           missedPatchFileAbsPath,
           patchFileAbsPath,
@@ -112,10 +77,8 @@ const patchReactNativeFork: PatchRepoFuncType = (
             log.error('PatchRNFork', result);
           },
           options.patchExecutable,
+          options.reverse,
         );
-      } else {
-        //
-        copyFile(patchFileAbsPath, missedPatchFileAbsPath);
       }
     };
 
@@ -127,18 +90,21 @@ const patchReactNativeFork: PatchRepoFuncType = (
     );
   };
 
-  const callbackNewDirectory = (path: string) => {
+  const callbackDirectory = (path: string, rootAbsPath: string) => {
     // tslint:disable-next-line:no-console
     // console.log('Directory: ' + path);
   };
 
-  traverseDirectory(
-    patchStoreAbsPath,
-    '.',
-    callbackFile,
-    callbackDirectory,
-    [],
-  );
+  patchNames.forEach(patchName => {
+    const patchNameDirAbsPath = resolvePath(options.patchStore, patchName);
+    traverseDirectory(
+      patchNameDirAbsPath,
+      '.',
+      callbackFile,
+      callbackDirectory,
+      [],
+    );
+  });
 };
 
-export default patchReactNativeFork;
+export default patchRepo;

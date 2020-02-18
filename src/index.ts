@@ -1,5 +1,5 @@
-import diffReactNativeForks from './diffReactNativeForks';
-import patchReactNativeFork from './patchReactNativeFork';
+import diffRepos from './diffRepos';
+import patchRepo from './patchRepo';
 import {initCli} from './cli';
 
-initCli(diffReactNativeForks, patchReactNativeFork);
+initCli(diffRepos, patchRepo);

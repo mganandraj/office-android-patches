@@ -139,12 +139,18 @@ export function initCli(
     });
 
   program
-    .command('patch <targetRepo> <patchStore>')
+    .command('patch <targetRepo> [patchNames...]')
+    .option(
+      '-ps, --patch-store <path>',
+      'Full path of the directory where the patches can be found. Each patch is a subdirectory in this directory.',
+      'E:\\github\\office-android-patches\\patches-droid-office-grouped',
+    )
     .option(
       '-pe, --patch-executable <path>',
       'Full path of the patch utility to be used for patching. What we expect is a *x patch utility or compatible one: http://man7.org/linux/man-pages/man1/patch.1.html',
       'C:\\Program Files\\Git\\usr\\bin\\patch.exe',
     )
+    .option('-r, --reverse', 'Whether the patch is applied reverse', false)
     .option(
       '-ge, --git-executable <path>',
       'Full path of the git executable',
@@ -155,15 +161,10 @@ export function initCli(
       "Whether to clean up both the dirty and base repos. It will cleanup all non-tracked files. Essentially we run 'git clean -fdx'",
       false,
     )
-    .action((targetRepo: string, patchStore: string, cmdObject: any) => {
-      patchRepoFunc(targetRepo, patchStore, cmdObject);
+    .action((targetRepo: string, patchNames: string[], cmdObject: any) => {
+      patchRepoFunc(targetRepo, patchNames, cmdObject);
     });
 
-  program.on('--help', () => {
-    log.info('Main', '-d -df <dirty fork path> -bf <base fork path>');
-    log.info('Main', '-p -pf <patch folder> -tf <target fork path>');
-    log.info('Main', '-h --help');
-  });
   program.parse(process.argv);
 
   function logErrorAndExitApp(message: string) {

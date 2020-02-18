@@ -84,15 +84,15 @@ export function writeFile(
 export function traverseDirectory(
   rootAbsPath: string,
   relPath: string,
-  callbackFile: (path: string) => void,
-  callbackDirectory: (path: string) => void,
+  callbackFile: (path: string, root: string) => void,
+  callbackDirectory: (path: string, root: string) => void,
   blackListDirs: string[] = [],
   recursive: boolean = true,
 ) {
   log.verbose('traverseDirectory', `Entering ${rootAbsPath}\\${relPath}`);
   const path = resolvePath(rootAbsPath, relPath);
   if (isRegularFile(path)) {
-    callbackFile(path);
+    callbackFile(path, rootAbsPath);
   } else if (isDirectory(path)) {
     const children = fs.readdirSync(path);
     children.forEach((childpath: string) => {
@@ -114,7 +114,7 @@ export function traverseDirectory(
         return;
       }
 
-      callbackDirectory(absChildPath);
+      callbackDirectory(absChildPath, rootAbsPath);
       if (recursive)
         traverseDirectory(
           rootAbsPath,

@@ -42,8 +42,13 @@ export function applyPatch(
   callback: (result: string) => void,
   errorcallback: (error: string) => void,
   patchExecutable: string,
+  reverse: boolean,
 ) {
   const patchArgs = ['-i', patchPath, targetPath, '-s'];
+  if (reverse) {
+    patchArgs.push('-R');
+  }
+
   const patch = spawn(patchExecutable, patchArgs);
   log.info(
     'Patch',

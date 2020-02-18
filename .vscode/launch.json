@@ -7,6 +7,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Help",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "args": ["--help"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Diff",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\dist\\index.js",
@@ -27,7 +36,10 @@
       "args": [
         "patch",
         "E:\\github\\fb-rn-p",
-        "E:\\github\\ms-react-native-forpatch\\patches"
+        "AnnotationProcessing",
+        "V8Integration",
+        "--patch-store",
+        "E:\\github\\office-android-patches\\patches-droid-office-grouped"
       ]
     },
     {

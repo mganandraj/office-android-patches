@@ -17,7 +17,10 @@ const logger = winston.createLogger({
       level: 'error',
       dirname: 'logs',
     }),
-    new winston.transports.File({filename: 'combined.log', dirname: 'logs'}),
+    new winston.transports.File({
+      filename: `combined.log`,
+      dirname: `logs\\${Date.now()}`,
+    }),
   ],
 });
 

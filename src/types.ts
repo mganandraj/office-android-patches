@@ -16,11 +16,13 @@ export interface IDiffCommandOptions extends ICommonOptions {
 
 export interface IPatchCommandOptions extends ICommonOptions {
   patchExecutable: string;
+  patchStore: string;
+  reverse: boolean;
 }
 
 export type PatchRepoFuncType = (
   targetRepoAbsPath: string,
-  patchStoreAbsPath: string,
+  patchNames: string[],
   patchOptions: IPatchCommandOptions,
 ) => void;
 export type DiffReposFuncType = (

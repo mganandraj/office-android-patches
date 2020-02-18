@@ -16,41 +16,23 @@ import {cleanRepoSync} from './git_utils';
 
 import {IDiffCommandOptions, DiffReposFuncType} from './types';
 
-const diffReactNativeForks: DiffReposFuncType = (
+const diffRepos: DiffReposFuncType = (
   dirtyRepoAbsPath: string,
   baseRepoAbsPath: string,
   options: IDiffCommandOptions,
 ) => {
-  log.info('diffReactNativeForks', `dirtyRepoAbsPath: ${dirtyRepoAbsPath}`);
-  log.info('diffReactNativeForks', `baseRepoAbsPath: ${baseRepoAbsPath}`);
-  log.info('diffReactNativeForks', `options.patchName: ${options.patchName}`);
-  log.info(
-    'diffReactNativeForks',
-    `options.whitelistDirs: ${options.whitelistDirs}`,
-  );
-  log.info(
-    'diffReactNativeForks',
-    `options.blacklistDirs: ${options.blacklistDirs}`,
-  );
-  log.info(
-    'diffReactNativeForks',
-    `options.blacklistExts: ${options.blacklistExts}`,
-  );
-  log.info(
-    'diffReactNativeForks',
-    `options.gitExecutable: ${options.gitExecutable}`,
-  );
-  log.info(
-    'diffReactNativeForks',
-    `options.cleanupRepos: ${options.cleanupRepos}`,
-  );
+  log.info('diffRepos', `dirtyRepoAbsPath: ${dirtyRepoAbsPath}`);
+  log.info('diffRepos', `baseRepoAbsPath: ${baseRepoAbsPath}`);
+  log.info('diffRepos', `options.patchName: ${options.patchName}`);
+  log.info('diffRepos', `options.whitelistDirs: ${options.whitelistDirs}`);
+  log.info('diffRepos', `options.blacklistDirs: ${options.blacklistDirs}`);
+  log.info('diffRepos', `options.blacklistExts: ${options.blacklistExts}`);
+  log.info('diffRepos', `options.gitExecutable: ${options.gitExecutable}`);
+  log.info('diffRepos', `options.cleanupRepos: ${options.cleanupRepos}`);
 
+  log.info('diffRepos', `options.diffExecutable: ${options.diffExecutable}`);
   log.info(
-    'diffReactNativeForks',
-    `options.diffExecutable: ${options.diffExecutable}`,
-  );
-  log.info(
-    'diffReactNativeForks',
+    'diffRepos',
     `options.cleanupExistingPatches: ${options.cleanupExistingPatches}`,
   );
 
@@ -205,4 +187,4 @@ const diffReactNativeForks: DiffReposFuncType = (
   }
 };
 
-export default diffReactNativeForks;
+export default diffRepos;

@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\Application.mk"	2020-01-30 13:55:48.459617000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\Application.mk"	2020-02-14 14:19:56.642292800 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\Application.mk"	2020-02-19 13:19:36.173821500 -0800
 @@ -22,7 +22,7 @@
  # Where are APP_MK_DIR, THIRD_PARTY_NDK_DIR, etc. defined?
  #   The directories inside NDK_MODULE_PATH (ex: APP_MK_DIR, THIRD_PARTY_NDK_DIR,

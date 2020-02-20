@@ -1,6 +1,6 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.h"	2020-01-30 13:55:48.515581300 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"	2020-01-29 14:10:09.748923000 -0800
-@@ -34,18 +34,38 @@
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"	2020-02-19 16:12:10.829003800 -0800
+@@ -34,10 +34,28 @@
    virtual void decrementPendingJSCalls() {}
  };
  
@@ -21,29 +21,16 @@
  class RN_EXPORT Instance {
  public:
 -  ~Instance();
--  void initializeBridge(std::unique_ptr<InstanceCallback> callback,
 +  virtual ~Instance();
 +
-+  virtual void setModuleRegistry(std::shared_ptr<ModuleRegistry> moduleRegistry);
++  void setModuleRegistry(std::shared_ptr<ModuleRegistry> moduleRegistry);
 +
-+  virtual void initializeBridge(std::unique_ptr<InstanceCallback> callback,
+   void initializeBridge(std::unique_ptr<InstanceCallback> callback,
 +                        std::shared_ptr<ExecutorDelegateFactory> edf, // if nullptr, will use default delegate (JsToNativeBridge) // TODO(OSS Candidate ISS#2710739)
                          std::shared_ptr<JSExecutorFactory> jsef,
                          std::shared_ptr<MessageQueueThread> jsQueue,
                          std::shared_ptr<ModuleRegistry> moduleRegistry);
- 
-   void setSourceURL(std::string sourceURL);
- 
--  void loadScriptFromString(std::unique_ptr<const JSBigString> string,
--                            std::string sourceURL, bool loadSynchronously);
-+  virtual void loadScriptFromString(
-+      std::unique_ptr<const JSBigString> bundleString,
-+      std::string bundleURL,
-+      bool loadSynchronously);
-   static bool isIndexedRAMBundle(const char *sourcePath);
-   static bool isIndexedRAMBundle(std::unique_ptr<const JSBigString>* string);
-   void loadRAMBundleFromString(std::unique_ptr<const JSBigString> script, const std::string& sourceURL);
-@@ -64,6 +84,7 @@
+@@ -64,6 +82,7 @@
    void callJSFunction(std::string &&module, std::string &&method,
                        folly::dynamic &&params);
    void callJSCallback(uint64_t callbackId, folly::dynamic &&params);
@@ -51,7 +38,7 @@
  
    // This method is experimental, and may be modified or removed.
    void registerBundle(uint32_t bundleId, const std::string& bundlePath);
-@@ -73,20 +94,28 @@
+@@ -73,6 +92,13 @@
  
    void handleMemoryPressure(int pressureLevel);
  
@@ -65,20 +52,7 @@
    void invokeAsync(std::function<void()>&& func);
  
  private:
-   void callNativeModules(folly::dynamic &&calls, bool isEndOfBatch);
--  void loadApplication(std::unique_ptr<RAMBundleRegistry> bundleRegistry,
--                       std::unique_ptr<const JSBigString> startupScript,
--                       std::string startupScriptSourceURL);
--  void loadApplicationSync(std::unique_ptr<RAMBundleRegistry> bundleRegistry,
--                           std::unique_ptr<const JSBigString> startupScript,
--                           std::string startupScriptSourceURL);
-+  virtual void loadApplication(std::unique_ptr<RAMBundleRegistry> bundleRegistry,
-+                       std::unique_ptr<const JSBigString> bundle,
-+                       std::string bundleURL);
-+  virtual void loadApplicationSync(std::unique_ptr<RAMBundleRegistry> bundleRegistry,
-+                           std::unique_ptr<const JSBigString> bundle,
-+                           std::string bundleURL);
- 
+@@ -87,6 +113,7 @@
    std::shared_ptr<InstanceCallback> callback_;
    std::unique_ptr<NativeToJsBridge> nativeToJsBridge_;
    std::shared_ptr<ModuleRegistry> moduleRegistry_;

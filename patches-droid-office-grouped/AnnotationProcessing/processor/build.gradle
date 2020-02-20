@@ -1,14 +1,12 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\processor\\build.gradle"	1969-12-31 16:00:00.000000000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\processor\\build.gradle"	2020-02-14 15:58:49.011580200 -0800
-@@ -0,0 +1,36 @@
++++ "e:\\github\\ms-react-native-forpatch\\processor\\build.gradle"	2020-02-19 16:32:48.474066600 -0800
+@@ -0,0 +1,34 @@
 +apply plugin: 'java'
 +
 +dependencies {
 +    compile fileTree(dir: 'libs', include: ['*.jar'])
-+    compile fileTree(dir: 'libs', include: ['*.aar'])
 +    compile 'com.squareup:javapoet:1.9.0'
 +    compile 'com.google.code.findbugs:jsr305:3.0.2'
-+    compile 'com.facebook.fresco:fbcore:2.1.0'
 +}
 +
 +// code to generate processor.jar in libs
@@ -37,3 +35,4 @@
 +        }
 +    }
 +}
+\ No newline at end of file

@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\Android.mk"	2020-01-29 14:11:26.494528400 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\Android.mk"	2020-01-29 14:10:09.687889500 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\Android.mk"	2020-02-19 13:19:36.174853600 -0800
 @@ -3,19 +3,21 @@
  include $(CLEAR_VARS)
  

@@ -116,10 +116,6 @@ processFile(
   OfficeRNHostDir,
 );
 processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\ReactMarkerConstants.java',
-  OfficeRNHostDir,
-);
-processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java',
   OfficeRNHostDir,
 );
@@ -135,11 +131,6 @@ processFile('ReactCommon\\cxxreact\\JSExecutor.h', OfficeRNHostDir);
 processFile('ReactCommon\\cxxreact\\NativeToJsBridge.cpp', OfficeRNHostDir);
 processFile('ReactCommon\\cxxreact\\NativeToJsBridge.h', OfficeRNHostDir);
 processFile('ReactCommon\\cxxreact\\PlatformBundleInfo.h', OfficeRNHostDir);
-processFile('ReactCommon\\cxxreact\\ReactMarker.h', OfficeRNHostDir);
-processFile(
-  'ReactAndroid\\src\\main\\jni\\react\\jni\\Android.mk',
-  OfficeRNHostDir,
-);
 processFile(
   'ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.cpp',
   OfficeRNHostDir,
@@ -317,6 +308,10 @@ processFile('ReactCommon\\jsi\\V8Runtime_shared.cpp', V8IntegrationDir);
 processFile('ReactCommon\\jsi\\V8Runtime_win.cpp', V8IntegrationDir);
 
 processFile(
+  'ReactAndroid\\src\\main\\jni\\react\\jni\\Android.mk',
+  V8IntegrationDir,
+);
+processFile(
   'ReactAndroid\\src\\main\\jni\\third-party\\v8\\Android.mk',
   V8IntegrationDir,
 );
@@ -332,6 +327,11 @@ processFile(
   'ReactAndroid\\src\\main\\jni\\third-party\\v8platform\\Android.mk',
   V8IntegrationDir,
 );
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\ReactMarkerConstants.java',
+  V8IntegrationDir,
+);
+processFile('ReactCommon\\cxxreact\\ReactMarker.h', V8IntegrationDir);
 
 // BuildAndThirdPartyFixes
 processFile(

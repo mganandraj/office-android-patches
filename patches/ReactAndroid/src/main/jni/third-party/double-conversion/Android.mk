@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"	2020-01-29 14:11:26.493527900 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"	2020-02-14 16:13:32.544614700 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\double-conversion\\Android.mk"	2020-02-19 13:19:36.173821500 -0800
 @@ -16,7 +16,7 @@
  
  LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)

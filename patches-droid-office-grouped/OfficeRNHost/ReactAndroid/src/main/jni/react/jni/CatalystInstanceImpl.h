@@ -1,11 +1,9 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-01-30 13:55:48.476581100 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-01-29 14:10:09.676889700 -0800
-@@ -46,14 +46,18 @@
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-02-19 13:52:40.647819700 -0800
+@@ -46,14 +46,16 @@
  
    CatalystInstanceImpl();
  
-+  static bool isIndexedRAMBundle(const char *sourcePath);
-+
 +  void createModuleRegistry(
 +     jni::alias_ref<JavaMessageQueueThread::javaobject> nativeModulesQueue,
 +     jni::alias_ref<jni::JCollection<JavaModuleWrapper::javaobject>::javaobject> javaModules,
@@ -23,7 +21,7 @@
  
    void extendNativeModules(
      jni::alias_ref<jni::JCollection<JavaModuleWrapper::javaobject>::javaobject> javaModules,
-@@ -80,6 +84,7 @@
+@@ -80,6 +82,7 @@
                           std::string&& jsonValue);
    jlong getJavaScriptContext();
    void handleMemoryPressure(int pressureLevel);

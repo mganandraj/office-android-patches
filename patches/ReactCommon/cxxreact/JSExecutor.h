@@ -1,16 +1,14 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\JSExecutor.h"	2020-01-30 13:55:48.517581300 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\JSExecutor.h"	2020-01-29 14:10:09.749922100 -0800
-@@ -7,7 +7,9 @@
- 
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\JSExecutor.h"	2020-02-19 13:39:55.620256800 -0800
+@@ -8,6 +8,7 @@
  #include <memory>
  #include <string>
-+#include <cassert>
  
 +#include <cxxreact/ModuleRegistry.h>
  #include <cxxreact/NativeModule.h>
  #include <folly/dynamic.h>
  
-@@ -19,11 +21,21 @@
+@@ -19,11 +20,21 @@
  namespace react {
  
  class JSBigString;
@@ -18,10 +16,9 @@
  class JSExecutor;
  class JSModulesUnbundle;
  class MessageQueueThread;
--class ModuleRegistry;
+ class ModuleRegistry;
  class RAMBundleRegistry;
 +struct InstanceCallback;
-+struct JSEConfigParams;
 +
 +class ExecutorDelegateFactory {
 +public:
@@ -33,7 +30,7 @@
  
  // This interface describes the delegate interface required by
  // Executor implementations to call from JS into native code.
-@@ -37,6 +49,8 @@
+@@ -37,6 +48,8 @@
      JSExecutor& executor, folly::dynamic&& calls, bool isEndOfBatch) = 0;
    virtual MethodCallResult callSerializableNativeHook(
      JSExecutor& executor, unsigned int moduleId, unsigned int methodId, folly::dynamic&& args) = 0;
@@ -42,22 +39,7 @@
  };
  
  using NativeExtensionsProvider = std::function<folly::dynamic(const std::string&)>;
-@@ -46,6 +60,14 @@
-   virtual std::unique_ptr<JSExecutor> createJSExecutor(
-     std::shared_ptr<ExecutorDelegate> delegate,
-     std::shared_ptr<MessageQueueThread> jsQueue) = 0;
-+
-+  virtual std::unique_ptr<JSExecutor> createJSExecutor(
-+    std::shared_ptr<ExecutorDelegate> delegate,
-+    std::shared_ptr<MessageQueueThread> jsQueue,
-+    std::shared_ptr<JSEConfigParams> /*jseConfigParams*/) {
-+      return createJSExecutor(std::move(delegate),std::move(jsQueue));
-+  }
-+
-   virtual ~JSExecutorFactory() {}
- };
- 
-@@ -105,6 +127,15 @@
+@@ -105,6 +118,15 @@
  
    virtual void handleMemoryPressure(__unused int pressureLevel) {}
  

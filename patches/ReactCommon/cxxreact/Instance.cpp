@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.cpp"	2020-01-30 13:55:48.514580900 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.cpp"	2020-02-19 16:01:58.813656600 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.cpp"	2020-02-20 11:21:17.377514000 -0800
 @@ -36,16 +36,28 @@
    }
  }

@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.h"	2020-01-30 13:55:48.520581000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.h"	2020-02-19 13:35:44.732920200 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.h"	2020-02-20 11:21:17.381512700 -0800
 @@ -40,10 +40,11 @@
     * This must be called on the main JS thread.
     */

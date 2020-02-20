@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-01-30 13:55:48.476581100 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-02-19 13:52:40.647819700 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\react\\jni\\CatalystInstanceImpl.h"	2020-02-20 11:21:17.375511700 -0800
 @@ -46,14 +46,16 @@
  
    CatalystInstanceImpl();

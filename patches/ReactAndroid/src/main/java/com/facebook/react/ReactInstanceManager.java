@@ -1,5 +1,5 @@
---- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-02-14 15:12:24.018775400 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-02-14 15:09:02.431935800 -0800
+--- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-02-20 11:22:34.051346400 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\java\\com\\facebook\\react\\ReactInstanceManager.java"	2020-02-20 11:21:17.366516300 -0800
 @@ -49,6 +49,7 @@
  import com.facebook.infer.annotation.ThreadSafe;
  import com.facebook.react.bridge.Arguments;
@@ -42,7 +42,7 @@
      mCreateReactContextThread =
          new Thread(
              null,
-@@ -985,28 +999,76 @@
+@@ -985,27 +999,75 @@
      mCreateReactContextThread.start();
    }
  
@@ -120,15 +120,13 @@
        ReactMarker.logMarker(ATTACH_MEASURED_ROOT_VIEWS_START);
 -      for (ReactRoot reactRoot : mAttachedReactRoots) {
 -        attachRootViewToInstance(reactRoot);
--	  }
 +      synchronized (mAttachedReactRoots) {
 +        for (ReactRoot reactRoot : mAttachedReactRoots) {
 +          attachRootViewToInstance(reactRoot);
 +        }
-+      }
+       }
        ReactMarker.logMarker(ATTACH_MEASURED_ROOT_VIEWS_END);
      }
- 
 @@ -1127,7 +1189,8 @@
        .setJSExecutor(jsExecutor)
        .setRegistry(nativeModuleRegistry)

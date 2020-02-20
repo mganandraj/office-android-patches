@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactAndroid\\build.gradle"	2020-01-30 13:55:48.205611000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle"	2020-02-19 16:28:49.005279000 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactAndroid\\build.gradle"	2020-02-20 11:21:17.365518300 -0800
 @@ -22,10 +22,11 @@
  def thirdPartyNdkDir = new File("$buildDir/third-party-ndk")
  
@@ -120,10 +120,3 @@
      api("com.facebook.infer.annotation:infer-annotation:0.11.2")
      api("javax.inject:javax.inject:1")
      api("androidx.appcompat:appcompat:1.0.2")
-@@ -355,4 +372,4 @@
-     androidTestImplementation("org.mockito:mockito-core:${MOCKITO_CORE_VERSION}")
- }
- 
--apply(from: "release.gradle")
-+apply(from: "release.gradle"
-\ No newline at end of file

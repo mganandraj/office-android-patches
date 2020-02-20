@@ -1,12 +1,12 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\package.json"	2020-01-30 13:55:48.643609800 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\package.json"	2020-02-14 10:59:16.805390300 -0800
++++ "e:\\github\\ms-react-native-forpatch\\package.json"	2020-02-20 11:21:17.382512600 -0800
 @@ -1,12 +1,11 @@
  {
    "name": "react-native",
 -  "version": "0.60.0",
 -  "bin": "./cli.js",
 -  "description": "A framework for building native apps using React",
-+  "version": "0.60.0-microsoft.51",
++  "version": "0.60.0-microsoft.53",
 +  "description": "[Microsoft Fork] A framework for building native apps using React",
    "license": "MIT",
    "repository": {

@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"	2020-01-30 13:55:48.520581000 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"	2020-02-19 13:44:51.362621000 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\NativeToJsBridge.cpp"	2020-02-20 11:21:17.380512500 -0800
 @@ -38,7 +38,7 @@
      return m_registry;
    }

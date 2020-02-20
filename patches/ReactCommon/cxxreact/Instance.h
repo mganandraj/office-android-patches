@@ -1,5 +1,5 @@
 --- "e:\\github\\fb-react-native-forpatch-base\\ReactCommon\\cxxreact\\Instance.h"	2020-01-30 13:55:48.515581300 -0800
-+++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"	2020-02-19 16:12:10.829003800 -0800
++++ "e:\\github\\ms-react-native-forpatch\\ReactCommon\\cxxreact\\Instance.h"	2020-02-20 11:21:17.377514000 -0800
 @@ -34,10 +34,28 @@
    virtual void decrementPendingJSCalls() {}
  };

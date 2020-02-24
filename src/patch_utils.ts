@@ -2,6 +2,10 @@ import {spawn} from 'child_process';
 
 import {log} from './logger';
 
+import {executeEffects} from './patch/apply';
+import {reversePatch} from './patch/reverse';
+import {readPatch} from './patch/read';
+
 // import {InterfaceCLI, getArgs} from './cli';
 // const patchExecutable = getArgs().patchExecutable;
 // const diffExecutable = getArgs().diffExecutable;
@@ -36,7 +40,7 @@ export function diffFiles(
   });
 }
 
-export function applyPatch(
+export function applyPatchTool(
   targetPath: string,
   patchPath: string,
   callback: (result: string) => void,
@@ -73,4 +77,25 @@ export function applyPatch(
   patch.on('close', (code: any) => {
     log.info('Patch', `patch child process exited with code ${code}`);
   });
+}
+
+export function applyPatchEmbedded({
+  patchFilePath,
+  reverse,
+}: {
+  patchFilePath: string;
+  reverse: boolean;
+}): boolean {
+  const patch = readPatch({patchFilePath, packageDetails, patchDir});
+  try {
+    executeEffects(reverse ? reversePatch(patch) : patch, {dryRun: false});
+  } catch (e) {
+    try {
+      executeEffects(reverse ? patch : reversePatch(patch), {dryRun: true});
+    } catch (e) {
+      return false;
+    }
+  }
+
+  return true;
 }

@@ -15,6 +15,7 @@ export interface IDiffCommandOptions extends ICommonOptions {
 }
 
 export interface IPatchCommandOptions extends ICommonOptions {
+  embeddedPatcher: boolean;
   patchExecutable: string;
   patchStore: string;
   reverse: boolean;

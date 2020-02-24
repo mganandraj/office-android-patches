@@ -10,7 +10,7 @@ import {
   copyFile2Overwrite,
 } from './fs_utils';
 import {log} from './logger';
-import {applyPatch} from './patch_utils';
+import {applyPatchTool} from './patch_utils';
 import {isFileText, isFileBinary} from './file_type_utils';
 import {IPatchCommandOptions, PatchRepoFuncType} from './types';
 
@@ -22,6 +22,7 @@ const patchRepo: PatchRepoFuncType = (
   log.info('patchRepo', `targetRepoAbsPath: ${targetRepoAbsPath}`);
   log.info('patchRepo', `patchNames: ${patchNames}`);
   log.info('patchRepo', `options.patchStore: ${options.patchStore}`);
+  log.info('patchRepo', `enbeddedPatcher?: ${options.embeddedPatcher}`);
   log.info('patchRepo', `options.reverse: ${options.reverse}`);
   log.info('patchRepo', `options.patchExecutable: ${options.patchExecutable}`);
 
@@ -39,7 +40,7 @@ const patchRepo: PatchRepoFuncType = (
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
       if (!isFileBinary(patchFileAbsPath)) {
-        applyPatch(
+        applyPatchTool(
           hitPatchFileAbsPath,
           patchFileAbsPath,
           (result: string) => {
@@ -67,18 +68,21 @@ const patchRepo: PatchRepoFuncType = (
         // If patch file is binary, we copy anyways.
         copyFile(patchFileAbsPath, missedPatchFileAbsPath);
       } else {
-        applyPatch(
-          missedPatchFileAbsPath,
-          patchFileAbsPath,
-          (result: string) => {
-            log.info('PatchRNFork', result);
-          },
-          (result: string) => {
-            log.error('PatchRNFork', result);
-          },
-          options.patchExecutable,
-          options.reverse,
-        );
+        if (!options.embeddedPatcher) {
+          applyPatchTool(
+            missedPatchFileAbsPath,
+            patchFileAbsPath,
+            (result: string) => {
+              log.info('PatchRNFork', result);
+            },
+            (result: string) => {
+              log.error('PatchRNFork', result);
+            },
+            options.patchExecutable,
+            options.reverse,
+          );
+        } else {
+        }
       }
     };
 

@@ -146,8 +146,13 @@ export function initCli(
       'E:\\github\\office-android-patches\\patches-droid-office-grouped',
     )
     .option(
+      '-ep, --embedded-patcher',
+      "If true, use the embedded patching code written in Javascript. Currently, this code is taken from the source code the popular package : 'https://github.com/ds300/patch-package'. And adapted. Thanks !",
+      true,
+    )
+    .option(
       '-pe, --patch-executable <path>',
-      'Full path of the patch utility to be used for patching. What we expect is a *x patch utility or compatible one: http://man7.org/linux/man-pages/man1/patch.1.html',
+      'Full path of the patch utility to be used for patching. What we expect is a *x patch utility or compatible one: http://man7.org/linux/man-pages/man1/patch.1.html. Used only if embeddedPatcher is set to false.',
       'C:\\Program Files\\Git\\usr\\bin\\patch.exe',
     )
     .option('-r, --reverse', 'Whether the patch is applied reverse', false)
@@ -166,91 +171,4 @@ export function initCli(
     });
 
   program.parse(process.argv);
-
-  function logErrorAndExitApp(message: string) {
-    log.error('cli', message);
-    process.exit(1);
-  }
-
-  // if (!cli.applyPatch && !cli.createPatch) {
-  //   logErrorAndExitApp(
-  //     'Either createPath or applyPatch option should be specified when launching the application.',
-  //   );
-  // }
-
-  // if (cli.applyPatch) {
-  //   if (!cli.targetFork) {
-  //     logErrorAndExitApp('Target fork path is required for applying patch.');
-  //   }
-  //   if (!fse.existsSync(cli.targetFork)) {
-  //     logErrorAndExitApp(
-  //       `Target fork path (${cli.targetFork}) must exist for applying patch.`,
-  //     );
-  //   }
-  //   if (!cli.patchFolder) {
-  //     logErrorAndExitApp('Patch folder is required for applying patch.');
-  //   }
-  //   if (!fse.existsSync(cli.patchFolder)) {
-  //     logErrorAndExitApp(
-  //       `Patch folder (${cli.patchFolder}) must exist for applying patch.`,
-  //     );
-  //   }
-  //   if (!cli.patchExecutable) {
-  //     logErrorAndExitApp(
-  //       'Patch executable path is required for applying patch.',
-  //     );
-  //   }
-  //   if (!fse.existsSync(cli.patchExecutable)) {
-  //     logErrorAndExitApp(
-  //       `Patch executable path (${cli.patchExecutable}) must exist for applying patch.`,
-  //     );
-  //   }
-  // }
-
-  // if (cli.createPatch) {
-  //   if (!cli.dirtyFork) {
-  //     logErrorAndExitApp('Dirty fork path is required for creating patch.');
-  //   }
-  //   if (!fse.existsSync(cli.dirtyFork)) {
-  //     logErrorAndExitApp(
-  //       `Dirty fork path (${cli.dirtyFork}) must exist for creating patch.`,
-  //     );
-  //   }
-  //   if (!cli.baseFork) {
-  //     logErrorAndExitApp('Base fork path is required for creating patch.');
-  //   }
-  //   if (!fse.existsSync(cli.baseFork)) {
-  //     logErrorAndExitApp(
-  //       `Base fork path (${cli.baseFork}) must exist for creating patch.`,
-  //     );
-  //   }
-  //   if (!cli.diffExecutable) {
-  //     logErrorAndExitApp(
-  //       'Diff executable path is required for creating patch.',
-  //     );
-  //   }
-  //   if (!fse.existsSync(cli.diffExecutable)) {
-  //     logErrorAndExitApp(
-  //       `Diff executable path (${cli.diffExecutable}) must exist for creating patch.`,
-  //     );
-  //   }
-  // }
-
-  // log.info('Main', `cli.dirtyFork: ${cli.dirtyFork}`);
-  // log.info('Main', `cli.baseFork: ${cli.baseFork}`);
-  // log.info('Main', `cli.targetFork: ${cli.targetFork}`);
-  // log.info('Main', `cli.patchFolder: ${cli.patchFolder}`);
-  // log.info('Main', `cli.applyPatch: ${cli.applyPatch}`);
-  // log.info('Main', `cli.createPatch: ${cli.createPatch}`);
-  // log.info('Main', `cli.patchExecutable: ${cli.patchExecutable}`);
-  // log.info('Main', `cli.diffExecutable: ${cli.diffExecutable}`);
-  // log.info('Main', `cli.gitExecutable: ${cli.gitExecutable}`);
-  // log.info('Main', `cli.cleanupForks: ${cli.cleanupForks}`);
-  // log.info('Main', `cli.cleanupExistingPatches: ${cli.cleanupExistingPatches}`);
-  // log.info('Main', `cli.blacklistDirs: ${cli.blacklistDirs}`);
-  // log.info('Main', `cli.whitelistDirs: ${cli.whitelistDirs}`);
-
-  // export function getArgs(): InterfaceCLI {
-  //   return cli;
-  // }
 }

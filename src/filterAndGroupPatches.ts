@@ -37,9 +37,7 @@ fse.ensureDirSync(filteredGroupedPatchStore);
 // Known groups
 const OfficeRNHostDir = 'OfficeRNHost';
 const V8IntegrationDir = 'V8Integration';
-const EditTextFocusDir = 'EditTextFocus';
 const AccessibilityDir = 'Accessibility';
-const UIChangesDir = 'UI';
 const UIScollChangesDir = 'UIScroll';
 const UITextFontChangesDir = 'UITextFont';
 const UIEditTextChangesDir = 'UIEditText';
@@ -212,10 +210,6 @@ processFile(
   UIEditTextChangesDir,
 );
 processFile(
-  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java',
-  UIChangesDir,
-);
-processFile(
   'Libraries\\Components\\TextInput\\TextInput.js',
   UIEditTextChangesDir,
 );
@@ -224,38 +218,42 @@ processFile(
   UIEditTextChangesDir,
 );
 
-// UI
+// Accessibility
+processFile(
+  'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewManager.java',
+  AccessibilityDir,
+);
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\BaseViewManager.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\NativeViewHierarchyManager.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIImplementation.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIManagerModule.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\UIViewOperationQueue.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 // processFile(
 //   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManager.java',
-//   UIChangesDir,
+//   AccessibilityDir,
 // );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\uimanager\\ViewManagerRegistry.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\view\\ReactViewFocusEvent.java',
-  UIChangesDir,
+  AccessibilityDir,
 );
 
 // V8Integration

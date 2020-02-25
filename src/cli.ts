@@ -2,13 +2,14 @@ import program from 'commander';
 import {log} from './logger';
 import fse from 'fs-extra';
 
-import {DiffReposFuncType, PatchRepoFuncType} from './types';
+import {DiffReposFuncType, PatchRepoFuncType, PatchFileFuncType} from './types';
 
 program.version('0.0.1');
 
 export function initCli(
   diffReposFunc: DiffReposFuncType,
   patchRepoFunc: PatchRepoFuncType,
+  patchFileFunc: PatchFileFuncType,
 ) {
   const defaultWhiteListDirs: string[] = [];
 
@@ -168,6 +169,23 @@ export function initCli(
     )
     .action((targetRepo: string, patchNames: string[], cmdObject: any) => {
       patchRepoFunc(targetRepo, patchNames, cmdObject);
+    });
+
+  program
+    .command('patchfile <targetFilePath> <patchFilePath>')
+    .option(
+      '-ep, --embedded-patcher',
+      "If true, use the embedded patching code written in Javascript. Currently, this code is taken from the source code the popular package : 'https://github.com/ds300/patch-package'. And adapted. Thanks !",
+      true,
+    )
+    .option(
+      '-pe, --patch-executable <path>',
+      'Full path of the patch utility to be used for patching. What we expect is a *x patch utility or compatible one: http://man7.org/linux/man-pages/man1/patch.1.html. Used only if embeddedPatcher is set to false.',
+      'C:\\Program Files\\Git\\usr\\bin\\patch.exe',
+    )
+    .option('-r, --reverse', 'Whether the patch is applied reverse', false)
+    .action((targetFilePath: string, patchFilePath: string, cmdObject: any) => {
+      patchFileFunc(targetFilePath, patchFilePath, cmdObject);
     });
 
   program.parse(process.argv);

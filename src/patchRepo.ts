@@ -1,13 +1,10 @@
 import {
   traverseDirectory,
-  writeFile,
   getRelativePath,
   lookUpRelativePath,
-  initDirectory,
   resolvePath,
   copyFile,
   copyFileOverwrite,
-  copyFile2Overwrite,
 } from './fs_utils';
 import {log} from './logger';
 import {applyPatchTool, applyPatchEmbedded} from './patch_utils';
@@ -21,21 +18,29 @@ function applyPatch(
   callback: (result: string) => void,
   errorcallback: (error: string) => void,
 ) {
+  log.info(
+    'PatchRepo',
+    `Applying ${patchPath} on ${targetPath} with options ${JSON.stringify(
+      options,
+    )}`,
+  );
   if (options.embeddedPatcher) {
-    applyPatchEmbedded({
+    const sucess = applyPatchEmbedded({
       patchFilePath: patchPath,
       targetFilePathOverride: targetPath,
       reverse: options.reverse,
     });
+    if (!sucess)
+      log.error('PatchRepo', `Applying ${patchPath} on ${targetPath} failed.`);
   } else {
     applyPatchTool(
       targetPath,
       patchPath,
       (result: string) => {
-        log.info('PatchRNFork', result);
+        log.info('PatchRepo', result);
       },
       (result: string) => {
-        log.error('PatchRNFork', result);
+        log.error('PatchRepo', result);
       },
       options.patchExecutable,
       options.reverse,
@@ -74,10 +79,10 @@ const patchRepo: PatchRepoFuncType = (
           patchFileAbsPath,
           options,
           (result: string) => {
-            log.info('PatchRNFork', result);
+            log.info('PatchRepo', result);
           },
           (result: string) => {
-            log.error('PatchRNFork', result);
+            log.error('PatchRepo', result);
           },
         );
       } else {
@@ -88,7 +93,7 @@ const patchRepo: PatchRepoFuncType = (
 
     const callbackOnMiss = (missedPatchFileAbsPath: string) => {
       log.error(
-        'PatchRNFork',
+        'PatchRepo',
         `File path with patches (${missedPatchFileAbsPath}) not found in the target repository.`,
       );
 
@@ -101,10 +106,10 @@ const patchRepo: PatchRepoFuncType = (
           patchFileAbsPath,
           options,
           (result: string) => {
-            log.info('PatchRNFork', result);
+            log.info('PatchRepo', result);
           },
           (result: string) => {
-            log.error('PatchRNFork', result);
+            log.error('PatchRepo', result);
           },
         );
       }

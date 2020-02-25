@@ -21,6 +21,17 @@ export interface IPatchCommandOptions extends ICommonOptions {
   reverse: boolean;
 }
 
+export interface IPatchFileCommandOptions extends ICommonOptions {
+  embeddedPatcher: boolean;
+  patchExecutable: string;
+  reverse: boolean;
+}
+
+export type PatchFileFuncType = (
+  targetFileAbsPath: string,
+  patchFileAbsPath: string,
+  patchOptions: IPatchFileCommandOptions,
+) => void;
 export type PatchRepoFuncType = (
   targetRepoAbsPath: string,
   patchNames: string[],

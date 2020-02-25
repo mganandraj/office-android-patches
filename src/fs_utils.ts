@@ -4,6 +4,10 @@ import fs_path from 'path';
 import {pathToFileURL} from 'url';
 import {log} from './logger';
 
+export function getDirectoryFromFilePath(path: string): string {
+  return fs_path.basename(path);
+}
+
 export function getFileNameExtension(path: string): string {
   return fs_path.extname(path);
 }

@@ -3,6 +3,8 @@ import {dirname} from 'path';
 import {ParsedPatchFile, FilePatch, Hunk} from './parse';
 import {assertNever} from './assertNever';
 
+import {log} from '../logger';
+
 export const executeEffects = (
   effects: ParsedPatchFile,
   targetFilePathOverride: string, // Override the target path in the patch file.
@@ -52,6 +54,7 @@ export const executeEffects = (
         }
         break;
       case 'patch':
+        log.info('patch\\apply', 'Patches found.');
         applyPatch(eff, targetFilePathOverride, {dryRun});
         break;
       case 'mode change':
@@ -165,9 +168,11 @@ function applyPatch(
             modification.linesToInsert.length - modification.numToDelete;
           break;
         case 'pop':
+          log.verbose('patch\\apply', 'Removing lines');
           fileLines.pop();
           break;
         case 'push':
+          log.verbose('patch\\apply', 'Adding lines');
           fileLines.push(modification.line);
           break;
         default:

@@ -1,4 +1,26 @@
 import winston from 'winston';
+import fs_path from 'path'; // TODO
+
+// Suitable for developments.. may not be when running in the CI/Publish machines.
+const getLogDirectoryDev = () => {
+  const loggerSourcePath = __dirname;
+
+  // // tslint:disable-next-line:no-console
+  // console.log(`loggerSourcePath: ${loggerSourcePath}`);
+
+  const loggerParentDir = fs_path.resolve(loggerSourcePath, '..');
+
+  // // tslint:disable-next-line:no-console
+  // console.log(`loggerParentDir: ${loggerParentDir}`);
+
+  const logDirBase = fs_path.resolve(loggerParentDir, 'logs');
+  return fs_path.resolve(logDirBase, `${Date.now()}`);
+};
+
+const logDirectory = getLogDirectoryDev();
+
+// // tslint:disable-next-line:no-console
+// console.log(`logDirectory: ${logDirectory}`);
 
 const logger = winston.createLogger({
   level: 'verbose',
@@ -15,11 +37,11 @@ const logger = winston.createLogger({
     new winston.transports.File({
       filename: 'error.log',
       level: 'error',
-      dirname: 'logs',
+      dirname: logDirectory,
     }),
     new winston.transports.File({
       filename: `combined.log`,
-      dirname: `logs\\${Date.now()}`,
+      dirname: logDirectory,
     }),
   ],
 });

@@ -22,4 +22,9 @@ module.exports = {
     path: path.resolve(__dirname, 'bundle'),
   },
   externals: [nodeExternals()],
+  node: {
+    global: false,
+    __filename: false,
+    __dirname: false,
+  },
 };

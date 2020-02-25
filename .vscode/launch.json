@@ -37,9 +37,21 @@
         "patch",
         "E:\\github\\fb-rn-p",
         "AnnotationProcessing",
-        "V8Integration",
         "--patch-store",
         "E:\\github\\office-android-patches\\patches-droid-office-grouped"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "PatchFile",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "args": [
+        "patchfile",
+        "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
+        "E:\\github\\ms-react-native-forpatch\\android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk"
       ]
     },
     {

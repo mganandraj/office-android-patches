@@ -107,6 +107,7 @@ export function applyPatchEmbedded({
         },
       );
     } catch (e) {
+      log.error('patch_utils', `Applying patch failed: ${e}`);
       return false;
     }
   }

@@ -10,9 +10,38 @@ import {
   copyFile2Overwrite,
 } from './fs_utils';
 import {log} from './logger';
-import {applyPatchTool} from './patch_utils';
+import {applyPatchTool, applyPatchEmbedded} from './patch_utils';
 import {isFileText, isFileBinary} from './file_type_utils';
 import {IPatchCommandOptions, PatchRepoFuncType} from './types';
+
+function applyPatch(
+  targetPath: string,
+  patchPath: string,
+  options: IPatchCommandOptions,
+  callback: (result: string) => void,
+  errorcallback: (error: string) => void,
+) {
+  if (options.embeddedPatcher) {
+    applyPatchEmbedded({
+      patchFilePath: patchPath,
+      targetFilePathOverride: targetPath,
+      reverse: options.reverse,
+    });
+  } else {
+    applyPatchTool(
+      targetPath,
+      patchPath,
+      (result: string) => {
+        log.info('PatchRNFork', result);
+      },
+      (result: string) => {
+        log.error('PatchRNFork', result);
+      },
+      options.patchExecutable,
+      options.reverse,
+    );
+  }
+}
 
 const patchRepo: PatchRepoFuncType = (
   targetRepoAbsPath: string,
@@ -40,17 +69,16 @@ const patchRepo: PatchRepoFuncType = (
 
     const callbackOnHit = (hitPatchFileAbsPath: string) => {
       if (!isFileBinary(patchFileAbsPath)) {
-        applyPatchTool(
+        applyPatch(
           hitPatchFileAbsPath,
           patchFileAbsPath,
+          options,
           (result: string) => {
             log.info('PatchRNFork', result);
           },
           (result: string) => {
             log.error('PatchRNFork', result);
           },
-          options.patchExecutable,
-          options.reverse,
         );
       } else {
         // Overwrite the file.
@@ -68,21 +96,17 @@ const patchRepo: PatchRepoFuncType = (
         // If patch file is binary, we copy anyways.
         copyFile(patchFileAbsPath, missedPatchFileAbsPath);
       } else {
-        if (!options.embeddedPatcher) {
-          applyPatchTool(
-            missedPatchFileAbsPath,
-            patchFileAbsPath,
-            (result: string) => {
-              log.info('PatchRNFork', result);
-            },
-            (result: string) => {
-              log.error('PatchRNFork', result);
-            },
-            options.patchExecutable,
-            options.reverse,
-          );
-        } else {
-        }
+        applyPatch(
+          missedPatchFileAbsPath,
+          patchFileAbsPath,
+          options,
+          (result: string) => {
+            log.info('PatchRNFork', result);
+          },
+          (result: string) => {
+            log.error('PatchRNFork', result);
+          },
+        );
       }
     };
 

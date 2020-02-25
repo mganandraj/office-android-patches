@@ -81,17 +81,31 @@ export function applyPatchTool(
 
 export function applyPatchEmbedded({
   patchFilePath,
+  targetFilePathOverride, // Override the target file path in the patch file.
   reverse,
 }: {
   patchFilePath: string;
+  targetFilePathOverride: string;
   reverse: boolean;
 }): boolean {
-  const patch = readPatch({patchFilePath, packageDetails, patchDir});
+  const patch = readPatch({patchFilePath});
   try {
-    executeEffects(reverse ? reversePatch(patch) : patch, {dryRun: false});
+    executeEffects(
+      reverse ? reversePatch(patch) : patch,
+      targetFilePathOverride,
+      {
+        dryRun: false,
+      },
+    );
   } catch (e) {
     try {
-      executeEffects(reverse ? patch : reversePatch(patch), {dryRun: true});
+      executeEffects(
+        reverse ? patch : reversePatch(patch),
+        targetFilePathOverride,
+        {
+          dryRun: true,
+        },
+      );
     } catch (e) {
       return false;
     }

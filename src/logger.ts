@@ -4,23 +4,12 @@ import fs_path from 'path'; // TODO
 // Suitable for developments.. may not be when running in the CI/Publish machines.
 const getLogDirectoryDev = () => {
   const loggerSourcePath = __dirname;
-
-  // // tslint:disable-next-line:no-console
-  // console.log(`loggerSourcePath: ${loggerSourcePath}`);
-
   const loggerParentDir = fs_path.resolve(loggerSourcePath, '..');
-
-  // // tslint:disable-next-line:no-console
-  // console.log(`loggerParentDir: ${loggerParentDir}`);
-
   const logDirBase = fs_path.resolve(loggerParentDir, 'logs');
   return fs_path.resolve(logDirBase, `${Date.now()}`);
 };
 
 const logDirectory = getLogDirectoryDev();
-
-// // tslint:disable-next-line:no-console
-// console.log(`logDirectory: ${logDirectory}`);
 
 const logger = winston.createLogger({
   level: 'verbose',
@@ -29,22 +18,25 @@ const logger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.json(),
   ),
-  transports: [
-    //
-    // - Write all logs with level `error` and below to `error.log`
-    // - Write all logs with level `info` and below to `combined.log`
-    //
+});
+
+function setLogFolder(logFolder: string) {
+  // logFolder = fs_path.resolve(logFolder, `${Date.now()}`);
+
+  logger.add(
     new winston.transports.File({
       filename: 'error.log',
       level: 'error',
-      dirname: logDirectory,
+      dirname: logFolder,
     }),
+  );
+  logger.add(
     new winston.transports.File({
-      filename: `combined.log`,
-      dirname: logDirectory,
+      filename: `all.log`,
+      dirname: logFolder,
     }),
-  ],
-});
+  );
+}
 
 function info(prefix: string, message: string) {
   logger.info(`${prefix} - ${message}`);
@@ -58,5 +50,9 @@ function error(prefix: string, message: string) {
   logger.error(`${prefix} - ${message}`);
 }
 
-const log = {error, info, verbose};
+function warn(prefix: string, message: string) {
+  logger.warn(`${prefix} - ${message}`);
+}
+
+const log = {setLogFolder, error, warn, info, verbose};
 export {log};

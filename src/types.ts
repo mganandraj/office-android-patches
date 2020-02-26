@@ -3,6 +3,8 @@ import program from 'commander';
 export interface ICommonOptions extends program.Command {
   gitExecutable: string;
   cleanupRepos: boolean; // Delete all the existing patched. 'gitExecutable' must be specified.
+
+  logFolder: string;
 }
 
 export interface IDiffCommandOptions extends ICommonOptions {

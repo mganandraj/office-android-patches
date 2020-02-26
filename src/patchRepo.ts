@@ -18,12 +18,7 @@ function applyPatch(
   callback: (result: string) => void,
   errorcallback: (error: string) => void,
 ) {
-  log.info(
-    'PatchRepo',
-    `Applying ${patchPath} on ${targetPath} with options ${JSON.stringify(
-      options,
-    )}`,
-  );
+  log.info('PatchRepo', `Applying ${patchPath} on ${targetPath} `);
   if (options.embeddedPatcher) {
     const sucess = applyPatchEmbedded({
       patchFilePath: patchPath,
@@ -92,7 +87,7 @@ const patchRepo: PatchRepoFuncType = (
     };
 
     const callbackOnMiss = (missedPatchFileAbsPath: string) => {
-      log.error(
+      log.warn(
         'PatchRepo',
         `File path with patches (${missedPatchFileAbsPath}) not found in the target repository.`,
       );

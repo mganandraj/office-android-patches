@@ -201,6 +201,10 @@ interface Splice {
 
 type Modificaiton = Push | Pop | Splice;
 
+function hunkToString(hunk: Hunk): string {
+  return `@@ -${hunk.header.original.start}, ${hunk.header.original.length} +${hunk.header.patched.start}, ${hunk.header.patched.length} @@`;
+}
+
 function evaluateHunk(
   hunk: Hunk,
   fileLines: string[],
@@ -210,9 +214,11 @@ function evaluateHunk(
   let contextIndex = hunk.header.original.start - 1 + fuzzingOffset;
   // do bounds checks for index
   if (contextIndex < 0) {
+    log.error("evaluateHunk", `Reason: contextIndex < 0; Hunk Details: ${hunkToString(hunk)}`);
     return null;
   }
   if (fileLines.length - contextIndex < hunk.header.original.length) {
+    log.error("evaluateHunk", `Reason: fileLines.length - contextIndex < hunk.header.original.length; Hunk Details: ${hunkToString(hunk)}`);
     return null;
   }
 
@@ -223,6 +229,7 @@ function evaluateHunk(
         for (const line of part.lines) {
           const originalLine = fileLines[contextIndex];
           if (!linesAreEqual(originalLine, line)) {
+            log.error("evaluateHunk", `Reason: Context/Deletion line mismatch; Expected: ${line}; Actual: ${originalLine};Hunk Details: ${hunkToString(hunk)}`);
             return null;
           }
           contextIndex++;

@@ -35,10 +35,31 @@
       "outFiles": ["${workspaceFolder}/**/*.js"],
       "args": [
         "patch",
-        "E:\\github\\fb-rn-p",
-        "AnnotationProcessing",
+        "..",
+        "BuildAndThirdPartyFixes",
         "--patch-store",
-        "E:\\github\\office-android-patches\\patches-droid-office-grouped"
+        ".\\patches-droid-office-grouped",
+        "--log-folder",
+        "e:\\patcher-logs"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Rev-Patch",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "args": [
+        "patch",
+        "..",
+        "BuildAndThirdPartyFixes",
+        "--patch-store",
+        ".\\patches-droid-office-grouped",
+        "--log-folder",
+        "e:\\patcher-logs",
+        "--no-embedded-patcher",
+        "--reverse"
       ]
     },
     {

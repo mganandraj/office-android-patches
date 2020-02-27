@@ -1,2 +1,3 @@
 REM assuming that
-node %~dp0\..\bundle\bundle.js patch %~dp0\..\.. BuildAndThirdPartyFixes --patch-store %~dp0\..\patches-droid-office-grouped
+node %~dp0\..\dist\index.js patch %~dp0\..\.. BuildAndThirdPartyFixes DialogModule UIEditText UIScroll UITextFont Accessibility OfficeRNHost SecurityFixes V8Integration AnnotationProcessing  --patch-store %~dp0\..\patches-droid-office-grouped --log-folder %~dp0\..\..\android-patching-logs
+REM AnnotationProcessing V8Integration SecurityFixes OfficeRNHost Accessibility UITextFont UIScroll UIEditText DialogModule BuildAndThirdPartyFixes 

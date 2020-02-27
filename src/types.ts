@@ -44,3 +44,5 @@ export type DiffReposFuncType = (
   baseRepoAbsPath: string,
   diffOptions: IDiffCommandOptions,
 ) => void;
+
+export type OnCompletionFuncType = () => void;

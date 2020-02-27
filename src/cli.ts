@@ -6,6 +6,7 @@ import {
   DiffReposFuncType,
   PatchRepoFuncType,
   PatchFileFuncType,
+  OnCompletionFuncType,
   IDiffCommandOptions,
   IPatchCommandOptions,
   IPatchFileCommandOptions,
@@ -17,6 +18,7 @@ export function initCli(
   diffReposFunc: DiffReposFuncType,
   patchRepoFunc: PatchRepoFuncType,
   patchFileFunc: PatchFileFuncType,
+  onCompletionFunc: OnCompletionFuncType,
 ) {
   const defaultWhiteListDirs: string[] = [];
 
@@ -147,6 +149,9 @@ export function initCli(
       (dirtyRepo: string, baseRepo: string, cmdObject: IDiffCommandOptions) => {
         log.setLogFolder(cmdObject.logFolder);
         diffReposFunc(dirtyRepo, baseRepo, cmdObject);
+
+        // TODO :: This is broken for diffing as we run diffs asynchronously.
+        onCompletionFunc();
       },
     );
 
@@ -186,6 +191,7 @@ export function initCli(
       ) => {
         log.setLogFolder(cmdObject.logFolder);
         patchRepoFunc(targetRepo, patchNames, cmdObject);
+        onCompletionFunc();
       },
     );
 
@@ -210,6 +216,7 @@ export function initCli(
       ) => {
         log.setLogFolder(cmdObject.logFolder);
         patchFileFunc(targetFilePath, patchFilePath, cmdObject);
+        onCompletionFunc();
       },
     );
 

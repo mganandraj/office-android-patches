@@ -18,41 +18,85 @@ const logger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.json(),
   ),
+  transports: [
+    new winston.transports.Console({
+      handleExceptions: true,
+      level: 'error',
+    }),
+  ],
 });
 
 function setLogFolder(logFolder: string) {
   // logFolder = fs_path.resolve(logFolder, `${Date.now()}`);
 
-  logger.add(
+  winston.add(
     new winston.transports.File({
       filename: 'error.log',
       level: 'error',
       dirname: logFolder,
     }),
   );
-  logger.add(
+  winston.add(
     new winston.transports.File({
       filename: `all.log`,
+      dirname: logFolder,
+    }),
+  );
+  winston.exceptions.handle(
+    new winston.transports.File({
+      filename: 'exceptions.log',
       dirname: logFolder,
     }),
   );
 }
 
 function info(prefix: string, message: string) {
-  logger.info(`${prefix} - ${message}`);
+  winston.info(`${prefix} - ${message}`);
 }
 
 function verbose(prefix: string, message: string) {
-  logger.verbose(`${prefix} - ${message}`);
+  winston.verbose(`${prefix} - ${message}`);
 }
 
+const errors: string[] = [];
 function error(prefix: string, message: string) {
-  logger.error(`${prefix} - ${message}`);
+  const message2 = `${prefix} - ${message}`;
+  errors.push(message2);
+  winston.error(message2);
 }
 
 function warn(prefix: string, message: string) {
-  logger.warn(`${prefix} - ${message}`);
+  winston.warn(`${prefix} - ${message}`);
 }
 
-const log = {setLogFolder, error, warn, info, verbose};
+function queryErrors(resultCallback: (error: string[]) => void) {
+  // winston.error('Done', () => {
+  //   const options: winston.QueryOptions = {
+  //     // //from: new Date() - 24 * 60 * 60 * 1000,
+  //     until: new Date(),
+  //     limit: 500,
+  //     start: 0,
+  //     order: 'desc',
+  //     fields: ['message', 'level'],
+  //   };
+  //   winston.query(options, (err, results) => {
+  //     if (err) {
+  //       /* TODO: handle me */
+  //       throw err;
+  //     }
+  //     const errors: string[] = [];
+  //     results.file.forEach((element: {level: string; message: string}) => {
+  //       if (element.level === 'error') {
+  //         // tslint:disable-next-line:no-console
+  //         console.log(element.message);
+  //         errors.push(element.message);
+  //       }
+  //     });
+  //     resultCallback(errors);
+  //   });
+  // });
+  resultCallback(errors);
+}
+
+const log = {queryErrors, setLogFolder, error, warn, info, verbose};
 export {log};

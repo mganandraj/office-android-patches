@@ -8,18 +8,28 @@
       "type": "node",
       "request": "launch",
       "name": "Help",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"],
-      "args": ["--help"]
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ],
+      "args": [
+        "--help"
+      ]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Diff",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ],
       "args": [
         "diff",
         "E:\\github\\ms-react-native-forpatch",
@@ -30,26 +40,34 @@
       "type": "node",
       "request": "launch",
       "name": "Patch",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ],
       "args": [
         "patch",
-        "..",
+        "D:\\work\\github\\mgan-react-native",
         "BuildAndThirdPartyFixes",
         "--patch-store",
         ".\\patches-droid-office-grouped",
         "--log-folder",
-        "e:\\patcher-logs"
+        "g:\\patcher-logs"
       ]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Rev-Patch",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ],
       "args": [
         "patch",
         "..",
@@ -66,22 +84,32 @@
       "type": "node",
       "request": "launch",
       "name": "PatchFile",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ],
       "args": [
         "patchfile",
-        "E:\\github\\ms-react-native-forpatch\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
-        "E:\\github\\ms-react-native-forpatch\\android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk"
+        "D:\\work\\github\\mgan-react-native\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h",
+        "D:\\work\\github\\office-android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h",
+        "--log-folder",
+        "g:\\patcher-logs",
       ]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "GroupFilter",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${workspaceFolder}\\dist\\filterAndGroupPatches.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"]
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
     }
   ]
 }

@@ -93,8 +93,8 @@
       ],
       "args": [
         "patchfile",
-        "D:\\work\\github\\mgan-react-native\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h",
-        "D:\\work\\github\\office-android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\glog\\config.h",
+        "D:\\work\\github\\mgan-react-native\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
+        "D:\\work\\github\\mgan-react-native\\android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
         "--log-folder",
         "g:\\patcher-logs",
       ]

@@ -93,7 +93,7 @@
       ],
       "args": [
         "patchfile",
-        "D:\\work\\github\\mgan-react-native\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
+        "D:\\work\\github\\s\\android-patches\\patches-droid-office-grouped\\AnnotationProcessing\\settings.gradle.kts",
         "D:\\work\\github\\mgan-react-native\\android-patches\\patches-droid-office-grouped\\BuildAndThirdPartyFixes\\ReactAndroid\\src\\main\\jni\\third-party\\folly\\Android.mk",
         "--log-folder",
         "g:\\patcher-logs",

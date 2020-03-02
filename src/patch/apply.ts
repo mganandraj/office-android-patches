@@ -123,7 +123,7 @@ function applyPatch(
     mode = fs.statSync(targetFilePathOverride).mode;
   }
 
-  const fileLines: string[] = fileContents.split(/\n/);
+  const fileLines: string[] = fileContents.split(/\r?\n/);
 
   const result: Modificaiton[][] = [];
 
@@ -214,21 +214,29 @@ function evaluateHunk(
   let contextIndex = hunk.header.original.start - 1 + fuzzingOffset;
   // do bounds checks for index
   if (contextIndex < 0) {
-    log.error(
+    log.warn(
       'evaluateHunk',
-      `Reason: contextIndex < 0; Hunk Details: ${hunkToString(hunk)}`,
+      `Reason: contextIndex < 0; Hunk Details: ${hunkToString(hunk)}; contextIndex: ${contextIndex}; fuzzingOffset:${fuzzingOffset}`,
     );
     return null;
+  } else {
+    log.verbose(
+      'evaluateHunk',
+      `Reason: contextIndex < 0; passed`);
   }
   if (fileLines.length - contextIndex < hunk.header.original.length) {
-    log.error(
+    log.warn(
       'evaluateHunk',
       `Reason: fileLines.length - contextIndex < hunk.header.original.length; Hunk Details: ${hunkToString(
         hunk,
-      )}`,
+      )}; fileLines.length:${fileLines.length}; contextIndex: ${contextIndex}`,
     );
 
     return null;
+  } else {
+    log.verbose(
+      'evaluateHunk',
+      `Reason: fileLines.length - contextIndex < hunk.header.original.length; passed`);
   }
 
   for (const part of hunk.parts) {

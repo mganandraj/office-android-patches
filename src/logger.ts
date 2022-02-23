@@ -21,7 +21,8 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.Console({
       handleExceptions: true,
-      // level: 'error',
+      level: 'error',
+      format: winston.format.colorize({all: true})
     }),
   ],
 });

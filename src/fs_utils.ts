@@ -1,8 +1,8 @@
 import fs from 'fs';
 import fse from 'fs-extra';
 import fs_path from 'path';
-import {pathToFileURL} from 'url';
-import {log} from './logger';
+import { pathToFileURL } from 'url';
+import { log } from './logger';
 
 export function getDirectoryFromFilePath(path: string): string {
   return fs_path.basename(path);
@@ -54,10 +54,10 @@ export function writeFile(
   try {
     // const name2 = 'patch-' + name.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '-');
     const name = fs_path.basename(relativefilepath);
-    const relative_dir = fs_path.parse(relativefilepath).dir;
+    const relativeDir = fs_path.parse(relativefilepath).dir;
 
     // Create directory if not exists.
-    const absPath1 = fs_path.resolve(basepath, relative_dir);
+    const absPath1 = fs_path.resolve(basepath, relativeDir);
     if (!fs.existsSync(absPath1)) {
       fse.ensureDirSync(absPath1);
     }

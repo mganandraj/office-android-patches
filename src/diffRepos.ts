@@ -8,13 +8,13 @@ import {
   copyFile2,
   getFileNameExtension,
 } from './fs_utils';
-import {diffFiles} from './patch_utils';
-import {log} from './logger';
-import {isFileText, isFileBinary} from './file_type_utils';
-import {compareFiles} from './file_compare';
-import {cleanRepoSync} from './git_utils';
+import { diffFiles } from './patch_utils';
+import { log } from './logger';
+import { isFileText, isFileBinary } from './file_type_utils';
+import { compareFiles } from './file_compare';
+import { cleanRepoSync } from './git_utils';
 
-import {IDiffCommandOptions, DiffReposFuncType} from './types';
+import { IDiffCommandOptions, DiffReposFuncType } from './types';
 
 const diffRepos: DiffReposFuncType = (
   dirtyRepoAbsPath: string,
@@ -141,8 +141,9 @@ const diffRepos: DiffReposFuncType = (
       callbackOnMiss,
     );
   };
-
-  const callbackDirectory = (path: string) => {};
+  const callbackDirectory = (path: string) => {
+    // noop
+  };
 
   /*
   Pseudo-code

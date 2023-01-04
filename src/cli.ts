@@ -1,5 +1,5 @@
 import program from 'commander';
-import {log} from './logger';
+import { log } from './logger';
 import fse from 'fs-extra';
 import fs_path from 'path';
 
@@ -45,44 +45,44 @@ export function initCli(
     '.prettierrc',
     'bots',
     'Brewfile',
-    //'build.gradle', //'CHANGELOG.json', //'CHANGELOG.md', //'cli.js', //'CODE_OF_CONDUCT.md', //'ContainerShip', //'CONTRIBUTING.md',
+    // 'build.gradle', // 'CHANGELOG.json', // 'CHANGELOG.md', // 'cli.js', // 'CODE_OF_CONDUCT.md', // 'ContainerShip', // 'CONTRIBUTING.md',
     'danger',
     'double-conversion',
-    //'ECOSYSTEM.md',
+    // 'ECOSYSTEM.md',
     'flow',
     'flow-typed',
     'Folly',
     'follybuild',
     'glog',
     '.gradle',
-    //'gradle', //'gradlew', //'gradlew.bat', //'IntegrationTests',
+    // 'gradle', // 'gradlew', // 'gradlew.bat', // 'IntegrationTests',
     '.idea',
     'jest',
     'jest-preset.js',
     'jest.config.js',
     'jsc',
-    //'KeepingRecent.md',
+    // 'KeepingRecent.md',
     'keystores',
     'lib',
-    //'Libraries', //'LICENSE', //'LICENSE-docs', //'local-cli',
+    // 'Libraries', // 'LICENSE', // 'LICENSE-docs', // 'local-cli',
     'metadata',
-    //'metro.config.js',
+    // 'metro.config.js',
     'office-android-patches',
-    //'package.json',
+    // 'package.json',
     'packages',
-    //'processor',
+    // 'processor',
     'React',
-    //'react-native.config.js', //'react.gradle',
+    // 'react-native.config.js', // 'react.gradle',
     'React.podspec',
-    //'ReactAndroid',
+    // 'ReactAndroid',
     'ReactApple',
-    //'ReactCommon', //'README.md', //'Releases.md', //'rn-get-polyfills.js', //'RNTester',
+    // 'ReactCommon', // 'README.md', // 'Releases.md', // 'rn-get-polyfills.js', // 'RNTester',
     'runXcodeTests.sh',
-    //'scripts', //'settings.gradle.kts',
+    // 'scripts', // 'settings.gradle.kts',
     'stubs',
-    //'template', //'template.config.js',
+    // 'template', // 'template.config.js',
     'third-party-podspecs',
-    //'tools',
+    // 'tools',
     'v8-docker-build',
     'website',
     'yarn.lock',
@@ -192,8 +192,8 @@ export function initCli(
         cmdObject: IPatchCommandOptions,
       ) => {
         log.setLogFolder(cmdObject.logFolder);
-        
-        if(cmdObject.confirm == 'true')
+
+        if (cmdObject.confirm === 'true')
           patchRepoFunc(targetRepo, patchNames, cmdObject);
         else
           log.warn('CLI', `Confirmation string not available: ${cmdObject.confirm}`);

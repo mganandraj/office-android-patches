@@ -4,7 +4,7 @@ import winston from 'winston';
 
 const logger = winston.createLogger({
   level: 'verbose',
-  defaultMeta: {service: 'user-service'},
+  defaultMeta: { service: 'user-service' },
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json(),
@@ -92,7 +92,7 @@ processFile(
   AnnotationProcessingDir,
 );
 
-//OfficeRNHost
+// OfficeRNHost
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\bridge\\CatalystInstance.java',
   OfficeRNHostDir,
@@ -200,7 +200,7 @@ processFile(
 //   UITextFontChangesDir,
 // );
 
-//UIEditTextChanges
+// UIEditTextChanges
 processFile(
   'ReactAndroid\\src\\main\\java\\com\\facebook\\react\\views\\textinput\\ReactEditText.java',
   UIEditTextChangesDir,
